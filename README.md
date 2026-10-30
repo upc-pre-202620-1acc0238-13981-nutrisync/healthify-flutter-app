@@ -1,1 +1,3 @@
-# healthify-flutter-app
+# healthify
+
+A new Flutter project.
