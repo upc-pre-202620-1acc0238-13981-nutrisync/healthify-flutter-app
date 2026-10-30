@@ -16,6 +16,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get commonClose => 'Cerrar';
 
   @override
+  String get commonUnderstood => 'Entendido';
+
+  @override
   String get errorNetwork =>
       'No hay conexión. Revisa tu internet e inténtalo de nuevo.';
 
@@ -365,4 +368,223 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get practitionerOnlySignOut => 'Cerrar sesión';
+
+  @override
+  String get menuCdOpen => 'Abrir menú';
+
+  @override
+  String get menuRolePractitioner => 'Nutricionista';
+
+  @override
+  String get menuSettings => 'Ajustes';
+
+  @override
+  String get menuSignOut => 'Cerrar sesión';
+
+  @override
+  String get settingsTitle => 'AJUSTES';
+
+  @override
+  String get settingsAccount => 'Mi cuenta';
+
+  @override
+  String get settingsLanguage => 'Idioma';
+
+  @override
+  String get settingsLanguageSheetTitle => 'IDIOMA';
+
+  @override
+  String get signOutTitle => '¿CERRAR SESIÓN?';
+
+  @override
+  String get signOutBody =>
+      'Tendrás que volver a ingresar tu correo y contraseña. Tus pacientes y sus datos quedan guardados.';
+
+  @override
+  String get signOutConfirm => 'Cerrar sesión';
+
+  @override
+  String get signOutInProgress => 'Cerrando sesión…';
+
+  @override
+  String shellPatientDischarged(String patientName) {
+    return 'Alta registrada: $patientName ya no está en tu cartera.';
+  }
+
+  @override
+  String get practitionerNoActiveLinkTitle => 'Sin vínculo activo';
+
+  @override
+  String get practitionerNoActiveLinkBody =>
+      'No tienes un vínculo activo con este paciente.';
+
+  @override
+  String get rosterTitle => 'MIS PACIENTES';
+
+  @override
+  String get rosterInvite => 'Invitar paciente';
+
+  @override
+  String get rosterEmptyTitle => 'Sin pacientes aún';
+
+  @override
+  String get rosterEmptyBody =>
+      'Invita a tu primer paciente generando un código QR durante la consulta.';
+
+  @override
+  String get rosterOfflineTitle => 'Necesitas conexión';
+
+  @override
+  String get rosterOfflineBody =>
+      'Tu cartera y los datos de tus pacientes no se guardan en el teléfono. Vuelve a intentarlo cuando tengas conexión.';
+
+  @override
+  String get rosterSearch => 'Buscar paciente';
+
+  @override
+  String get rosterSearchPlaceholder => 'Buscar paciente…';
+
+  @override
+  String rosterNeedsAction(int count) {
+    return 'Requieren acción · $count';
+  }
+
+  @override
+  String rosterUpToDate(int count) {
+    return 'Al día · $count';
+  }
+
+  @override
+  String get rosterUpToDateBody => 'Sin pendientes';
+
+  @override
+  String get rosterReasonOpenReview => 'Señal por revisar';
+
+  @override
+  String get rosterReasonConsultation => 'Consulta por terminar';
+
+  @override
+  String get rosterReasonBaseline => 'Faltan datos base';
+
+  @override
+  String get rosterReasonPlan => 'Falta publicar el plan';
+
+  @override
+  String get rosterNoResultsTitle => 'Sin resultados';
+
+  @override
+  String rosterNoResultsBody(String query) {
+    return 'Ningún paciente coincide con «$query».';
+  }
+
+  @override
+  String get inviteTitle => 'INVITAR PACIENTE';
+
+  @override
+  String get inviteInstructions =>
+      'Muéstrale este código a tu paciente para que lo escanee desde su teléfono, aquí en consulta.';
+
+  @override
+  String get inviteExpiresInLabel => 'Vence en';
+
+  @override
+  String get inviteValidityOneHour => '1 hora';
+
+  @override
+  String get inviteValidityOneDay => '24 horas';
+
+  @override
+  String get inviteValiditySevenDays => '7 días';
+
+  @override
+  String get inviteQrCd => 'Código QR de la invitación';
+
+  @override
+  String inviteCountdown(String time) {
+    return 'Vence en $time · un solo uso';
+  }
+
+  @override
+  String inviteCountdownDays(int days, String clock) {
+    return '$days d $clock';
+  }
+
+  @override
+  String get inviteExpired =>
+      'Este código venció. Genera otro para tu paciente.';
+
+  @override
+  String get inviteGenerateAnother => 'Generar otro código';
+
+  @override
+  String get invitePreviousStillValid =>
+      'El código anterior seguirá siendo válido hasta que venza.';
+
+  @override
+  String get inviteGenerating => 'Generando código…';
+
+  @override
+  String get inviteErrorOffline =>
+      'Necesitas conexión para generar una invitación.';
+
+  @override
+  String get inviteErrorExpirationRequired => 'Elige cuándo vence este código.';
+
+  @override
+  String get dischargeTitle => 'DAR DE ALTA';
+
+  @override
+  String get dischargeBody =>
+      'Esto cierra el tratamiento con este paciente. Un vínculo dado de alta no se puede reactivar.';
+
+  @override
+  String get dischargeReason => 'Motivo clínico';
+
+  @override
+  String get dischargeReasonPlaceholder => 'Obligatorio…';
+
+  @override
+  String get dischargeReasonMissing => 'Escribe el motivo clínico del alta';
+
+  @override
+  String get dischargeAction => 'Dar de alta';
+
+  @override
+  String get dischargeProcessing => 'Procesando…';
+
+  @override
+  String get dischargeDialogTitle => '¿DAR DE ALTA?';
+
+  @override
+  String get dischargeDialogBody =>
+      'Este vínculo no se podrá reactivar después. El motivo clínico queda registrado.';
+
+  @override
+  String get dischargeDialogConfirm => 'Sí, dar de alta';
+
+  @override
+  String get dischargeAlreadyTitle => 'Alta ya registrada';
+
+  @override
+  String get dischargeAlreadyBody =>
+      'Este paciente ya había sido dado de alta.';
+
+  @override
+  String shellSignalResolved(String name) {
+    return 'Señal resuelta. $name ya no aparece en tu bandeja.';
+  }
+
+  @override
+  String get shellSignalResolvedGeneric =>
+      'Señal resuelta. Ya no aparece en tu bandeja.';
+
+  @override
+  String shellFollowUpScheduled(String day, String time) {
+    return 'Consulta agendada: $day, $time';
+  }
+
+  @override
+  String shellFollowUpRescheduled(String day, String time) {
+    return 'Consulta reprogramada: $day, $time';
+  }
 }
