@@ -18,13 +18,18 @@ import '../features/iam/presentation/screen/sign_up_screen.dart';
 import '../features/iam/presentation/state/shell_loading_state.dart';
 import '../features/main/presentation/cubit/practitioner_shell_cubit.dart';
 import '../features/main/presentation/navigation/shell_routes.dart';
+import '../features/main/presentation/navigation/patient_snackbar_request.dart';
+import '../features/main/presentation/screen/practitioner_patient_screen.dart';
 import '../features/main/presentation/screen/practitioner_settings_screen.dart';
 import '../features/main/presentation/screen/practitioner_shell_screen.dart';
 import '../features/main/presentation/screen/sign_out_confirmation_screen.dart';
 import '../features/main/presentation/state/practitioner_shell_state.dart';
+import '../features/nutritionalcare/presentation/navigation/nutritional_care_routes.dart';
+import '../features/nutritionalcare/presentation/screen/baseline_screen.dart';
 import '../features/onboarding/presentation/screen/splash_screen.dart';
 import '../features/onboarding/presentation/screen/welcome_screen.dart';
 import '../features/onboarding/presentation/state/splash_state.dart';
+import 'consultation_routes.dart';
 import 'session_gate.dart';
 
 const splashPath = '/';
@@ -144,7 +149,11 @@ GoRouter createAppRouter(SessionGate gate) => GoRouter(
                 builder: (context) => PatientRosterScreen(
                   onInvitePatient: () => context.push(invitePatientPath),
                   onOpenPatient: (patient) => context.push(
-                    DischargePatientRoute(careLinkId: patient.careLinkId, patientName: patient.fullName).location,
+                    PractitionerPatientRoute(
+                      patientId: patient.patientId,
+                      careLinkId: patient.careLinkId,
+                      patientName: patient.fullName,
+                    ).location,
                   ),
                   onOpenMenu: context.read<PractitionerShellCubit>().onOpenMenu,
                 ),
@@ -174,6 +183,45 @@ GoRouter createAppRouter(SessionGate gate) => GoRouter(
       path: invitePatientPath,
       builder: (context, state) => InvitePatientScreen(onBack: context.pop),
     ),
+    GoRoute(
+      path: PractitionerPatientRoute.pathPattern,
+      redirect: (context, state) => PractitionerPatientRoute.tryParse(state) == null ? patientsPath : null,
+      builder: (context, state) {
+        final route = PractitionerPatientRoute.tryParse(state)!;
+        return PractitionerPatientScreen(
+          route: route,
+          onBack: context.pop,
+          onOpenBaseline: (editing) => context.push<PatientSnackbarRequest>(
+            BaselineRoute(patientId: route.patientId, patientName: route.patientName, editing: editing).location,
+          ),
+          onOpenConsultation: (step) => context.push<PatientSnackbarRequest>(
+            ConsultationRoute(patientId: route.patientId, patientName: route.patientName, step: step).location,
+          ),
+          onSchedule: () async => null,
+          onReferral: () async => null,
+          onDischarge: () => context.push(
+            DischargePatientRoute(careLinkId: route.careLinkId, patientName: route.patientName).location,
+          ),
+        );
+      },
+    ),
+    GoRoute(
+      path: BaselineRoute.pathPattern,
+      redirect: (context, state) => BaselineRoute.tryParse(state) == null ? patientsPath : null,
+      builder: (context, state) {
+        final route = BaselineRoute.tryParse(state)!;
+        return BaselineScreen(
+          patientId: route.patientId,
+          editing: route.editing,
+          onBack: context.pop,
+          onSaved: context.pop,
+          // The baseline hands over to the consultation through the patient file, which opens it: the file stays the
+          // screen that gets the result ("Plan published") when the consultation ends.
+          onStartConsultation: (step) => context.pop(ContinueToConsultation(step)),
+        );
+      },
+    ),
+    consultationRoutes(),
     GoRoute(
       path: DischargePatientRoute.pathPattern,
       redirect: (context, state) => DischargePatientRoute.tryParse(state) == null ? patientsPath : null,

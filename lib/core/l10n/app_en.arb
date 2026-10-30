@@ -171,8 +171,664 @@
   "dischargeDialogConfirm": "Yes, discharge",
   "dischargeAlreadyTitle": "Discharge already recorded",
   "dischargeAlreadyBody": "This patient had already been discharged.",
+  "patientTabSummary": "Summary",
+  "patientTabFollowUp": "Follow-up",
+  "patientTabPlan": "Plan",
+  "patientUnnamed": "Patient",
+  "patientPlanVersion": "Plan version {version}",
+  "@patientPlanVersion": {
+    "placeholders": {
+      "version": {
+        "type": "int"
+      }
+    }
+  },
+  "patientInRosterSince": "in your roster since {date}",
+  "@patientInRosterSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "patientWithoutPlan": "no plan",
+  "patientNewChip": "New intake",
+  "patientPlanActiveChip": "Current",
+  "patientOfflineBody": "Your patients' data is not stored on the phone. Try again when you're connected.",
+  "patientSnackbarPlanPublished": "Plan published. {patient} can now see their targets.",
+  "@patientSnackbarPlanPublished": {
+    "placeholders": {
+      "patient": {
+        "type": "String"
+      }
+    }
+  },
+  "patientSnackbarReferralRegistered": "Referral to {specialty} registered.",
+  "@patientSnackbarReferralRegistered": {
+    "placeholders": {
+      "specialty": {
+        "type": "String"
+      }
+    }
+  },
+  "patientSnackbarView": "View",
+  "patientSnackbarFollowUpScheduled": "Consultation scheduled: {day}, {time}",
+  "@patientSnackbarFollowUpScheduled": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryNoBaselineTitle": "No baseline data yet",
+  "summaryNoBaselineBody": "Record it once: date of birth, sex, height and medical history. Age, BMI and targets are calculated from it.",
+  "summaryRegisterBaseline": "Record baseline data",
+  "summaryContinueConsultation": "Continue consultation",
+  "summaryInProgressTitle": "Consultation in progress",
+  "summaryInProgressBody": "Step {step} of {total} · {title} · {saved}",
+  "@summaryInProgressBody": {
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "title": {
+        "type": "String"
+      },
+      "saved": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryNextFollowUp": "Next consultation",
+  "summaryFollowUpWhen": "{day} · {time}",
+  "@summaryFollowUpWhen": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryBaselineTitle": "Baseline data",
+  "summarySinceLastConsultation": "SINCE THE LAST CONSULTATION",
+  "summaryWeightLabel": "Weight (self-weigh-in)",
+  "summaryComplianceLabel": "Adherence",
+  "summaryComplianceLastWeek": "Last 7 days",
+  "summaryComplianceSince": "Since {date}",
+  "@summaryComplianceSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryManagement": "MANAGEMENT",
+  "commonEdit": "Edit",
+  "savedToday": "saved today",
+  "savedYesterday": "saved yesterday",
+  "savedOn": "saved on {date}",
+  "@savedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "sexFemale": "Female",
+  "sexMale": "Male",
+  "sexSummaryFemale": "Woman",
+  "sexSummaryMale": "Man",
+  "conditionType2Diabetes": "Type 2 diabetes",
+  "conditionHypertension": "Hypertension",
+  "conditionCeliacDisease": "Celiac disease",
+  "conditionHypothyroidism": "Hypothyroidism",
+  "conditionChronicKidneyDisease": "Kidney disease",
+  "conditionGout": "Gout",
+  "consultationStepMeasurement": "Today's measurement",
+  "consultationStepDiagnosis": "Diagnosis",
+  "consultationStepTargets": "Targets",
+  "consultationStepPublication": "Guidelines and publication",
+  "consultationStepHeader": "Step {step} of {total} · {title}",
+  "@consultationStepHeader": {
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "unitCm": "cm",
+  "unitCmValue": "{value} cm",
+  "@unitCmValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "unitKcalValue": "{value} kcal",
+  "@unitKcalValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "unitKgValue": "{value} kg",
+  "@unitKgValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "unitKgPerWeek": "{value} kg/wk",
+  "@unitKgPerWeek": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "unitGValue": "{value} g",
+  "@unitGValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "macroProtein": "Protein",
+  "macroFat": "Fat",
+  "macroCarbsShort": "Carbs",
+  "followUpThisWeek": "This week",
+  "followUpLegendMet": "Within targets",
+  "followUpLegendExceeded": "Above",
+  "followUpLegendShort": "Below",
+  "followUpLegendUnlogged": "Not logged",
+  "followUpDayCd": "{day}: {outcome}",
+  "@followUpDayCd": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      },
+      "outcome": {
+        "type": "String"
+      }
+    }
+  },
+  "followUpWeightTrend": "Weight trend",
+  "followUpLogging": "Logging",
+  "followUpLoggingCaption": "Meals logged",
+  "followUpAiBadge": "AI-generated summary",
+  "followUpAiReview": "Review it before using it in the consultation.",
+  "followUpDiaryToday": "Today's diary",
+  "followUpDiaryEmpty": "No meals logged today yet.",
+  "followUpFoodUnnamed": "Meal",
+  "followUpFoodPortion": "{name} · {grams} g",
+  "@followUpFoodPortion": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "grams": {
+        "type": "String"
+      }
+    }
+  },
+  "followUpEntryMeta": "{time} · {source}",
+  "@followUpEntryMeta": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "source": {
+        "type": "String"
+      }
+    }
+  },
+  "followUpProvenancePhoto": "photo",
+  "followUpProvenanceManual": "manual",
+  "followUpProvenanceOffPlan": "off plan",
+  "followUpEntryConfirmed": "Confirmed",
+  "followUpLastMeasurement": "Last clinical measurement",
+  "followUpReadOnly": "Read only: you can't write or correct diary entries.",
+  "protocolFasting": "Fasting",
+  "protocolNoShoes": "No shoes",
+  "protocolLightClothing": "Light clothing",
+  "protocolEmptyBladder": "Empty bladder",
+  "protocolSameScale": "Same scale",
+  "planActiveTargets": "Current targets",
+  "planVersionChip": "Version {version}",
+  "@planVersionChip": {
+    "placeholders": {
+      "version": {
+        "type": "int"
+      }
+    }
+  },
+  "planKcalPerDay": "kcal / day",
+  "planPublishedOn": "Published on {date}",
+  "@planPublishedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "planSeenSameDay": "{name} saw them the same day.",
+  "@planSeenSameDay": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "planSeenOn": "{name} saw them on {date}.",
+  "@planSeenOn": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "planSeen": "{name} has seen them.",
+  "@planSeen": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "planNotSeenYet": "{name} hasn't reviewed them yet.",
+  "@planNotSeenYet": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "planGuidelines": "Guidelines",
+  "planRestrictions": "Restrictions",
+  "planNone": "None",
+  "planHistory": "PLAN HISTORY",
+  "planVersionTitle": "Version {version}",
+  "@planVersionTitle": {
+    "placeholders": {
+      "version": {
+        "type": "int"
+      }
+    }
+  },
+  "planVersionLine": "{date} · {kcal} kcal",
+  "@planVersionLine": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "kcal": {
+        "type": "String"
+      }
+    }
+  },
+  "planAdjust": "Adjust plan",
+  "planEmptyTitle": "No plan yet",
+  "planEmptyBody": "The plan is published when the guided consultation is closed.",
+  "planVersionDetailPublished": "Published on {date}",
+  "@planVersionDetailPublished": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "planVersionDetailMessageToPatient": "Message to the patient",
+  "guidelinePrioritizeVegetables": "Prioritize vegetables",
+  "guidelineDrink2lWater": "Drink 2 L of water a day",
+  "guidelineAvoidSugaryDrinks": "Avoid sugary drinks",
+  "guidelineProteinAtBreakfast": "Protein at breakfast",
+  "guidelineReduceSalt": "Reduce salt",
+  "guidelineEatEvery3To4Hours": "Eat every 3 to 4 hours",
+  "guidelineProteinAndVegetablesAtDinner": "Protein and vegetables at dinner",
+  "restrictionLactoseFree": "Lactose-free",
+  "restrictionGlutenFree": "Gluten-free",
+  "restrictionVegan": "Vegan",
+  "restrictionVegetarian": "Vegetarian",
+  "restrictionTreeNutFree": "Tree-nut-free",
+  "restrictionShellfishFree": "Shellfish-free",
+  "restrictionKosher": "Kosher",
+  "restrictionHalal": "Halal",
+  "baselineTitle": "BASELINE DATA",
+  "baselineIntro": "Recorded only once. You can edit it later from the Summary tab.",
+  "baselineBirthDate": "Date of birth",
+  "baselineBirthDateRequired": "Choose the date of birth.",
+  "baselineBirthDateRange": "The date must be 1 to 120 years ago.",
+  "baselineAgeAuto": "Age: {age} (updates by itself)",
+  "@baselineAgeAuto": {
+    "placeholders": {
+      "age": {
+        "type": "String"
+      }
+    }
+  },
+  "baselineSex": "Biological sex",
+  "baselineSexRequired": "Choose the biological sex.",
+  "baselineHeight": "Height",
+  "baselineHeightRequired": "Enter the height in cm.",
+  "baselineHeightRange": "Height goes from 50 to 250 cm.",
+  "baselineConditions": "Medical history",
+  "baselineConditionsHint": "You can choose several.",
+  "baselineSaveAndStart": "Save and start consultation",
+  "baselineSaveAndExit": "Save and exit",
+  "baselineSave": "Save changes",
+  "baselineAgeYears": "{count, plural, one{{count} year} other{{count} years}}",
+  "@baselineAgeYears": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "daysOfTotal": "{total, plural, one{{met} of {total} day} other{{met} of {total} days}}",
+  "@daysOfTotal": {
+    "placeholders": {
+      "met": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryWeightCaption": "{weeks, plural, one{Trend · {weeks} week} other{Trend · {weeks} weeks}}",
+  "@summaryWeightCaption": {
+    "placeholders": {
+      "weeks": {
+        "type": "int"
+      }
+    }
+  },
+  "followUpWeightTrendCaption": "{weeks, plural, one{Self-weigh-in · {weeks} week} other{Self-weigh-in · {weeks} weeks}}",
+  "@followUpWeightTrendCaption": {
+    "placeholders": {
+      "weeks": {
+        "type": "int"
+      }
+    }
+  },
+  "patientTabRecord": "History",
+  "summaryStartConsultation": "New consultation",
+  "recordPrClinicalWeight": "Clinical weight",
+  "recordPrWeightDelta": "{delta} kg since {month}",
+  "@recordPrWeightDelta": {
+    "placeholders": {
+      "delta": {
+        "type": "String"
+      },
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "recordPrNoMeasurement": "No measurement yet",
+  "recordPrBmi": "BMI",
+  "recordPrBmiValue": "BMI {value}",
+  "@recordPrBmiValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "recordPrActiveTargets": "Current targets",
+  "recordPrVersionOn": "Version {version} · {date}",
+  "@recordPrVersionOn": {
+    "placeholders": {
+      "version": {
+        "type": "int"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "recordPrNoPlan": "No plan yet",
+  "recordPrActiveDiagnosis": "Active diagnosis",
+  "recordPrDiagnosisLine": "{label} · {date} · practitioner only",
+  "@recordPrDiagnosisLine": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "recordPrNoDiagnosis": "No diagnosis yet · practitioner only",
+  "recordPrReferralTitle": "Referral to {specialty}",
+  "@recordPrReferralTitle": {
+    "placeholders": {
+      "specialty": {
+        "type": "String"
+      }
+    }
+  },
+  "recordPrReferralLine": "{date} · {status}",
+  "@recordPrReferralLine": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "recordPrReferralOpen": "in progress",
+  "recordPrReferralClosed": "closed",
+  "recordPrEvaluations": "EVALUATIONS",
+  "recordPrNoEvaluations": "No evaluations yet",
+  "recordPrFirstEvaluation": "first evaluation",
+  "recordPrWaistValue": "waist {value} cm",
+  "@recordPrWaistValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "recordReferralsTitle": "Referrals",
+  "evaluationDetailTitle": "Assessment",
+  "referralDetailOpen": "Ongoing",
+  "referralDetailClosed": "Closed",
+  "referralDetailIssuedOn": "Recorded on {date}",
+  "@referralDetailIssuedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "referralDetailClosedOn": "closed on {date}",
+  "@referralDetailClosedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "referralDetailReason": "Reason",
+  "referralDetailNoReason": "No reason recorded.",
+  "historyRecordUnavailable": "We couldn't load the record.",
+  "activityInlineIntense": "intense activity",
+  "activityInlineLight": "light activity",
+  "activityInlineModerate": "moderate activity",
+  "activityInlineSedentary": "sedentary activity",
+  "activityIntense": "Intense",
+  "activityLight": "Light",
+  "activityModerate": "Moderate",
+  "activitySedentary": "Sedentary",
+  "checkInDifficultyCravings": "Cravings",
+  "checkInDifficultyDinners": "Dinners",
+  "checkInDifficultyEatingOut": "Eating out",
+  "checkInDifficultySchedules": "Schedules",
+  "checkInDifficultyWeekends": "Weekends",
+  "checkInReportDifficulties": "Found it hard: {list}.",
+  "checkInReportFeelingFair": "Felt so-so with the plan.",
+  "checkInReportFeelingGood": "Felt good with the plan.",
+  "checkInReportFeelingHard": "Found the plan hard to follow.",
+  "checkInReportQuestion": "Question: {question}",
+  "consultationDiscardBody": "The consultation with {patient} from today is discarded. Their current plan and targets stay the same.",
+  "consultationDiscardCd": "Delete the consultation",
+  "consultationDiscardConfirm": "Delete consultation",
+  "consultationDiscardKeep": "Keep it",
+  "consultationDiscardTitle": "DELETE THIS CONSULTATION?",
+  "consultationExitBody": "What you already saved stays saved. You can continue from “Consultation in progress” in {patient}'s summary.",
+  "consultationExitConfirm": "Leave and continue later",
+  "consultationExitStay": "Stay here",
+  "consultationExitTitle": "LEAVE THE CONSULTATION?",
+  "consultationOfflineBody": "You need a connection to continue the consultation. What you already saved isn't lost.",
+  "consultationTitle": "TODAY'S CONSULTATION",
+  "diagnosisAiBadge": "AI suggestion",
+  "diagnosisChooseOther": "Choose another",
+  "diagnosisContinue": "Continue to targets",
+  "diagnosisDisclaimer": "Based on the measurement and history of this evaluation. Review it before using it.",
+  "diagnosisNormalWeight": "Normal weight",
+  "diagnosisObesityGradeI": "Obesity grade I",
+  "diagnosisObesityGradeIi": "Obesity grade II",
+  "diagnosisObesityGradeIii": "Obesity grade III",
+  "diagnosisOverweightGradeI": "Overweight grade I",
+  "diagnosisRationale": "Clinical rationale",
+  "diagnosisRequired": "Choose a diagnosis to continue.",
+  "diagnosisRuleBadge": "Suggestion based on BMI",
+  "diagnosisSubtitle": "Only for your professional record. The patient won't see it.",
+  "diagnosisSuggestionUsed": "Suggestion chosen",
+  "diagnosisTitle": "Diagnosis",
+  "diagnosisUnderweight": "Underweight",
+  "diagnosisUseSuggestion": "Use suggestion",
+  "equationFaoWhoUnu": "FAO/WHO/UNU",
+  "equationHarrisBenedict": "Harris-Benedict",
+  "equationKatchMcardle": "Katch-McArdle",
+  "equationMifflinStJeor": "Mifflin-St Jeor",
+  "measurementActivity": "Current physical activity",
+  "measurementActivityRequired": "Choose the current physical activity.",
+  "measurementBiochemistry": "Biochemical data",
+  "measurementBiochemistryHint": "Glucose, cholesterol, triglycerides",
+  "measurementBmi": "Calculated BMI",
+  "measurementBodyFat": "Body fat",
+  "measurementBodyFatPlaceholder": "E.g. 24",
+  "measurementBodyFatRange": "From 3 to 70 %.",
+  "measurementCheckInSent": "Sent on {date} from their app.",
+  "measurementCheckInTitle": "Before the consultation, {name} shared",
+  "measurementCholesterol": "Total cholesterol",
+  "measurementCholesterolRange": "From 50 to 500 mg/dL.",
+  "measurementContinue": "Continue to diagnosis",
+  "measurementFromBaseline": "From the baseline data",
+  "measurementFromBaselineWith": "{conditions} · from the baseline data",
+  "measurementGlucose": "Fasting glucose",
+  "measurementGlucoseRange": "From 20 to 600 mg/dL.",
+  "measurementHabits": "Eating habits",
+  "measurementHabitsHint": "Meals per day, water, meals out",
+  "measurementMealsOut": "Meals out per week",
+  "measurementMealsOutRange": "From 0 to 21 meals.",
+  "measurementMealsPerDay": "Meals per day",
+  "measurementMealsPerDayRange": "From 1 to 10 meals.",
+  "measurementMeasures": "Measurements",
+  "measurementOptional": "OPTIONAL",
+  "measurementOptionalNote": "Waist and body fat are optional.",
+  "measurementProtocol": "Protocol used",
+  "measurementProtocolRequired": "Tick at least one protocol box.",
+  "measurementSubtitle": "Only what changes between consultations. The rest comes from the baseline data.",
+  "measurementTriglycerides": "Triglycerides",
+  "measurementTriglyceridesRange": "From 20 to 2000 mg/dL.",
+  "measurementWaist": "Waist",
+  "measurementWaistRange": "From 40 to 200 cm.",
+  "measurementWater": "Water",
+  "measurementWaterRange": "From 0 to 10 liters.",
+  "measurementWeight": "Weight",
+  "measurementWeightRange": "Weight goes from 20 to 350 kg.",
+  "measurementWeightRequired": "Enter the weight in kg.",
+  "publicationAddGuideline": "Add guideline",
+  "publicationChooseSeveral": "You can choose several.",
+  "publicationErrorBody": "We couldn't publish the plan. What you wrote wasn't lost.",
+  "publicationErrorRetry": "Try again",
+  "publicationErrorTitle": "SOMETHING WENT WRONG",
+  "publicationGuidelines": "Guidelines",
+  "publicationMessage": "Message for your patient",
+  "publicationMessageLabel": "Message (optional)",
+  "publicationMessagePlaceholder": "They'll see it with their targets.",
+  "publicationMessageTooLong": "Use at most 500 characters.",
+  "publicationOtherGuideline": "Other guideline",
+  "publicationOtherGuidelineLength": "Write 3 to 140 characters.",
+  "publicationOtherGuidelineMax": "You can add up to 5 guidelines of your own.",
+  "publicationPatientSees": "Your patient will see the targets, guidelines and restrictions. They won't see the diagnosis.",
+  "publicationPublish": "Publish and close consultation",
+  "publicationRestrictions": "Restrictions",
+  "publicationSuggestedAi": "Suggested by AI based on the diagnosis",
+  "publicationSuggestedRule": "Suggested based on the diagnosis",
+  "targetsAccept": "Accept targets",
+  "targetsActivityFactor": "activity factor {factor}",
+  "targetsCalculatedWith": "Calculated with",
+  "targetsChangeParameters": "Change parameters",
+  "targetsDeficit": "Deficit",
+  "targetsDeficitKcal": "{value} kcal deficit",
+  "targetsDeficitKindKcal": "Fixed kcal",
+  "targetsDeficitKindPercent": "% of expenditure",
+  "targetsDeficitPercent": "{value} % deficit",
+  "targetsDeficitValue": "Deficit value",
+  "targetsEnergy": "Energy",
+  "targetsEnergyInvalid": "Enter an energy greater than 0.",
+  "targetsEquation": "Equation",
+  "targetsFatPercent": "Fat share of energy",
+  "targetsKcalPerDay": "kcal per day",
+  "targetsMacroShare": "{label} · {percent} %",
+  "targetsOverrideReason": "Reason for the change",
+  "targetsOverrideReasonPlaceholder": "E.g. Adjusted to their work schedule",
+  "targetsOverrideReasonRequired": "Write the reason for the change: it stays in the record.",
+  "targetsOverrideSave": "Save and continue",
+  "targetsOverrideTitle": "Your own values",
+  "targetsParametersInvalid": "Check the values: deficit 0–1500 kcal or 0–40 %, protein 0.5–3 g/kg and fat 15–45 %.",
+  "targetsParametersTitle": "Change parameters",
+  "targetsProposed": "Proposed targets",
+  "targetsProteinPerKg": "Protein",
+  "targetsRecalculate": "Recalculate targets",
+  "targetsSubtitle": "Calculated automatically from the baseline data and today's measurement.",
+  "targetsWriteOwn": "Write my own values",
+  "textCounter": "{count}/{max}",
+  "unitBmiValue": "{value} kg/m²",
+  "unitG": "g",
+  "unitGPerKg": "g/kg",
+  "unitKcal": "kcal",
+  "unitKg": "kg",
+  "unitLitersPerDay": "L/day",
+  "unitMgDl": "mg/dL",
+  "unitPercent": "%",
+  "aiGeneratingNote": "Generating with AI. It can take up to a minute.",
+  "diagnosisSuggestionFailedTitle": "We couldn't generate the AI suggestion",
+  "diagnosisSuggestionFailedBody": "You can pick the diagnosis from the list or try again. What you already chose is kept.",
+  "publicationSuggestionsFailed": "We couldn't load the AI-suggested guidelines. You can choose your own or try again.",
+  "targetsCalculating": "Calculating the targets…",
   "shellSignalResolved": "Signal resolved. {name} is no longer in your inbox.",
   "shellSignalResolvedGeneric": "Signal resolved. It's no longer in your inbox.",
   "shellFollowUpScheduled": "Consultation scheduled: {day}, {time}",
-  "shellFollowUpRescheduled": "Consultation rescheduled: {day}, {time}"
+  "shellFollowUpRescheduled": "Consultation rescheduled: {day}, {time}",
+  "summarySchedule": "Schedule consultation",
+  "summaryReferral": "Register referral"
 }
