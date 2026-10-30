@@ -163,5 +163,37 @@
         "type": "String"
       }
     }
-  }
+  },
+  "inviteTitle": "INVITAR PACIENTE",
+  "inviteInstructions": "Muéstrale este código a tu paciente para que lo escanee desde su teléfono, aquí en consulta.",
+  "inviteExpiresInLabel": "Vence en",
+  "inviteValidityOneHour": "1 hora",
+  "inviteValidityOneDay": "24 horas",
+  "inviteValiditySevenDays": "7 días",
+  "inviteQrCd": "Código QR de la invitación",
+  "inviteCountdown": "Vence en {time} · un solo uso",
+  "@inviteCountdown": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "inviteCountdownDays": "{days} d {clock}",
+  "@inviteCountdownDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      },
+      "clock": {
+        "type": "String"
+      }
+    }
+  },
+  "inviteExpired": "Este código venció. Genera otro para tu paciente.",
+  "inviteGenerateAnother": "Generar otro código",
+  "invitePreviousStillValid": "El código anterior seguirá siendo válido hasta que venza.",
+  "inviteGenerating": "Generando código…",
+  "inviteErrorOffline": "Necesitas conexión para generar una invitación.",
+  "inviteErrorExpirationRequired": "Elige cuándo vence este código."
 }

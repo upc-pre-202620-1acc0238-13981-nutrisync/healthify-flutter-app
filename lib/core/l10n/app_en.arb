@@ -128,5 +128,20 @@
   "rosterReasonBaseline": "Baseline data missing",
   "rosterReasonPlan": "Plan not published yet",
   "rosterNoResultsTitle": "No results",
-  "rosterNoResultsBody": "No patient matches “{query}”."
+  "rosterNoResultsBody": "No patient matches “{query}”.",
+  "inviteTitle": "INVITE PATIENT",
+  "inviteInstructions": "Show this code to your patient so they can scan it with their phone, here in the consultation.",
+  "inviteExpiresInLabel": "Expires in",
+  "inviteValidityOneHour": "1 hour",
+  "inviteValidityOneDay": "24 hours",
+  "inviteValiditySevenDays": "7 days",
+  "inviteQrCd": "Invitation QR code",
+  "inviteCountdown": "Expires in {time} · single use",
+  "inviteCountdownDays": "{days} d {clock}",
+  "inviteExpired": "This code expired. Generate another one for your patient.",
+  "inviteGenerateAnother": "Generate another code",
+  "invitePreviousStillValid": "The previous code stays valid until it expires.",
+  "inviteGenerating": "Generating code…",
+  "inviteErrorOffline": "You need a connection to generate an invitation.",
+  "inviteErrorExpirationRequired": "Choose when this code expires."
 }

@@ -871,6 +871,96 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Ningún paciente coincide con «{query}».'**
   String rosterNoResultsBody(String query);
+
+  /// No description provided for @inviteTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'INVITAR PACIENTE'**
+  String get inviteTitle;
+
+  /// No description provided for @inviteInstructions.
+  ///
+  /// In es, this message translates to:
+  /// **'Muéstrale este código a tu paciente para que lo escanee desde su teléfono, aquí en consulta.'**
+  String get inviteInstructions;
+
+  /// No description provided for @inviteExpiresInLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Vence en'**
+  String get inviteExpiresInLabel;
+
+  /// No description provided for @inviteValidityOneHour.
+  ///
+  /// In es, this message translates to:
+  /// **'1 hora'**
+  String get inviteValidityOneHour;
+
+  /// No description provided for @inviteValidityOneDay.
+  ///
+  /// In es, this message translates to:
+  /// **'24 horas'**
+  String get inviteValidityOneDay;
+
+  /// No description provided for @inviteValiditySevenDays.
+  ///
+  /// In es, this message translates to:
+  /// **'7 días'**
+  String get inviteValiditySevenDays;
+
+  /// No description provided for @inviteQrCd.
+  ///
+  /// In es, this message translates to:
+  /// **'Código QR de la invitación'**
+  String get inviteQrCd;
+
+  /// No description provided for @inviteCountdown.
+  ///
+  /// In es, this message translates to:
+  /// **'Vence en {time} · un solo uso'**
+  String inviteCountdown(String time);
+
+  /// No description provided for @inviteCountdownDays.
+  ///
+  /// In es, this message translates to:
+  /// **'{days} d {clock}'**
+  String inviteCountdownDays(int days, String clock);
+
+  /// No description provided for @inviteExpired.
+  ///
+  /// In es, this message translates to:
+  /// **'Este código venció. Genera otro para tu paciente.'**
+  String get inviteExpired;
+
+  /// No description provided for @inviteGenerateAnother.
+  ///
+  /// In es, this message translates to:
+  /// **'Generar otro código'**
+  String get inviteGenerateAnother;
+
+  /// No description provided for @invitePreviousStillValid.
+  ///
+  /// In es, this message translates to:
+  /// **'El código anterior seguirá siendo válido hasta que venza.'**
+  String get invitePreviousStillValid;
+
+  /// No description provided for @inviteGenerating.
+  ///
+  /// In es, this message translates to:
+  /// **'Generando código…'**
+  String get inviteGenerating;
+
+  /// No description provided for @inviteErrorOffline.
+  ///
+  /// In es, this message translates to:
+  /// **'Necesitas conexión para generar una invitación.'**
+  String get inviteErrorOffline;
+
+  /// No description provided for @inviteErrorExpirationRequired.
+  ///
+  /// In es, this message translates to:
+  /// **'Elige cuándo vence este código.'**
+  String get inviteErrorExpirationRequired;
 }
 
 class _AppLocalizationsDelegate

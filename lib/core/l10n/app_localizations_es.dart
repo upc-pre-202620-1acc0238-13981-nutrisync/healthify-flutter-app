@@ -427,4 +427,57 @@ class AppLocalizationsEs extends AppLocalizations {
   String rosterNoResultsBody(String query) {
     return 'Ningún paciente coincide con «$query».';
   }
+
+  @override
+  String get inviteTitle => 'INVITAR PACIENTE';
+
+  @override
+  String get inviteInstructions =>
+      'Muéstrale este código a tu paciente para que lo escanee desde su teléfono, aquí en consulta.';
+
+  @override
+  String get inviteExpiresInLabel => 'Vence en';
+
+  @override
+  String get inviteValidityOneHour => '1 hora';
+
+  @override
+  String get inviteValidityOneDay => '24 horas';
+
+  @override
+  String get inviteValiditySevenDays => '7 días';
+
+  @override
+  String get inviteQrCd => 'Código QR de la invitación';
+
+  @override
+  String inviteCountdown(String time) {
+    return 'Vence en $time · un solo uso';
+  }
+
+  @override
+  String inviteCountdownDays(int days, String clock) {
+    return '$days d $clock';
+  }
+
+  @override
+  String get inviteExpired =>
+      'Este código venció. Genera otro para tu paciente.';
+
+  @override
+  String get inviteGenerateAnother => 'Generar otro código';
+
+  @override
+  String get invitePreviousStillValid =>
+      'El código anterior seguirá siendo válido hasta que venza.';
+
+  @override
+  String get inviteGenerating => 'Generando código…';
+
+  @override
+  String get inviteErrorOffline =>
+      'Necesitas conexión para generar una invitación.';
+
+  @override
+  String get inviteErrorExpirationRequired => 'Elige cuándo vence este código.';
 }

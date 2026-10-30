@@ -430,4 +430,57 @@ class AppLocalizationsEn extends AppLocalizations {
   String rosterNoResultsBody(String query) {
     return 'No patient matches “$query”.';
   }
+
+  @override
+  String get inviteTitle => 'INVITE PATIENT';
+
+  @override
+  String get inviteInstructions =>
+      'Show this code to your patient so they can scan it with their phone, here in the consultation.';
+
+  @override
+  String get inviteExpiresInLabel => 'Expires in';
+
+  @override
+  String get inviteValidityOneHour => '1 hour';
+
+  @override
+  String get inviteValidityOneDay => '24 hours';
+
+  @override
+  String get inviteValiditySevenDays => '7 days';
+
+  @override
+  String get inviteQrCd => 'Invitation QR code';
+
+  @override
+  String inviteCountdown(String time) {
+    return 'Expires in $time · single use';
+  }
+
+  @override
+  String inviteCountdownDays(int days, String clock) {
+    return '$days d $clock';
+  }
+
+  @override
+  String get inviteExpired =>
+      'This code expired. Generate another one for your patient.';
+
+  @override
+  String get inviteGenerateAnother => 'Generate another code';
+
+  @override
+  String get invitePreviousStillValid =>
+      'The previous code stays valid until it expires.';
+
+  @override
+  String get inviteGenerating => 'Generating code…';
+
+  @override
+  String get inviteErrorOffline =>
+      'You need a connection to generate an invitation.';
+
+  @override
+  String get inviteErrorExpirationRequired => 'Choose when this code expires.';
 }
