@@ -11,7 +11,7 @@ void registerMain() {
   getIt
     // One bus for the whole app: full-screen routes leave their message there for the shell underneath.
     ..registerLazySingleton<PractitionerShellMessages>(PractitionerShellMessages.new)
-    ..registerFactory(() => PractitionerShellCubit(getIt(), getIt<PractitionerShellMessages>()))
+    ..registerFactory(() => PractitionerShellCubit(getIt(), getIt<PractitionerShellMessages>(), getIt()))
     ..registerFactory(() => PractitionerSettingsCubit(getIt(), getIt(), getIt(), getIt(), getIt<ConnectivityObserver>()))
     ..registerFactory(() => SignOutCubit(getIt()))
     ..registerFactoryParam<PatientHistoryCubit, int, void>(

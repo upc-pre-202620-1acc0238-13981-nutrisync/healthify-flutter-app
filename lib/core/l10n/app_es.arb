@@ -1373,5 +1373,28 @@
         "type": "int"
       }
     }
+  },
+  "consultationReminderChannelName": "Consultas",
+  "consultationReminderChannelDescription": "Avisos antes de cada consulta agendada.",
+  "consultationReminderTitleDay": "Consulta mañana",
+  "consultationReminderTitleHour": "Consulta en una hora",
+  "consultationReminderText": "Con {patientName} a las {time}.",
+  "@consultationReminderText": {
+    "placeholders": {
+      "patientName": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "consultationReminderTextNoName": "Con tu paciente a las {time}.",
+  "@consultationReminderTextNoName": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
   }
 }

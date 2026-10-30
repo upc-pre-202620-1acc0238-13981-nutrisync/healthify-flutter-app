@@ -3851,6 +3851,42 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'{count, plural, one{{count} ítem pendiente por revisar} other{{count} ítems pendientes por revisar}}'**
   String inboxPendingCount(int count);
+
+  /// No description provided for @consultationReminderChannelName.
+  ///
+  /// In es, this message translates to:
+  /// **'Consultas'**
+  String get consultationReminderChannelName;
+
+  /// No description provided for @consultationReminderChannelDescription.
+  ///
+  /// In es, this message translates to:
+  /// **'Avisos antes de cada consulta agendada.'**
+  String get consultationReminderChannelDescription;
+
+  /// No description provided for @consultationReminderTitleDay.
+  ///
+  /// In es, this message translates to:
+  /// **'Consulta mañana'**
+  String get consultationReminderTitleDay;
+
+  /// No description provided for @consultationReminderTitleHour.
+  ///
+  /// In es, this message translates to:
+  /// **'Consulta en una hora'**
+  String get consultationReminderTitleHour;
+
+  /// No description provided for @consultationReminderText.
+  ///
+  /// In es, this message translates to:
+  /// **'Con {patientName} a las {time}.'**
+  String consultationReminderText(String patientName, String time);
+
+  /// No description provided for @consultationReminderTextNoName.
+  ///
+  /// In es, this message translates to:
+  /// **'Con tu paciente a las {time}.'**
+  String consultationReminderTextNoName(String time);
 }
 
 class _AppLocalizationsDelegate

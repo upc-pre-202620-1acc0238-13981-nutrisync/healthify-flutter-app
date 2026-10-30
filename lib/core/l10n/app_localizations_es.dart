@@ -2183,4 +2183,27 @@ class AppLocalizationsEs extends AppLocalizations {
     );
     return '$_temp0';
   }
+
+  @override
+  String get consultationReminderChannelName => 'Consultas';
+
+  @override
+  String get consultationReminderChannelDescription =>
+      'Avisos antes de cada consulta agendada.';
+
+  @override
+  String get consultationReminderTitleDay => 'Consulta mañana';
+
+  @override
+  String get consultationReminderTitleHour => 'Consulta en una hora';
+
+  @override
+  String consultationReminderText(String patientName, String time) {
+    return 'Con $patientName a las $time.';
+  }
+
+  @override
+  String consultationReminderTextNoName(String time) {
+    return 'Con tu paciente a las $time.';
+  }
 }

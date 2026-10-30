@@ -959,5 +959,11 @@
   "summarySchedule": "Schedule consultation",
   "summaryReferral": "Register referral",
   "agendaViewPatient": "View patient",
-  "inboxPendingCount": "{count, plural, one{{count} item waiting for review} other{{count} items waiting for review}}"
+  "inboxPendingCount": "{count, plural, one{{count} item waiting for review} other{{count} items waiting for review}}",
+  "consultationReminderChannelName": "Consultations",
+  "consultationReminderChannelDescription": "Notices before each scheduled consultation.",
+  "consultationReminderTitleDay": "Consultation tomorrow",
+  "consultationReminderTitleHour": "Consultation in one hour",
+  "consultationReminderText": "With {patientName} at {time}.",
+  "consultationReminderTextNoName": "With your patient at {time}."
 }
