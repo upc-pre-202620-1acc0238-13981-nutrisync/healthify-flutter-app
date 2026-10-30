@@ -112,4 +112,45 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get navAgenda => 'Agenda';
+
+  @override
+  String get authEmail => 'Correo electrónico';
+
+  @override
+  String get authEmailPlaceholder => 'tucorreo@ejemplo.com';
+
+  @override
+  String get authPassword => 'Contraseña';
+
+  @override
+  String get signInTitle => 'INICIAR SESIÓN';
+
+  @override
+  String get signInSubtitle =>
+      'Entra con tu correo. Te llevaremos a tu espacio según tu tipo de cuenta.';
+
+  @override
+  String get signInPasswordPlaceholder => 'Tu contraseña';
+
+  @override
+  String get signInForgotPassword => '¿Olvidaste tu contraseña?';
+
+  @override
+  String get signInSubmit => 'Iniciar sesión';
+
+  @override
+  String get signInSubmitting => 'Entrando…';
+
+  @override
+  String get signInCreateAccount => 'Crear cuenta';
+
+  @override
+  String get signInErrorCredentials => 'Correo o contraseña incorrectos';
+
+  @override
+  String get signInLockedTitle => 'Tu cuenta está bloqueada temporalmente';
+
+  @override
+  String get signInLockedBody =>
+      'Por seguridad, tras 5 intentos fallidos. Inténtalo más tarde o recupera tu contraseña.';
 }

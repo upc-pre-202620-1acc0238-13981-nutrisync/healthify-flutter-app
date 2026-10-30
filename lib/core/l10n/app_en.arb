@@ -32,5 +32,18 @@
   "statusChipOffPlan": "Off plan",
   "navPatients": "Patients",
   "navInbox": "Inbox",
-  "navAgenda": "Schedule"
+  "navAgenda": "Schedule",
+  "authEmail": "Email",
+  "authEmailPlaceholder": "youremail@example.com",
+  "authPassword": "Password",
+  "signInTitle": "SIGN IN",
+  "signInSubtitle": "Sign in with your email. We'll take you to your space based on your account type.",
+  "signInPasswordPlaceholder": "Your password",
+  "signInForgotPassword": "Forgot your password?",
+  "signInSubmit": "Sign in",
+  "signInSubmitting": "Signing in…",
+  "signInCreateAccount": "Create account",
+  "signInErrorCredentials": "Incorrect email or password",
+  "signInLockedTitle": "Your account is temporarily locked",
+  "signInLockedBody": "For your security, after 5 failed attempts. Try again later or recover your password."
 }

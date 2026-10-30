@@ -32,5 +32,18 @@
   "statusChipOffPlan": "Fuera del plan",
   "navPatients": "Pacientes",
   "navInbox": "Bandeja",
-  "navAgenda": "Agenda"
+  "navAgenda": "Agenda",
+  "authEmail": "Correo electrónico",
+  "authEmailPlaceholder": "tucorreo@ejemplo.com",
+  "authPassword": "Contraseña",
+  "signInTitle": "INICIAR SESIÓN",
+  "signInSubtitle": "Entra con tu correo. Te llevaremos a tu espacio según tu tipo de cuenta.",
+  "signInPasswordPlaceholder": "Tu contraseña",
+  "signInForgotPassword": "¿Olvidaste tu contraseña?",
+  "signInSubmit": "Iniciar sesión",
+  "signInSubmitting": "Entrando…",
+  "signInCreateAccount": "Crear cuenta",
+  "signInErrorCredentials": "Correo o contraseña incorrectos",
+  "signInLockedTitle": "Tu cuenta está bloqueada temporalmente",
+  "signInLockedBody": "Por seguridad, tras 5 intentos fallidos. Inténtalo más tarde o recupera tu contraseña."
 }

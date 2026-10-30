@@ -295,6 +295,84 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Agenda'**
   String get navAgenda;
+
+  /// No description provided for @authEmail.
+  ///
+  /// In es, this message translates to:
+  /// **'Correo electrónico'**
+  String get authEmail;
+
+  /// No description provided for @authEmailPlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'tucorreo@ejemplo.com'**
+  String get authEmailPlaceholder;
+
+  /// No description provided for @authPassword.
+  ///
+  /// In es, this message translates to:
+  /// **'Contraseña'**
+  String get authPassword;
+
+  /// No description provided for @signInTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'INICIAR SESIÓN'**
+  String get signInTitle;
+
+  /// No description provided for @signInSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Entra con tu correo. Te llevaremos a tu espacio según tu tipo de cuenta.'**
+  String get signInSubtitle;
+
+  /// No description provided for @signInPasswordPlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu contraseña'**
+  String get signInPasswordPlaceholder;
+
+  /// No description provided for @signInForgotPassword.
+  ///
+  /// In es, this message translates to:
+  /// **'¿Olvidaste tu contraseña?'**
+  String get signInForgotPassword;
+
+  /// No description provided for @signInSubmit.
+  ///
+  /// In es, this message translates to:
+  /// **'Iniciar sesión'**
+  String get signInSubmit;
+
+  /// No description provided for @signInSubmitting.
+  ///
+  /// In es, this message translates to:
+  /// **'Entrando…'**
+  String get signInSubmitting;
+
+  /// No description provided for @signInCreateAccount.
+  ///
+  /// In es, this message translates to:
+  /// **'Crear cuenta'**
+  String get signInCreateAccount;
+
+  /// No description provided for @signInErrorCredentials.
+  ///
+  /// In es, this message translates to:
+  /// **'Correo o contraseña incorrectos'**
+  String get signInErrorCredentials;
+
+  /// No description provided for @signInLockedTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu cuenta está bloqueada temporalmente'**
+  String get signInLockedTitle;
+
+  /// No description provided for @signInLockedBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Por seguridad, tras 5 intentos fallidos. Inténtalo más tarde o recupera tu contraseña.'**
+  String get signInLockedBody;
 }
 
 class _AppLocalizationsDelegate
