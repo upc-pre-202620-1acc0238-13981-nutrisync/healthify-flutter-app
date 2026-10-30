@@ -110,6 +110,12 @@ abstract class AppLocalizations {
   /// **'Cerrar'**
   String get commonClose;
 
+  /// No description provided for @commonUnderstood.
+  ///
+  /// In es, this message translates to:
+  /// **'Entendido'**
+  String get commonUnderstood;
+
   /// No description provided for @errorNetwork.
   ///
   /// In es, this message translates to:
@@ -763,6 +769,384 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Cerrar sesión'**
   String get practitionerOnlySignOut;
+
+  /// No description provided for @menuCdOpen.
+  ///
+  /// In es, this message translates to:
+  /// **'Abrir menú'**
+  String get menuCdOpen;
+
+  /// No description provided for @menuRolePractitioner.
+  ///
+  /// In es, this message translates to:
+  /// **'Nutricionista'**
+  String get menuRolePractitioner;
+
+  /// No description provided for @menuSettings.
+  ///
+  /// In es, this message translates to:
+  /// **'Ajustes'**
+  String get menuSettings;
+
+  /// No description provided for @menuSignOut.
+  ///
+  /// In es, this message translates to:
+  /// **'Cerrar sesión'**
+  String get menuSignOut;
+
+  /// No description provided for @settingsTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'AJUSTES'**
+  String get settingsTitle;
+
+  /// No description provided for @settingsAccount.
+  ///
+  /// In es, this message translates to:
+  /// **'Mi cuenta'**
+  String get settingsAccount;
+
+  /// No description provided for @settingsLanguage.
+  ///
+  /// In es, this message translates to:
+  /// **'Idioma'**
+  String get settingsLanguage;
+
+  /// No description provided for @settingsLanguageSheetTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'IDIOMA'**
+  String get settingsLanguageSheetTitle;
+
+  /// No description provided for @signOutTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'¿CERRAR SESIÓN?'**
+  String get signOutTitle;
+
+  /// No description provided for @signOutBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Tendrás que volver a ingresar tu correo y contraseña. Tus pacientes y sus datos quedan guardados.'**
+  String get signOutBody;
+
+  /// No description provided for @signOutConfirm.
+  ///
+  /// In es, this message translates to:
+  /// **'Cerrar sesión'**
+  String get signOutConfirm;
+
+  /// No description provided for @signOutInProgress.
+  ///
+  /// In es, this message translates to:
+  /// **'Cerrando sesión…'**
+  String get signOutInProgress;
+
+  /// No description provided for @shellPatientDischarged.
+  ///
+  /// In es, this message translates to:
+  /// **'Alta registrada: {patientName} ya no está en tu cartera.'**
+  String shellPatientDischarged(String patientName);
+
+  /// No description provided for @practitionerNoActiveLinkTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin vínculo activo'**
+  String get practitionerNoActiveLinkTitle;
+
+  /// No description provided for @practitionerNoActiveLinkBody.
+  ///
+  /// In es, this message translates to:
+  /// **'No tienes un vínculo activo con este paciente.'**
+  String get practitionerNoActiveLinkBody;
+
+  /// No description provided for @rosterTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'MIS PACIENTES'**
+  String get rosterTitle;
+
+  /// No description provided for @rosterInvite.
+  ///
+  /// In es, this message translates to:
+  /// **'Invitar paciente'**
+  String get rosterInvite;
+
+  /// No description provided for @rosterEmptyTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin pacientes aún'**
+  String get rosterEmptyTitle;
+
+  /// No description provided for @rosterEmptyBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Invita a tu primer paciente generando un código QR durante la consulta.'**
+  String get rosterEmptyBody;
+
+  /// No description provided for @rosterOfflineTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Necesitas conexión'**
+  String get rosterOfflineTitle;
+
+  /// No description provided for @rosterOfflineBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu cartera y los datos de tus pacientes no se guardan en el teléfono. Vuelve a intentarlo cuando tengas conexión.'**
+  String get rosterOfflineBody;
+
+  /// No description provided for @rosterSearch.
+  ///
+  /// In es, this message translates to:
+  /// **'Buscar paciente'**
+  String get rosterSearch;
+
+  /// No description provided for @rosterSearchPlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'Buscar paciente…'**
+  String get rosterSearchPlaceholder;
+
+  /// No description provided for @rosterNeedsAction.
+  ///
+  /// In es, this message translates to:
+  /// **'Requieren acción · {count}'**
+  String rosterNeedsAction(int count);
+
+  /// No description provided for @rosterUpToDate.
+  ///
+  /// In es, this message translates to:
+  /// **'Al día · {count}'**
+  String rosterUpToDate(int count);
+
+  /// No description provided for @rosterUpToDateBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin pendientes'**
+  String get rosterUpToDateBody;
+
+  /// No description provided for @rosterReasonOpenReview.
+  ///
+  /// In es, this message translates to:
+  /// **'Señal por revisar'**
+  String get rosterReasonOpenReview;
+
+  /// No description provided for @rosterReasonConsultation.
+  ///
+  /// In es, this message translates to:
+  /// **'Consulta por terminar'**
+  String get rosterReasonConsultation;
+
+  /// No description provided for @rosterReasonBaseline.
+  ///
+  /// In es, this message translates to:
+  /// **'Faltan datos base'**
+  String get rosterReasonBaseline;
+
+  /// No description provided for @rosterReasonPlan.
+  ///
+  /// In es, this message translates to:
+  /// **'Falta publicar el plan'**
+  String get rosterReasonPlan;
+
+  /// No description provided for @rosterNoResultsTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin resultados'**
+  String get rosterNoResultsTitle;
+
+  /// No description provided for @rosterNoResultsBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Ningún paciente coincide con «{query}».'**
+  String rosterNoResultsBody(String query);
+
+  /// No description provided for @inviteTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'INVITAR PACIENTE'**
+  String get inviteTitle;
+
+  /// No description provided for @inviteInstructions.
+  ///
+  /// In es, this message translates to:
+  /// **'Muéstrale este código a tu paciente para que lo escanee desde su teléfono, aquí en consulta.'**
+  String get inviteInstructions;
+
+  /// No description provided for @inviteExpiresInLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Vence en'**
+  String get inviteExpiresInLabel;
+
+  /// No description provided for @inviteValidityOneHour.
+  ///
+  /// In es, this message translates to:
+  /// **'1 hora'**
+  String get inviteValidityOneHour;
+
+  /// No description provided for @inviteValidityOneDay.
+  ///
+  /// In es, this message translates to:
+  /// **'24 horas'**
+  String get inviteValidityOneDay;
+
+  /// No description provided for @inviteValiditySevenDays.
+  ///
+  /// In es, this message translates to:
+  /// **'7 días'**
+  String get inviteValiditySevenDays;
+
+  /// No description provided for @inviteQrCd.
+  ///
+  /// In es, this message translates to:
+  /// **'Código QR de la invitación'**
+  String get inviteQrCd;
+
+  /// No description provided for @inviteCountdown.
+  ///
+  /// In es, this message translates to:
+  /// **'Vence en {time} · un solo uso'**
+  String inviteCountdown(String time);
+
+  /// No description provided for @inviteCountdownDays.
+  ///
+  /// In es, this message translates to:
+  /// **'{days} d {clock}'**
+  String inviteCountdownDays(int days, String clock);
+
+  /// No description provided for @inviteExpired.
+  ///
+  /// In es, this message translates to:
+  /// **'Este código venció. Genera otro para tu paciente.'**
+  String get inviteExpired;
+
+  /// No description provided for @inviteGenerateAnother.
+  ///
+  /// In es, this message translates to:
+  /// **'Generar otro código'**
+  String get inviteGenerateAnother;
+
+  /// No description provided for @invitePreviousStillValid.
+  ///
+  /// In es, this message translates to:
+  /// **'El código anterior seguirá siendo válido hasta que venza.'**
+  String get invitePreviousStillValid;
+
+  /// No description provided for @inviteGenerating.
+  ///
+  /// In es, this message translates to:
+  /// **'Generando código…'**
+  String get inviteGenerating;
+
+  /// No description provided for @inviteErrorOffline.
+  ///
+  /// In es, this message translates to:
+  /// **'Necesitas conexión para generar una invitación.'**
+  String get inviteErrorOffline;
+
+  /// No description provided for @inviteErrorExpirationRequired.
+  ///
+  /// In es, this message translates to:
+  /// **'Elige cuándo vence este código.'**
+  String get inviteErrorExpirationRequired;
+
+  /// No description provided for @dischargeTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'DAR DE ALTA'**
+  String get dischargeTitle;
+
+  /// No description provided for @dischargeBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Esto cierra el tratamiento con este paciente. Un vínculo dado de alta no se puede reactivar.'**
+  String get dischargeBody;
+
+  /// No description provided for @dischargeReason.
+  ///
+  /// In es, this message translates to:
+  /// **'Motivo clínico'**
+  String get dischargeReason;
+
+  /// No description provided for @dischargeReasonPlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'Obligatorio…'**
+  String get dischargeReasonPlaceholder;
+
+  /// No description provided for @dischargeReasonMissing.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribe el motivo clínico del alta'**
+  String get dischargeReasonMissing;
+
+  /// No description provided for @dischargeAction.
+  ///
+  /// In es, this message translates to:
+  /// **'Dar de alta'**
+  String get dischargeAction;
+
+  /// No description provided for @dischargeProcessing.
+  ///
+  /// In es, this message translates to:
+  /// **'Procesando…'**
+  String get dischargeProcessing;
+
+  /// No description provided for @dischargeDialogTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'¿DAR DE ALTA?'**
+  String get dischargeDialogTitle;
+
+  /// No description provided for @dischargeDialogBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Este vínculo no se podrá reactivar después. El motivo clínico queda registrado.'**
+  String get dischargeDialogBody;
+
+  /// No description provided for @dischargeDialogConfirm.
+  ///
+  /// In es, this message translates to:
+  /// **'Sí, dar de alta'**
+  String get dischargeDialogConfirm;
+
+  /// No description provided for @dischargeAlreadyTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Alta ya registrada'**
+  String get dischargeAlreadyTitle;
+
+  /// No description provided for @dischargeAlreadyBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Este paciente ya había sido dado de alta.'**
+  String get dischargeAlreadyBody;
+
+  /// No description provided for @shellSignalResolved.
+  ///
+  /// In es, this message translates to:
+  /// **'Señal resuelta. {name} ya no aparece en tu bandeja.'**
+  String shellSignalResolved(String name);
+
+  /// No description provided for @shellSignalResolvedGeneric.
+  ///
+  /// In es, this message translates to:
+  /// **'Señal resuelta. Ya no aparece en tu bandeja.'**
+  String get shellSignalResolvedGeneric;
+
+  /// No description provided for @shellFollowUpScheduled.
+  ///
+  /// In es, this message translates to:
+  /// **'Consulta agendada: {day}, {time}'**
+  String shellFollowUpScheduled(String day, String time);
+
+  /// No description provided for @shellFollowUpRescheduled.
+  ///
+  /// In es, this message translates to:
+  /// **'Consulta reprogramada: {day}, {time}'**
+  String shellFollowUpRescheduled(String day, String time);
 }
 
 class _AppLocalizationsDelegate

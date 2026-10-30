@@ -16,6 +16,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get commonClose => 'Close';
 
   @override
+  String get commonUnderstood => 'Got it';
+
+  @override
   String get errorNetwork =>
       'You\'re offline. Check your connection and try again.';
 
@@ -368,4 +371,224 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get practitionerOnlySignOut => 'Sign out';
+
+  @override
+  String get menuCdOpen => 'Open menu';
+
+  @override
+  String get menuRolePractitioner => 'Nutritionist';
+
+  @override
+  String get menuSettings => 'Settings';
+
+  @override
+  String get menuSignOut => 'Sign out';
+
+  @override
+  String get settingsTitle => 'SETTINGS';
+
+  @override
+  String get settingsAccount => 'My account';
+
+  @override
+  String get settingsLanguage => 'Language';
+
+  @override
+  String get settingsLanguageSheetTitle => 'LANGUAGE';
+
+  @override
+  String get signOutTitle => 'SIGN OUT?';
+
+  @override
+  String get signOutBody =>
+      'You\'ll have to enter your email and password again. Your patients and their data stay saved.';
+
+  @override
+  String get signOutConfirm => 'Sign out';
+
+  @override
+  String get signOutInProgress => 'Signing out…';
+
+  @override
+  String shellPatientDischarged(String patientName) {
+    return 'Discharge recorded: $patientName is no longer in your roster.';
+  }
+
+  @override
+  String get practitionerNoActiveLinkTitle => 'No active link';
+
+  @override
+  String get practitionerNoActiveLinkBody =>
+      'You don\'t have an active link with this patient.';
+
+  @override
+  String get rosterTitle => 'MY PATIENTS';
+
+  @override
+  String get rosterInvite => 'Invite patient';
+
+  @override
+  String get rosterEmptyTitle => 'No patients yet';
+
+  @override
+  String get rosterEmptyBody =>
+      'Invite your first patient by generating a QR code during the consultation.';
+
+  @override
+  String get rosterOfflineTitle => 'You need a connection';
+
+  @override
+  String get rosterOfflineBody =>
+      'Your roster and your patients\' data are not stored on the phone. Try again when you\'re connected.';
+
+  @override
+  String get rosterSearch => 'Search patient';
+
+  @override
+  String get rosterSearchPlaceholder => 'Search patient…';
+
+  @override
+  String rosterNeedsAction(int count) {
+    return 'Need action · $count';
+  }
+
+  @override
+  String rosterUpToDate(int count) {
+    return 'Up to date · $count';
+  }
+
+  @override
+  String get rosterUpToDateBody => 'Nothing pending';
+
+  @override
+  String get rosterReasonOpenReview => 'Signal to review';
+
+  @override
+  String get rosterReasonConsultation => 'Consultation to finish';
+
+  @override
+  String get rosterReasonBaseline => 'Baseline data missing';
+
+  @override
+  String get rosterReasonPlan => 'Plan not published yet';
+
+  @override
+  String get rosterNoResultsTitle => 'No results';
+
+  @override
+  String rosterNoResultsBody(String query) {
+    return 'No patient matches “$query”.';
+  }
+
+  @override
+  String get inviteTitle => 'INVITE PATIENT';
+
+  @override
+  String get inviteInstructions =>
+      'Show this code to your patient so they can scan it with their phone, here in the consultation.';
+
+  @override
+  String get inviteExpiresInLabel => 'Expires in';
+
+  @override
+  String get inviteValidityOneHour => '1 hour';
+
+  @override
+  String get inviteValidityOneDay => '24 hours';
+
+  @override
+  String get inviteValiditySevenDays => '7 days';
+
+  @override
+  String get inviteQrCd => 'Invitation QR code';
+
+  @override
+  String inviteCountdown(String time) {
+    return 'Expires in $time · single use';
+  }
+
+  @override
+  String inviteCountdownDays(int days, String clock) {
+    return '$days d $clock';
+  }
+
+  @override
+  String get inviteExpired =>
+      'This code expired. Generate another one for your patient.';
+
+  @override
+  String get inviteGenerateAnother => 'Generate another code';
+
+  @override
+  String get invitePreviousStillValid =>
+      'The previous code stays valid until it expires.';
+
+  @override
+  String get inviteGenerating => 'Generating code…';
+
+  @override
+  String get inviteErrorOffline =>
+      'You need a connection to generate an invitation.';
+
+  @override
+  String get inviteErrorExpirationRequired => 'Choose when this code expires.';
+
+  @override
+  String get dischargeTitle => 'DISCHARGE';
+
+  @override
+  String get dischargeBody =>
+      'This ends the treatment with this patient. A discharged link can\'t be reactivated.';
+
+  @override
+  String get dischargeReason => 'Clinical reason';
+
+  @override
+  String get dischargeReasonPlaceholder => 'Required…';
+
+  @override
+  String get dischargeReasonMissing =>
+      'Write the clinical reason for the discharge';
+
+  @override
+  String get dischargeAction => 'Discharge';
+
+  @override
+  String get dischargeProcessing => 'Processing…';
+
+  @override
+  String get dischargeDialogTitle => 'DISCHARGE?';
+
+  @override
+  String get dischargeDialogBody =>
+      'This link can\'t be reactivated later. The clinical reason is recorded.';
+
+  @override
+  String get dischargeDialogConfirm => 'Yes, discharge';
+
+  @override
+  String get dischargeAlreadyTitle => 'Discharge already recorded';
+
+  @override
+  String get dischargeAlreadyBody =>
+      'This patient had already been discharged.';
+
+  @override
+  String shellSignalResolved(String name) {
+    return 'Signal resolved. $name is no longer in your inbox.';
+  }
+
+  @override
+  String get shellSignalResolvedGeneric =>
+      'Signal resolved. It\'s no longer in your inbox.';
+
+  @override
+  String shellFollowUpScheduled(String day, String time) {
+    return 'Consultation scheduled: $day, $time';
+  }
+
+  @override
+  String shellFollowUpRescheduled(String day, String time) {
+    return 'Consultation rescheduled: $day, $time';
+  }
 }

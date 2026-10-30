@@ -2,6 +2,7 @@
   "@@locale": "es",
   "appName": "Healthify",
   "commonClose": "Cerrar",
+  "commonUnderstood": "Entendido",
   "errorNetwork": "No hay conexión. Revisa tu internet e inténtalo de nuevo.",
   "errorUnauthorized": "Tu sesión terminó. Vuelve a ingresar.",
   "errorForbidden": "No tienes acceso a esta información.",
@@ -124,5 +125,140 @@
   "shellLoadingText": "Preparando tu espacio…",
   "practitionerOnlyTitle": "ESTA APP ES PARA NUTRICIONISTAS",
   "practitionerOnlyBody": "Tu cuenta es de paciente. Usa la app de pacientes de Healthify para ver tu plan y registrar tus comidas.",
-  "practitionerOnlySignOut": "Cerrar sesión"
+  "practitionerOnlySignOut": "Cerrar sesión",
+  "menuCdOpen": "Abrir menú",
+  "menuRolePractitioner": "Nutricionista",
+  "menuSettings": "Ajustes",
+  "menuSignOut": "Cerrar sesión",
+  "settingsTitle": "AJUSTES",
+  "settingsAccount": "Mi cuenta",
+  "settingsLanguage": "Idioma",
+  "settingsLanguageSheetTitle": "IDIOMA",
+  "signOutTitle": "¿CERRAR SESIÓN?",
+  "signOutBody": "Tendrás que volver a ingresar tu correo y contraseña. Tus pacientes y sus datos quedan guardados.",
+  "signOutConfirm": "Cerrar sesión",
+  "signOutInProgress": "Cerrando sesión…",
+  "shellPatientDischarged": "Alta registrada: {patientName} ya no está en tu cartera.",
+  "@shellPatientDischarged": {
+    "placeholders": {
+      "patientName": {
+        "type": "String"
+      }
+    }
+  },
+  "practitionerNoActiveLinkTitle": "Sin vínculo activo",
+  "practitionerNoActiveLinkBody": "No tienes un vínculo activo con este paciente.",
+  "rosterTitle": "MIS PACIENTES",
+  "rosterInvite": "Invitar paciente",
+  "rosterEmptyTitle": "Sin pacientes aún",
+  "rosterEmptyBody": "Invita a tu primer paciente generando un código QR durante la consulta.",
+  "rosterOfflineTitle": "Necesitas conexión",
+  "rosterOfflineBody": "Tu cartera y los datos de tus pacientes no se guardan en el teléfono. Vuelve a intentarlo cuando tengas conexión.",
+  "rosterSearch": "Buscar paciente",
+  "rosterSearchPlaceholder": "Buscar paciente…",
+  "rosterNeedsAction": "Requieren acción · {count}",
+  "@rosterNeedsAction": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rosterUpToDate": "Al día · {count}",
+  "@rosterUpToDate": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rosterUpToDateBody": "Sin pendientes",
+  "rosterReasonOpenReview": "Señal por revisar",
+  "rosterReasonConsultation": "Consulta por terminar",
+  "rosterReasonBaseline": "Faltan datos base",
+  "rosterReasonPlan": "Falta publicar el plan",
+  "rosterNoResultsTitle": "Sin resultados",
+  "rosterNoResultsBody": "Ningún paciente coincide con «{query}».",
+  "@rosterNoResultsBody": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "inviteTitle": "INVITAR PACIENTE",
+  "inviteInstructions": "Muéstrale este código a tu paciente para que lo escanee desde su teléfono, aquí en consulta.",
+  "inviteExpiresInLabel": "Vence en",
+  "inviteValidityOneHour": "1 hora",
+  "inviteValidityOneDay": "24 horas",
+  "inviteValiditySevenDays": "7 días",
+  "inviteQrCd": "Código QR de la invitación",
+  "inviteCountdown": "Vence en {time} · un solo uso",
+  "@inviteCountdown": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "inviteCountdownDays": "{days} d {clock}",
+  "@inviteCountdownDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      },
+      "clock": {
+        "type": "String"
+      }
+    }
+  },
+  "inviteExpired": "Este código venció. Genera otro para tu paciente.",
+  "inviteGenerateAnother": "Generar otro código",
+  "invitePreviousStillValid": "El código anterior seguirá siendo válido hasta que venza.",
+  "inviteGenerating": "Generando código…",
+  "inviteErrorOffline": "Necesitas conexión para generar una invitación.",
+  "inviteErrorExpirationRequired": "Elige cuándo vence este código.",
+  "dischargeTitle": "DAR DE ALTA",
+  "dischargeBody": "Esto cierra el tratamiento con este paciente. Un vínculo dado de alta no se puede reactivar.",
+  "dischargeReason": "Motivo clínico",
+  "dischargeReasonPlaceholder": "Obligatorio…",
+  "dischargeReasonMissing": "Escribe el motivo clínico del alta",
+  "dischargeAction": "Dar de alta",
+  "dischargeProcessing": "Procesando…",
+  "dischargeDialogTitle": "¿DAR DE ALTA?",
+  "dischargeDialogBody": "Este vínculo no se podrá reactivar después. El motivo clínico queda registrado.",
+  "dischargeDialogConfirm": "Sí, dar de alta",
+  "dischargeAlreadyTitle": "Alta ya registrada",
+  "dischargeAlreadyBody": "Este paciente ya había sido dado de alta.",
+  "shellSignalResolved": "Señal resuelta. {name} ya no aparece en tu bandeja.",
+  "@shellSignalResolved": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "shellSignalResolvedGeneric": "Señal resuelta. Ya no aparece en tu bandeja.",
+  "shellFollowUpScheduled": "Consulta agendada: {day}, {time}",
+  "@shellFollowUpScheduled": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "shellFollowUpRescheduled": "Consulta reprogramada: {day}, {time}",
+  "@shellFollowUpRescheduled": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  }
 }
