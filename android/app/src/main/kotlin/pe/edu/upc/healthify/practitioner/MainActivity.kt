@@ -1,4 +1,4 @@
-package pe.edu.upc.healthify.healthify
+package pe.edu.upc.healthify.practitioner
 
 import io.flutter.embedding.android.FlutterActivity
 

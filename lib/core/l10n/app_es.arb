@@ -1,8 +1,13 @@
 {
   "@@locale": "es",
   "appName": "Healthify",
+  "placeholderTitle": "Healthify para nutricionistas",
+  "placeholderBody": "La migración a Flutter está en curso.",
   "commonClose": "Cerrar",
   "commonUnderstood": "Entendido",
+  "commonAccept": "Aceptar",
+  "commonTryAgain": "Volver a intentarlo",
+  "commonSaving": "Guardando…",
   "errorNetwork": "No hay conexión. Revisa tu internet e inténtalo de nuevo.",
   "errorUnauthorized": "Tu sesión terminó. Vuelve a ingresar.",
   "errorForbidden": "No tienes acceso a esta información.",
@@ -130,6 +135,9 @@
   "menuRolePractitioner": "Nutricionista",
   "menuSettings": "Ajustes",
   "menuSignOut": "Cerrar sesión",
+  "comingSoonBody": "Esta sección estará disponible muy pronto.",
+  "inboxTitle": "BANDEJA",
+  "agendaTitle": "AGENDA",
   "settingsTitle": "AJUSTES",
   "settingsAccount": "Mi cuenta",
   "settingsLanguage": "Idioma",
@@ -981,6 +989,36 @@
   "diagnosisSuggestionFailedBody": "Puedes elegir el diagnóstico de la lista o volver a intentarlo. Lo que ya elegiste se conserva.",
   "publicationSuggestionsFailed": "No pudimos cargar las indicaciones sugeridas por IA. Puedes elegir las tuyas o volver a intentarlo.",
   "targetsCalculating": "Calculando las metas…",
+  "inboxRowTitle": "{name} · {signal}",
+  "@inboxRowTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "signal": {
+        "type": "String"
+      }
+    }
+  },
+  "inboxReceivedOn": "Recibido el {date}",
+  "@inboxReceivedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "inboxUnknownPatient": "Paciente",
+  "inboxEmptyTitle": "Bandeja al día",
+  "inboxEmptyBody": "No tienes señales pendientes. Ninguna señal cambia un plan por sí sola.",
+  "inboxOfflineBody": "Tu bandeja no se guarda en el teléfono. Vuelve a intentarlo cuando tengas conexión.",
+  "practitionerOfflineTitle": "Necesitas conexión",
+  "signalSustainedDeviation": "Desviación sostenida",
+  "signalSustainedDeviationInline": "desviación sostenida",
+  "signalScheduledRecheck": "Revisión programada",
+  "signalScheduledRecheckInline": "revisión programada",
+  "signalConsistencyEscalation": "Señal de consistencia",
+  "signalConsistencyEscalationInline": "señal de consistencia",
   "shellSignalResolved": "Señal resuelta. {name} ya no aparece en tu bandeja.",
   "@shellSignalResolved": {
     "placeholders": {
@@ -990,6 +1028,289 @@
     }
   },
   "shellSignalResolvedGeneric": "Señal resuelta. Ya no aparece en tu bandeja.",
+  "reviewTitle": "REVISAR SEÑAL",
+  "reviewChip": "{signal} · recibido el {date}",
+  "@reviewChip": {
+    "placeholders": {
+      "signal": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewEvidenceDeviationNamed": "{name} registró en promedio {percent} % {direction} de su meta de energía{kcalClause} en {deviatedDays} de sus últimos {loggedDays} días registrados.",
+  "@reviewEvidenceDeviationNamed": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "String"
+      },
+      "direction": {
+        "type": "String"
+      },
+      "kcalClause": {
+        "type": "String"
+      },
+      "deviatedDays": {
+        "type": "String"
+      },
+      "loggedDays": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewEvidenceDeviation": "Registró en promedio {percent} % {direction} de su meta de energía{kcalClause} en {deviatedDays} de sus últimos {loggedDays} días registrados.",
+  "@reviewEvidenceDeviation": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      },
+      "direction": {
+        "type": "String"
+      },
+      "kcalClause": {
+        "type": "String"
+      },
+      "deviatedDays": {
+        "type": "String"
+      },
+      "loggedDays": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewDirectionBelow": "menos",
+  "reviewDirectionAbove": "más",
+  "reviewEvidenceKcalClause": " (≈ {kcal} kcal/día)",
+  "@reviewEvidenceKcalClause": {
+    "placeholders": {
+      "kcal": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewEvidenceRecheckCounts": "Revisión programada tras el ajuste del {date} (v{version}): {deviatedDays} de {loggedDays} días registrados fuera de la meta.",
+  "@reviewEvidenceRecheckCounts": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "version": {
+        "type": "int"
+      },
+      "deviatedDays": {
+        "type": "String"
+      },
+      "loggedDays": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewEvidenceRecheck": "Revisión programada tras el ajuste del {date} (v{version}).",
+  "@reviewEvidenceRecheck": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "version": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewEvidenceConsistency": "Índice de consistencia: {index} kg/semana sin explicar{alertClause}{shownClause}.",
+  "@reviewEvidenceConsistency": {
+    "placeholders": {
+      "index": {
+        "type": "String"
+      },
+      "alertClause": {
+        "type": "String"
+      },
+      "shownClause": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewAlertClause": "; en alerta desde el {date}",
+  "@reviewAlertClause": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewAlertClauseOneWeek": "; en alerta desde el {date} (1 semana)",
+  "@reviewAlertClauseOneWeek": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewAlertClauseWeeks": "; en alerta desde el {date} ({weeks} semanas)",
+  "@reviewAlertClauseWeeks": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "weeks": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewShownClause": "; se le mostró al paciente el {date}",
+  "@reviewShownClause": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewUnloggedDaysNote": "Los días sin registro no cuentan.",
+  "reviewEvidenceWithNote": "{evidence} {note}",
+  "@reviewEvidenceWithNote": {
+    "placeholders": {
+      "evidence": {
+        "type": "String"
+      },
+      "note": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewAdjustedQuestion": "¿Ajustaste el plan por esta señal?",
+  "reviewAnswerYesNo": "Responde Sí o No",
+  "reviewNoteLabel": "Nota (opcional)",
+  "reviewNotePlaceholder": "Ej. se conversó en consulta…",
+  "reviewResolutionInfo": "Resolver no cambia el plan. Si decides ajustarlo, se abre como una acción aparte y la señal queda registrada como «ajustada».",
+  "reviewResolve": "Resolver",
+  "reviewAdjustPlanNow": "Ajustar el plan ahora",
+  "reviewAdjust": "Ajustar",
+  "reviewAssigning": "Asignando…",
+  "reviewResolveWithoutProposal": "Resolver sin asignar este plan",
+  "reviewResolveNow": "Resolver sin esperar",
+  "reviewAiProposalBadge": "Plan propuesto por IA",
+  "reviewAiGenerating": "La IA está preparando un plan propuesto…",
+  "reviewNotAvailableTitle": "Ítem no disponible",
+  "reviewNotAvailableBody": "Este ítem ya no está disponible.",
+  "reviewAlreadyResolvedTitle": "Ítem resuelto",
+  "reviewAlreadyResolvedBody": "Este ítem ya fue resuelto.",
+  "reviewPlanChangedTitle": "El plan cambió",
+  "reviewPlanChangedBody": "El plan de este paciente cambió mientras revisabas la señal. Vuelve a revisarla.",
+  "reviewBackToInbox": "Volver a la bandeja",
+  "proposalDailyEnergy": "Energía diaria",
+  "proposalEnergyChange": "{from} → {to} kcal",
+  "@proposalEnergyChange": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "proposalEnergyValue": "{value} kcal",
+  "@proposalEnergyValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "proposalAddedGuideline": "Nueva indicación",
+  "proposalRemovedGuideline": "Se quita la indicación",
+  "proposalMessageFor": "Mensaje para {name}",
+  "@proposalMessageFor": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "proposalMessageForPatient": "Mensaje para tu paciente",
+  "proposalQuoted": "«{text}»",
+  "@proposalQuoted": {
+    "placeholders": {
+      "text": {
+        "type": "String"
+      }
+    }
+  },
+  "proposalFollowUp": "Seguimiento",
+  "proposalRecheckInDays": "Revisar de nuevo en {days} días",
+  "@proposalRecheckInDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "proposalWhy": "Por qué",
+  "adjustProposalTitle": "AJUSTAR PLAN",
+  "adjustProposalBadge": "Prellenado con la propuesta de IA",
+  "adjustProposalIntro": "Todo viene prellenado con la propuesta. Cambia solo lo que necesites.",
+  "adjustProposalTargets": "Metas diarias",
+  "adjustProposalEnergy": "Energía",
+  "adjustProposalBefore": "Antes: {value} kcal",
+  "@adjustProposalBefore": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "adjustProposalProtein": "Proteína",
+  "adjustProposalCarb": "Carbohid.",
+  "adjustProposalFat": "Grasa",
+  "adjustProposalPositiveValue": "Escribe un valor mayor que 0",
+  "adjustProposalBelowFloor": "Está por debajo del mínimo seguro de energía para este paciente.",
+  "adjustProposalGuidelines": "Indicaciones",
+  "adjustProposalMessageHelp": "Lo verá tu paciente junto a sus metas. Máximo {max} caracteres.",
+  "@adjustProposalMessageHelp": {
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "adjustProposalMessageInvalid": "Escribe un mensaje de hasta {max} caracteres.",
+  "@adjustProposalMessageInvalid": {
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "adjustProposalAssign": "Asignar plan ajustado",
+  "agendaUpcoming": "Próximas consultas",
+  "agendaRowTime": "{weekday} · {time}",
+  "@agendaRowTime": {
+    "placeholders": {
+      "weekday": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "agendaSchedule": "Agendar consulta",
+  "agendaEmptyTitle": "Sin consultas agendadas",
+  "agendaEmptyBody": "Cuando agendes una consulta, aparecerá aquí.",
+  "agendaOfflineBody": "Tu agenda no se guarda en el teléfono. Vuelve a intentarlo cuando tengas conexión.",
+  "agendaReschedule": "Reprogramar",
+  "agendaCancel": "Cancelar consulta",
+  "agendaCancelDialogTitle": "¿CANCELAR ESTA CONSULTA?",
+  "agendaCancelDialogBody": "Tu paciente dejará de verla en su app. Cancelar no cierra el vínculo.",
+  "agendaCancelConfirm": "Sí, cancelar",
+  "agendaCancelled": "Consulta cancelada",
+  "agendaNotCancellableTitle": "No se puede cancelar",
+  "agendaNotCancellableBody": "Esta consulta ya no está agendada.",
   "shellFollowUpScheduled": "Consulta agendada: {day}, {time}",
   "@shellFollowUpScheduled": {
     "placeholders": {
@@ -1012,6 +1333,72 @@
       }
     }
   },
+  "scheduleTitle": "AGENDAR CONSULTA",
+  "scheduleRescheduleTitle": "REPROGRAMAR CONSULTA",
+  "schedulePatient": "Paciente",
+  "schedulePatientMissing": "Elige un paciente",
+  "schedulePatientAlreadyScheduled": "Este paciente ya tiene una consulta en agenda.",
+  "schedulePatientPickerTitle": "PACIENTE",
+  "schedulePatientPickerEmpty": "Aún no tienes pacientes con un vínculo activo.",
+  "scheduleDate": "Fecha",
+  "scheduleTime": "Hora",
+  "scheduleTimeDialogTitle": "Hora de la consulta",
+  "scheduleMomentHelp": "Ej. 18/09/2026 · 10:00 a. m. La fecha y hora deben ser futuras.",
+  "scheduleMomentMissing": "Elige la fecha y la hora",
+  "scheduleMomentNotFuture": "Elige una fecha y hora futuras",
+  "schedulePreparationTitle": "¿Cómo debe prepararse?",
+  "schedulePreparationHelp": "Puedes elegir varias. Tu paciente las verá en su app.",
+  "schedulePreparationFasting": "En ayunas",
+  "schedulePreparationLightClothing": "Ropa ligera",
+  "schedulePreparationBloodTests": "Llevar análisis de sangre",
+  "schedulePreparationEmptyBladder": "Vejiga vacía",
+  "scheduleSubmit": "Agendar",
+  "scheduleRescheduleSubmit": "Reprogramar",
+  "scheduleSaving": "Agendando…",
+  "scheduleFailedTitle": "NO SE PUDO AGENDAR",
+  "scheduleFailedBody": "No pudimos agendar la consulta. Revisa tu conexión e inténtalo de nuevo. Lo que escribiste no se perdió.",
+  "referralTitle": "REGISTRAR DERIVACIÓN",
+  "referralSpecialty": "Especialidad",
+  "referralSpecialtyPlaceholder": "Ej. Endocrinología",
+  "referralSpecialtyMissing": "Completa la especialidad",
+  "referralReason": "Motivo",
+  "referralReasonPlaceholder": "Describe el motivo clínico…",
+  "referralReasonMissing": "Completa el motivo clínico de la derivación",
+  "referralSubmit": "Registrar",
+  "referralFailedTitle": "HUBO UN ERROR",
+  "referralFailedBody": "No pudimos registrar la derivación. Lo que escribiste no se perdió.",
   "summarySchedule": "Agendar consulta",
-  "summaryReferral": "Registrar derivación"
+  "summaryReferral": "Registrar derivación",
+  "agendaViewPatient": "Ver paciente",
+  "inboxPendingCount": "{count, plural, one{{count} ítem pendiente por revisar} other{{count} ítems pendientes por revisar}}",
+  "@inboxPendingCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "consultationReminderChannelName": "Consultas",
+  "consultationReminderChannelDescription": "Avisos antes de cada consulta agendada.",
+  "consultationReminderTitleDay": "Consulta mañana",
+  "consultationReminderTitleHour": "Consulta en una hora",
+  "consultationReminderText": "Con {patientName} a las {time}.",
+  "@consultationReminderText": {
+    "placeholders": {
+      "patientName": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "consultationReminderTextNoName": "Con tu paciente a las {time}.",
+  "@consultationReminderTextNoName": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  }
 }

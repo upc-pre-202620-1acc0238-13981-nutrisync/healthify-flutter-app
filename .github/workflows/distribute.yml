@@ -1,0 +1,108 @@
+name: Distribute
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: distribute
+  cancel-in-progress: false
+
+jobs:
+  distribute:
+    name: Signed release to Firebase App Distribution and GitHub
+    runs-on: ubuntu-latest
+    permissions:
+      # Creates the version tag and the GitHub release.
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 20
+
+      # A push to main must bring a new version; a manual run of an already released version only redistributes it.
+      - name: Check the version is new
+        id: version
+        run: |
+          # 0.1.0+1 -> 0.1.0: the build number comes from the run number below.
+          version=$(grep -oP '^version:\s*\K[^+\s]+' pubspec.yaml)
+          echo "tag=v$version" >> "$GITHUB_OUTPUT"
+          if git ls-remote --exit-code --tags origin "refs/tags/v$version" > /dev/null; then
+            echo "released=true" >> "$GITHUB_OUTPUT"
+            if [ "$GITHUB_EVENT_NAME" = "push" ]; then
+              echo "::error::v$version is already released. Bump version in pubspec.yaml."
+              exit 1
+            fi
+          else
+            echo "released=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.47.7
+          channel: stable
+          cache: true
+
+      - name: Write signing key and Firebase credentials
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}
+        run: |
+          echo "$KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/upload.jks"
+          echo "$FIREBASE_SERVICE_ACCOUNT_JSON" > "$RUNNER_TEMP/firebase-service-account.json"
+
+      - name: Write release notes
+        run: git log -10 --no-merges --pretty=format:'- %s' > "$RUNNER_TEMP/release-notes.txt"
+
+      - name: Generate code
+        run: |
+          flutter pub get
+          dart run build_runner build -d
+          flutter gen-l10n
+
+      # Each distributed build needs a higher versionCode than the last one.
+      - name: Build
+        env:
+          KEYSTORE_FILE: ${{ runner.temp }}/upload.jks
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: flutter build apk --release --build-number=${{ github.run_number }}
+
+      # The app uses no Firebase SDK, so no google-services.json: only the CLI uploads the APK.
+      - name: Upload to Firebase App Distribution
+        env:
+          FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/firebase-service-account.json
+        run: >
+          npx --yes firebase-tools@15.34.0 appdistribution:distribute
+          build/app/outputs/flutter-apk/app-release.apk
+          --app "$FIREBASE_APP_ID"
+          --groups qa
+          --release-notes-file "$RUNNER_TEMP/release-notes.txt"
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v5
+        with:
+          name: healthify-release-${{ github.run_number }}
+          path: build/app/outputs/flutter-apk/app-release.apk
+
+      - name: Create GitHub release
+        if: steps.version.outputs.released == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          cp build/app/outputs/flutter-apk/app-release.apk "$RUNNER_TEMP/healthify-$TAG.apk"
+          gh release create "$TAG" "$RUNNER_TEMP/healthify-$TAG.apk" \
+            --target "$GITHUB_SHA" --title "$TAG" --generate-notes
+
+      - name: Remove signing key and credentials
+        if: always()
+        run: rm -f "$RUNNER_TEMP/upload.jks" "$RUNNER_TEMP/firebase-service-account.json"
