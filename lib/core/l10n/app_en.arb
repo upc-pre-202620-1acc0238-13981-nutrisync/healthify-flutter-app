@@ -9,6 +9,9 @@
   "errorConflict": "This has already changed. Refresh and try again.",
   "errorValidation": "Please check the details and try again.",
   "errorUnexpected": "Something went wrong. Please try again in a few minutes.",
+  "sessionExpiredTitle": "YOUR SESSION ENDED",
+  "sessionExpiredBody": "For your security we closed your session. What you already logged is safe.",
+  "sessionExpiredOffline": "As soon as you're back online, sign in again.",
   "brandLogoCd": "Healthify",
   "dsCdBack": "Back",
   "dsCdClose": "Close",
@@ -89,5 +92,9 @@
   "forgotPasswordChangeEmail": "Use another email",
   "forgotPasswordDoneTitle": "PASSWORD UPDATED",
   "forgotPasswordDoneBody": "You can now sign in with your new password. For your security, we signed you out on your other devices.",
-  "forgotPasswordGoToSignIn": "Sign in"
+  "forgotPasswordGoToSignIn": "Sign in",
+  "shellLoadingText": "Getting your space ready…",
+  "practitionerOnlyTitle": "THIS APP IS FOR DIETITIANS",
+  "practitionerOnlyBody": "Your account is a patient account. Use the Healthify patient app to see your plan and log your meals.",
+  "practitionerOnlySignOut": "Sign out"
 }

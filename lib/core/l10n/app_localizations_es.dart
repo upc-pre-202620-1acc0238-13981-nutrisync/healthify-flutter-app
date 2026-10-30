@@ -39,6 +39,17 @@ class AppLocalizationsEs extends AppLocalizations {
       'Algo salió mal. Inténtalo de nuevo en unos minutos.';
 
   @override
+  String get sessionExpiredTitle => 'TU SESIÓN VENCIÓ';
+
+  @override
+  String get sessionExpiredBody =>
+      'Por tu seguridad cerramos tu sesión. Lo que ya registraste está a salvo.';
+
+  @override
+  String get sessionExpiredOffline =>
+      'En cuanto tengas conexión, vuelve a iniciar sesión.';
+
+  @override
   String get brandLogoCd => 'Healthify';
 
   @override
@@ -298,4 +309,17 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get forgotPasswordGoToSignIn => 'Iniciar sesión';
+
+  @override
+  String get shellLoadingText => 'Preparando tu espacio…';
+
+  @override
+  String get practitionerOnlyTitle => 'ESTA APP ES PARA NUTRICIONISTAS';
+
+  @override
+  String get practitionerOnlyBody =>
+      'Tu cuenta es de paciente. Usa la app de pacientes de Healthify para ver tu plan y registrar tus comidas.';
+
+  @override
+  String get practitionerOnlySignOut => 'Cerrar sesión';
 }

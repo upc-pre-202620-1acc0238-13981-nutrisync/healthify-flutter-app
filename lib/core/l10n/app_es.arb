@@ -9,6 +9,9 @@
   "errorConflict": "Esto ya cambió. Actualiza e inténtalo de nuevo.",
   "errorValidation": "Revisa los datos e inténtalo de nuevo.",
   "errorUnexpected": "Algo salió mal. Inténtalo de nuevo en unos minutos.",
+  "sessionExpiredTitle": "TU SESIÓN VENCIÓ",
+  "sessionExpiredBody": "Por tu seguridad cerramos tu sesión. Lo que ya registraste está a salvo.",
+  "sessionExpiredOffline": "En cuanto tengas conexión, vuelve a iniciar sesión.",
   "brandLogoCd": "Healthify",
   "dsCdBack": "Volver",
   "dsCdClose": "Cerrar",
@@ -103,5 +106,9 @@
   "forgotPasswordChangeEmail": "Usar otro correo",
   "forgotPasswordDoneTitle": "CONTRASEÑA ACTUALIZADA",
   "forgotPasswordDoneBody": "Ya puedes iniciar sesión con tu contraseña nueva. Por seguridad, cerramos tu sesión en los demás dispositivos.",
-  "forgotPasswordGoToSignIn": "Iniciar sesión"
+  "forgotPasswordGoToSignIn": "Iniciar sesión",
+  "shellLoadingText": "Preparando tu espacio…",
+  "practitionerOnlyTitle": "ESTA APP ES PARA NUTRICIONISTAS",
+  "practitionerOnlyBody": "Tu cuenta es de paciente. Usa la app de pacientes de Healthify para ver tu plan y registrar tus comidas.",
+  "practitionerOnlySignOut": "Cerrar sesión"
 }

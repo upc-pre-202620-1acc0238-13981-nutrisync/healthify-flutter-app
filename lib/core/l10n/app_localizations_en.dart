@@ -40,6 +40,17 @@ class AppLocalizationsEn extends AppLocalizations {
       'Something went wrong. Please try again in a few minutes.';
 
   @override
+  String get sessionExpiredTitle => 'YOUR SESSION ENDED';
+
+  @override
+  String get sessionExpiredBody =>
+      'For your security we closed your session. What you already logged is safe.';
+
+  @override
+  String get sessionExpiredOffline =>
+      'As soon as you\'re back online, sign in again.';
+
+  @override
   String get brandLogoCd => 'Healthify';
 
   @override
@@ -301,4 +312,17 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get forgotPasswordGoToSignIn => 'Sign in';
+
+  @override
+  String get shellLoadingText => 'Getting your space ready…';
+
+  @override
+  String get practitionerOnlyTitle => 'THIS APP IS FOR DIETITIANS';
+
+  @override
+  String get practitionerOnlyBody =>
+      'Your account is a patient account. Use the Healthify patient app to see your plan and log your meals.';
+
+  @override
+  String get practitionerOnlySignOut => 'Sign out';
 }

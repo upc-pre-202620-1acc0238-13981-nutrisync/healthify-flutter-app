@@ -152,6 +152,24 @@ abstract class AppLocalizations {
   /// **'Algo salió mal. Inténtalo de nuevo en unos minutos.'**
   String get errorUnexpected;
 
+  /// No description provided for @sessionExpiredTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'TU SESIÓN VENCIÓ'**
+  String get sessionExpiredTitle;
+
+  /// No description provided for @sessionExpiredBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Por tu seguridad cerramos tu sesión. Lo que ya registraste está a salvo.'**
+  String get sessionExpiredBody;
+
+  /// No description provided for @sessionExpiredOffline.
+  ///
+  /// In es, this message translates to:
+  /// **'En cuanto tengas conexión, vuelve a iniciar sesión.'**
+  String get sessionExpiredOffline;
+
   /// No description provided for @brandLogoCd.
   ///
   /// In es, this message translates to:
@@ -637,6 +655,30 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Iniciar sesión'**
   String get forgotPasswordGoToSignIn;
+
+  /// No description provided for @shellLoadingText.
+  ///
+  /// In es, this message translates to:
+  /// **'Preparando tu espacio…'**
+  String get shellLoadingText;
+
+  /// No description provided for @practitionerOnlyTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'ESTA APP ES PARA NUTRICIONISTAS'**
+  String get practitionerOnlyTitle;
+
+  /// No description provided for @practitionerOnlyBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu cuenta es de paciente. Usa la app de pacientes de Healthify para ver tu plan y registrar tus comidas.'**
+  String get practitionerOnlyBody;
+
+  /// No description provided for @practitionerOnlySignOut.
+  ///
+  /// In es, this message translates to:
+  /// **'Cerrar sesión'**
+  String get practitionerOnlySignOut;
 }
 
 class _AppLocalizationsDelegate
