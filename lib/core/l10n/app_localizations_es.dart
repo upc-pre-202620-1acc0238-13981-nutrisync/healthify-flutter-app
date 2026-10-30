@@ -125,6 +125,40 @@ class AppLocalizationsEs extends AppLocalizations {
   String get navAgenda => 'Agenda';
 
   @override
+  String get welcomeChipGoalLabel => 'Meta de hoy';
+
+  @override
+  String get welcomeChipGoalValue => '1 260 / 1 850 kcal';
+
+  @override
+  String get welcomeChipMealLabel => 'Comida registrada';
+
+  @override
+  String get welcomeChipMealValue => 'Lomo saltado · 320 g';
+
+  @override
+  String get welcomeChipPractitionerLabel => 'Tu nutricionista';
+
+  @override
+  String get welcomeChipPractitionerValue => 'Revisó tu plan';
+
+  @override
+  String get welcomeHeadlineFirst => 'TU NUTRICIÓN,';
+
+  @override
+  String get welcomeHeadlineSecond => 'EN UN LUGAR';
+
+  @override
+  String get welcomeBody =>
+      'Metas, registro y seguimiento junto a tu nutricionista, sin complicarte.';
+
+  @override
+  String get welcomeCreateAccount => 'Crear cuenta';
+
+  @override
+  String get welcomeHaveAccount => 'Ya tengo cuenta';
+
+  @override
   String get languageSpanish => 'Español';
 
   @override

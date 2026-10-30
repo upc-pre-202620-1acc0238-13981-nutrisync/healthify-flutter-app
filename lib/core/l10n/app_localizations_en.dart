@@ -126,6 +126,40 @@ class AppLocalizationsEn extends AppLocalizations {
   String get navAgenda => 'Schedule';
 
   @override
+  String get welcomeChipGoalLabel => 'Today\'s goal';
+
+  @override
+  String get welcomeChipGoalValue => '1,260 / 1,850 kcal';
+
+  @override
+  String get welcomeChipMealLabel => 'Meal logged';
+
+  @override
+  String get welcomeChipMealValue => 'Lomo saltado · 320 g';
+
+  @override
+  String get welcomeChipPractitionerLabel => 'Your dietitian';
+
+  @override
+  String get welcomeChipPractitionerValue => 'Reviewed your plan';
+
+  @override
+  String get welcomeHeadlineFirst => 'YOUR NUTRITION,';
+
+  @override
+  String get welcomeHeadlineSecond => 'IN ONE PLACE';
+
+  @override
+  String get welcomeBody =>
+      'Goals, logging and follow-up with your dietitian, without the hassle.';
+
+  @override
+  String get welcomeCreateAccount => 'Create account';
+
+  @override
+  String get welcomeHaveAccount => 'I already have an account';
+
+  @override
   String get languageSpanish => 'Español';
 
   @override

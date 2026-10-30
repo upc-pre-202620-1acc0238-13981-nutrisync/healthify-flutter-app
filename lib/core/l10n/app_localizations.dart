@@ -314,6 +314,72 @@ abstract class AppLocalizations {
   /// **'Agenda'**
   String get navAgenda;
 
+  /// No description provided for @welcomeChipGoalLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Meta de hoy'**
+  String get welcomeChipGoalLabel;
+
+  /// No description provided for @welcomeChipGoalValue.
+  ///
+  /// In es, this message translates to:
+  /// **'1 260 / 1 850 kcal'**
+  String get welcomeChipGoalValue;
+
+  /// No description provided for @welcomeChipMealLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Comida registrada'**
+  String get welcomeChipMealLabel;
+
+  /// No description provided for @welcomeChipMealValue.
+  ///
+  /// In es, this message translates to:
+  /// **'Lomo saltado · 320 g'**
+  String get welcomeChipMealValue;
+
+  /// No description provided for @welcomeChipPractitionerLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu nutricionista'**
+  String get welcomeChipPractitionerLabel;
+
+  /// No description provided for @welcomeChipPractitionerValue.
+  ///
+  /// In es, this message translates to:
+  /// **'Revisó tu plan'**
+  String get welcomeChipPractitionerValue;
+
+  /// No description provided for @welcomeHeadlineFirst.
+  ///
+  /// In es, this message translates to:
+  /// **'TU NUTRICIÓN,'**
+  String get welcomeHeadlineFirst;
+
+  /// No description provided for @welcomeHeadlineSecond.
+  ///
+  /// In es, this message translates to:
+  /// **'EN UN LUGAR'**
+  String get welcomeHeadlineSecond;
+
+  /// No description provided for @welcomeBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Metas, registro y seguimiento junto a tu nutricionista, sin complicarte.'**
+  String get welcomeBody;
+
+  /// No description provided for @welcomeCreateAccount.
+  ///
+  /// In es, this message translates to:
+  /// **'Crear cuenta'**
+  String get welcomeCreateAccount;
+
+  /// No description provided for @welcomeHaveAccount.
+  ///
+  /// In es, this message translates to:
+  /// **'Ya tengo cuenta'**
+  String get welcomeHaveAccount;
+
   /// No description provided for @languageSpanish.
   ///
   /// In es, this message translates to:
