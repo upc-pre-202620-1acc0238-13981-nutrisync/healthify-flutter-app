@@ -13,10 +13,25 @@ class AppLocalizationsEs extends AppLocalizations {
   String get appName => 'Healthify';
 
   @override
+  String get placeholderTitle => 'Healthify para nutricionistas';
+
+  @override
+  String get placeholderBody => 'La migración a Flutter está en curso.';
+
+  @override
   String get commonClose => 'Cerrar';
 
   @override
   String get commonUnderstood => 'Entendido';
+
+  @override
+  String get commonAccept => 'Aceptar';
+
+  @override
+  String get commonTryAgain => 'Volver a intentarlo';
+
+  @override
+  String get commonSaving => 'Guardando…';
 
   @override
   String get errorNetwork =>
@@ -380,6 +395,15 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get menuSignOut => 'Cerrar sesión';
+
+  @override
+  String get comingSoonBody => 'Esta sección estará disponible muy pronto.';
+
+  @override
+  String get inboxTitle => 'BANDEJA';
+
+  @override
+  String get agendaTitle => 'AGENDA';
 
   @override
   String get settingsTitle => 'AJUSTES';
@@ -1682,6 +1706,51 @@ class AppLocalizationsEs extends AppLocalizations {
   String get targetsCalculating => 'Calculando las metas…';
 
   @override
+  String inboxRowTitle(String name, String signal) {
+    return '$name · $signal';
+  }
+
+  @override
+  String inboxReceivedOn(String date) {
+    return 'Recibido el $date';
+  }
+
+  @override
+  String get inboxUnknownPatient => 'Paciente';
+
+  @override
+  String get inboxEmptyTitle => 'Bandeja al día';
+
+  @override
+  String get inboxEmptyBody =>
+      'No tienes señales pendientes. Ninguna señal cambia un plan por sí sola.';
+
+  @override
+  String get inboxOfflineBody =>
+      'Tu bandeja no se guarda en el teléfono. Vuelve a intentarlo cuando tengas conexión.';
+
+  @override
+  String get practitionerOfflineTitle => 'Necesitas conexión';
+
+  @override
+  String get signalSustainedDeviation => 'Desviación sostenida';
+
+  @override
+  String get signalSustainedDeviationInline => 'desviación sostenida';
+
+  @override
+  String get signalScheduledRecheck => 'Revisión programada';
+
+  @override
+  String get signalScheduledRecheckInline => 'revisión programada';
+
+  @override
+  String get signalConsistencyEscalation => 'Señal de consistencia';
+
+  @override
+  String get signalConsistencyEscalationInline => 'señal de consistencia';
+
+  @override
   String shellSignalResolved(String name) {
     return 'Señal resuelta. $name ya no aparece en tu bandeja.';
   }
@@ -1689,6 +1758,304 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get shellSignalResolvedGeneric =>
       'Señal resuelta. Ya no aparece en tu bandeja.';
+
+  @override
+  String get reviewTitle => 'REVISAR SEÑAL';
+
+  @override
+  String reviewChip(String signal, String date) {
+    return '$signal · recibido el $date';
+  }
+
+  @override
+  String reviewEvidenceDeviationNamed(
+    String name,
+    String percent,
+    String direction,
+    String kcalClause,
+    String deviatedDays,
+    String loggedDays,
+  ) {
+    return '$name registró en promedio $percent % $direction de su meta de energía$kcalClause en $deviatedDays de sus últimos $loggedDays días registrados.';
+  }
+
+  @override
+  String reviewEvidenceDeviation(
+    String percent,
+    String direction,
+    String kcalClause,
+    String deviatedDays,
+    String loggedDays,
+  ) {
+    return 'Registró en promedio $percent % $direction de su meta de energía$kcalClause en $deviatedDays de sus últimos $loggedDays días registrados.';
+  }
+
+  @override
+  String get reviewDirectionBelow => 'menos';
+
+  @override
+  String get reviewDirectionAbove => 'más';
+
+  @override
+  String reviewEvidenceKcalClause(String kcal) {
+    return ' (≈ $kcal kcal/día)';
+  }
+
+  @override
+  String reviewEvidenceRecheckCounts(
+    String date,
+    int version,
+    String deviatedDays,
+    String loggedDays,
+  ) {
+    return 'Revisión programada tras el ajuste del $date (v$version): $deviatedDays de $loggedDays días registrados fuera de la meta.';
+  }
+
+  @override
+  String reviewEvidenceRecheck(String date, int version) {
+    return 'Revisión programada tras el ajuste del $date (v$version).';
+  }
+
+  @override
+  String reviewEvidenceConsistency(
+    String index,
+    String alertClause,
+    String shownClause,
+  ) {
+    return 'Índice de consistencia: $index kg/semana sin explicar$alertClause$shownClause.';
+  }
+
+  @override
+  String reviewAlertClause(String date) {
+    return '; en alerta desde el $date';
+  }
+
+  @override
+  String reviewAlertClauseOneWeek(String date) {
+    return '; en alerta desde el $date (1 semana)';
+  }
+
+  @override
+  String reviewAlertClauseWeeks(String date, String weeks) {
+    return '; en alerta desde el $date ($weeks semanas)';
+  }
+
+  @override
+  String reviewShownClause(String date) {
+    return '; se le mostró al paciente el $date';
+  }
+
+  @override
+  String get reviewUnloggedDaysNote => 'Los días sin registro no cuentan.';
+
+  @override
+  String reviewEvidenceWithNote(String evidence, String note) {
+    return '$evidence $note';
+  }
+
+  @override
+  String get reviewAdjustedQuestion => '¿Ajustaste el plan por esta señal?';
+
+  @override
+  String get reviewAnswerYesNo => 'Responde Sí o No';
+
+  @override
+  String get reviewNoteLabel => 'Nota (opcional)';
+
+  @override
+  String get reviewNotePlaceholder => 'Ej. se conversó en consulta…';
+
+  @override
+  String get reviewResolutionInfo =>
+      'Resolver no cambia el plan. Si decides ajustarlo, se abre como una acción aparte y la señal queda registrada como «ajustada».';
+
+  @override
+  String get reviewResolve => 'Resolver';
+
+  @override
+  String get reviewAdjustPlanNow => 'Ajustar el plan ahora';
+
+  @override
+  String get reviewAdjust => 'Ajustar';
+
+  @override
+  String get reviewAssigning => 'Asignando…';
+
+  @override
+  String get reviewResolveWithoutProposal => 'Resolver sin asignar este plan';
+
+  @override
+  String get reviewResolveNow => 'Resolver sin esperar';
+
+  @override
+  String get reviewAiProposalBadge => 'Plan propuesto por IA';
+
+  @override
+  String get reviewAiGenerating => 'La IA está preparando un plan propuesto…';
+
+  @override
+  String get reviewNotAvailableTitle => 'Ítem no disponible';
+
+  @override
+  String get reviewNotAvailableBody => 'Este ítem ya no está disponible.';
+
+  @override
+  String get reviewAlreadyResolvedTitle => 'Ítem resuelto';
+
+  @override
+  String get reviewAlreadyResolvedBody => 'Este ítem ya fue resuelto.';
+
+  @override
+  String get reviewPlanChangedTitle => 'El plan cambió';
+
+  @override
+  String get reviewPlanChangedBody =>
+      'El plan de este paciente cambió mientras revisabas la señal. Vuelve a revisarla.';
+
+  @override
+  String get reviewBackToInbox => 'Volver a la bandeja';
+
+  @override
+  String get proposalDailyEnergy => 'Energía diaria';
+
+  @override
+  String proposalEnergyChange(String from, String to) {
+    return '$from → $to kcal';
+  }
+
+  @override
+  String proposalEnergyValue(String value) {
+    return '$value kcal';
+  }
+
+  @override
+  String get proposalAddedGuideline => 'Nueva indicación';
+
+  @override
+  String get proposalRemovedGuideline => 'Se quita la indicación';
+
+  @override
+  String proposalMessageFor(String name) {
+    return 'Mensaje para $name';
+  }
+
+  @override
+  String get proposalMessageForPatient => 'Mensaje para tu paciente';
+
+  @override
+  String proposalQuoted(String text) {
+    return '«$text»';
+  }
+
+  @override
+  String get proposalFollowUp => 'Seguimiento';
+
+  @override
+  String proposalRecheckInDays(int days) {
+    return 'Revisar de nuevo en $days días';
+  }
+
+  @override
+  String get proposalWhy => 'Por qué';
+
+  @override
+  String get adjustProposalTitle => 'AJUSTAR PLAN';
+
+  @override
+  String get adjustProposalBadge => 'Prellenado con la propuesta de IA';
+
+  @override
+  String get adjustProposalIntro =>
+      'Todo viene prellenado con la propuesta. Cambia solo lo que necesites.';
+
+  @override
+  String get adjustProposalTargets => 'Metas diarias';
+
+  @override
+  String get adjustProposalEnergy => 'Energía';
+
+  @override
+  String adjustProposalBefore(String value) {
+    return 'Antes: $value kcal';
+  }
+
+  @override
+  String get adjustProposalProtein => 'Proteína';
+
+  @override
+  String get adjustProposalCarb => 'Carbohid.';
+
+  @override
+  String get adjustProposalFat => 'Grasa';
+
+  @override
+  String get adjustProposalPositiveValue => 'Escribe un valor mayor que 0';
+
+  @override
+  String get adjustProposalBelowFloor =>
+      'Está por debajo del mínimo seguro de energía para este paciente.';
+
+  @override
+  String get adjustProposalGuidelines => 'Indicaciones';
+
+  @override
+  String adjustProposalMessageHelp(int max) {
+    return 'Lo verá tu paciente junto a sus metas. Máximo $max caracteres.';
+  }
+
+  @override
+  String adjustProposalMessageInvalid(int max) {
+    return 'Escribe un mensaje de hasta $max caracteres.';
+  }
+
+  @override
+  String get adjustProposalAssign => 'Asignar plan ajustado';
+
+  @override
+  String get agendaUpcoming => 'Próximas consultas';
+
+  @override
+  String agendaRowTime(String weekday, String time) {
+    return '$weekday · $time';
+  }
+
+  @override
+  String get agendaSchedule => 'Agendar consulta';
+
+  @override
+  String get agendaEmptyTitle => 'Sin consultas agendadas';
+
+  @override
+  String get agendaEmptyBody => 'Cuando agendes una consulta, aparecerá aquí.';
+
+  @override
+  String get agendaOfflineBody =>
+      'Tu agenda no se guarda en el teléfono. Vuelve a intentarlo cuando tengas conexión.';
+
+  @override
+  String get agendaReschedule => 'Reprogramar';
+
+  @override
+  String get agendaCancel => 'Cancelar consulta';
+
+  @override
+  String get agendaCancelDialogTitle => '¿CANCELAR ESTA CONSULTA?';
+
+  @override
+  String get agendaCancelDialogBody =>
+      'Tu paciente dejará de verla en su app. Cancelar no cierra el vínculo.';
+
+  @override
+  String get agendaCancelConfirm => 'Sí, cancelar';
+
+  @override
+  String get agendaCancelled => 'Consulta cancelada';
+
+  @override
+  String get agendaNotCancellableTitle => 'No se puede cancelar';
+
+  @override
+  String get agendaNotCancellableBody => 'Esta consulta ya no está agendada.';
 
   @override
   String shellFollowUpScheduled(String day, String time) {
@@ -1701,8 +2068,154 @@ class AppLocalizationsEs extends AppLocalizations {
   }
 
   @override
+  String get scheduleTitle => 'AGENDAR CONSULTA';
+
+  @override
+  String get scheduleRescheduleTitle => 'REPROGRAMAR CONSULTA';
+
+  @override
+  String get schedulePatient => 'Paciente';
+
+  @override
+  String get schedulePatientMissing => 'Elige un paciente';
+
+  @override
+  String get schedulePatientAlreadyScheduled =>
+      'Este paciente ya tiene una consulta en agenda.';
+
+  @override
+  String get schedulePatientPickerTitle => 'PACIENTE';
+
+  @override
+  String get schedulePatientPickerEmpty =>
+      'Aún no tienes pacientes con un vínculo activo.';
+
+  @override
+  String get scheduleDate => 'Fecha';
+
+  @override
+  String get scheduleTime => 'Hora';
+
+  @override
+  String get scheduleTimeDialogTitle => 'Hora de la consulta';
+
+  @override
+  String get scheduleMomentHelp =>
+      'Ej. 18/09/2026 · 10:00 a. m. La fecha y hora deben ser futuras.';
+
+  @override
+  String get scheduleMomentMissing => 'Elige la fecha y la hora';
+
+  @override
+  String get scheduleMomentNotFuture => 'Elige una fecha y hora futuras';
+
+  @override
+  String get schedulePreparationTitle => '¿Cómo debe prepararse?';
+
+  @override
+  String get schedulePreparationHelp =>
+      'Puedes elegir varias. Tu paciente las verá en su app.';
+
+  @override
+  String get schedulePreparationFasting => 'En ayunas';
+
+  @override
+  String get schedulePreparationLightClothing => 'Ropa ligera';
+
+  @override
+  String get schedulePreparationBloodTests => 'Llevar análisis de sangre';
+
+  @override
+  String get schedulePreparationEmptyBladder => 'Vejiga vacía';
+
+  @override
+  String get scheduleSubmit => 'Agendar';
+
+  @override
+  String get scheduleRescheduleSubmit => 'Reprogramar';
+
+  @override
+  String get scheduleSaving => 'Agendando…';
+
+  @override
+  String get scheduleFailedTitle => 'NO SE PUDO AGENDAR';
+
+  @override
+  String get scheduleFailedBody =>
+      'No pudimos agendar la consulta. Revisa tu conexión e inténtalo de nuevo. Lo que escribiste no se perdió.';
+
+  @override
+  String get referralTitle => 'REGISTRAR DERIVACIÓN';
+
+  @override
+  String get referralSpecialty => 'Especialidad';
+
+  @override
+  String get referralSpecialtyPlaceholder => 'Ej. Endocrinología';
+
+  @override
+  String get referralSpecialtyMissing => 'Completa la especialidad';
+
+  @override
+  String get referralReason => 'Motivo';
+
+  @override
+  String get referralReasonPlaceholder => 'Describe el motivo clínico…';
+
+  @override
+  String get referralReasonMissing =>
+      'Completa el motivo clínico de la derivación';
+
+  @override
+  String get referralSubmit => 'Registrar';
+
+  @override
+  String get referralFailedTitle => 'HUBO UN ERROR';
+
+  @override
+  String get referralFailedBody =>
+      'No pudimos registrar la derivación. Lo que escribiste no se perdió.';
+
+  @override
   String get summarySchedule => 'Agendar consulta';
 
   @override
   String get summaryReferral => 'Registrar derivación';
+
+  @override
+  String get agendaViewPatient => 'Ver paciente';
+
+  @override
+  String inboxPendingCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count ítems pendientes por revisar',
+      one: '$count ítem pendiente por revisar',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get consultationReminderChannelName => 'Consultas';
+
+  @override
+  String get consultationReminderChannelDescription =>
+      'Avisos antes de cada consulta agendada.';
+
+  @override
+  String get consultationReminderTitleDay => 'Consulta mañana';
+
+  @override
+  String get consultationReminderTitleHour => 'Consulta en una hora';
+
+  @override
+  String consultationReminderText(String patientName, String time) {
+    return 'Con $patientName a las $time.';
+  }
+
+  @override
+  String consultationReminderTextNoName(String time) {
+    return 'Con tu paciente a las $time.';
+  }
 }

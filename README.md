@@ -30,3 +30,56 @@ Run the generators again after changing a DTO, a `freezed` state or an ARB file.
 flutter analyze
 flutter test              # add --coverage to write coverage/lcov.info
 ```
+
+## CI/CD
+
+| Workflow | When | What it does |
+|---|---|---|
+| `ci.yml` | Pull requests to `develop` or `main`, pushes to `develop` | Generators, `flutter analyze`, `flutter test --coverage` and `flutter build apk --debug`. Uploads `coverage/lcov.info` as the `reports` artifact |
+| `distribute.yml` | Pushes to `main`, or by hand from the Actions tab | Builds the signed release APK, uploads it to Firebase App Distribution (group `qa`) and creates the GitHub release |
+
+`distribute.yml` in detail:
+
+- The version comes from `version` in `pubspec.yaml`, without the `+build` part (`0.1.0+1` → tag `v0.1.0`).
+  A push to `main` with an already released version fails: bump `version` in `pubspec.yaml`. A manual run of an
+  already released version only redistributes it, without a new GitHub release.
+- Each distributed build takes the workflow run number as its build number (`versionCode`).
+- Release notes for testers are the last 10 commits, without merges.
+- The APK is also kept as the `healthify-release-<run number>` artifact, and attached to the GitHub release as
+  `healthify-v<version>.apk`.
+
+### Repository secrets
+
+| Secret | Value |
+|---|---|
+| `FIREBASE_APP_ID` | Firebase App ID of the Android app `pe.edu.upc.healthify.practitioner` |
+| `FIREBASE_SERVICE_ACCOUNT_JSON` | JSON key of a service account with the *Firebase App Distribution Admin* role |
+| `KEYSTORE_BASE64` | Upload keystore (`.jks`) encoded in base64 |
+| `KEYSTORE_PASSWORD` | Keystore password |
+| `KEY_ALIAS` | Key alias |
+| `KEY_PASSWORD` | Key password |
+
+The app uses no Firebase SDK: there is no `google-services.json`, only the Firebase CLI uploads the APK.
+
+### Signing a release build locally
+
+Create `android/key.properties` (it is ignored by git, like `*.jks` and `*.keystore`):
+
+```properties
+KEYSTORE_FILE=C:/path/to/healthify-upload.jks
+KEYSTORE_PASSWORD=...
+KEY_ALIAS=healthify
+KEY_PASSWORD=...
+```
+
+`KEYSTORE_FILE` may be absolute or relative to `android/`. The same four keys can be passed as environment variables
+instead, which is what CI does. Then:
+
+```sh
+flutter build apk --release
+```
+
+Without a keystore the release still builds, **unsigned**: Gradle writes
+`build/app/outputs/apk/release/app-release-unsigned.apk` and Flutter copies it to
+`build/app/outputs/flutter-apk/app-release.apk`. Despite its name that APK is not signed and cannot be installed;
+use `flutter run` (debug) to try the app on a device.
