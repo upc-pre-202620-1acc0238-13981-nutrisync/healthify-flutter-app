@@ -171,6 +171,9 @@
   "dischargeDialogConfirm": "Yes, discharge",
   "dischargeAlreadyTitle": "Discharge already recorded",
   "dischargeAlreadyBody": "This patient had already been discharged.",
+  "patientTabSummary": "Summary",
+  "patientTabFollowUp": "Follow-up",
+  "patientTabPlan": "Plan",
   "patientUnnamed": "Patient",
   "patientPlanVersion": "Plan version {version}",
   "@patientPlanVersion": {
@@ -192,6 +195,34 @@
   "patientNewChip": "New intake",
   "patientPlanActiveChip": "Current",
   "patientOfflineBody": "Your patients' data is not stored on the phone. Try again when you're connected.",
+  "patientSnackbarPlanPublished": "Plan published. {patient} can now see their targets.",
+  "@patientSnackbarPlanPublished": {
+    "placeholders": {
+      "patient": {
+        "type": "String"
+      }
+    }
+  },
+  "patientSnackbarReferralRegistered": "Referral to {specialty} registered.",
+  "@patientSnackbarReferralRegistered": {
+    "placeholders": {
+      "specialty": {
+        "type": "String"
+      }
+    }
+  },
+  "patientSnackbarView": "View",
+  "patientSnackbarFollowUpScheduled": "Consultation scheduled: {day}, {time}",
+  "@patientSnackbarFollowUpScheduled": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
   "summaryNoBaselineTitle": "No baseline data yet",
   "summaryNoBaselineBody": "Record it once: date of birth, sex, height and medical history. Age, BMI and targets are calculated from it.",
   "summaryRegisterBaseline": "Record baseline data",
@@ -268,6 +299,14 @@
   "unitCm": "cm",
   "unitCmValue": "{value} cm",
   "@unitCmValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "unitKcalValue": "{value} kcal",
+  "@unitKcalValue": {
     "placeholders": {
       "value": {
         "type": "String"
@@ -519,7 +558,127 @@
       }
     }
   },
+  "patientTabRecord": "History",
   "summaryStartConsultation": "New consultation",
+  "recordPrClinicalWeight": "Clinical weight",
+  "recordPrWeightDelta": "{delta} kg since {month}",
+  "@recordPrWeightDelta": {
+    "placeholders": {
+      "delta": {
+        "type": "String"
+      },
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "recordPrNoMeasurement": "No measurement yet",
+  "recordPrBmi": "BMI",
+  "recordPrBmiValue": "BMI {value}",
+  "@recordPrBmiValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "recordPrActiveTargets": "Current targets",
+  "recordPrVersionOn": "Version {version} · {date}",
+  "@recordPrVersionOn": {
+    "placeholders": {
+      "version": {
+        "type": "int"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "recordPrNoPlan": "No plan yet",
+  "recordPrActiveDiagnosis": "Active diagnosis",
+  "recordPrDiagnosisLine": "{label} · {date} · practitioner only",
+  "@recordPrDiagnosisLine": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "recordPrNoDiagnosis": "No diagnosis yet · practitioner only",
+  "recordPrReferralTitle": "Referral to {specialty}",
+  "@recordPrReferralTitle": {
+    "placeholders": {
+      "specialty": {
+        "type": "String"
+      }
+    }
+  },
+  "recordPrReferralLine": "{date} · {status}",
+  "@recordPrReferralLine": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "recordPrReferralOpen": "in progress",
+  "recordPrReferralClosed": "closed",
+  "recordPrEvaluations": "EVALUATIONS",
+  "recordPrNoEvaluations": "No evaluations yet",
+  "recordPrFirstEvaluation": "first evaluation",
+  "recordPrWaistValue": "waist {value} cm",
+  "@recordPrWaistValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "recordReferralsTitle": "Referrals",
+  "evaluationDetailTitle": "Assessment",
+  "referralDetailOpen": "Ongoing",
+  "referralDetailClosed": "Closed",
+  "referralDetailIssuedOn": "Recorded on {date}",
+  "@referralDetailIssuedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "referralDetailClosedOn": "closed on {date}",
+  "@referralDetailClosedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "referralDetailReason": "Reason",
+  "referralDetailNoReason": "No reason recorded.",
+  "historyRecordUnavailable": "We couldn't load the record.",
+  "measurementActivity": "Current physical activity",
+  "measurementBiochemistry": "Biochemical data",
+  "measurementBodyFat": "Body fat",
+  "measurementCholesterol": "Total cholesterol",
+  "measurementGlucose": "Fasting glucose",
+  "measurementHabits": "Eating habits",
+  "measurementMealsOut": "Meals out per week",
+  "measurementMealsPerDay": "Meals per day",
+  "measurementProtocol": "Protocol used",
+  "measurementTriglycerides": "Triglycerides",
+  "measurementWaist": "Waist",
+  "measurementWater": "Water",
+  "measurementWeight": "Weight",
+  "unitLitersPerDay": "L/day",
+  "unitMgDl": "mg/dL",
+  "unitPercent": "%",
   "shellSignalResolved": "Signal resolved. {name} is no longer in your inbox.",
   "shellSignalResolvedGeneric": "Signal resolved. It's no longer in your inbox.",
   "shellFollowUpScheduled": "Consultation scheduled: {day}, {time}",

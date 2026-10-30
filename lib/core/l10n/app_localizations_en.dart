@@ -574,6 +574,15 @@ class AppLocalizationsEn extends AppLocalizations {
       'This patient had already been discharged.';
 
   @override
+  String get patientTabSummary => 'Summary';
+
+  @override
+  String get patientTabFollowUp => 'Follow-up';
+
+  @override
+  String get patientTabPlan => 'Plan';
+
+  @override
   String get patientUnnamed => 'Patient';
 
   @override
@@ -598,6 +607,24 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get patientOfflineBody =>
       'Your patients\' data is not stored on the phone. Try again when you\'re connected.';
+
+  @override
+  String patientSnackbarPlanPublished(String patient) {
+    return 'Plan published. $patient can now see their targets.';
+  }
+
+  @override
+  String patientSnackbarReferralRegistered(String specialty) {
+    return 'Referral to $specialty registered.';
+  }
+
+  @override
+  String get patientSnackbarView => 'View';
+
+  @override
+  String patientSnackbarFollowUpScheduled(String day, String time) {
+    return 'Consultation scheduled: $day, $time';
+  }
 
   @override
   String get summaryNoBaselineTitle => 'No baseline data yet';
@@ -718,6 +745,11 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String unitCmValue(String value) {
     return '$value cm';
+  }
+
+  @override
+  String unitKcalValue(String value) {
+    return '$value kcal';
   }
 
   @override
@@ -1051,7 +1083,160 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String get patientTabRecord => 'History';
+
+  @override
   String get summaryStartConsultation => 'New consultation';
+
+  @override
+  String get recordPrClinicalWeight => 'Clinical weight';
+
+  @override
+  String recordPrWeightDelta(String delta, String month) {
+    return '$delta kg since $month';
+  }
+
+  @override
+  String get recordPrNoMeasurement => 'No measurement yet';
+
+  @override
+  String get recordPrBmi => 'BMI';
+
+  @override
+  String recordPrBmiValue(String value) {
+    return 'BMI $value';
+  }
+
+  @override
+  String get recordPrActiveTargets => 'Current targets';
+
+  @override
+  String recordPrVersionOn(int version, String date) {
+    return 'Version $version · $date';
+  }
+
+  @override
+  String get recordPrNoPlan => 'No plan yet';
+
+  @override
+  String get recordPrActiveDiagnosis => 'Active diagnosis';
+
+  @override
+  String recordPrDiagnosisLine(String label, String date) {
+    return '$label · $date · practitioner only';
+  }
+
+  @override
+  String get recordPrNoDiagnosis => 'No diagnosis yet · practitioner only';
+
+  @override
+  String recordPrReferralTitle(String specialty) {
+    return 'Referral to $specialty';
+  }
+
+  @override
+  String recordPrReferralLine(String date, String status) {
+    return '$date · $status';
+  }
+
+  @override
+  String get recordPrReferralOpen => 'in progress';
+
+  @override
+  String get recordPrReferralClosed => 'closed';
+
+  @override
+  String get recordPrEvaluations => 'EVALUATIONS';
+
+  @override
+  String get recordPrNoEvaluations => 'No evaluations yet';
+
+  @override
+  String get recordPrFirstEvaluation => 'first evaluation';
+
+  @override
+  String recordPrWaistValue(String value) {
+    return 'waist $value cm';
+  }
+
+  @override
+  String get recordReferralsTitle => 'Referrals';
+
+  @override
+  String get evaluationDetailTitle => 'Assessment';
+
+  @override
+  String get referralDetailOpen => 'Ongoing';
+
+  @override
+  String get referralDetailClosed => 'Closed';
+
+  @override
+  String referralDetailIssuedOn(String date) {
+    return 'Recorded on $date';
+  }
+
+  @override
+  String referralDetailClosedOn(String date) {
+    return 'closed on $date';
+  }
+
+  @override
+  String get referralDetailReason => 'Reason';
+
+  @override
+  String get referralDetailNoReason => 'No reason recorded.';
+
+  @override
+  String get historyRecordUnavailable => 'We couldn\'t load the record.';
+
+  @override
+  String get measurementActivity => 'Current physical activity';
+
+  @override
+  String get measurementBiochemistry => 'Biochemical data';
+
+  @override
+  String get measurementBodyFat => 'Body fat';
+
+  @override
+  String get measurementCholesterol => 'Total cholesterol';
+
+  @override
+  String get measurementGlucose => 'Fasting glucose';
+
+  @override
+  String get measurementHabits => 'Eating habits';
+
+  @override
+  String get measurementMealsOut => 'Meals out per week';
+
+  @override
+  String get measurementMealsPerDay => 'Meals per day';
+
+  @override
+  String get measurementProtocol => 'Protocol used';
+
+  @override
+  String get measurementTriglycerides => 'Triglycerides';
+
+  @override
+  String get measurementWaist => 'Waist';
+
+  @override
+  String get measurementWater => 'Water';
+
+  @override
+  String get measurementWeight => 'Weight';
+
+  @override
+  String get unitLitersPerDay => 'L/day';
+
+  @override
+  String get unitMgDl => 'mg/dL';
+
+  @override
+  String get unitPercent => '%';
 
   @override
   String shellSignalResolved(String name) {

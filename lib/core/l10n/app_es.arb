@@ -230,6 +230,9 @@
   "dischargeDialogConfirm": "Sí, dar de alta",
   "dischargeAlreadyTitle": "Alta ya registrada",
   "dischargeAlreadyBody": "Este paciente ya había sido dado de alta.",
+  "patientTabSummary": "Resumen",
+  "patientTabFollowUp": "Seguimiento",
+  "patientTabPlan": "Plan",
   "patientUnnamed": "Paciente",
   "patientPlanVersion": "Plan versión {version}",
   "@patientPlanVersion": {
@@ -251,6 +254,34 @@
   "patientNewChip": "Nuevo ingreso",
   "patientPlanActiveChip": "Vigente",
   "patientOfflineBody": "Los datos de tus pacientes no se guardan en el teléfono. Vuelve a intentarlo cuando tengas conexión.",
+  "patientSnackbarPlanPublished": "Plan publicado. {patient} ya puede ver sus metas.",
+  "@patientSnackbarPlanPublished": {
+    "placeholders": {
+      "patient": {
+        "type": "String"
+      }
+    }
+  },
+  "patientSnackbarReferralRegistered": "Derivación a {specialty} registrada.",
+  "@patientSnackbarReferralRegistered": {
+    "placeholders": {
+      "specialty": {
+        "type": "String"
+      }
+    }
+  },
+  "patientSnackbarView": "Ver",
+  "patientSnackbarFollowUpScheduled": "Consulta agendada: {day}, {time}",
+  "@patientSnackbarFollowUpScheduled": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
   "summaryNoBaselineTitle": "Aún no tiene datos base",
   "summaryNoBaselineBody": "Regístralos una sola vez: fecha de nacimiento, sexo, talla y antecedentes. Con ellos se calculan la edad, el IMC y las metas.",
   "summaryRegisterBaseline": "Registrar datos base",
@@ -327,6 +358,14 @@
   "unitCm": "cm",
   "unitCmValue": "{value} cm",
   "@unitCmValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "unitKcalValue": "{value} kcal",
+  "@unitKcalValue": {
     "placeholders": {
       "value": {
         "type": "String"
@@ -578,7 +617,127 @@
       }
     }
   },
+  "patientTabRecord": "Historia",
   "summaryStartConsultation": "Nueva consulta",
+  "recordPrClinicalWeight": "Peso clínico",
+  "recordPrWeightDelta": "{delta} kg desde {month}",
+  "@recordPrWeightDelta": {
+    "placeholders": {
+      "delta": {
+        "type": "String"
+      },
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "recordPrNoMeasurement": "Aún sin medición",
+  "recordPrBmi": "IMC",
+  "recordPrBmiValue": "IMC {value}",
+  "@recordPrBmiValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "recordPrActiveTargets": "Metas vigentes",
+  "recordPrVersionOn": "Versión {version} · {date}",
+  "@recordPrVersionOn": {
+    "placeholders": {
+      "version": {
+        "type": "int"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "recordPrNoPlan": "Aún sin plan",
+  "recordPrActiveDiagnosis": "Diagnóstico activo",
+  "recordPrDiagnosisLine": "{label} · {date} · solo profesional",
+  "@recordPrDiagnosisLine": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "recordPrNoDiagnosis": "Aún sin diagnóstico · solo profesional",
+  "recordPrReferralTitle": "Derivación a {specialty}",
+  "@recordPrReferralTitle": {
+    "placeholders": {
+      "specialty": {
+        "type": "String"
+      }
+    }
+  },
+  "recordPrReferralLine": "{date} · {status}",
+  "@recordPrReferralLine": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "recordPrReferralOpen": "en curso",
+  "recordPrReferralClosed": "cerrada",
+  "recordPrEvaluations": "EVALUACIONES",
+  "recordPrNoEvaluations": "Aún sin evaluaciones",
+  "recordPrFirstEvaluation": "primera evaluación",
+  "recordPrWaistValue": "cintura {value} cm",
+  "@recordPrWaistValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "recordReferralsTitle": "Derivaciones",
+  "evaluationDetailTitle": "Evaluación",
+  "referralDetailOpen": "En curso",
+  "referralDetailClosed": "Cerrada",
+  "referralDetailIssuedOn": "Registrada el {date}",
+  "@referralDetailIssuedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "referralDetailClosedOn": "cerrada el {date}",
+  "@referralDetailClosedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "referralDetailReason": "Motivo",
+  "referralDetailNoReason": "Sin motivo registrado.",
+  "historyRecordUnavailable": "No pudimos cargar el expediente.",
+  "measurementActivity": "Actividad física actual",
+  "measurementBiochemistry": "Datos bioquímicos",
+  "measurementBodyFat": "Grasa corporal",
+  "measurementCholesterol": "Colesterol total",
+  "measurementGlucose": "Glucosa en ayunas",
+  "measurementHabits": "Hábitos alimentarios",
+  "measurementMealsOut": "Comidas fuera de casa por semana",
+  "measurementMealsPerDay": "Comidas al día",
+  "measurementProtocol": "Protocolo utilizado",
+  "measurementTriglycerides": "Triglicéridos",
+  "measurementWaist": "Cintura",
+  "measurementWater": "Agua",
+  "measurementWeight": "Peso",
+  "unitLitersPerDay": "L/día",
+  "unitMgDl": "mg/dL",
+  "unitPercent": "%",
   "shellSignalResolved": "Señal resuelta. {name} ya no aparece en tu bandeja.",
   "@shellSignalResolved": {
     "placeholders": {

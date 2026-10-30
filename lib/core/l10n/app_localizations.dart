@@ -1124,6 +1124,24 @@ abstract class AppLocalizations {
   /// **'Este paciente ya había sido dado de alta.'**
   String get dischargeAlreadyBody;
 
+  /// No description provided for @patientTabSummary.
+  ///
+  /// In es, this message translates to:
+  /// **'Resumen'**
+  String get patientTabSummary;
+
+  /// No description provided for @patientTabFollowUp.
+  ///
+  /// In es, this message translates to:
+  /// **'Seguimiento'**
+  String get patientTabFollowUp;
+
+  /// No description provided for @patientTabPlan.
+  ///
+  /// In es, this message translates to:
+  /// **'Plan'**
+  String get patientTabPlan;
+
   /// No description provided for @patientUnnamed.
   ///
   /// In es, this message translates to:
@@ -1165,6 +1183,30 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Los datos de tus pacientes no se guardan en el teléfono. Vuelve a intentarlo cuando tengas conexión.'**
   String get patientOfflineBody;
+
+  /// No description provided for @patientSnackbarPlanPublished.
+  ///
+  /// In es, this message translates to:
+  /// **'Plan publicado. {patient} ya puede ver sus metas.'**
+  String patientSnackbarPlanPublished(String patient);
+
+  /// No description provided for @patientSnackbarReferralRegistered.
+  ///
+  /// In es, this message translates to:
+  /// **'Derivación a {specialty} registrada.'**
+  String patientSnackbarReferralRegistered(String specialty);
+
+  /// No description provided for @patientSnackbarView.
+  ///
+  /// In es, this message translates to:
+  /// **'Ver'**
+  String get patientSnackbarView;
+
+  /// No description provided for @patientSnackbarFollowUpScheduled.
+  ///
+  /// In es, this message translates to:
+  /// **'Consulta agendada: {day}, {time}'**
+  String patientSnackbarFollowUpScheduled(String day, String time);
 
   /// No description provided for @summaryNoBaselineTitle.
   ///
@@ -1375,6 +1417,12 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'{value} cm'**
   String unitCmValue(String value);
+
+  /// No description provided for @unitKcalValue.
+  ///
+  /// In es, this message translates to:
+  /// **'{value} kcal'**
+  String unitKcalValue(String value);
 
   /// No description provided for @unitKgValue.
   ///
@@ -1898,11 +1946,281 @@ abstract class AppLocalizations {
   /// **'{weeks, plural, one{Autopesaje · {weeks} semana} other{Autopesaje · {weeks} semanas}}'**
   String followUpWeightTrendCaption(int weeks);
 
+  /// No description provided for @patientTabRecord.
+  ///
+  /// In es, this message translates to:
+  /// **'Historia'**
+  String get patientTabRecord;
+
   /// No description provided for @summaryStartConsultation.
   ///
   /// In es, this message translates to:
   /// **'Nueva consulta'**
   String get summaryStartConsultation;
+
+  /// No description provided for @recordPrClinicalWeight.
+  ///
+  /// In es, this message translates to:
+  /// **'Peso clínico'**
+  String get recordPrClinicalWeight;
+
+  /// No description provided for @recordPrWeightDelta.
+  ///
+  /// In es, this message translates to:
+  /// **'{delta} kg desde {month}'**
+  String recordPrWeightDelta(String delta, String month);
+
+  /// No description provided for @recordPrNoMeasurement.
+  ///
+  /// In es, this message translates to:
+  /// **'Aún sin medición'**
+  String get recordPrNoMeasurement;
+
+  /// No description provided for @recordPrBmi.
+  ///
+  /// In es, this message translates to:
+  /// **'IMC'**
+  String get recordPrBmi;
+
+  /// No description provided for @recordPrBmiValue.
+  ///
+  /// In es, this message translates to:
+  /// **'IMC {value}'**
+  String recordPrBmiValue(String value);
+
+  /// No description provided for @recordPrActiveTargets.
+  ///
+  /// In es, this message translates to:
+  /// **'Metas vigentes'**
+  String get recordPrActiveTargets;
+
+  /// No description provided for @recordPrVersionOn.
+  ///
+  /// In es, this message translates to:
+  /// **'Versión {version} · {date}'**
+  String recordPrVersionOn(int version, String date);
+
+  /// No description provided for @recordPrNoPlan.
+  ///
+  /// In es, this message translates to:
+  /// **'Aún sin plan'**
+  String get recordPrNoPlan;
+
+  /// No description provided for @recordPrActiveDiagnosis.
+  ///
+  /// In es, this message translates to:
+  /// **'Diagnóstico activo'**
+  String get recordPrActiveDiagnosis;
+
+  /// No description provided for @recordPrDiagnosisLine.
+  ///
+  /// In es, this message translates to:
+  /// **'{label} · {date} · solo profesional'**
+  String recordPrDiagnosisLine(String label, String date);
+
+  /// No description provided for @recordPrNoDiagnosis.
+  ///
+  /// In es, this message translates to:
+  /// **'Aún sin diagnóstico · solo profesional'**
+  String get recordPrNoDiagnosis;
+
+  /// No description provided for @recordPrReferralTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Derivación a {specialty}'**
+  String recordPrReferralTitle(String specialty);
+
+  /// No description provided for @recordPrReferralLine.
+  ///
+  /// In es, this message translates to:
+  /// **'{date} · {status}'**
+  String recordPrReferralLine(String date, String status);
+
+  /// No description provided for @recordPrReferralOpen.
+  ///
+  /// In es, this message translates to:
+  /// **'en curso'**
+  String get recordPrReferralOpen;
+
+  /// No description provided for @recordPrReferralClosed.
+  ///
+  /// In es, this message translates to:
+  /// **'cerrada'**
+  String get recordPrReferralClosed;
+
+  /// No description provided for @recordPrEvaluations.
+  ///
+  /// In es, this message translates to:
+  /// **'EVALUACIONES'**
+  String get recordPrEvaluations;
+
+  /// No description provided for @recordPrNoEvaluations.
+  ///
+  /// In es, this message translates to:
+  /// **'Aún sin evaluaciones'**
+  String get recordPrNoEvaluations;
+
+  /// No description provided for @recordPrFirstEvaluation.
+  ///
+  /// In es, this message translates to:
+  /// **'primera evaluación'**
+  String get recordPrFirstEvaluation;
+
+  /// No description provided for @recordPrWaistValue.
+  ///
+  /// In es, this message translates to:
+  /// **'cintura {value} cm'**
+  String recordPrWaistValue(String value);
+
+  /// No description provided for @recordReferralsTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Derivaciones'**
+  String get recordReferralsTitle;
+
+  /// No description provided for @evaluationDetailTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Evaluación'**
+  String get evaluationDetailTitle;
+
+  /// No description provided for @referralDetailOpen.
+  ///
+  /// In es, this message translates to:
+  /// **'En curso'**
+  String get referralDetailOpen;
+
+  /// No description provided for @referralDetailClosed.
+  ///
+  /// In es, this message translates to:
+  /// **'Cerrada'**
+  String get referralDetailClosed;
+
+  /// No description provided for @referralDetailIssuedOn.
+  ///
+  /// In es, this message translates to:
+  /// **'Registrada el {date}'**
+  String referralDetailIssuedOn(String date);
+
+  /// No description provided for @referralDetailClosedOn.
+  ///
+  /// In es, this message translates to:
+  /// **'cerrada el {date}'**
+  String referralDetailClosedOn(String date);
+
+  /// No description provided for @referralDetailReason.
+  ///
+  /// In es, this message translates to:
+  /// **'Motivo'**
+  String get referralDetailReason;
+
+  /// No description provided for @referralDetailNoReason.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin motivo registrado.'**
+  String get referralDetailNoReason;
+
+  /// No description provided for @historyRecordUnavailable.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos cargar el expediente.'**
+  String get historyRecordUnavailable;
+
+  /// No description provided for @measurementActivity.
+  ///
+  /// In es, this message translates to:
+  /// **'Actividad física actual'**
+  String get measurementActivity;
+
+  /// No description provided for @measurementBiochemistry.
+  ///
+  /// In es, this message translates to:
+  /// **'Datos bioquímicos'**
+  String get measurementBiochemistry;
+
+  /// No description provided for @measurementBodyFat.
+  ///
+  /// In es, this message translates to:
+  /// **'Grasa corporal'**
+  String get measurementBodyFat;
+
+  /// No description provided for @measurementCholesterol.
+  ///
+  /// In es, this message translates to:
+  /// **'Colesterol total'**
+  String get measurementCholesterol;
+
+  /// No description provided for @measurementGlucose.
+  ///
+  /// In es, this message translates to:
+  /// **'Glucosa en ayunas'**
+  String get measurementGlucose;
+
+  /// No description provided for @measurementHabits.
+  ///
+  /// In es, this message translates to:
+  /// **'Hábitos alimentarios'**
+  String get measurementHabits;
+
+  /// No description provided for @measurementMealsOut.
+  ///
+  /// In es, this message translates to:
+  /// **'Comidas fuera de casa por semana'**
+  String get measurementMealsOut;
+
+  /// No description provided for @measurementMealsPerDay.
+  ///
+  /// In es, this message translates to:
+  /// **'Comidas al día'**
+  String get measurementMealsPerDay;
+
+  /// No description provided for @measurementProtocol.
+  ///
+  /// In es, this message translates to:
+  /// **'Protocolo utilizado'**
+  String get measurementProtocol;
+
+  /// No description provided for @measurementTriglycerides.
+  ///
+  /// In es, this message translates to:
+  /// **'Triglicéridos'**
+  String get measurementTriglycerides;
+
+  /// No description provided for @measurementWaist.
+  ///
+  /// In es, this message translates to:
+  /// **'Cintura'**
+  String get measurementWaist;
+
+  /// No description provided for @measurementWater.
+  ///
+  /// In es, this message translates to:
+  /// **'Agua'**
+  String get measurementWater;
+
+  /// No description provided for @measurementWeight.
+  ///
+  /// In es, this message translates to:
+  /// **'Peso'**
+  String get measurementWeight;
+
+  /// No description provided for @unitLitersPerDay.
+  ///
+  /// In es, this message translates to:
+  /// **'L/día'**
+  String get unitLitersPerDay;
+
+  /// No description provided for @unitMgDl.
+  ///
+  /// In es, this message translates to:
+  /// **'mg/dL'**
+  String get unitMgDl;
+
+  /// No description provided for @unitPercent.
+  ///
+  /// In es, this message translates to:
+  /// **'%'**
+  String get unitPercent;
 
   /// No description provided for @shellSignalResolved.
   ///
