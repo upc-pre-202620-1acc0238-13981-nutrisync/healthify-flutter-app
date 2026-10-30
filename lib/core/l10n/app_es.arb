@@ -341,7 +341,105 @@
       }
     }
   },
+  "unitGValue": "{value} g",
+  "@unitGValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "macroProtein": "Proteína",
+  "macroFat": "Grasa",
+  "macroCarbsShort": "Carbohid.",
+  "planActiveTargets": "Metas vigentes",
+  "planVersionChip": "Versión {version}",
+  "@planVersionChip": {
+    "placeholders": {
+      "version": {
+        "type": "int"
+      }
+    }
+  },
+  "planKcalPerDay": "kcal / día",
+  "planPublishedOn": "Publicadas el {date}",
+  "@planPublishedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "planSeenSameDay": "{name} las vio el mismo día.",
+  "@planSeenSameDay": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "planSeenOn": "{name} las vio el {date}.",
+  "@planSeenOn": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "planSeen": "{name} ya las vio.",
+  "@planSeen": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "planNotSeenYet": "{name} todavía no las revisa.",
+  "@planNotSeenYet": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "planGuidelines": "Indicaciones",
+  "planRestrictions": "Restricciones",
+  "planNone": "Ninguna",
   "planHistory": "HISTORIAL DEL PLAN",
+  "planVersionTitle": "Versión {version}",
+  "@planVersionTitle": {
+    "placeholders": {
+      "version": {
+        "type": "int"
+      }
+    }
+  },
+  "planVersionLine": "{date} · {kcal} kcal",
+  "@planVersionLine": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "kcal": {
+        "type": "String"
+      }
+    }
+  },
+  "planAdjust": "Ajustar plan",
+  "planEmptyTitle": "Aún sin plan",
+  "planEmptyBody": "El plan se publica al cerrar la consulta guiada.",
+  "planVersionDetailPublished": "Publicada el {date}",
+  "@planVersionDetailPublished": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "planVersionDetailMessageToPatient": "Mensaje al paciente",
   "guidelinePrioritizeVegetables": "Prioriza vegetales",
   "guidelineDrink2lWater": "Toma 2 L de agua al día",
   "guidelineAvoidSugaryDrinks": "Evita bebidas azucaradas",

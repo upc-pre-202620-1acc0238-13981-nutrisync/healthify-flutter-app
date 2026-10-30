@@ -1382,11 +1382,143 @@ abstract class AppLocalizations {
   /// **'{value} kg/sem'**
   String unitKgPerWeek(String value);
 
+  /// No description provided for @unitGValue.
+  ///
+  /// In es, this message translates to:
+  /// **'{value} g'**
+  String unitGValue(String value);
+
+  /// No description provided for @macroProtein.
+  ///
+  /// In es, this message translates to:
+  /// **'Proteína'**
+  String get macroProtein;
+
+  /// No description provided for @macroFat.
+  ///
+  /// In es, this message translates to:
+  /// **'Grasa'**
+  String get macroFat;
+
+  /// No description provided for @macroCarbsShort.
+  ///
+  /// In es, this message translates to:
+  /// **'Carbohid.'**
+  String get macroCarbsShort;
+
+  /// No description provided for @planActiveTargets.
+  ///
+  /// In es, this message translates to:
+  /// **'Metas vigentes'**
+  String get planActiveTargets;
+
+  /// No description provided for @planVersionChip.
+  ///
+  /// In es, this message translates to:
+  /// **'Versión {version}'**
+  String planVersionChip(int version);
+
+  /// No description provided for @planKcalPerDay.
+  ///
+  /// In es, this message translates to:
+  /// **'kcal / día'**
+  String get planKcalPerDay;
+
+  /// No description provided for @planPublishedOn.
+  ///
+  /// In es, this message translates to:
+  /// **'Publicadas el {date}'**
+  String planPublishedOn(String date);
+
+  /// No description provided for @planSeenSameDay.
+  ///
+  /// In es, this message translates to:
+  /// **'{name} las vio el mismo día.'**
+  String planSeenSameDay(String name);
+
+  /// No description provided for @planSeenOn.
+  ///
+  /// In es, this message translates to:
+  /// **'{name} las vio el {date}.'**
+  String planSeenOn(String name, String date);
+
+  /// No description provided for @planSeen.
+  ///
+  /// In es, this message translates to:
+  /// **'{name} ya las vio.'**
+  String planSeen(String name);
+
+  /// No description provided for @planNotSeenYet.
+  ///
+  /// In es, this message translates to:
+  /// **'{name} todavía no las revisa.'**
+  String planNotSeenYet(String name);
+
+  /// No description provided for @planGuidelines.
+  ///
+  /// In es, this message translates to:
+  /// **'Indicaciones'**
+  String get planGuidelines;
+
+  /// No description provided for @planRestrictions.
+  ///
+  /// In es, this message translates to:
+  /// **'Restricciones'**
+  String get planRestrictions;
+
+  /// No description provided for @planNone.
+  ///
+  /// In es, this message translates to:
+  /// **'Ninguna'**
+  String get planNone;
+
   /// No description provided for @planHistory.
   ///
   /// In es, this message translates to:
   /// **'HISTORIAL DEL PLAN'**
   String get planHistory;
+
+  /// No description provided for @planVersionTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Versión {version}'**
+  String planVersionTitle(int version);
+
+  /// No description provided for @planVersionLine.
+  ///
+  /// In es, this message translates to:
+  /// **'{date} · {kcal} kcal'**
+  String planVersionLine(String date, String kcal);
+
+  /// No description provided for @planAdjust.
+  ///
+  /// In es, this message translates to:
+  /// **'Ajustar plan'**
+  String get planAdjust;
+
+  /// No description provided for @planEmptyTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Aún sin plan'**
+  String get planEmptyTitle;
+
+  /// No description provided for @planEmptyBody.
+  ///
+  /// In es, this message translates to:
+  /// **'El plan se publica al cerrar la consulta guiada.'**
+  String get planEmptyBody;
+
+  /// No description provided for @planVersionDetailPublished.
+  ///
+  /// In es, this message translates to:
+  /// **'Publicada el {date}'**
+  String planVersionDetailPublished(String date);
+
+  /// No description provided for @planVersionDetailMessageToPatient.
+  ///
+  /// In es, this message translates to:
+  /// **'Mensaje al paciente'**
+  String get planVersionDetailMessageToPatient;
 
   /// No description provided for @guidelinePrioritizeVegetables.
   ///

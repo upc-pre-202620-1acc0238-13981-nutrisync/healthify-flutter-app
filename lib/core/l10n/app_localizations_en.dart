@@ -726,7 +726,94 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String unitGValue(String value) {
+    return '$value g';
+  }
+
+  @override
+  String get macroProtein => 'Protein';
+
+  @override
+  String get macroFat => 'Fat';
+
+  @override
+  String get macroCarbsShort => 'Carbs';
+
+  @override
+  String get planActiveTargets => 'Current targets';
+
+  @override
+  String planVersionChip(int version) {
+    return 'Version $version';
+  }
+
+  @override
+  String get planKcalPerDay => 'kcal / day';
+
+  @override
+  String planPublishedOn(String date) {
+    return 'Published on $date';
+  }
+
+  @override
+  String planSeenSameDay(String name) {
+    return '$name saw them the same day.';
+  }
+
+  @override
+  String planSeenOn(String name, String date) {
+    return '$name saw them on $date.';
+  }
+
+  @override
+  String planSeen(String name) {
+    return '$name has seen them.';
+  }
+
+  @override
+  String planNotSeenYet(String name) {
+    return '$name hasn\'t reviewed them yet.';
+  }
+
+  @override
+  String get planGuidelines => 'Guidelines';
+
+  @override
+  String get planRestrictions => 'Restrictions';
+
+  @override
+  String get planNone => 'None';
+
+  @override
   String get planHistory => 'PLAN HISTORY';
+
+  @override
+  String planVersionTitle(int version) {
+    return 'Version $version';
+  }
+
+  @override
+  String planVersionLine(String date, String kcal) {
+    return '$date · $kcal kcal';
+  }
+
+  @override
+  String get planAdjust => 'Adjust plan';
+
+  @override
+  String get planEmptyTitle => 'No plan yet';
+
+  @override
+  String get planEmptyBody =>
+      'The plan is published when the guided consultation is closed.';
+
+  @override
+  String planVersionDetailPublished(String date) {
+    return 'Published on $date';
+  }
+
+  @override
+  String get planVersionDetailMessageToPatient => 'Message to the patient';
 
   @override
   String get guidelinePrioritizeVegetables => 'Prioritize vegetables';
