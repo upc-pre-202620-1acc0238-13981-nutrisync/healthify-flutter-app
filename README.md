@@ -60,3 +60,26 @@ flutter test              # add --coverage to write coverage/lcov.info
 | `KEY_PASSWORD` | Key password |
 
 The app uses no Firebase SDK: there is no `google-services.json`, only the Firebase CLI uploads the APK.
+
+### Signing a release build locally
+
+Create `android/key.properties` (it is ignored by git, like `*.jks` and `*.keystore`):
+
+```properties
+KEYSTORE_FILE=C:/path/to/healthify-upload.jks
+KEYSTORE_PASSWORD=...
+KEY_ALIAS=healthify
+KEY_PASSWORD=...
+```
+
+`KEYSTORE_FILE` may be absolute or relative to `android/`. The same four keys can be passed as environment variables
+instead, which is what CI does. Then:
+
+```sh
+flutter build apk --release
+```
+
+Without a keystore the release still builds, **unsigned**: Gradle writes
+`build/app/outputs/apk/release/app-release-unsigned.apk` and Flutter copies it to
+`build/app/outputs/flutter-apk/app-release.apk`. Despite its name that APK is not signed and cannot be installed;
+use `flutter run` (debug) to try the app on a device.
