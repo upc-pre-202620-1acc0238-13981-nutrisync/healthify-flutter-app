@@ -37,3 +37,17 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+  assets:
+    - assets/icons/
+    - assets/images/
+  fonts:
+    - family: Anton
+      fonts:
+        - asset: assets/fonts/anton_regular.ttf
+    - family: OpenSans
+      fonts:
+        - asset: assets/fonts/open_sans_regular.ttf
+        - asset: assets/fonts/open_sans_semibold.ttf
+          weight: 600
+        - asset: assets/fonts/open_sans_bold.ttf
+          weight: 700
