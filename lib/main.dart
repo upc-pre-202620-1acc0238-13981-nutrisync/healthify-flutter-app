@@ -5,8 +5,10 @@ import 'core/designsystem/theme/healthify_theme.dart';
 import 'core/di/service_locator.dart';
 import 'core/l10n/app_localizations.dart';
 import 'core/network/app_language_provider.dart';
+import 'features/carerelationship/infrastructure/di/care_relationship_module.dart';
 import 'features/iam/application/usecase/session_use_cases.dart';
 import 'features/iam/infrastructure/di/iam_module.dart';
+import 'features/main/presentation/di/main_module.dart';
 import 'features/onboarding/presentation/di/onboarding_module.dart';
 import 'navigation/app_router.dart';
 import 'navigation/session_gate.dart';
@@ -21,6 +23,8 @@ Future<void> main() async {
 /// The bounded contexts' graphs, on top of `setupCore`. Tests call it too, so they exercise the graph the app runs with.
 void registerFeatureModules() {
   registerIam();
+  registerCareRelationship();
+  registerMain();
   registerOnboarding();
 }
 
