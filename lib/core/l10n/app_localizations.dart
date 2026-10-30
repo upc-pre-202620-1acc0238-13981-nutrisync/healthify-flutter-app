@@ -487,6 +487,156 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Por seguridad, tras 5 intentos fallidos. Inténtalo más tarde o recupera tu contraseña.'**
   String get signInLockedBody;
+
+  /// No description provided for @forgotPasswordTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'RECUPERAR CONTRASEÑA'**
+  String get forgotPasswordTitle;
+
+  /// No description provided for @forgotPasswordEmailSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribe el correo de tu cuenta y te enviaremos un código de 6 dígitos.'**
+  String get forgotPasswordEmailSubtitle;
+
+  /// No description provided for @forgotPasswordEmailError.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribe un correo válido'**
+  String get forgotPasswordEmailError;
+
+  /// No description provided for @forgotPasswordSend.
+  ///
+  /// In es, this message translates to:
+  /// **'Enviar código'**
+  String get forgotPasswordSend;
+
+  /// No description provided for @forgotPasswordSending.
+  ///
+  /// In es, this message translates to:
+  /// **'Enviando…'**
+  String get forgotPasswordSending;
+
+  /// No description provided for @forgotPasswordBackToSignIn.
+  ///
+  /// In es, this message translates to:
+  /// **'Volver a iniciar sesión'**
+  String get forgotPasswordBackToSignIn;
+
+  /// No description provided for @forgotPasswordCodeSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Si {email} tiene una cuenta, te enviamos un código. Revisa también la carpeta de spam.'**
+  String forgotPasswordCodeSubtitle(String email);
+
+  /// No description provided for @forgotPasswordCodeLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Código'**
+  String get forgotPasswordCodeLabel;
+
+  /// No description provided for @forgotPasswordCodePlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'6 dígitos'**
+  String get forgotPasswordCodePlaceholder;
+
+  /// No description provided for @forgotPasswordCodeError.
+  ///
+  /// In es, this message translates to:
+  /// **'El código no es correcto o ya venció. Pide uno nuevo.'**
+  String get forgotPasswordCodeError;
+
+  /// No description provided for @forgotPasswordVerify.
+  ///
+  /// In es, this message translates to:
+  /// **'Verificar código'**
+  String get forgotPasswordVerify;
+
+  /// No description provided for @forgotPasswordVerifying.
+  ///
+  /// In es, this message translates to:
+  /// **'Verificando…'**
+  String get forgotPasswordVerifying;
+
+  /// No description provided for @forgotPasswordTokenExpired.
+  ///
+  /// In es, this message translates to:
+  /// **'Se acabó el tiempo para cambiar tu contraseña. Pide un código nuevo.'**
+  String get forgotPasswordTokenExpired;
+
+  /// No description provided for @forgotPasswordNewPasswordSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Código verificado. Elige una contraseña nueva, distinta a la actual.'**
+  String get forgotPasswordNewPasswordSubtitle;
+
+  /// No description provided for @forgotPasswordNewPassword.
+  ///
+  /// In es, this message translates to:
+  /// **'Contraseña nueva'**
+  String get forgotPasswordNewPassword;
+
+  /// No description provided for @forgotPasswordErrorReused.
+  ///
+  /// In es, this message translates to:
+  /// **'Usa una contraseña distinta a la actual'**
+  String get forgotPasswordErrorReused;
+
+  /// No description provided for @forgotPasswordSubmit.
+  ///
+  /// In es, this message translates to:
+  /// **'Cambiar contraseña'**
+  String get forgotPasswordSubmit;
+
+  /// No description provided for @forgotPasswordSubmitting.
+  ///
+  /// In es, this message translates to:
+  /// **'Cambiando…'**
+  String get forgotPasswordSubmitting;
+
+  /// No description provided for @forgotPasswordResend.
+  ///
+  /// In es, this message translates to:
+  /// **'Reenviar código'**
+  String get forgotPasswordResend;
+
+  /// No description provided for @forgotPasswordResendIn.
+  ///
+  /// In es, this message translates to:
+  /// **'Reenviar código en {seconds} s'**
+  String forgotPasswordResendIn(int seconds);
+
+  /// No description provided for @forgotPasswordResent.
+  ///
+  /// In es, this message translates to:
+  /// **'Te enviamos un código nuevo.'**
+  String get forgotPasswordResent;
+
+  /// No description provided for @forgotPasswordChangeEmail.
+  ///
+  /// In es, this message translates to:
+  /// **'Usar otro correo'**
+  String get forgotPasswordChangeEmail;
+
+  /// No description provided for @forgotPasswordDoneTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'CONTRASEÑA ACTUALIZADA'**
+  String get forgotPasswordDoneTitle;
+
+  /// No description provided for @forgotPasswordDoneBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Ya puedes iniciar sesión con tu contraseña nueva. Por seguridad, cerramos tu sesión en los demás dispositivos.'**
+  String get forgotPasswordDoneBody;
+
+  /// No description provided for @forgotPasswordGoToSignIn.
+  ///
+  /// In es, this message translates to:
+  /// **'Iniciar sesión'**
+  String get forgotPasswordGoToSignIn;
 }
 
 class _AppLocalizationsDelegate

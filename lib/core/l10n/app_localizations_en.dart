@@ -216,4 +216,89 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get signInLockedBody =>
       'For your security, after 5 failed attempts. Try again later or recover your password.';
+
+  @override
+  String get forgotPasswordTitle => 'RESET PASSWORD';
+
+  @override
+  String get forgotPasswordEmailSubtitle =>
+      'Enter your account email and we\'ll send you a 6-digit code.';
+
+  @override
+  String get forgotPasswordEmailError => 'Enter a valid email';
+
+  @override
+  String get forgotPasswordSend => 'Send code';
+
+  @override
+  String get forgotPasswordSending => 'Sending…';
+
+  @override
+  String get forgotPasswordBackToSignIn => 'Back to sign in';
+
+  @override
+  String forgotPasswordCodeSubtitle(String email) {
+    return 'If $email has an account, we sent it a code. Check your spam folder too.';
+  }
+
+  @override
+  String get forgotPasswordCodeLabel => 'Code';
+
+  @override
+  String get forgotPasswordCodePlaceholder => '6 digits';
+
+  @override
+  String get forgotPasswordCodeError =>
+      'The code is wrong or has expired. Ask for a new one.';
+
+  @override
+  String get forgotPasswordVerify => 'Verify code';
+
+  @override
+  String get forgotPasswordVerifying => 'Verifying…';
+
+  @override
+  String get forgotPasswordTokenExpired =>
+      'The time to change your password ran out. Ask for a new code.';
+
+  @override
+  String get forgotPasswordNewPasswordSubtitle =>
+      'Code verified. Choose a new password, different from your current one.';
+
+  @override
+  String get forgotPasswordNewPassword => 'New password';
+
+  @override
+  String get forgotPasswordErrorReused =>
+      'Use a password different from your current one';
+
+  @override
+  String get forgotPasswordSubmit => 'Change password';
+
+  @override
+  String get forgotPasswordSubmitting => 'Changing…';
+
+  @override
+  String get forgotPasswordResend => 'Resend code';
+
+  @override
+  String forgotPasswordResendIn(int seconds) {
+    return 'Resend code in $seconds s';
+  }
+
+  @override
+  String get forgotPasswordResent => 'We sent you a new code.';
+
+  @override
+  String get forgotPasswordChangeEmail => 'Use another email';
+
+  @override
+  String get forgotPasswordDoneTitle => 'PASSWORD UPDATED';
+
+  @override
+  String get forgotPasswordDoneBody =>
+      'You can now sign in with your new password. For your security, we signed you out on your other devices.';
+
+  @override
+  String get forgotPasswordGoToSignIn => 'Sign in';
 }

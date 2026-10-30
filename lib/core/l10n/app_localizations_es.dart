@@ -213,4 +213,89 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get signInLockedBody =>
       'Por seguridad, tras 5 intentos fallidos. Inténtalo más tarde o recupera tu contraseña.';
+
+  @override
+  String get forgotPasswordTitle => 'RECUPERAR CONTRASEÑA';
+
+  @override
+  String get forgotPasswordEmailSubtitle =>
+      'Escribe el correo de tu cuenta y te enviaremos un código de 6 dígitos.';
+
+  @override
+  String get forgotPasswordEmailError => 'Escribe un correo válido';
+
+  @override
+  String get forgotPasswordSend => 'Enviar código';
+
+  @override
+  String get forgotPasswordSending => 'Enviando…';
+
+  @override
+  String get forgotPasswordBackToSignIn => 'Volver a iniciar sesión';
+
+  @override
+  String forgotPasswordCodeSubtitle(String email) {
+    return 'Si $email tiene una cuenta, te enviamos un código. Revisa también la carpeta de spam.';
+  }
+
+  @override
+  String get forgotPasswordCodeLabel => 'Código';
+
+  @override
+  String get forgotPasswordCodePlaceholder => '6 dígitos';
+
+  @override
+  String get forgotPasswordCodeError =>
+      'El código no es correcto o ya venció. Pide uno nuevo.';
+
+  @override
+  String get forgotPasswordVerify => 'Verificar código';
+
+  @override
+  String get forgotPasswordVerifying => 'Verificando…';
+
+  @override
+  String get forgotPasswordTokenExpired =>
+      'Se acabó el tiempo para cambiar tu contraseña. Pide un código nuevo.';
+
+  @override
+  String get forgotPasswordNewPasswordSubtitle =>
+      'Código verificado. Elige una contraseña nueva, distinta a la actual.';
+
+  @override
+  String get forgotPasswordNewPassword => 'Contraseña nueva';
+
+  @override
+  String get forgotPasswordErrorReused =>
+      'Usa una contraseña distinta a la actual';
+
+  @override
+  String get forgotPasswordSubmit => 'Cambiar contraseña';
+
+  @override
+  String get forgotPasswordSubmitting => 'Cambiando…';
+
+  @override
+  String get forgotPasswordResend => 'Reenviar código';
+
+  @override
+  String forgotPasswordResendIn(int seconds) {
+    return 'Reenviar código en $seconds s';
+  }
+
+  @override
+  String get forgotPasswordResent => 'Te enviamos un código nuevo.';
+
+  @override
+  String get forgotPasswordChangeEmail => 'Usar otro correo';
+
+  @override
+  String get forgotPasswordDoneTitle => 'CONTRASEÑA ACTUALIZADA';
+
+  @override
+  String get forgotPasswordDoneBody =>
+      'Ya puedes iniciar sesión con tu contraseña nueva. Por seguridad, cerramos tu sesión en los demás dispositivos.';
+
+  @override
+  String get forgotPasswordGoToSignIn => 'Iniciar sesión';
 }
