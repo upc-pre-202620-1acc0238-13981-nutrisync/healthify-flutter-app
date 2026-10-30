@@ -1292,6 +1292,19 @@ class AppLocalizationsEn extends AppLocalizations {
   String get consultationTitle => 'TODAY\'S CONSULTATION';
 
   @override
+  String get diagnosisAiBadge => 'AI suggestion';
+
+  @override
+  String get diagnosisChooseOther => 'Choose another';
+
+  @override
+  String get diagnosisContinue => 'Continue to targets';
+
+  @override
+  String get diagnosisDisclaimer =>
+      'Based on the measurement and history of this evaluation. Review it before using it.';
+
+  @override
   String get diagnosisNormalWeight => 'Normal weight';
 
   @override
@@ -1307,7 +1320,29 @@ class AppLocalizationsEn extends AppLocalizations {
   String get diagnosisOverweightGradeI => 'Overweight grade I';
 
   @override
+  String get diagnosisRationale => 'Clinical rationale';
+
+  @override
+  String get diagnosisRequired => 'Choose a diagnosis to continue.';
+
+  @override
+  String get diagnosisRuleBadge => 'Suggestion based on BMI';
+
+  @override
+  String get diagnosisSubtitle =>
+      'Only for your professional record. The patient won\'t see it.';
+
+  @override
+  String get diagnosisSuggestionUsed => 'Suggestion chosen';
+
+  @override
+  String get diagnosisTitle => 'Diagnosis';
+
+  @override
   String get diagnosisUnderweight => 'Underweight';
+
+  @override
+  String get diagnosisUseSuggestion => 'Use suggestion';
 
   @override
   String get equationFaoWhoUnu => 'FAO/WHO/UNU';
@@ -1445,9 +1480,21 @@ class AppLocalizationsEn extends AppLocalizations {
   String get measurementWeightRequired => 'Enter the weight in kg.';
 
   @override
+  String get targetsAccept => 'Accept targets';
+
+  @override
   String targetsActivityFactor(String factor) {
     return 'activity factor $factor';
   }
+
+  @override
+  String get targetsCalculatedWith => 'Calculated with';
+
+  @override
+  String get targetsChangeParameters => 'Change parameters';
+
+  @override
+  String get targetsDeficit => 'Deficit';
 
   @override
   String targetsDeficitKcal(String value) {
@@ -1466,9 +1513,86 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String get targetsDeficitValue => 'Deficit value';
+
+  @override
+  String get targetsEnergy => 'Energy';
+
+  @override
+  String get targetsEnergyInvalid => 'Enter an energy greater than 0.';
+
+  @override
+  String get targetsEquation => 'Equation';
+
+  @override
+  String get targetsFatPercent => 'Fat share of energy';
+
+  @override
+  String get targetsKcalPerDay => 'kcal per day';
+
+  @override
+  String targetsMacroShare(String label, int percent) {
+    return '$label · $percent %';
+  }
+
+  @override
+  String get targetsOverrideReason => 'Reason for the change';
+
+  @override
+  String get targetsOverrideReasonPlaceholder =>
+      'E.g. Adjusted to their work schedule';
+
+  @override
+  String get targetsOverrideReasonRequired =>
+      'Write the reason for the change: it stays in the record.';
+
+  @override
+  String get targetsOverrideSave => 'Save and continue';
+
+  @override
+  String get targetsOverrideTitle => 'Your own values';
+
+  @override
+  String get targetsParametersInvalid =>
+      'Check the values: deficit 0–1500 kcal or 0–40 %, protein 0.5–3 g/kg and fat 15–45 %.';
+
+  @override
+  String get targetsParametersTitle => 'Change parameters';
+
+  @override
+  String get targetsProposed => 'Proposed targets';
+
+  @override
+  String get targetsProteinPerKg => 'Protein';
+
+  @override
+  String get targetsRecalculate => 'Recalculate targets';
+
+  @override
+  String get targetsSubtitle =>
+      'Calculated automatically from the baseline data and today\'s measurement.';
+
+  @override
+  String get targetsWriteOwn => 'Write my own values';
+
+  @override
+  String textCounter(int count, int max) {
+    return '$count/$max';
+  }
+
+  @override
   String unitBmiValue(String value) {
     return '$value kg/m²';
   }
+
+  @override
+  String get unitG => 'g';
+
+  @override
+  String get unitGPerKg => 'g/kg';
+
+  @override
+  String get unitKcal => 'kcal';
 
   @override
   String get unitKg => 'kg';
@@ -1481,6 +1605,21 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get unitPercent => '%';
+
+  @override
+  String get aiGeneratingNote =>
+      'Generating with AI. It can take up to a minute.';
+
+  @override
+  String get diagnosisSuggestionFailedTitle =>
+      'We couldn\'t generate the AI suggestion';
+
+  @override
+  String get diagnosisSuggestionFailedBody =>
+      'You can pick the diagnosis from the list or try again. What you already chose is kept.';
+
+  @override
+  String get targetsCalculating => 'Calculating the targets…';
 
   @override
   String shellSignalResolved(String name) {

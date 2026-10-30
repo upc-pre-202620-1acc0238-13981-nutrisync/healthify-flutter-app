@@ -2306,6 +2306,30 @@ abstract class AppLocalizations {
   /// **'CONSULTA DE HOY'**
   String get consultationTitle;
 
+  /// No description provided for @diagnosisAiBadge.
+  ///
+  /// In es, this message translates to:
+  /// **'Sugerencia de IA'**
+  String get diagnosisAiBadge;
+
+  /// No description provided for @diagnosisChooseOther.
+  ///
+  /// In es, this message translates to:
+  /// **'Elegir otro'**
+  String get diagnosisChooseOther;
+
+  /// No description provided for @diagnosisContinue.
+  ///
+  /// In es, this message translates to:
+  /// **'Continuar a metas'**
+  String get diagnosisContinue;
+
+  /// No description provided for @diagnosisDisclaimer.
+  ///
+  /// In es, this message translates to:
+  /// **'Se basa en la medición y la historia de esta evaluación. Revísala antes de usarla.'**
+  String get diagnosisDisclaimer;
+
   /// No description provided for @diagnosisNormalWeight.
   ///
   /// In es, this message translates to:
@@ -2336,11 +2360,53 @@ abstract class AppLocalizations {
   /// **'Sobrepeso grado I'**
   String get diagnosisOverweightGradeI;
 
+  /// No description provided for @diagnosisRationale.
+  ///
+  /// In es, this message translates to:
+  /// **'Fundamento clínico'**
+  String get diagnosisRationale;
+
+  /// No description provided for @diagnosisRequired.
+  ///
+  /// In es, this message translates to:
+  /// **'Elige un diagnóstico para continuar.'**
+  String get diagnosisRequired;
+
+  /// No description provided for @diagnosisRuleBadge.
+  ///
+  /// In es, this message translates to:
+  /// **'Sugerencia según el IMC'**
+  String get diagnosisRuleBadge;
+
+  /// No description provided for @diagnosisSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Solo para tu expediente profesional. El paciente no lo verá.'**
+  String get diagnosisSubtitle;
+
+  /// No description provided for @diagnosisSuggestionUsed.
+  ///
+  /// In es, this message translates to:
+  /// **'Sugerencia elegida'**
+  String get diagnosisSuggestionUsed;
+
+  /// No description provided for @diagnosisTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Diagnóstico'**
+  String get diagnosisTitle;
+
   /// No description provided for @diagnosisUnderweight.
   ///
   /// In es, this message translates to:
   /// **'Bajo peso'**
   String get diagnosisUnderweight;
+
+  /// No description provided for @diagnosisUseSuggestion.
+  ///
+  /// In es, this message translates to:
+  /// **'Usar sugerencia'**
+  String get diagnosisUseSuggestion;
 
   /// No description provided for @equationFaoWhoUnu.
   ///
@@ -2594,11 +2660,35 @@ abstract class AppLocalizations {
   /// **'Escribe el peso en kg.'**
   String get measurementWeightRequired;
 
+  /// No description provided for @targetsAccept.
+  ///
+  /// In es, this message translates to:
+  /// **'Aceptar metas'**
+  String get targetsAccept;
+
   /// No description provided for @targetsActivityFactor.
   ///
   /// In es, this message translates to:
   /// **'factor de actividad {factor}'**
   String targetsActivityFactor(String factor);
+
+  /// No description provided for @targetsCalculatedWith.
+  ///
+  /// In es, this message translates to:
+  /// **'Calculado con'**
+  String get targetsCalculatedWith;
+
+  /// No description provided for @targetsChangeParameters.
+  ///
+  /// In es, this message translates to:
+  /// **'Cambiar parámetros'**
+  String get targetsChangeParameters;
+
+  /// No description provided for @targetsDeficit.
+  ///
+  /// In es, this message translates to:
+  /// **'Déficit'**
+  String get targetsDeficit;
 
   /// No description provided for @targetsDeficitKcal.
   ///
@@ -2624,11 +2714,149 @@ abstract class AppLocalizations {
   /// **'déficit del {value} %'**
   String targetsDeficitPercent(String value);
 
+  /// No description provided for @targetsDeficitValue.
+  ///
+  /// In es, this message translates to:
+  /// **'Valor del déficit'**
+  String get targetsDeficitValue;
+
+  /// No description provided for @targetsEnergy.
+  ///
+  /// In es, this message translates to:
+  /// **'Energía'**
+  String get targetsEnergy;
+
+  /// No description provided for @targetsEnergyInvalid.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribe una energía mayor que 0.'**
+  String get targetsEnergyInvalid;
+
+  /// No description provided for @targetsEquation.
+  ///
+  /// In es, this message translates to:
+  /// **'Ecuación'**
+  String get targetsEquation;
+
+  /// No description provided for @targetsFatPercent.
+  ///
+  /// In es, this message translates to:
+  /// **'Grasa de la energía'**
+  String get targetsFatPercent;
+
+  /// No description provided for @targetsKcalPerDay.
+  ///
+  /// In es, this message translates to:
+  /// **'kcal por día'**
+  String get targetsKcalPerDay;
+
+  /// No description provided for @targetsMacroShare.
+  ///
+  /// In es, this message translates to:
+  /// **'{label} · {percent} %'**
+  String targetsMacroShare(String label, int percent);
+
+  /// No description provided for @targetsOverrideReason.
+  ///
+  /// In es, this message translates to:
+  /// **'Razón del cambio'**
+  String get targetsOverrideReason;
+
+  /// No description provided for @targetsOverrideReasonPlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'Ej. Ajuste por su ritmo de trabajo'**
+  String get targetsOverrideReasonPlaceholder;
+
+  /// No description provided for @targetsOverrideReasonRequired.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribe la razón del cambio: queda en el expediente.'**
+  String get targetsOverrideReasonRequired;
+
+  /// No description provided for @targetsOverrideSave.
+  ///
+  /// In es, this message translates to:
+  /// **'Guardar y continuar'**
+  String get targetsOverrideSave;
+
+  /// No description provided for @targetsOverrideTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Tus propios valores'**
+  String get targetsOverrideTitle;
+
+  /// No description provided for @targetsParametersInvalid.
+  ///
+  /// In es, this message translates to:
+  /// **'Revisa los valores: déficit de 0 a 1500 kcal o de 0 a 40 %, proteína de 0,5 a 3 g/kg y grasa de 15 a 45 %.'**
+  String get targetsParametersInvalid;
+
+  /// No description provided for @targetsParametersTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Cambiar parámetros'**
+  String get targetsParametersTitle;
+
+  /// No description provided for @targetsProposed.
+  ///
+  /// In es, this message translates to:
+  /// **'Metas propuestas'**
+  String get targetsProposed;
+
+  /// No description provided for @targetsProteinPerKg.
+  ///
+  /// In es, this message translates to:
+  /// **'Proteína'**
+  String get targetsProteinPerKg;
+
+  /// No description provided for @targetsRecalculate.
+  ///
+  /// In es, this message translates to:
+  /// **'Recalcular metas'**
+  String get targetsRecalculate;
+
+  /// No description provided for @targetsSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Se calculan solas con los datos base y la medición de hoy.'**
+  String get targetsSubtitle;
+
+  /// No description provided for @targetsWriteOwn.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribir mis propios valores'**
+  String get targetsWriteOwn;
+
+  /// No description provided for @textCounter.
+  ///
+  /// In es, this message translates to:
+  /// **'{count}/{max}'**
+  String textCounter(int count, int max);
+
   /// No description provided for @unitBmiValue.
   ///
   /// In es, this message translates to:
   /// **'{value} kg/m²'**
   String unitBmiValue(String value);
+
+  /// No description provided for @unitG.
+  ///
+  /// In es, this message translates to:
+  /// **'g'**
+  String get unitG;
+
+  /// No description provided for @unitGPerKg.
+  ///
+  /// In es, this message translates to:
+  /// **'g/kg'**
+  String get unitGPerKg;
+
+  /// No description provided for @unitKcal.
+  ///
+  /// In es, this message translates to:
+  /// **'kcal'**
+  String get unitKcal;
 
   /// No description provided for @unitKg.
   ///
@@ -2653,6 +2881,30 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'%'**
   String get unitPercent;
+
+  /// No description provided for @aiGeneratingNote.
+  ///
+  /// In es, this message translates to:
+  /// **'Generando con IA. Puede tardar hasta un minuto.'**
+  String get aiGeneratingNote;
+
+  /// No description provided for @diagnosisSuggestionFailedTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos generar la sugerencia de IA'**
+  String get diagnosisSuggestionFailedTitle;
+
+  /// No description provided for @diagnosisSuggestionFailedBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Puedes elegir el diagnóstico de la lista o volver a intentarlo. Lo que ya elegiste se conserva.'**
+  String get diagnosisSuggestionFailedBody;
+
+  /// No description provided for @targetsCalculating.
+  ///
+  /// In es, this message translates to:
+  /// **'Calculando las metas…'**
+  String get targetsCalculating;
 
   /// No description provided for @shellSignalResolved.
   ///

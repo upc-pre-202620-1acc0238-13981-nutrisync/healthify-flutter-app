@@ -793,12 +793,23 @@
   "consultationExitTitle": "¿SALIR DE LA CONSULTA?",
   "consultationOfflineBody": "Necesitas conexión para continuar la consulta. Lo que ya guardaste no se pierde.",
   "consultationTitle": "CONSULTA DE HOY",
+  "diagnosisAiBadge": "Sugerencia de IA",
+  "diagnosisChooseOther": "Elegir otro",
+  "diagnosisContinue": "Continuar a metas",
+  "diagnosisDisclaimer": "Se basa en la medición y la historia de esta evaluación. Revísala antes de usarla.",
   "diagnosisNormalWeight": "Peso normal",
   "diagnosisObesityGradeI": "Obesidad grado I",
   "diagnosisObesityGradeIi": "Obesidad grado II",
   "diagnosisObesityGradeIii": "Obesidad grado III",
   "diagnosisOverweightGradeI": "Sobrepeso grado I",
+  "diagnosisRationale": "Fundamento clínico",
+  "diagnosisRequired": "Elige un diagnóstico para continuar.",
+  "diagnosisRuleBadge": "Sugerencia según el IMC",
+  "diagnosisSubtitle": "Solo para tu expediente profesional. El paciente no lo verá.",
+  "diagnosisSuggestionUsed": "Sugerencia elegida",
+  "diagnosisTitle": "Diagnóstico",
   "diagnosisUnderweight": "Bajo peso",
+  "diagnosisUseSuggestion": "Usar sugerencia",
   "equationFaoWhoUnu": "FAO/OMS/UNU",
   "equationHarrisBenedict": "Harris-Benedict",
   "equationKatchMcardle": "Katch-McArdle",
@@ -862,6 +873,7 @@
   "measurementWeight": "Peso",
   "measurementWeightRange": "El peso va de 20 a 350 kg.",
   "measurementWeightRequired": "Escribe el peso en kg.",
+  "targetsAccept": "Aceptar metas",
   "targetsActivityFactor": "factor de actividad {factor}",
   "@targetsActivityFactor": {
     "placeholders": {
@@ -870,6 +882,9 @@
       }
     }
   },
+  "targetsCalculatedWith": "Calculado con",
+  "targetsChangeParameters": "Cambiar parámetros",
+  "targetsDeficit": "Déficit",
   "targetsDeficitKcal": "déficit de {value} kcal",
   "@targetsDeficitKcal": {
     "placeholders": {
@@ -888,6 +903,46 @@
       }
     }
   },
+  "targetsDeficitValue": "Valor del déficit",
+  "targetsEnergy": "Energía",
+  "targetsEnergyInvalid": "Escribe una energía mayor que 0.",
+  "targetsEquation": "Ecuación",
+  "targetsFatPercent": "Grasa de la energía",
+  "targetsKcalPerDay": "kcal por día",
+  "targetsMacroShare": "{label} · {percent} %",
+  "@targetsMacroShare": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "targetsOverrideReason": "Razón del cambio",
+  "targetsOverrideReasonPlaceholder": "Ej. Ajuste por su ritmo de trabajo",
+  "targetsOverrideReasonRequired": "Escribe la razón del cambio: queda en el expediente.",
+  "targetsOverrideSave": "Guardar y continuar",
+  "targetsOverrideTitle": "Tus propios valores",
+  "targetsParametersInvalid": "Revisa los valores: déficit de 0 a 1500 kcal o de 0 a 40 %, proteína de 0,5 a 3 g/kg y grasa de 15 a 45 %.",
+  "targetsParametersTitle": "Cambiar parámetros",
+  "targetsProposed": "Metas propuestas",
+  "targetsProteinPerKg": "Proteína",
+  "targetsRecalculate": "Recalcular metas",
+  "targetsSubtitle": "Se calculan solas con los datos base y la medición de hoy.",
+  "targetsWriteOwn": "Escribir mis propios valores",
+  "textCounter": "{count}/{max}",
+  "@textCounter": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
   "unitBmiValue": "{value} kg/m²",
   "@unitBmiValue": {
     "placeholders": {
@@ -896,10 +951,17 @@
       }
     }
   },
+  "unitG": "g",
+  "unitGPerKg": "g/kg",
+  "unitKcal": "kcal",
   "unitKg": "kg",
   "unitLitersPerDay": "L/día",
   "unitMgDl": "mg/dL",
   "unitPercent": "%",
+  "aiGeneratingNote": "Generando con IA. Puede tardar hasta un minuto.",
+  "diagnosisSuggestionFailedTitle": "No pudimos generar la sugerencia de IA",
+  "diagnosisSuggestionFailedBody": "Puedes elegir el diagnóstico de la lista o volver a intentarlo. Lo que ya elegiste se conserva.",
+  "targetsCalculating": "Calculando las metas…",
   "shellSignalResolved": "Señal resuelta. {name} ya no aparece en tu bandeja.",
   "@shellSignalResolved": {
     "placeholders": {
