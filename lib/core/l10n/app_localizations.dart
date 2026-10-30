@@ -104,6 +104,18 @@ abstract class AppLocalizations {
   /// **'Healthify'**
   String get appName;
 
+  /// No description provided for @placeholderTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Healthify para nutricionistas'**
+  String get placeholderTitle;
+
+  /// No description provided for @placeholderBody.
+  ///
+  /// In es, this message translates to:
+  /// **'La migración a Flutter está en curso.'**
+  String get placeholderBody;
+
   /// No description provided for @commonClose.
   ///
   /// In es, this message translates to:
@@ -115,6 +127,12 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Entendido'**
   String get commonUnderstood;
+
+  /// No description provided for @commonAccept.
+  ///
+  /// In es, this message translates to:
+  /// **'Aceptar'**
+  String get commonAccept;
 
   /// No description provided for @commonTryAgain.
   ///
@@ -805,6 +823,12 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Cerrar sesión'**
   String get menuSignOut;
+
+  /// No description provided for @comingSoonBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Esta sección estará disponible muy pronto.'**
+  String get comingSoonBody;
 
   /// No description provided for @inboxTitle.
   ///

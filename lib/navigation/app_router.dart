@@ -2,9 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-import '../core/designsystem/theme/healthify_theme.dart';
 import '../core/di/service_locator.dart';
-import '../core/l10n/app_localizations.dart';
 import '../features/carerelationship/presentation/navigation/care_relationship_routes.dart';
 import '../features/carerelationship/presentation/screen/discharge_patient_screen.dart';
 import '../features/carerelationship/presentation/screen/invite_patient_screen.dart';
@@ -24,8 +22,15 @@ import '../features/main/presentation/screen/practitioner_settings_screen.dart';
 import '../features/main/presentation/screen/practitioner_shell_screen.dart';
 import '../features/main/presentation/screen/sign_out_confirmation_screen.dart';
 import '../features/main/presentation/state/practitioner_shell_state.dart';
+import '../features/monitoring/presentation/navigation/monitoring_routes.dart';
+import '../features/monitoring/presentation/screen/practitioner_agenda_screen.dart';
+import '../features/monitoring/presentation/screen/record_referral_screen.dart';
+import '../features/monitoring/presentation/screen/schedule_follow_up_screen.dart';
 import '../features/nutritionalcare/presentation/navigation/nutritional_care_routes.dart';
+import '../features/nutritionalcare/presentation/screen/adjust_proposal_screen.dart';
 import '../features/nutritionalcare/presentation/screen/baseline_screen.dart';
+import '../features/nutritionalcare/presentation/screen/review_inbox_screen.dart';
+import '../features/nutritionalcare/presentation/screen/review_item_screen.dart';
 import '../features/onboarding/presentation/screen/splash_screen.dart';
 import '../features/onboarding/presentation/screen/welcome_screen.dart';
 import '../features/onboarding/presentation/state/splash_state.dart';
@@ -55,6 +60,8 @@ bool routeRequiresSession(String location) =>
       agendaPath,
       invitePatientPath,
       '/care-links',
+      '/review-items',
+      ScheduleFollowUpRoute.pathPattern,
       practitionerSettingsPath,
       signOutConfirmationPath,
     ].any((path) => location == path || location.startsWith('$path/'));
@@ -165,7 +172,12 @@ GoRouter createAppRouter(SessionGate gate) => GoRouter(
           routes: [
             GoRoute(
               path: inboxPath,
-              builder: (context, state) => const _Placeholder(),
+              builder: (context, state) => Builder(
+                builder: (context) => ReviewInboxScreen(
+                  onOpenItem: (reviewItemId) => context.push(ReviewItemRoute(reviewItemId: reviewItemId).location),
+                  onOpenMenu: context.read<PractitionerShellCubit>().onOpenMenu,
+                ),
+              ),
             ),
           ],
         ),
@@ -173,7 +185,24 @@ GoRouter createAppRouter(SessionGate gate) => GoRouter(
           routes: [
             GoRoute(
               path: agendaPath,
-              builder: (context, state) => const _Placeholder(),
+              builder: (context, state) => Builder(
+                builder: (context) => PractitionerAgendaScreen(
+                  onSchedule: () => context.push(const ScheduleFollowUpRoute().location),
+                  onReschedule: (row) => context.push(
+                    ScheduleFollowUpRoute(
+                      patientId: row.patientId,
+                      patientName: row.patientName ?? '',
+                      followUpId: row.followUpId,
+                      scheduledFor: row.scheduledFor,
+                      preparation: row.preparation,
+                    ).location,
+                  ),
+                  onOpenPatient: (patientId, careLinkId, patientName) => context.push(
+                    PractitionerPatientRoute(patientId: patientId, careLinkId: careLinkId, patientName: patientName).location,
+                  ),
+                  onOpenMenu: context.read<PractitionerShellCubit>().onOpenMenu,
+                ),
+              ),
             ),
           ],
         ),
@@ -197,8 +226,12 @@ GoRouter createAppRouter(SessionGate gate) => GoRouter(
           onOpenConsultation: (step) => context.push<PatientSnackbarRequest>(
             ConsultationRoute(patientId: route.patientId, patientName: route.patientName, step: step).location,
           ),
-          onSchedule: () async => null,
-          onReferral: () async => null,
+          onSchedule: () => context.push<PatientSnackbarRequest>(
+            ScheduleFollowUpRoute(patientId: route.patientId, patientName: route.patientName).location,
+          ),
+          onReferral: () => context.push<PatientSnackbarRequest>(
+            RecordReferralRoute(patientId: route.patientId, patientName: route.patientName).location,
+          ),
           onDischarge: () => context.push(
             DischargePatientRoute(careLinkId: route.careLinkId, patientName: route.patientName).location,
           ),
@@ -220,6 +253,67 @@ GoRouter createAppRouter(SessionGate gate) => GoRouter(
           onStartConsultation: (step) => context.pop(ContinueToConsultation(step)),
         );
       },
+    ),
+    GoRoute(
+      path: ReviewItemRoute.pathPattern,
+      redirect: (context, state) => ReviewItemRoute.tryParse(state) == null ? inboxPath : null,
+      builder: (context, state) => ReviewItemScreen(
+        reviewItemId: ReviewItemRoute.tryParse(state)!.reviewItemId,
+        onBack: context.pop,
+        onResolved: (patientName) => _returnToInbox(context, patientName: patientName, resolved: true),
+        onClose: () => _returnToInbox(context),
+        onOpenAdjust: (reviewItemId) => context.push(AdjustProposalRoute(reviewItemId: reviewItemId).location),
+        onOpenPatient: (patientId, careLinkId, patientName) => context.push(
+          PractitionerPatientRoute(patientId: patientId, careLinkId: careLinkId, patientName: patientName).location,
+        ),
+      ),
+    ),
+    GoRoute(
+      path: AdjustProposalRoute.pathPattern,
+      redirect: (context, state) => AdjustProposalRoute.tryParse(state) == null ? inboxPath : null,
+      builder: (context, state) => AdjustProposalScreen(
+        reviewItemId: AdjustProposalRoute.tryParse(state)!.reviewItemId,
+        onBack: context.pop,
+        onAssigned: (patientName) => _returnToInbox(context, patientName: patientName, resolved: true),
+        onClose: () => _returnToInbox(context),
+      ),
+    ),
+    GoRoute(
+      path: ScheduleFollowUpRoute.pathPattern,
+      builder: (context, state) {
+        final route = ScheduleFollowUpRoute.parse(state);
+        return ScheduleFollowUpScreen(
+          args: (
+            patientId: route.patientId,
+            patientName: route.patientName,
+            followUpId: route.followUpId,
+            scheduledFor: route.scheduledFor,
+            preparation: route.preparation,
+          ),
+          onBack: context.pop,
+          onScheduled: (scheduledFor, rescheduled) {
+            // From the patient file it returns to the file; from the Agenda, to the Agenda tab.
+            final fromPatientFile = route.patientId > 0 && route.followUpId == 0;
+            if (fromPatientFile) {
+              context.pop<PatientSnackbarRequest>(FollowUpScheduled(scheduledFor));
+            } else {
+              getIt<PractitionerShellMessages>().post(
+                AgendaVisitScheduled(scheduledFor: scheduledFor, rescheduled: rescheduled),
+              );
+              context.go(agendaPath);
+            }
+          },
+        );
+      },
+    ),
+    GoRoute(
+      path: RecordReferralRoute.pathPattern,
+      redirect: (context, state) => RecordReferralRoute.tryParse(state) == null ? patientsPath : null,
+      builder: (context, state) => RecordReferralScreen(
+        patientId: RecordReferralRoute.tryParse(state)!.patientId,
+        onBack: context.pop,
+        onRecorded: (specialty) => context.pop<PatientSnackbarRequest>(ReferralRegistered(specialty)),
+      ),
     ),
     consultationRoutes(),
     GoRoute(
@@ -254,11 +348,9 @@ GoRouter createAppRouter(SessionGate gate) => GoRouter(
   ],
 );
 
-/// Temporary destination until the tab's own screen lands.
-class _Placeholder extends StatelessWidget {
-  const _Placeholder();
-
-  @override
-  Widget build(BuildContext context) =>
-      ColoredBox(color: context.colors.surface, child: Center(child: Text(AppLocalizations.of(context).appName)));
+/// Back to the Inbox tab, dropping what was opened over it. A resolved item leaves its "Signal resolved" snackbar for the
+/// shell underneath; a vanished one just reloads the inbox.
+void _returnToInbox(BuildContext context, {String? patientName, bool resolved = false}) {
+  if (resolved) getIt<PractitionerShellMessages>().post(SignalResolved(patientName));
+  context.go(inboxPath);
 }

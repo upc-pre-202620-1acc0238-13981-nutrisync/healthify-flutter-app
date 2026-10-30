@@ -13,10 +13,19 @@ class AppLocalizationsEs extends AppLocalizations {
   String get appName => 'Healthify';
 
   @override
+  String get placeholderTitle => 'Healthify para nutricionistas';
+
+  @override
+  String get placeholderBody => 'La migración a Flutter está en curso.';
+
+  @override
   String get commonClose => 'Cerrar';
 
   @override
   String get commonUnderstood => 'Entendido';
+
+  @override
+  String get commonAccept => 'Aceptar';
 
   @override
   String get commonTryAgain => 'Volver a intentarlo';
@@ -386,6 +395,9 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get menuSignOut => 'Cerrar sesión';
+
+  @override
+  String get comingSoonBody => 'Esta sección estará disponible muy pronto.';
 
   @override
   String get inboxTitle => 'BANDEJA';

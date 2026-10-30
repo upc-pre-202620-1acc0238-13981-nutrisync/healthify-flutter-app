@@ -19,6 +19,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await setupCore();
   registerFeatureModules();
+  startConsultationReminders();
   runApp(const HealthifyApp());
 }
 
