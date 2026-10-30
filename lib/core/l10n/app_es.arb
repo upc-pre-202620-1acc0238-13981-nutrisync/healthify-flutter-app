@@ -355,6 +355,20 @@
   "consultationStepDiagnosis": "Diagnóstico",
   "consultationStepTargets": "Metas",
   "consultationStepPublication": "Indicaciones y publicación",
+  "consultationStepHeader": "Paso {step} de {total} · {title}",
+  "@consultationStepHeader": {
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "title": {
+        "type": "String"
+      }
+    }
+  },
   "unitCm": "cm",
   "unitCmValue": "{value} cm",
   "@unitCmValue": {
@@ -722,19 +736,167 @@
   "referralDetailReason": "Motivo",
   "referralDetailNoReason": "Sin motivo registrado.",
   "historyRecordUnavailable": "No pudimos cargar el expediente.",
+  "activityInlineIntense": "actividad intensa",
+  "activityInlineLight": "actividad ligera",
+  "activityInlineModerate": "actividad moderada",
+  "activityInlineSedentary": "actividad sedentaria",
+  "activityIntense": "Intensa",
+  "activityLight": "Ligera",
+  "activityModerate": "Moderada",
+  "activitySedentary": "Sedentaria",
+  "checkInDifficultyCravings": "Antojos",
+  "checkInDifficultyDinners": "Cenas",
+  "checkInDifficultyEatingOut": "Comer fuera",
+  "checkInDifficultySchedules": "Horarios",
+  "checkInDifficultyWeekends": "Fines de semana",
+  "checkInReportDifficulties": "Le costaron: {list}.",
+  "@checkInReportDifficulties": {
+    "placeholders": {
+      "list": {
+        "type": "String"
+      }
+    }
+  },
+  "checkInReportFeelingFair": "Se sintió regular con el plan.",
+  "checkInReportFeelingGood": "Se sintió bien con el plan.",
+  "checkInReportFeelingHard": "Le costó seguir el plan.",
+  "checkInReportQuestion": "Pregunta: {question}",
+  "@checkInReportQuestion": {
+    "placeholders": {
+      "question": {
+        "type": "String"
+      }
+    }
+  },
+  "consultationDiscardBody": "Se descarta la consulta de hoy de {patient}. Su plan y sus metas vigentes no cambian.",
+  "@consultationDiscardBody": {
+    "placeholders": {
+      "patient": {
+        "type": "String"
+      }
+    }
+  },
+  "consultationDiscardCd": "Borrar la consulta",
+  "consultationDiscardConfirm": "Borrar consulta",
+  "consultationDiscardKeep": "Conservar",
+  "consultationDiscardTitle": "¿BORRAR ESTA CONSULTA?",
+  "consultationExitBody": "Lo que ya guardaste queda guardado. Podrás continuar desde «Consulta en curso» en el resumen de {patient}.",
+  "@consultationExitBody": {
+    "placeholders": {
+      "patient": {
+        "type": "String"
+      }
+    }
+  },
+  "consultationExitConfirm": "Salir y continuar después",
+  "consultationExitStay": "Seguir aquí",
+  "consultationExitTitle": "¿SALIR DE LA CONSULTA?",
+  "consultationOfflineBody": "Necesitas conexión para continuar la consulta. Lo que ya guardaste no se pierde.",
+  "consultationTitle": "CONSULTA DE HOY",
+  "diagnosisNormalWeight": "Peso normal",
+  "diagnosisObesityGradeI": "Obesidad grado I",
+  "diagnosisObesityGradeIi": "Obesidad grado II",
+  "diagnosisObesityGradeIii": "Obesidad grado III",
+  "diagnosisOverweightGradeI": "Sobrepeso grado I",
+  "diagnosisUnderweight": "Bajo peso",
+  "equationFaoWhoUnu": "FAO/OMS/UNU",
+  "equationHarrisBenedict": "Harris-Benedict",
+  "equationKatchMcardle": "Katch-McArdle",
+  "equationMifflinStJeor": "Mifflin-St Jeor",
   "measurementActivity": "Actividad física actual",
+  "measurementActivityRequired": "Elige la actividad física actual.",
   "measurementBiochemistry": "Datos bioquímicos",
+  "measurementBiochemistryHint": "Glucosa, colesterol, triglicéridos",
+  "measurementBmi": "IMC calculado",
   "measurementBodyFat": "Grasa corporal",
+  "measurementBodyFatPlaceholder": "Ej. 24",
+  "measurementBodyFatRange": "De 3 a 70 %.",
+  "measurementCheckInSent": "Enviado el {date} desde su app.",
+  "@measurementCheckInSent": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "measurementCheckInTitle": "Antes de la consulta, {name} contó",
+  "@measurementCheckInTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "measurementCholesterol": "Colesterol total",
+  "measurementCholesterolRange": "De 50 a 500 mg/dL.",
+  "measurementContinue": "Continuar a diagnóstico",
+  "measurementFromBaseline": "De los datos base",
+  "measurementFromBaselineWith": "{conditions} · de los datos base",
+  "@measurementFromBaselineWith": {
+    "placeholders": {
+      "conditions": {
+        "type": "String"
+      }
+    }
+  },
   "measurementGlucose": "Glucosa en ayunas",
+  "measurementGlucoseRange": "De 20 a 600 mg/dL.",
   "measurementHabits": "Hábitos alimentarios",
+  "measurementHabitsHint": "Comidas al día, agua, comidas fuera de casa",
   "measurementMealsOut": "Comidas fuera de casa por semana",
+  "measurementMealsOutRange": "De 0 a 21 comidas.",
   "measurementMealsPerDay": "Comidas al día",
+  "measurementMealsPerDayRange": "De 1 a 10 comidas.",
+  "measurementMeasures": "Medidas",
+  "measurementOptional": "OPCIONAL",
+  "measurementOptionalNote": "Cintura y grasa corporal son opcionales.",
   "measurementProtocol": "Protocolo utilizado",
+  "measurementProtocolRequired": "Marca al menos una casilla del protocolo.",
+  "measurementSubtitle": "Solo lo que cambia entre consultas. Lo demás viene de los datos base.",
   "measurementTriglycerides": "Triglicéridos",
+  "measurementTriglyceridesRange": "De 20 a 2000 mg/dL.",
   "measurementWaist": "Cintura",
+  "measurementWaistRange": "De 40 a 200 cm.",
   "measurementWater": "Agua",
+  "measurementWaterRange": "De 0 a 10 litros.",
   "measurementWeight": "Peso",
+  "measurementWeightRange": "El peso va de 20 a 350 kg.",
+  "measurementWeightRequired": "Escribe el peso en kg.",
+  "targetsActivityFactor": "factor de actividad {factor}",
+  "@targetsActivityFactor": {
+    "placeholders": {
+      "factor": {
+        "type": "String"
+      }
+    }
+  },
+  "targetsDeficitKcal": "déficit de {value} kcal",
+  "@targetsDeficitKcal": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "targetsDeficitKindKcal": "kcal fijas",
+  "targetsDeficitKindPercent": "% del gasto",
+  "targetsDeficitPercent": "déficit del {value} %",
+  "@targetsDeficitPercent": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "unitBmiValue": "{value} kg/m²",
+  "@unitBmiValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "unitKg": "kg",
   "unitLitersPerDay": "L/día",
   "unitMgDl": "mg/dL",
   "unitPercent": "%",

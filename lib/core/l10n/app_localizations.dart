@@ -1406,6 +1406,12 @@ abstract class AppLocalizations {
   /// **'Indicaciones y publicación'**
   String get consultationStepPublication;
 
+  /// No description provided for @consultationStepHeader.
+  ///
+  /// In es, this message translates to:
+  /// **'Paso {step} de {total} · {title}'**
+  String consultationStepHeader(int step, int total, String title);
+
   /// No description provided for @unitCm.
   ///
   /// In es, this message translates to:
@@ -2126,11 +2132,251 @@ abstract class AppLocalizations {
   /// **'No pudimos cargar el expediente.'**
   String get historyRecordUnavailable;
 
+  /// No description provided for @activityInlineIntense.
+  ///
+  /// In es, this message translates to:
+  /// **'actividad intensa'**
+  String get activityInlineIntense;
+
+  /// No description provided for @activityInlineLight.
+  ///
+  /// In es, this message translates to:
+  /// **'actividad ligera'**
+  String get activityInlineLight;
+
+  /// No description provided for @activityInlineModerate.
+  ///
+  /// In es, this message translates to:
+  /// **'actividad moderada'**
+  String get activityInlineModerate;
+
+  /// No description provided for @activityInlineSedentary.
+  ///
+  /// In es, this message translates to:
+  /// **'actividad sedentaria'**
+  String get activityInlineSedentary;
+
+  /// No description provided for @activityIntense.
+  ///
+  /// In es, this message translates to:
+  /// **'Intensa'**
+  String get activityIntense;
+
+  /// No description provided for @activityLight.
+  ///
+  /// In es, this message translates to:
+  /// **'Ligera'**
+  String get activityLight;
+
+  /// No description provided for @activityModerate.
+  ///
+  /// In es, this message translates to:
+  /// **'Moderada'**
+  String get activityModerate;
+
+  /// No description provided for @activitySedentary.
+  ///
+  /// In es, this message translates to:
+  /// **'Sedentaria'**
+  String get activitySedentary;
+
+  /// No description provided for @checkInDifficultyCravings.
+  ///
+  /// In es, this message translates to:
+  /// **'Antojos'**
+  String get checkInDifficultyCravings;
+
+  /// No description provided for @checkInDifficultyDinners.
+  ///
+  /// In es, this message translates to:
+  /// **'Cenas'**
+  String get checkInDifficultyDinners;
+
+  /// No description provided for @checkInDifficultyEatingOut.
+  ///
+  /// In es, this message translates to:
+  /// **'Comer fuera'**
+  String get checkInDifficultyEatingOut;
+
+  /// No description provided for @checkInDifficultySchedules.
+  ///
+  /// In es, this message translates to:
+  /// **'Horarios'**
+  String get checkInDifficultySchedules;
+
+  /// No description provided for @checkInDifficultyWeekends.
+  ///
+  /// In es, this message translates to:
+  /// **'Fines de semana'**
+  String get checkInDifficultyWeekends;
+
+  /// No description provided for @checkInReportDifficulties.
+  ///
+  /// In es, this message translates to:
+  /// **'Le costaron: {list}.'**
+  String checkInReportDifficulties(String list);
+
+  /// No description provided for @checkInReportFeelingFair.
+  ///
+  /// In es, this message translates to:
+  /// **'Se sintió regular con el plan.'**
+  String get checkInReportFeelingFair;
+
+  /// No description provided for @checkInReportFeelingGood.
+  ///
+  /// In es, this message translates to:
+  /// **'Se sintió bien con el plan.'**
+  String get checkInReportFeelingGood;
+
+  /// No description provided for @checkInReportFeelingHard.
+  ///
+  /// In es, this message translates to:
+  /// **'Le costó seguir el plan.'**
+  String get checkInReportFeelingHard;
+
+  /// No description provided for @checkInReportQuestion.
+  ///
+  /// In es, this message translates to:
+  /// **'Pregunta: {question}'**
+  String checkInReportQuestion(String question);
+
+  /// No description provided for @consultationDiscardBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Se descarta la consulta de hoy de {patient}. Su plan y sus metas vigentes no cambian.'**
+  String consultationDiscardBody(String patient);
+
+  /// No description provided for @consultationDiscardCd.
+  ///
+  /// In es, this message translates to:
+  /// **'Borrar la consulta'**
+  String get consultationDiscardCd;
+
+  /// No description provided for @consultationDiscardConfirm.
+  ///
+  /// In es, this message translates to:
+  /// **'Borrar consulta'**
+  String get consultationDiscardConfirm;
+
+  /// No description provided for @consultationDiscardKeep.
+  ///
+  /// In es, this message translates to:
+  /// **'Conservar'**
+  String get consultationDiscardKeep;
+
+  /// No description provided for @consultationDiscardTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'¿BORRAR ESTA CONSULTA?'**
+  String get consultationDiscardTitle;
+
+  /// No description provided for @consultationExitBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Lo que ya guardaste queda guardado. Podrás continuar desde «Consulta en curso» en el resumen de {patient}.'**
+  String consultationExitBody(String patient);
+
+  /// No description provided for @consultationExitConfirm.
+  ///
+  /// In es, this message translates to:
+  /// **'Salir y continuar después'**
+  String get consultationExitConfirm;
+
+  /// No description provided for @consultationExitStay.
+  ///
+  /// In es, this message translates to:
+  /// **'Seguir aquí'**
+  String get consultationExitStay;
+
+  /// No description provided for @consultationExitTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'¿SALIR DE LA CONSULTA?'**
+  String get consultationExitTitle;
+
+  /// No description provided for @consultationOfflineBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Necesitas conexión para continuar la consulta. Lo que ya guardaste no se pierde.'**
+  String get consultationOfflineBody;
+
+  /// No description provided for @consultationTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'CONSULTA DE HOY'**
+  String get consultationTitle;
+
+  /// No description provided for @diagnosisNormalWeight.
+  ///
+  /// In es, this message translates to:
+  /// **'Peso normal'**
+  String get diagnosisNormalWeight;
+
+  /// No description provided for @diagnosisObesityGradeI.
+  ///
+  /// In es, this message translates to:
+  /// **'Obesidad grado I'**
+  String get diagnosisObesityGradeI;
+
+  /// No description provided for @diagnosisObesityGradeIi.
+  ///
+  /// In es, this message translates to:
+  /// **'Obesidad grado II'**
+  String get diagnosisObesityGradeIi;
+
+  /// No description provided for @diagnosisObesityGradeIii.
+  ///
+  /// In es, this message translates to:
+  /// **'Obesidad grado III'**
+  String get diagnosisObesityGradeIii;
+
+  /// No description provided for @diagnosisOverweightGradeI.
+  ///
+  /// In es, this message translates to:
+  /// **'Sobrepeso grado I'**
+  String get diagnosisOverweightGradeI;
+
+  /// No description provided for @diagnosisUnderweight.
+  ///
+  /// In es, this message translates to:
+  /// **'Bajo peso'**
+  String get diagnosisUnderweight;
+
+  /// No description provided for @equationFaoWhoUnu.
+  ///
+  /// In es, this message translates to:
+  /// **'FAO/OMS/UNU'**
+  String get equationFaoWhoUnu;
+
+  /// No description provided for @equationHarrisBenedict.
+  ///
+  /// In es, this message translates to:
+  /// **'Harris-Benedict'**
+  String get equationHarrisBenedict;
+
+  /// No description provided for @equationKatchMcardle.
+  ///
+  /// In es, this message translates to:
+  /// **'Katch-McArdle'**
+  String get equationKatchMcardle;
+
+  /// No description provided for @equationMifflinStJeor.
+  ///
+  /// In es, this message translates to:
+  /// **'Mifflin-St Jeor'**
+  String get equationMifflinStJeor;
+
   /// No description provided for @measurementActivity.
   ///
   /// In es, this message translates to:
   /// **'Actividad física actual'**
   String get measurementActivity;
+
+  /// No description provided for @measurementActivityRequired.
+  ///
+  /// In es, this message translates to:
+  /// **'Elige la actividad física actual.'**
+  String get measurementActivityRequired;
 
   /// No description provided for @measurementBiochemistry.
   ///
@@ -2138,11 +2384,47 @@ abstract class AppLocalizations {
   /// **'Datos bioquímicos'**
   String get measurementBiochemistry;
 
+  /// No description provided for @measurementBiochemistryHint.
+  ///
+  /// In es, this message translates to:
+  /// **'Glucosa, colesterol, triglicéridos'**
+  String get measurementBiochemistryHint;
+
+  /// No description provided for @measurementBmi.
+  ///
+  /// In es, this message translates to:
+  /// **'IMC calculado'**
+  String get measurementBmi;
+
   /// No description provided for @measurementBodyFat.
   ///
   /// In es, this message translates to:
   /// **'Grasa corporal'**
   String get measurementBodyFat;
+
+  /// No description provided for @measurementBodyFatPlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'Ej. 24'**
+  String get measurementBodyFatPlaceholder;
+
+  /// No description provided for @measurementBodyFatRange.
+  ///
+  /// In es, this message translates to:
+  /// **'De 3 a 70 %.'**
+  String get measurementBodyFatRange;
+
+  /// No description provided for @measurementCheckInSent.
+  ///
+  /// In es, this message translates to:
+  /// **'Enviado el {date} desde su app.'**
+  String measurementCheckInSent(String date);
+
+  /// No description provided for @measurementCheckInTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Antes de la consulta, {name} contó'**
+  String measurementCheckInTitle(String name);
 
   /// No description provided for @measurementCholesterol.
   ///
@@ -2150,11 +2432,41 @@ abstract class AppLocalizations {
   /// **'Colesterol total'**
   String get measurementCholesterol;
 
+  /// No description provided for @measurementCholesterolRange.
+  ///
+  /// In es, this message translates to:
+  /// **'De 50 a 500 mg/dL.'**
+  String get measurementCholesterolRange;
+
+  /// No description provided for @measurementContinue.
+  ///
+  /// In es, this message translates to:
+  /// **'Continuar a diagnóstico'**
+  String get measurementContinue;
+
+  /// No description provided for @measurementFromBaseline.
+  ///
+  /// In es, this message translates to:
+  /// **'De los datos base'**
+  String get measurementFromBaseline;
+
+  /// No description provided for @measurementFromBaselineWith.
+  ///
+  /// In es, this message translates to:
+  /// **'{conditions} · de los datos base'**
+  String measurementFromBaselineWith(String conditions);
+
   /// No description provided for @measurementGlucose.
   ///
   /// In es, this message translates to:
   /// **'Glucosa en ayunas'**
   String get measurementGlucose;
+
+  /// No description provided for @measurementGlucoseRange.
+  ///
+  /// In es, this message translates to:
+  /// **'De 20 a 600 mg/dL.'**
+  String get measurementGlucoseRange;
 
   /// No description provided for @measurementHabits.
   ///
@@ -2162,11 +2474,23 @@ abstract class AppLocalizations {
   /// **'Hábitos alimentarios'**
   String get measurementHabits;
 
+  /// No description provided for @measurementHabitsHint.
+  ///
+  /// In es, this message translates to:
+  /// **'Comidas al día, agua, comidas fuera de casa'**
+  String get measurementHabitsHint;
+
   /// No description provided for @measurementMealsOut.
   ///
   /// In es, this message translates to:
   /// **'Comidas fuera de casa por semana'**
   String get measurementMealsOut;
+
+  /// No description provided for @measurementMealsOutRange.
+  ///
+  /// In es, this message translates to:
+  /// **'De 0 a 21 comidas.'**
+  String get measurementMealsOutRange;
 
   /// No description provided for @measurementMealsPerDay.
   ///
@@ -2174,11 +2498,47 @@ abstract class AppLocalizations {
   /// **'Comidas al día'**
   String get measurementMealsPerDay;
 
+  /// No description provided for @measurementMealsPerDayRange.
+  ///
+  /// In es, this message translates to:
+  /// **'De 1 a 10 comidas.'**
+  String get measurementMealsPerDayRange;
+
+  /// No description provided for @measurementMeasures.
+  ///
+  /// In es, this message translates to:
+  /// **'Medidas'**
+  String get measurementMeasures;
+
+  /// No description provided for @measurementOptional.
+  ///
+  /// In es, this message translates to:
+  /// **'OPCIONAL'**
+  String get measurementOptional;
+
+  /// No description provided for @measurementOptionalNote.
+  ///
+  /// In es, this message translates to:
+  /// **'Cintura y grasa corporal son opcionales.'**
+  String get measurementOptionalNote;
+
   /// No description provided for @measurementProtocol.
   ///
   /// In es, this message translates to:
   /// **'Protocolo utilizado'**
   String get measurementProtocol;
+
+  /// No description provided for @measurementProtocolRequired.
+  ///
+  /// In es, this message translates to:
+  /// **'Marca al menos una casilla del protocolo.'**
+  String get measurementProtocolRequired;
+
+  /// No description provided for @measurementSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Solo lo que cambia entre consultas. Lo demás viene de los datos base.'**
+  String get measurementSubtitle;
 
   /// No description provided for @measurementTriglycerides.
   ///
@@ -2186,11 +2546,23 @@ abstract class AppLocalizations {
   /// **'Triglicéridos'**
   String get measurementTriglycerides;
 
+  /// No description provided for @measurementTriglyceridesRange.
+  ///
+  /// In es, this message translates to:
+  /// **'De 20 a 2000 mg/dL.'**
+  String get measurementTriglyceridesRange;
+
   /// No description provided for @measurementWaist.
   ///
   /// In es, this message translates to:
   /// **'Cintura'**
   String get measurementWaist;
+
+  /// No description provided for @measurementWaistRange.
+  ///
+  /// In es, this message translates to:
+  /// **'De 40 a 200 cm.'**
+  String get measurementWaistRange;
 
   /// No description provided for @measurementWater.
   ///
@@ -2198,11 +2570,71 @@ abstract class AppLocalizations {
   /// **'Agua'**
   String get measurementWater;
 
+  /// No description provided for @measurementWaterRange.
+  ///
+  /// In es, this message translates to:
+  /// **'De 0 a 10 litros.'**
+  String get measurementWaterRange;
+
   /// No description provided for @measurementWeight.
   ///
   /// In es, this message translates to:
   /// **'Peso'**
   String get measurementWeight;
+
+  /// No description provided for @measurementWeightRange.
+  ///
+  /// In es, this message translates to:
+  /// **'El peso va de 20 a 350 kg.'**
+  String get measurementWeightRange;
+
+  /// No description provided for @measurementWeightRequired.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribe el peso en kg.'**
+  String get measurementWeightRequired;
+
+  /// No description provided for @targetsActivityFactor.
+  ///
+  /// In es, this message translates to:
+  /// **'factor de actividad {factor}'**
+  String targetsActivityFactor(String factor);
+
+  /// No description provided for @targetsDeficitKcal.
+  ///
+  /// In es, this message translates to:
+  /// **'déficit de {value} kcal'**
+  String targetsDeficitKcal(String value);
+
+  /// No description provided for @targetsDeficitKindKcal.
+  ///
+  /// In es, this message translates to:
+  /// **'kcal fijas'**
+  String get targetsDeficitKindKcal;
+
+  /// No description provided for @targetsDeficitKindPercent.
+  ///
+  /// In es, this message translates to:
+  /// **'% del gasto'**
+  String get targetsDeficitKindPercent;
+
+  /// No description provided for @targetsDeficitPercent.
+  ///
+  /// In es, this message translates to:
+  /// **'déficit del {value} %'**
+  String targetsDeficitPercent(String value);
+
+  /// No description provided for @unitBmiValue.
+  ///
+  /// In es, this message translates to:
+  /// **'{value} kg/m²'**
+  String unitBmiValue(String value);
+
+  /// No description provided for @unitKg.
+  ///
+  /// In es, this message translates to:
+  /// **'kg'**
+  String get unitKg;
 
   /// No description provided for @unitLitersPerDay.
   ///
