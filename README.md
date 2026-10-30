@@ -30,3 +30,20 @@ Run the generators again after changing a DTO, a `freezed` state or an ARB file.
 flutter analyze
 flutter test              # add --coverage to write coverage/lcov.info
 ```
+
+## CI/CD
+
+| Workflow | When | What it does |
+|---|---|---|
+| `ci.yml` | Pull requests to `develop` or `main`, pushes to `develop` | Generators, `flutter analyze`, `flutter test --coverage` and `flutter build apk --debug`. Uploads `coverage/lcov.info` as the `reports` artifact |
+| `distribute.yml` | Pushes to `main`, or by hand from the Actions tab | Builds the signed release APK, uploads it to Firebase App Distribution (group `qa`) and creates the GitHub release |
+
+`distribute.yml` in detail:
+
+- The version comes from `version` in `pubspec.yaml`, without the `+build` part (`0.1.0+1` → tag `v0.1.0`).
+  A push to `main` with an already released version fails: bump `version` in `pubspec.yaml`. A manual run of an
+  already released version only redistributes it, without a new GitHub release.
+- Each distributed build takes the workflow run number as its build number (`versionCode`).
+- Release notes for testers are the last 10 commits, without merges.
+- The APK is also kept as the `healthify-release-<run number>` artifact, and attached to the GitHub release as
+  `healthify-v<version>.apk`.
