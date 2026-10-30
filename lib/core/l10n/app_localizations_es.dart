@@ -19,6 +19,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get commonUnderstood => 'Entendido';
 
   @override
+  String get commonTryAgain => 'Volver a intentarlo';
+
+  @override
   String get commonSaving => 'Guardando…';
 
   @override
@@ -2053,6 +2056,55 @@ class AppLocalizationsEs extends AppLocalizations {
   }
 
   @override
+  String get scheduleTitle => 'AGENDAR CONSULTA';
+
+  @override
+  String get scheduleRescheduleTitle => 'REPROGRAMAR CONSULTA';
+
+  @override
+  String get schedulePatient => 'Paciente';
+
+  @override
+  String get schedulePatientMissing => 'Elige un paciente';
+
+  @override
+  String get schedulePatientAlreadyScheduled =>
+      'Este paciente ya tiene una consulta en agenda.';
+
+  @override
+  String get schedulePatientPickerTitle => 'PACIENTE';
+
+  @override
+  String get schedulePatientPickerEmpty =>
+      'Aún no tienes pacientes con un vínculo activo.';
+
+  @override
+  String get scheduleDate => 'Fecha';
+
+  @override
+  String get scheduleTime => 'Hora';
+
+  @override
+  String get scheduleTimeDialogTitle => 'Hora de la consulta';
+
+  @override
+  String get scheduleMomentHelp =>
+      'Ej. 18/09/2026 · 10:00 a. m. La fecha y hora deben ser futuras.';
+
+  @override
+  String get scheduleMomentMissing => 'Elige la fecha y la hora';
+
+  @override
+  String get scheduleMomentNotFuture => 'Elige una fecha y hora futuras';
+
+  @override
+  String get schedulePreparationTitle => '¿Cómo debe prepararse?';
+
+  @override
+  String get schedulePreparationHelp =>
+      'Puedes elegir varias. Tu paciente las verá en su app.';
+
+  @override
   String get schedulePreparationFasting => 'En ayunas';
 
   @override
@@ -2063,6 +2115,54 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get schedulePreparationEmptyBladder => 'Vejiga vacía';
+
+  @override
+  String get scheduleSubmit => 'Agendar';
+
+  @override
+  String get scheduleRescheduleSubmit => 'Reprogramar';
+
+  @override
+  String get scheduleSaving => 'Agendando…';
+
+  @override
+  String get scheduleFailedTitle => 'NO SE PUDO AGENDAR';
+
+  @override
+  String get scheduleFailedBody =>
+      'No pudimos agendar la consulta. Revisa tu conexión e inténtalo de nuevo. Lo que escribiste no se perdió.';
+
+  @override
+  String get referralTitle => 'REGISTRAR DERIVACIÓN';
+
+  @override
+  String get referralSpecialty => 'Especialidad';
+
+  @override
+  String get referralSpecialtyPlaceholder => 'Ej. Endocrinología';
+
+  @override
+  String get referralSpecialtyMissing => 'Completa la especialidad';
+
+  @override
+  String get referralReason => 'Motivo';
+
+  @override
+  String get referralReasonPlaceholder => 'Describe el motivo clínico…';
+
+  @override
+  String get referralReasonMissing =>
+      'Completa el motivo clínico de la derivación';
+
+  @override
+  String get referralSubmit => 'Registrar';
+
+  @override
+  String get referralFailedTitle => 'HUBO UN ERROR';
+
+  @override
+  String get referralFailedBody =>
+      'No pudimos registrar la derivación. Lo que escribiste no se perdió.';
 
   @override
   String get summarySchedule => 'Agendar consulta';

@@ -116,6 +116,12 @@ abstract class AppLocalizations {
   /// **'Entendido'**
   String get commonUnderstood;
 
+  /// No description provided for @commonTryAgain.
+  ///
+  /// In es, this message translates to:
+  /// **'Volver a intentarlo'**
+  String get commonTryAgain;
+
   /// No description provided for @commonSaving.
   ///
   /// In es, this message translates to:
@@ -3618,6 +3624,96 @@ abstract class AppLocalizations {
   /// **'Consulta reprogramada: {day}, {time}'**
   String shellFollowUpRescheduled(String day, String time);
 
+  /// No description provided for @scheduleTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'AGENDAR CONSULTA'**
+  String get scheduleTitle;
+
+  /// No description provided for @scheduleRescheduleTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'REPROGRAMAR CONSULTA'**
+  String get scheduleRescheduleTitle;
+
+  /// No description provided for @schedulePatient.
+  ///
+  /// In es, this message translates to:
+  /// **'Paciente'**
+  String get schedulePatient;
+
+  /// No description provided for @schedulePatientMissing.
+  ///
+  /// In es, this message translates to:
+  /// **'Elige un paciente'**
+  String get schedulePatientMissing;
+
+  /// No description provided for @schedulePatientAlreadyScheduled.
+  ///
+  /// In es, this message translates to:
+  /// **'Este paciente ya tiene una consulta en agenda.'**
+  String get schedulePatientAlreadyScheduled;
+
+  /// No description provided for @schedulePatientPickerTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'PACIENTE'**
+  String get schedulePatientPickerTitle;
+
+  /// No description provided for @schedulePatientPickerEmpty.
+  ///
+  /// In es, this message translates to:
+  /// **'Aún no tienes pacientes con un vínculo activo.'**
+  String get schedulePatientPickerEmpty;
+
+  /// No description provided for @scheduleDate.
+  ///
+  /// In es, this message translates to:
+  /// **'Fecha'**
+  String get scheduleDate;
+
+  /// No description provided for @scheduleTime.
+  ///
+  /// In es, this message translates to:
+  /// **'Hora'**
+  String get scheduleTime;
+
+  /// No description provided for @scheduleTimeDialogTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Hora de la consulta'**
+  String get scheduleTimeDialogTitle;
+
+  /// No description provided for @scheduleMomentHelp.
+  ///
+  /// In es, this message translates to:
+  /// **'Ej. 18/09/2026 · 10:00 a. m. La fecha y hora deben ser futuras.'**
+  String get scheduleMomentHelp;
+
+  /// No description provided for @scheduleMomentMissing.
+  ///
+  /// In es, this message translates to:
+  /// **'Elige la fecha y la hora'**
+  String get scheduleMomentMissing;
+
+  /// No description provided for @scheduleMomentNotFuture.
+  ///
+  /// In es, this message translates to:
+  /// **'Elige una fecha y hora futuras'**
+  String get scheduleMomentNotFuture;
+
+  /// No description provided for @schedulePreparationTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'¿Cómo debe prepararse?'**
+  String get schedulePreparationTitle;
+
+  /// No description provided for @schedulePreparationHelp.
+  ///
+  /// In es, this message translates to:
+  /// **'Puedes elegir varias. Tu paciente las verá en su app.'**
+  String get schedulePreparationHelp;
+
   /// No description provided for @schedulePreparationFasting.
   ///
   /// In es, this message translates to:
@@ -3641,6 +3737,96 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Vejiga vacía'**
   String get schedulePreparationEmptyBladder;
+
+  /// No description provided for @scheduleSubmit.
+  ///
+  /// In es, this message translates to:
+  /// **'Agendar'**
+  String get scheduleSubmit;
+
+  /// No description provided for @scheduleRescheduleSubmit.
+  ///
+  /// In es, this message translates to:
+  /// **'Reprogramar'**
+  String get scheduleRescheduleSubmit;
+
+  /// No description provided for @scheduleSaving.
+  ///
+  /// In es, this message translates to:
+  /// **'Agendando…'**
+  String get scheduleSaving;
+
+  /// No description provided for @scheduleFailedTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'NO SE PUDO AGENDAR'**
+  String get scheduleFailedTitle;
+
+  /// No description provided for @scheduleFailedBody.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos agendar la consulta. Revisa tu conexión e inténtalo de nuevo. Lo que escribiste no se perdió.'**
+  String get scheduleFailedBody;
+
+  /// No description provided for @referralTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'REGISTRAR DERIVACIÓN'**
+  String get referralTitle;
+
+  /// No description provided for @referralSpecialty.
+  ///
+  /// In es, this message translates to:
+  /// **'Especialidad'**
+  String get referralSpecialty;
+
+  /// No description provided for @referralSpecialtyPlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'Ej. Endocrinología'**
+  String get referralSpecialtyPlaceholder;
+
+  /// No description provided for @referralSpecialtyMissing.
+  ///
+  /// In es, this message translates to:
+  /// **'Completa la especialidad'**
+  String get referralSpecialtyMissing;
+
+  /// No description provided for @referralReason.
+  ///
+  /// In es, this message translates to:
+  /// **'Motivo'**
+  String get referralReason;
+
+  /// No description provided for @referralReasonPlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'Describe el motivo clínico…'**
+  String get referralReasonPlaceholder;
+
+  /// No description provided for @referralReasonMissing.
+  ///
+  /// In es, this message translates to:
+  /// **'Completa el motivo clínico de la derivación'**
+  String get referralReasonMissing;
+
+  /// No description provided for @referralSubmit.
+  ///
+  /// In es, this message translates to:
+  /// **'Registrar'**
+  String get referralSubmit;
+
+  /// No description provided for @referralFailedTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'HUBO UN ERROR'**
+  String get referralFailedTitle;
+
+  /// No description provided for @referralFailedBody.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos registrar la derivación. Lo que escribiste no se perdió.'**
+  String get referralFailedBody;
 
   /// No description provided for @summarySchedule.
   ///
