@@ -127,6 +127,17 @@
   "practitionerOnlyBody": "Tu cuenta es de paciente. Usa la app de pacientes de Healthify para ver tu plan y registrar tus comidas.",
   "practitionerOnlySignOut": "Cerrar sesión",
   "menuCdOpen": "Abrir menú",
+  "menuRolePractitioner": "Nutricionista",
+  "menuSettings": "Ajustes",
+  "menuSignOut": "Cerrar sesión",
+  "shellPatientDischarged": "Alta registrada: {patientName} ya no está en tu cartera.",
+  "@shellPatientDischarged": {
+    "placeholders": {
+      "patientName": {
+        "type": "String"
+      }
+    }
+  },
   "practitionerNoActiveLinkTitle": "Sin vínculo activo",
   "practitionerNoActiveLinkBody": "No tienes un vínculo activo con este paciente.",
   "rosterTitle": "MIS PACIENTES",
@@ -210,5 +221,36 @@
   "dischargeDialogBody": "Este vínculo no se podrá reactivar después. El motivo clínico queda registrado.",
   "dischargeDialogConfirm": "Sí, dar de alta",
   "dischargeAlreadyTitle": "Alta ya registrada",
-  "dischargeAlreadyBody": "Este paciente ya había sido dado de alta."
+  "dischargeAlreadyBody": "Este paciente ya había sido dado de alta.",
+  "shellSignalResolved": "Señal resuelta. {name} ya no aparece en tu bandeja.",
+  "@shellSignalResolved": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "shellSignalResolvedGeneric": "Señal resuelta. Ya no aparece en tu bandeja.",
+  "shellFollowUpScheduled": "Consulta agendada: {day}, {time}",
+  "@shellFollowUpScheduled": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "shellFollowUpRescheduled": "Consulta reprogramada: {day}, {time}",
+  "@shellFollowUpRescheduled": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  }
 }

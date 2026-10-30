@@ -113,6 +113,10 @@
   "practitionerOnlyBody": "Your account is a patient account. Use the Healthify patient app to see your plan and log your meals.",
   "practitionerOnlySignOut": "Sign out",
   "menuCdOpen": "Open menu",
+  "menuRolePractitioner": "Nutritionist",
+  "menuSettings": "Settings",
+  "menuSignOut": "Sign out",
+  "shellPatientDischarged": "Discharge recorded: {patientName} is no longer in your roster.",
   "practitionerNoActiveLinkTitle": "No active link",
   "practitionerNoActiveLinkBody": "You don't have an active link with this patient.",
   "rosterTitle": "MY PATIENTS",
@@ -158,5 +162,9 @@
   "dischargeDialogBody": "This link can't be reactivated later. The clinical reason is recorded.",
   "dischargeDialogConfirm": "Yes, discharge",
   "dischargeAlreadyTitle": "Discharge already recorded",
-  "dischargeAlreadyBody": "This patient had already been discharged."
+  "dischargeAlreadyBody": "This patient had already been discharged.",
+  "shellSignalResolved": "Signal resolved. {name} is no longer in your inbox.",
+  "shellSignalResolvedGeneric": "Signal resolved. It's no longer in your inbox.",
+  "shellFollowUpScheduled": "Consultation scheduled: {day}, {time}",
+  "shellFollowUpRescheduled": "Consultation rescheduled: {day}, {time}"
 }

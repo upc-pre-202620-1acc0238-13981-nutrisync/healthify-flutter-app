@@ -376,6 +376,20 @@ class AppLocalizationsEn extends AppLocalizations {
   String get menuCdOpen => 'Open menu';
 
   @override
+  String get menuRolePractitioner => 'Nutritionist';
+
+  @override
+  String get menuSettings => 'Settings';
+
+  @override
+  String get menuSignOut => 'Sign out';
+
+  @override
+  String shellPatientDischarged(String patientName) {
+    return 'Discharge recorded: $patientName is no longer in your roster.';
+  }
+
+  @override
   String get practitionerNoActiveLinkTitle => 'No active link';
 
   @override
@@ -533,4 +547,23 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get dischargeAlreadyBody =>
       'This patient had already been discharged.';
+
+  @override
+  String shellSignalResolved(String name) {
+    return 'Signal resolved. $name is no longer in your inbox.';
+  }
+
+  @override
+  String get shellSignalResolvedGeneric =>
+      'Signal resolved. It\'s no longer in your inbox.';
+
+  @override
+  String shellFollowUpScheduled(String day, String time) {
+    return 'Consultation scheduled: $day, $time';
+  }
+
+  @override
+  String shellFollowUpRescheduled(String day, String time) {
+    return 'Consultation rescheduled: $day, $time';
+  }
 }

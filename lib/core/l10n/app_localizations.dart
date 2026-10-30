@@ -776,6 +776,30 @@ abstract class AppLocalizations {
   /// **'Abrir menú'**
   String get menuCdOpen;
 
+  /// No description provided for @menuRolePractitioner.
+  ///
+  /// In es, this message translates to:
+  /// **'Nutricionista'**
+  String get menuRolePractitioner;
+
+  /// No description provided for @menuSettings.
+  ///
+  /// In es, this message translates to:
+  /// **'Ajustes'**
+  String get menuSettings;
+
+  /// No description provided for @menuSignOut.
+  ///
+  /// In es, this message translates to:
+  /// **'Cerrar sesión'**
+  String get menuSignOut;
+
+  /// No description provided for @shellPatientDischarged.
+  ///
+  /// In es, this message translates to:
+  /// **'Alta registrada: {patientName} ya no está en tu cartera.'**
+  String shellPatientDischarged(String patientName);
+
   /// No description provided for @practitionerNoActiveLinkTitle.
   ///
   /// In es, this message translates to:
@@ -1051,6 +1075,30 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Este paciente ya había sido dado de alta.'**
   String get dischargeAlreadyBody;
+
+  /// No description provided for @shellSignalResolved.
+  ///
+  /// In es, this message translates to:
+  /// **'Señal resuelta. {name} ya no aparece en tu bandeja.'**
+  String shellSignalResolved(String name);
+
+  /// No description provided for @shellSignalResolvedGeneric.
+  ///
+  /// In es, this message translates to:
+  /// **'Señal resuelta. Ya no aparece en tu bandeja.'**
+  String get shellSignalResolvedGeneric;
+
+  /// No description provided for @shellFollowUpScheduled.
+  ///
+  /// In es, this message translates to:
+  /// **'Consulta agendada: {day}, {time}'**
+  String shellFollowUpScheduled(String day, String time);
+
+  /// No description provided for @shellFollowUpRescheduled.
+  ///
+  /// In es, this message translates to:
+  /// **'Consulta reprogramada: {day}, {time}'**
+  String shellFollowUpRescheduled(String day, String time);
 }
 
 class _AppLocalizationsDelegate
