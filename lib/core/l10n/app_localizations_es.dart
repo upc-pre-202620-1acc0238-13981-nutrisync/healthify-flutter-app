@@ -39,6 +39,17 @@ class AppLocalizationsEs extends AppLocalizations {
       'Algo salió mal. Inténtalo de nuevo en unos minutos.';
 
   @override
+  String get sessionExpiredTitle => 'TU SESIÓN VENCIÓ';
+
+  @override
+  String get sessionExpiredBody =>
+      'Por tu seguridad cerramos tu sesión. Lo que ya registraste está a salvo.';
+
+  @override
+  String get sessionExpiredOffline =>
+      'En cuanto tengas conexión, vuelve a iniciar sesión.';
+
+  @override
   String get brandLogoCd => 'Healthify';
 
   @override
@@ -112,4 +123,246 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get navAgenda => 'Agenda';
+
+  @override
+  String get welcomeChipGoalLabel => 'Meta de hoy';
+
+  @override
+  String get welcomeChipGoalValue => '1 260 / 1 850 kcal';
+
+  @override
+  String get welcomeChipMealLabel => 'Comida registrada';
+
+  @override
+  String get welcomeChipMealValue => 'Lomo saltado · 320 g';
+
+  @override
+  String get welcomeChipPractitionerLabel => 'Tu nutricionista';
+
+  @override
+  String get welcomeChipPractitionerValue => 'Revisó tu plan';
+
+  @override
+  String get welcomeHeadlineFirst => 'TU NUTRICIÓN,';
+
+  @override
+  String get welcomeHeadlineSecond => 'EN UN LUGAR';
+
+  @override
+  String get welcomeBody =>
+      'Metas, registro y seguimiento junto a tu nutricionista, sin complicarte.';
+
+  @override
+  String get welcomeCreateAccount => 'Crear cuenta';
+
+  @override
+  String get welcomeHaveAccount => 'Ya tengo cuenta';
+
+  @override
+  String get languageSpanish => 'Español';
+
+  @override
+  String get languageEnglish => 'English';
+
+  @override
+  String get languageSelectorLabel => 'Idioma';
+
+  @override
+  String get authEmail => 'Correo electrónico';
+
+  @override
+  String get authEmailPlaceholder => 'tucorreo@ejemplo.com';
+
+  @override
+  String get authPassword => 'Contraseña';
+
+  @override
+  String get signUpTitle => 'CREAR CUENTA';
+
+  @override
+  String get signUpSubtitle => 'Así vas a entrar a Healthify';
+
+  @override
+  String get signUpGivenNames => 'Nombres';
+
+  @override
+  String get signUpGivenNamesPlaceholder => 'Ej. María';
+
+  @override
+  String get signUpFamilyNames => 'Apellidos';
+
+  @override
+  String get signUpFamilyNamesPlaceholder => 'Ej. Flores';
+
+  @override
+  String get signUpPasswordPlaceholder => 'Mínimo 8 caracteres';
+
+  @override
+  String get signUpPasswordHint => 'Usa mayúscula, minúscula, número y símbolo';
+
+  @override
+  String get signUpSubmit => 'Crear cuenta';
+
+  @override
+  String get signUpSubmitting => 'Creando cuenta…';
+
+  @override
+  String get signUpHaveAccount => 'Ya tengo cuenta';
+
+  @override
+  String get signUpOfflineHint => 'Necesitas conexión para crear tu cuenta';
+
+  @override
+  String get signUpErrorGivenNamesRequired => 'Escribe tus nombres';
+
+  @override
+  String get signUpErrorFamilyNamesRequired => 'Escribe tus apellidos';
+
+  @override
+  String get signUpErrorNameCharacters =>
+      'Escríbelo sin números ni los signos < >';
+
+  @override
+  String get signUpErrorNameTooLong => 'Usa como máximo 80 caracteres';
+
+  @override
+  String get signUpErrorEmail => 'Ingresa un correo válido';
+
+  @override
+  String get signUpErrorEmailTaken =>
+      'Ya existe una cuenta con este correo. ¿Iniciar sesión?';
+
+  @override
+  String get signUpErrorPassword =>
+      'Necesita mayúscula, minúscula, número y símbolo, y al menos 8 caracteres';
+
+  @override
+  String get signInTitle => 'INICIAR SESIÓN';
+
+  @override
+  String get signInSubtitle =>
+      'Entra con tu correo. Te llevaremos a tu espacio según tu tipo de cuenta.';
+
+  @override
+  String get signInPasswordPlaceholder => 'Tu contraseña';
+
+  @override
+  String get signInForgotPassword => '¿Olvidaste tu contraseña?';
+
+  @override
+  String get signInSubmit => 'Iniciar sesión';
+
+  @override
+  String get signInSubmitting => 'Entrando…';
+
+  @override
+  String get signInCreateAccount => 'Crear cuenta';
+
+  @override
+  String get signInErrorCredentials => 'Correo o contraseña incorrectos';
+
+  @override
+  String get signInLockedTitle => 'Tu cuenta está bloqueada temporalmente';
+
+  @override
+  String get signInLockedBody =>
+      'Por seguridad, tras 5 intentos fallidos. Inténtalo más tarde o recupera tu contraseña.';
+
+  @override
+  String get forgotPasswordTitle => 'RECUPERAR CONTRASEÑA';
+
+  @override
+  String get forgotPasswordEmailSubtitle =>
+      'Escribe el correo de tu cuenta y te enviaremos un código de 6 dígitos.';
+
+  @override
+  String get forgotPasswordEmailError => 'Escribe un correo válido';
+
+  @override
+  String get forgotPasswordSend => 'Enviar código';
+
+  @override
+  String get forgotPasswordSending => 'Enviando…';
+
+  @override
+  String get forgotPasswordBackToSignIn => 'Volver a iniciar sesión';
+
+  @override
+  String forgotPasswordCodeSubtitle(String email) {
+    return 'Si $email tiene una cuenta, te enviamos un código. Revisa también la carpeta de spam.';
+  }
+
+  @override
+  String get forgotPasswordCodeLabel => 'Código';
+
+  @override
+  String get forgotPasswordCodePlaceholder => '6 dígitos';
+
+  @override
+  String get forgotPasswordCodeError =>
+      'El código no es correcto o ya venció. Pide uno nuevo.';
+
+  @override
+  String get forgotPasswordVerify => 'Verificar código';
+
+  @override
+  String get forgotPasswordVerifying => 'Verificando…';
+
+  @override
+  String get forgotPasswordTokenExpired =>
+      'Se acabó el tiempo para cambiar tu contraseña. Pide un código nuevo.';
+
+  @override
+  String get forgotPasswordNewPasswordSubtitle =>
+      'Código verificado. Elige una contraseña nueva, distinta a la actual.';
+
+  @override
+  String get forgotPasswordNewPassword => 'Contraseña nueva';
+
+  @override
+  String get forgotPasswordErrorReused =>
+      'Usa una contraseña distinta a la actual';
+
+  @override
+  String get forgotPasswordSubmit => 'Cambiar contraseña';
+
+  @override
+  String get forgotPasswordSubmitting => 'Cambiando…';
+
+  @override
+  String get forgotPasswordResend => 'Reenviar código';
+
+  @override
+  String forgotPasswordResendIn(int seconds) {
+    return 'Reenviar código en $seconds s';
+  }
+
+  @override
+  String get forgotPasswordResent => 'Te enviamos un código nuevo.';
+
+  @override
+  String get forgotPasswordChangeEmail => 'Usar otro correo';
+
+  @override
+  String get forgotPasswordDoneTitle => 'CONTRASEÑA ACTUALIZADA';
+
+  @override
+  String get forgotPasswordDoneBody =>
+      'Ya puedes iniciar sesión con tu contraseña nueva. Por seguridad, cerramos tu sesión en los demás dispositivos.';
+
+  @override
+  String get forgotPasswordGoToSignIn => 'Iniciar sesión';
+
+  @override
+  String get shellLoadingText => 'Preparando tu espacio…';
+
+  @override
+  String get practitionerOnlyTitle => 'ESTA APP ES PARA NUTRICIONISTAS';
+
+  @override
+  String get practitionerOnlyBody =>
+      'Tu cuenta es de paciente. Usa la app de pacientes de Healthify para ver tu plan y registrar tus comidas.';
+
+  @override
+  String get practitionerOnlySignOut => 'Cerrar sesión';
 }
