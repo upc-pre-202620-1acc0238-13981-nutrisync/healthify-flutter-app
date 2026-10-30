@@ -124,6 +124,68 @@ class AppLocalizationsEn extends AppLocalizations {
   String get authPassword => 'Password';
 
   @override
+  String get signUpTitle => 'CREATE ACCOUNT';
+
+  @override
+  String get signUpSubtitle => 'This is how you\'ll sign in to Healthify';
+
+  @override
+  String get signUpGivenNames => 'First names';
+
+  @override
+  String get signUpGivenNamesPlaceholder => 'e.g. María';
+
+  @override
+  String get signUpFamilyNames => 'Last names';
+
+  @override
+  String get signUpFamilyNamesPlaceholder => 'e.g. Flores';
+
+  @override
+  String get signUpPasswordPlaceholder => 'At least 8 characters';
+
+  @override
+  String get signUpPasswordHint =>
+      'Use an uppercase letter, a lowercase letter, a number and a symbol';
+
+  @override
+  String get signUpSubmit => 'Create account';
+
+  @override
+  String get signUpSubmitting => 'Creating account…';
+
+  @override
+  String get signUpHaveAccount => 'I already have an account';
+
+  @override
+  String get signUpOfflineHint =>
+      'You need a connection to create your account';
+
+  @override
+  String get signUpErrorGivenNamesRequired => 'Enter your first names';
+
+  @override
+  String get signUpErrorFamilyNamesRequired => 'Enter your last names';
+
+  @override
+  String get signUpErrorNameCharacters =>
+      'Write it without numbers or the < > signs';
+
+  @override
+  String get signUpErrorNameTooLong => 'Use 80 characters at most';
+
+  @override
+  String get signUpErrorEmail => 'Enter a valid email';
+
+  @override
+  String get signUpErrorEmailTaken =>
+      'There\'s already an account with this email. Sign in?';
+
+  @override
+  String get signUpErrorPassword =>
+      'It needs an uppercase letter, a lowercase letter, a number and a symbol, and at least 8 characters';
+
+  @override
   String get signInTitle => 'SIGN IN';
 
   @override

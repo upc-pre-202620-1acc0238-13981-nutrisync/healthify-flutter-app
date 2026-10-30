@@ -314,6 +314,120 @@ abstract class AppLocalizations {
   /// **'Contraseña'**
   String get authPassword;
 
+  /// No description provided for @signUpTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'CREAR CUENTA'**
+  String get signUpTitle;
+
+  /// No description provided for @signUpSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Así vas a entrar a Healthify'**
+  String get signUpSubtitle;
+
+  /// No description provided for @signUpGivenNames.
+  ///
+  /// In es, this message translates to:
+  /// **'Nombres'**
+  String get signUpGivenNames;
+
+  /// No description provided for @signUpGivenNamesPlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'Ej. María'**
+  String get signUpGivenNamesPlaceholder;
+
+  /// No description provided for @signUpFamilyNames.
+  ///
+  /// In es, this message translates to:
+  /// **'Apellidos'**
+  String get signUpFamilyNames;
+
+  /// No description provided for @signUpFamilyNamesPlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'Ej. Flores'**
+  String get signUpFamilyNamesPlaceholder;
+
+  /// No description provided for @signUpPasswordPlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'Mínimo 8 caracteres'**
+  String get signUpPasswordPlaceholder;
+
+  /// No description provided for @signUpPasswordHint.
+  ///
+  /// In es, this message translates to:
+  /// **'Usa mayúscula, minúscula, número y símbolo'**
+  String get signUpPasswordHint;
+
+  /// No description provided for @signUpSubmit.
+  ///
+  /// In es, this message translates to:
+  /// **'Crear cuenta'**
+  String get signUpSubmit;
+
+  /// No description provided for @signUpSubmitting.
+  ///
+  /// In es, this message translates to:
+  /// **'Creando cuenta…'**
+  String get signUpSubmitting;
+
+  /// No description provided for @signUpHaveAccount.
+  ///
+  /// In es, this message translates to:
+  /// **'Ya tengo cuenta'**
+  String get signUpHaveAccount;
+
+  /// No description provided for @signUpOfflineHint.
+  ///
+  /// In es, this message translates to:
+  /// **'Necesitas conexión para crear tu cuenta'**
+  String get signUpOfflineHint;
+
+  /// No description provided for @signUpErrorGivenNamesRequired.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribe tus nombres'**
+  String get signUpErrorGivenNamesRequired;
+
+  /// No description provided for @signUpErrorFamilyNamesRequired.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribe tus apellidos'**
+  String get signUpErrorFamilyNamesRequired;
+
+  /// No description provided for @signUpErrorNameCharacters.
+  ///
+  /// In es, this message translates to:
+  /// **'Escríbelo sin números ni los signos < >'**
+  String get signUpErrorNameCharacters;
+
+  /// No description provided for @signUpErrorNameTooLong.
+  ///
+  /// In es, this message translates to:
+  /// **'Usa como máximo 80 caracteres'**
+  String get signUpErrorNameTooLong;
+
+  /// No description provided for @signUpErrorEmail.
+  ///
+  /// In es, this message translates to:
+  /// **'Ingresa un correo válido'**
+  String get signUpErrorEmail;
+
+  /// No description provided for @signUpErrorEmailTaken.
+  ///
+  /// In es, this message translates to:
+  /// **'Ya existe una cuenta con este correo. ¿Iniciar sesión?'**
+  String get signUpErrorEmailTaken;
+
+  /// No description provided for @signUpErrorPassword.
+  ///
+  /// In es, this message translates to:
+  /// **'Necesita mayúscula, minúscula, número y símbolo, y al menos 8 caracteres'**
+  String get signUpErrorPassword;
+
   /// No description provided for @signInTitle.
   ///
   /// In es, this message translates to:

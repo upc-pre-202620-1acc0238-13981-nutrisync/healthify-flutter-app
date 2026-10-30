@@ -123,6 +123,66 @@ class AppLocalizationsEs extends AppLocalizations {
   String get authPassword => 'Contraseña';
 
   @override
+  String get signUpTitle => 'CREAR CUENTA';
+
+  @override
+  String get signUpSubtitle => 'Así vas a entrar a Healthify';
+
+  @override
+  String get signUpGivenNames => 'Nombres';
+
+  @override
+  String get signUpGivenNamesPlaceholder => 'Ej. María';
+
+  @override
+  String get signUpFamilyNames => 'Apellidos';
+
+  @override
+  String get signUpFamilyNamesPlaceholder => 'Ej. Flores';
+
+  @override
+  String get signUpPasswordPlaceholder => 'Mínimo 8 caracteres';
+
+  @override
+  String get signUpPasswordHint => 'Usa mayúscula, minúscula, número y símbolo';
+
+  @override
+  String get signUpSubmit => 'Crear cuenta';
+
+  @override
+  String get signUpSubmitting => 'Creando cuenta…';
+
+  @override
+  String get signUpHaveAccount => 'Ya tengo cuenta';
+
+  @override
+  String get signUpOfflineHint => 'Necesitas conexión para crear tu cuenta';
+
+  @override
+  String get signUpErrorGivenNamesRequired => 'Escribe tus nombres';
+
+  @override
+  String get signUpErrorFamilyNamesRequired => 'Escribe tus apellidos';
+
+  @override
+  String get signUpErrorNameCharacters =>
+      'Escríbelo sin números ni los signos < >';
+
+  @override
+  String get signUpErrorNameTooLong => 'Usa como máximo 80 caracteres';
+
+  @override
+  String get signUpErrorEmail => 'Ingresa un correo válido';
+
+  @override
+  String get signUpErrorEmailTaken =>
+      'Ya existe una cuenta con este correo. ¿Iniciar sesión?';
+
+  @override
+  String get signUpErrorPassword =>
+      'Necesita mayúscula, minúscula, número y símbolo, y al menos 8 caracteres';
+
+  @override
   String get signInTitle => 'INICIAR SESIÓN';
 
   @override
