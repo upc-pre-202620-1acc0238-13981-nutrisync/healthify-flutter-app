@@ -1,10 +1,17 @@
 {
   "@@locale": "en",
   "appName": "Healthify",
+  "brandLogoCd": "Healthify",
+  "dsCdBack": "Back",
+  "dsCdClose": "Close",
   "dsCdLoading": "Loading",
   "dsShowPassword": "Show password",
   "dsHidePassword": "Hide password",
   "dsYes": "Yes",
   "dsNo": "No",
-  "dsYesNoRequired": "Answer Yes or No"
+  "dsYesNoRequired": "Answer Yes or No",
+  "dsCancel": "Cancel",
+  "navPatients": "Patients",
+  "navInbox": "Inbox",
+  "navAgenda": "Schedule"
 }

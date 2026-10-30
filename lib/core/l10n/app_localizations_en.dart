@@ -13,6 +13,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get appName => 'Healthify';
 
   @override
+  String get brandLogoCd => 'Healthify';
+
+  @override
+  String get dsCdBack => 'Back';
+
+  @override
+  String get dsCdClose => 'Close';
+
+  @override
   String get dsCdLoading => 'Loading';
 
   @override
@@ -29,4 +38,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dsYesNoRequired => 'Answer Yes or No';
+
+  @override
+  String get dsCancel => 'Cancel';
+
+  @override
+  String get navPatients => 'Patients';
+
+  @override
+  String get navInbox => 'Inbox';
+
+  @override
+  String get navAgenda => 'Schedule';
 }

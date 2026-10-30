@@ -104,6 +104,24 @@ abstract class AppLocalizations {
   /// **'Healthify'**
   String get appName;
 
+  /// No description provided for @brandLogoCd.
+  ///
+  /// In es, this message translates to:
+  /// **'Healthify'**
+  String get brandLogoCd;
+
+  /// No description provided for @dsCdBack.
+  ///
+  /// In es, this message translates to:
+  /// **'Volver'**
+  String get dsCdBack;
+
+  /// No description provided for @dsCdClose.
+  ///
+  /// In es, this message translates to:
+  /// **'Cerrar'**
+  String get dsCdClose;
+
   /// No description provided for @dsCdLoading.
   ///
   /// In es, this message translates to:
@@ -139,6 +157,30 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Responde Sí o No'**
   String get dsYesNoRequired;
+
+  /// No description provided for @dsCancel.
+  ///
+  /// In es, this message translates to:
+  /// **'Cancelar'**
+  String get dsCancel;
+
+  /// No description provided for @navPatients.
+  ///
+  /// In es, this message translates to:
+  /// **'Pacientes'**
+  String get navPatients;
+
+  /// No description provided for @navInbox.
+  ///
+  /// In es, this message translates to:
+  /// **'Bandeja'**
+  String get navInbox;
+
+  /// No description provided for @navAgenda.
+  ///
+  /// In es, this message translates to:
+  /// **'Agenda'**
+  String get navAgenda;
 }
 
 class _AppLocalizationsDelegate
