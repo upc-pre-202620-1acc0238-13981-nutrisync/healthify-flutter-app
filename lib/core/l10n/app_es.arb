@@ -230,7 +230,39 @@
   "dischargeDialogConfirm": "Sí, dar de alta",
   "dischargeAlreadyTitle": "Alta ya registrada",
   "dischargeAlreadyBody": "Este paciente ya había sido dado de alta.",
+  "unitCm": "cm",
   "planHistory": "HISTORIAL DEL PLAN",
+  "baselineTitle": "DATOS BASE",
+  "baselineIntro": "Se registran una sola vez. Puedes editarlos después desde la pestaña Resumen.",
+  "baselineBirthDate": "Fecha de nacimiento",
+  "baselineBirthDateRequired": "Elige la fecha de nacimiento.",
+  "baselineBirthDateRange": "La fecha debe ser de hace 1 a 120 años.",
+  "baselineAgeAuto": "Edad: {age} (se actualiza sola)",
+  "@baselineAgeAuto": {
+    "placeholders": {
+      "age": {
+        "type": "String"
+      }
+    }
+  },
+  "baselineSex": "Sexo biológico",
+  "baselineSexRequired": "Elige el sexo biológico.",
+  "baselineHeight": "Talla",
+  "baselineHeightRequired": "Escribe la talla en cm.",
+  "baselineHeightRange": "La talla va de 50 a 250 cm.",
+  "baselineConditions": "Antecedentes médicos",
+  "baselineConditionsHint": "Puedes elegir varios.",
+  "baselineSaveAndStart": "Guardar e iniciar consulta",
+  "baselineSaveAndExit": "Guardar y salir",
+  "baselineSave": "Guardar cambios",
+  "baselineAgeYears": "{count, plural, one{{count} año} other{{count} años}}",
+  "@baselineAgeYears": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "shellSignalResolved": "Señal resuelta. {name} ya no aparece en tu bandeja.",
   "@shellSignalResolved": {
     "placeholders": {

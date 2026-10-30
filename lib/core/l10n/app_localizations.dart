@@ -1124,11 +1124,119 @@ abstract class AppLocalizations {
   /// **'Este paciente ya había sido dado de alta.'**
   String get dischargeAlreadyBody;
 
+  /// No description provided for @unitCm.
+  ///
+  /// In es, this message translates to:
+  /// **'cm'**
+  String get unitCm;
+
   /// No description provided for @planHistory.
   ///
   /// In es, this message translates to:
   /// **'HISTORIAL DEL PLAN'**
   String get planHistory;
+
+  /// No description provided for @baselineTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'DATOS BASE'**
+  String get baselineTitle;
+
+  /// No description provided for @baselineIntro.
+  ///
+  /// In es, this message translates to:
+  /// **'Se registran una sola vez. Puedes editarlos después desde la pestaña Resumen.'**
+  String get baselineIntro;
+
+  /// No description provided for @baselineBirthDate.
+  ///
+  /// In es, this message translates to:
+  /// **'Fecha de nacimiento'**
+  String get baselineBirthDate;
+
+  /// No description provided for @baselineBirthDateRequired.
+  ///
+  /// In es, this message translates to:
+  /// **'Elige la fecha de nacimiento.'**
+  String get baselineBirthDateRequired;
+
+  /// No description provided for @baselineBirthDateRange.
+  ///
+  /// In es, this message translates to:
+  /// **'La fecha debe ser de hace 1 a 120 años.'**
+  String get baselineBirthDateRange;
+
+  /// No description provided for @baselineAgeAuto.
+  ///
+  /// In es, this message translates to:
+  /// **'Edad: {age} (se actualiza sola)'**
+  String baselineAgeAuto(String age);
+
+  /// No description provided for @baselineSex.
+  ///
+  /// In es, this message translates to:
+  /// **'Sexo biológico'**
+  String get baselineSex;
+
+  /// No description provided for @baselineSexRequired.
+  ///
+  /// In es, this message translates to:
+  /// **'Elige el sexo biológico.'**
+  String get baselineSexRequired;
+
+  /// No description provided for @baselineHeight.
+  ///
+  /// In es, this message translates to:
+  /// **'Talla'**
+  String get baselineHeight;
+
+  /// No description provided for @baselineHeightRequired.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribe la talla en cm.'**
+  String get baselineHeightRequired;
+
+  /// No description provided for @baselineHeightRange.
+  ///
+  /// In es, this message translates to:
+  /// **'La talla va de 50 a 250 cm.'**
+  String get baselineHeightRange;
+
+  /// No description provided for @baselineConditions.
+  ///
+  /// In es, this message translates to:
+  /// **'Antecedentes médicos'**
+  String get baselineConditions;
+
+  /// No description provided for @baselineConditionsHint.
+  ///
+  /// In es, this message translates to:
+  /// **'Puedes elegir varios.'**
+  String get baselineConditionsHint;
+
+  /// No description provided for @baselineSaveAndStart.
+  ///
+  /// In es, this message translates to:
+  /// **'Guardar e iniciar consulta'**
+  String get baselineSaveAndStart;
+
+  /// No description provided for @baselineSaveAndExit.
+  ///
+  /// In es, this message translates to:
+  /// **'Guardar y salir'**
+  String get baselineSaveAndExit;
+
+  /// No description provided for @baselineSave.
+  ///
+  /// In es, this message translates to:
+  /// **'Guardar cambios'**
+  String get baselineSave;
+
+  /// No description provided for @baselineAgeYears.
+  ///
+  /// In es, this message translates to:
+  /// **'{count, plural, one{{count} año} other{{count} años}}'**
+  String baselineAgeYears(int count);
 
   /// No description provided for @shellSignalResolved.
   ///

@@ -574,7 +574,72 @@ class AppLocalizationsEn extends AppLocalizations {
       'This patient had already been discharged.';
 
   @override
+  String get unitCm => 'cm';
+
+  @override
   String get planHistory => 'PLAN HISTORY';
+
+  @override
+  String get baselineTitle => 'BASELINE DATA';
+
+  @override
+  String get baselineIntro =>
+      'Recorded only once. You can edit it later from the Summary tab.';
+
+  @override
+  String get baselineBirthDate => 'Date of birth';
+
+  @override
+  String get baselineBirthDateRequired => 'Choose the date of birth.';
+
+  @override
+  String get baselineBirthDateRange => 'The date must be 1 to 120 years ago.';
+
+  @override
+  String baselineAgeAuto(String age) {
+    return 'Age: $age (updates by itself)';
+  }
+
+  @override
+  String get baselineSex => 'Biological sex';
+
+  @override
+  String get baselineSexRequired => 'Choose the biological sex.';
+
+  @override
+  String get baselineHeight => 'Height';
+
+  @override
+  String get baselineHeightRequired => 'Enter the height in cm.';
+
+  @override
+  String get baselineHeightRange => 'Height goes from 50 to 250 cm.';
+
+  @override
+  String get baselineConditions => 'Medical history';
+
+  @override
+  String get baselineConditionsHint => 'You can choose several.';
+
+  @override
+  String get baselineSaveAndStart => 'Save and start consultation';
+
+  @override
+  String get baselineSaveAndExit => 'Save and exit';
+
+  @override
+  String get baselineSave => 'Save changes';
+
+  @override
+  String baselineAgeYears(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count years',
+      one: '$count year',
+    );
+    return '$_temp0';
+  }
 
   @override
   String shellSignalResolved(String name) {

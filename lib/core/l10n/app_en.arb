@@ -171,7 +171,39 @@
   "dischargeDialogConfirm": "Yes, discharge",
   "dischargeAlreadyTitle": "Discharge already recorded",
   "dischargeAlreadyBody": "This patient had already been discharged.",
+  "unitCm": "cm",
   "planHistory": "PLAN HISTORY",
+  "baselineTitle": "BASELINE DATA",
+  "baselineIntro": "Recorded only once. You can edit it later from the Summary tab.",
+  "baselineBirthDate": "Date of birth",
+  "baselineBirthDateRequired": "Choose the date of birth.",
+  "baselineBirthDateRange": "The date must be 1 to 120 years ago.",
+  "baselineAgeAuto": "Age: {age} (updates by itself)",
+  "@baselineAgeAuto": {
+    "placeholders": {
+      "age": {
+        "type": "String"
+      }
+    }
+  },
+  "baselineSex": "Biological sex",
+  "baselineSexRequired": "Choose the biological sex.",
+  "baselineHeight": "Height",
+  "baselineHeightRequired": "Enter the height in cm.",
+  "baselineHeightRange": "Height goes from 50 to 250 cm.",
+  "baselineConditions": "Medical history",
+  "baselineConditionsHint": "You can choose several.",
+  "baselineSaveAndStart": "Save and start consultation",
+  "baselineSaveAndExit": "Save and exit",
+  "baselineSave": "Save changes",
+  "baselineAgeYears": "{count, plural, one{{count} year} other{{count} years}}",
+  "@baselineAgeYears": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "shellSignalResolved": "Signal resolved. {name} is no longer in your inbox.",
   "shellSignalResolvedGeneric": "Signal resolved. It's no longer in your inbox.",
   "shellFollowUpScheduled": "Consultation scheduled: {day}, {time}",
