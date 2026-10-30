@@ -1,4 +1,10 @@
 {
   "@@locale": "en",
-  "appName": "Healthify"
+  "appName": "Healthify",
+  "dsCdLoading": "Loading",
+  "dsShowPassword": "Show password",
+  "dsHidePassword": "Hide password",
+  "dsYes": "Yes",
+  "dsNo": "No",
+  "dsYesNoRequired": "Answer Yes or No"
 }

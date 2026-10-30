@@ -11,4 +11,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get appName => 'Healthify';
+
+  @override
+  String get dsCdLoading => 'Loading';
+
+  @override
+  String get dsShowPassword => 'Show password';
+
+  @override
+  String get dsHidePassword => 'Hide password';
+
+  @override
+  String get dsYes => 'Yes';
+
+  @override
+  String get dsNo => 'No';
+
+  @override
+  String get dsYesNoRequired => 'Answer Yes or No';
 }

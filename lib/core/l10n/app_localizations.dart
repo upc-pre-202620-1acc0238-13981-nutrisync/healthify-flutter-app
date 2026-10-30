@@ -103,6 +103,42 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Healthify'**
   String get appName;
+
+  /// No description provided for @dsCdLoading.
+  ///
+  /// In es, this message translates to:
+  /// **'Cargando'**
+  String get dsCdLoading;
+
+  /// No description provided for @dsShowPassword.
+  ///
+  /// In es, this message translates to:
+  /// **'Mostrar contraseña'**
+  String get dsShowPassword;
+
+  /// No description provided for @dsHidePassword.
+  ///
+  /// In es, this message translates to:
+  /// **'Ocultar contraseña'**
+  String get dsHidePassword;
+
+  /// No description provided for @dsYes.
+  ///
+  /// In es, this message translates to:
+  /// **'Sí'**
+  String get dsYes;
+
+  /// No description provided for @dsNo.
+  ///
+  /// In es, this message translates to:
+  /// **'No'**
+  String get dsNo;
+
+  /// No description provided for @dsYesNoRequired.
+  ///
+  /// In es, this message translates to:
+  /// **'Responde Sí o No'**
+  String get dsYesNoRequired;
 }
 
 class _AppLocalizationsDelegate
