@@ -19,6 +19,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get commonUnderstood => 'Entendido';
 
   @override
+  String get commonSaving => 'Guardando…';
+
+  @override
   String get errorNetwork =>
       'No hay conexión. Revisa tu internet e inténtalo de nuevo.';
 
@@ -380,6 +383,9 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get menuSignOut => 'Cerrar sesión';
+
+  @override
+  String get inboxTitle => 'BANDEJA';
 
   @override
   String get settingsTitle => 'AJUSTES';
@@ -1682,6 +1688,51 @@ class AppLocalizationsEs extends AppLocalizations {
   String get targetsCalculating => 'Calculando las metas…';
 
   @override
+  String inboxRowTitle(String name, String signal) {
+    return '$name · $signal';
+  }
+
+  @override
+  String inboxReceivedOn(String date) {
+    return 'Recibido el $date';
+  }
+
+  @override
+  String get inboxUnknownPatient => 'Paciente';
+
+  @override
+  String get inboxEmptyTitle => 'Bandeja al día';
+
+  @override
+  String get inboxEmptyBody =>
+      'No tienes señales pendientes. Ninguna señal cambia un plan por sí sola.';
+
+  @override
+  String get inboxOfflineBody =>
+      'Tu bandeja no se guarda en el teléfono. Vuelve a intentarlo cuando tengas conexión.';
+
+  @override
+  String get practitionerOfflineTitle => 'Necesitas conexión';
+
+  @override
+  String get signalSustainedDeviation => 'Desviación sostenida';
+
+  @override
+  String get signalSustainedDeviationInline => 'desviación sostenida';
+
+  @override
+  String get signalScheduledRecheck => 'Revisión programada';
+
+  @override
+  String get signalScheduledRecheckInline => 'revisión programada';
+
+  @override
+  String get signalConsistencyEscalation => 'Señal de consistencia';
+
+  @override
+  String get signalConsistencyEscalationInline => 'señal de consistencia';
+
+  @override
   String shellSignalResolved(String name) {
     return 'Señal resuelta. $name ya no aparece en tu bandeja.';
   }
@@ -1689,6 +1740,205 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get shellSignalResolvedGeneric =>
       'Señal resuelta. Ya no aparece en tu bandeja.';
+
+  @override
+  String get reviewTitle => 'REVISAR SEÑAL';
+
+  @override
+  String reviewChip(String signal, String date) {
+    return '$signal · recibido el $date';
+  }
+
+  @override
+  String reviewEvidenceDeviationNamed(
+    String name,
+    String percent,
+    String direction,
+    String kcalClause,
+    String deviatedDays,
+    String loggedDays,
+  ) {
+    return '$name registró en promedio $percent % $direction de su meta de energía$kcalClause en $deviatedDays de sus últimos $loggedDays días registrados.';
+  }
+
+  @override
+  String reviewEvidenceDeviation(
+    String percent,
+    String direction,
+    String kcalClause,
+    String deviatedDays,
+    String loggedDays,
+  ) {
+    return 'Registró en promedio $percent % $direction de su meta de energía$kcalClause en $deviatedDays de sus últimos $loggedDays días registrados.';
+  }
+
+  @override
+  String get reviewDirectionBelow => 'menos';
+
+  @override
+  String get reviewDirectionAbove => 'más';
+
+  @override
+  String reviewEvidenceKcalClause(String kcal) {
+    return ' (≈ $kcal kcal/día)';
+  }
+
+  @override
+  String reviewEvidenceRecheckCounts(
+    String date,
+    int version,
+    String deviatedDays,
+    String loggedDays,
+  ) {
+    return 'Revisión programada tras el ajuste del $date (v$version): $deviatedDays de $loggedDays días registrados fuera de la meta.';
+  }
+
+  @override
+  String reviewEvidenceRecheck(String date, int version) {
+    return 'Revisión programada tras el ajuste del $date (v$version).';
+  }
+
+  @override
+  String reviewEvidenceConsistency(
+    String index,
+    String alertClause,
+    String shownClause,
+  ) {
+    return 'Índice de consistencia: $index kg/semana sin explicar$alertClause$shownClause.';
+  }
+
+  @override
+  String reviewAlertClause(String date) {
+    return '; en alerta desde el $date';
+  }
+
+  @override
+  String reviewAlertClauseOneWeek(String date) {
+    return '; en alerta desde el $date (1 semana)';
+  }
+
+  @override
+  String reviewAlertClauseWeeks(String date, String weeks) {
+    return '; en alerta desde el $date ($weeks semanas)';
+  }
+
+  @override
+  String reviewShownClause(String date) {
+    return '; se le mostró al paciente el $date';
+  }
+
+  @override
+  String get reviewUnloggedDaysNote => 'Los días sin registro no cuentan.';
+
+  @override
+  String reviewEvidenceWithNote(String evidence, String note) {
+    return '$evidence $note';
+  }
+
+  @override
+  String get reviewAdjustedQuestion => '¿Ajustaste el plan por esta señal?';
+
+  @override
+  String get reviewAnswerYesNo => 'Responde Sí o No';
+
+  @override
+  String get reviewNoteLabel => 'Nota (opcional)';
+
+  @override
+  String get reviewNotePlaceholder => 'Ej. se conversó en consulta…';
+
+  @override
+  String get reviewResolutionInfo =>
+      'Resolver no cambia el plan. Si decides ajustarlo, se abre como una acción aparte y la señal queda registrada como «ajustada».';
+
+  @override
+  String get reviewResolve => 'Resolver';
+
+  @override
+  String get reviewAdjustPlanNow => 'Ajustar el plan ahora';
+
+  @override
+  String get reviewAdjust => 'Ajustar';
+
+  @override
+  String get reviewAssigning => 'Asignando…';
+
+  @override
+  String get reviewResolveWithoutProposal => 'Resolver sin asignar este plan';
+
+  @override
+  String get reviewResolveNow => 'Resolver sin esperar';
+
+  @override
+  String get reviewAiProposalBadge => 'Plan propuesto por IA';
+
+  @override
+  String get reviewAiGenerating => 'La IA está preparando un plan propuesto…';
+
+  @override
+  String get reviewNotAvailableTitle => 'Ítem no disponible';
+
+  @override
+  String get reviewNotAvailableBody => 'Este ítem ya no está disponible.';
+
+  @override
+  String get reviewAlreadyResolvedTitle => 'Ítem resuelto';
+
+  @override
+  String get reviewAlreadyResolvedBody => 'Este ítem ya fue resuelto.';
+
+  @override
+  String get reviewPlanChangedTitle => 'El plan cambió';
+
+  @override
+  String get reviewPlanChangedBody =>
+      'El plan de este paciente cambió mientras revisabas la señal. Vuelve a revisarla.';
+
+  @override
+  String get reviewBackToInbox => 'Volver a la bandeja';
+
+  @override
+  String get proposalDailyEnergy => 'Energía diaria';
+
+  @override
+  String proposalEnergyChange(String from, String to) {
+    return '$from → $to kcal';
+  }
+
+  @override
+  String proposalEnergyValue(String value) {
+    return '$value kcal';
+  }
+
+  @override
+  String get proposalAddedGuideline => 'Nueva indicación';
+
+  @override
+  String get proposalRemovedGuideline => 'Se quita la indicación';
+
+  @override
+  String proposalMessageFor(String name) {
+    return 'Mensaje para $name';
+  }
+
+  @override
+  String get proposalMessageForPatient => 'Mensaje para tu paciente';
+
+  @override
+  String proposalQuoted(String text) {
+    return '«$text»';
+  }
+
+  @override
+  String get proposalFollowUp => 'Seguimiento';
+
+  @override
+  String proposalRecheckInDays(int days) {
+    return 'Revisar de nuevo en $days días';
+  }
+
+  @override
+  String get proposalWhy => 'Por qué';
 
   @override
   String shellFollowUpScheduled(String day, String time) {
@@ -1705,4 +1955,15 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get summaryReferral => 'Registrar derivación';
+
+  @override
+  String inboxPendingCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count ítems pendientes por revisar',
+      one: '$count ítem pendiente por revisar',
+    );
+    return '$_temp0';
+  }
 }

@@ -116,6 +116,12 @@ abstract class AppLocalizations {
   /// **'Entendido'**
   String get commonUnderstood;
 
+  /// No description provided for @commonSaving.
+  ///
+  /// In es, this message translates to:
+  /// **'Guardando…'**
+  String get commonSaving;
+
   /// No description provided for @errorNetwork.
   ///
   /// In es, this message translates to:
@@ -793,6 +799,12 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Cerrar sesión'**
   String get menuSignOut;
+
+  /// No description provided for @inboxTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'BANDEJA'**
+  String get inboxTitle;
 
   /// No description provided for @settingsTitle.
   ///
@@ -3020,6 +3032,84 @@ abstract class AppLocalizations {
   /// **'Calculando las metas…'**
   String get targetsCalculating;
 
+  /// No description provided for @inboxRowTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'{name} · {signal}'**
+  String inboxRowTitle(String name, String signal);
+
+  /// No description provided for @inboxReceivedOn.
+  ///
+  /// In es, this message translates to:
+  /// **'Recibido el {date}'**
+  String inboxReceivedOn(String date);
+
+  /// No description provided for @inboxUnknownPatient.
+  ///
+  /// In es, this message translates to:
+  /// **'Paciente'**
+  String get inboxUnknownPatient;
+
+  /// No description provided for @inboxEmptyTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Bandeja al día'**
+  String get inboxEmptyTitle;
+
+  /// No description provided for @inboxEmptyBody.
+  ///
+  /// In es, this message translates to:
+  /// **'No tienes señales pendientes. Ninguna señal cambia un plan por sí sola.'**
+  String get inboxEmptyBody;
+
+  /// No description provided for @inboxOfflineBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu bandeja no se guarda en el teléfono. Vuelve a intentarlo cuando tengas conexión.'**
+  String get inboxOfflineBody;
+
+  /// No description provided for @practitionerOfflineTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Necesitas conexión'**
+  String get practitionerOfflineTitle;
+
+  /// No description provided for @signalSustainedDeviation.
+  ///
+  /// In es, this message translates to:
+  /// **'Desviación sostenida'**
+  String get signalSustainedDeviation;
+
+  /// No description provided for @signalSustainedDeviationInline.
+  ///
+  /// In es, this message translates to:
+  /// **'desviación sostenida'**
+  String get signalSustainedDeviationInline;
+
+  /// No description provided for @signalScheduledRecheck.
+  ///
+  /// In es, this message translates to:
+  /// **'Revisión programada'**
+  String get signalScheduledRecheck;
+
+  /// No description provided for @signalScheduledRecheckInline.
+  ///
+  /// In es, this message translates to:
+  /// **'revisión programada'**
+  String get signalScheduledRecheckInline;
+
+  /// No description provided for @signalConsistencyEscalation.
+  ///
+  /// In es, this message translates to:
+  /// **'Señal de consistencia'**
+  String get signalConsistencyEscalation;
+
+  /// No description provided for @signalConsistencyEscalationInline.
+  ///
+  /// In es, this message translates to:
+  /// **'señal de consistencia'**
+  String get signalConsistencyEscalationInline;
+
   /// No description provided for @shellSignalResolved.
   ///
   /// In es, this message translates to:
@@ -3031,6 +3121,310 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Señal resuelta. Ya no aparece en tu bandeja.'**
   String get shellSignalResolvedGeneric;
+
+  /// No description provided for @reviewTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'REVISAR SEÑAL'**
+  String get reviewTitle;
+
+  /// No description provided for @reviewChip.
+  ///
+  /// In es, this message translates to:
+  /// **'{signal} · recibido el {date}'**
+  String reviewChip(String signal, String date);
+
+  /// No description provided for @reviewEvidenceDeviationNamed.
+  ///
+  /// In es, this message translates to:
+  /// **'{name} registró en promedio {percent} % {direction} de su meta de energía{kcalClause} en {deviatedDays} de sus últimos {loggedDays} días registrados.'**
+  String reviewEvidenceDeviationNamed(
+    String name,
+    String percent,
+    String direction,
+    String kcalClause,
+    String deviatedDays,
+    String loggedDays,
+  );
+
+  /// No description provided for @reviewEvidenceDeviation.
+  ///
+  /// In es, this message translates to:
+  /// **'Registró en promedio {percent} % {direction} de su meta de energía{kcalClause} en {deviatedDays} de sus últimos {loggedDays} días registrados.'**
+  String reviewEvidenceDeviation(
+    String percent,
+    String direction,
+    String kcalClause,
+    String deviatedDays,
+    String loggedDays,
+  );
+
+  /// No description provided for @reviewDirectionBelow.
+  ///
+  /// In es, this message translates to:
+  /// **'menos'**
+  String get reviewDirectionBelow;
+
+  /// No description provided for @reviewDirectionAbove.
+  ///
+  /// In es, this message translates to:
+  /// **'más'**
+  String get reviewDirectionAbove;
+
+  /// No description provided for @reviewEvidenceKcalClause.
+  ///
+  /// In es, this message translates to:
+  /// **' (≈ {kcal} kcal/día)'**
+  String reviewEvidenceKcalClause(String kcal);
+
+  /// No description provided for @reviewEvidenceRecheckCounts.
+  ///
+  /// In es, this message translates to:
+  /// **'Revisión programada tras el ajuste del {date} (v{version}): {deviatedDays} de {loggedDays} días registrados fuera de la meta.'**
+  String reviewEvidenceRecheckCounts(
+    String date,
+    int version,
+    String deviatedDays,
+    String loggedDays,
+  );
+
+  /// No description provided for @reviewEvidenceRecheck.
+  ///
+  /// In es, this message translates to:
+  /// **'Revisión programada tras el ajuste del {date} (v{version}).'**
+  String reviewEvidenceRecheck(String date, int version);
+
+  /// No description provided for @reviewEvidenceConsistency.
+  ///
+  /// In es, this message translates to:
+  /// **'Índice de consistencia: {index} kg/semana sin explicar{alertClause}{shownClause}.'**
+  String reviewEvidenceConsistency(
+    String index,
+    String alertClause,
+    String shownClause,
+  );
+
+  /// No description provided for @reviewAlertClause.
+  ///
+  /// In es, this message translates to:
+  /// **'; en alerta desde el {date}'**
+  String reviewAlertClause(String date);
+
+  /// No description provided for @reviewAlertClauseOneWeek.
+  ///
+  /// In es, this message translates to:
+  /// **'; en alerta desde el {date} (1 semana)'**
+  String reviewAlertClauseOneWeek(String date);
+
+  /// No description provided for @reviewAlertClauseWeeks.
+  ///
+  /// In es, this message translates to:
+  /// **'; en alerta desde el {date} ({weeks} semanas)'**
+  String reviewAlertClauseWeeks(String date, String weeks);
+
+  /// No description provided for @reviewShownClause.
+  ///
+  /// In es, this message translates to:
+  /// **'; se le mostró al paciente el {date}'**
+  String reviewShownClause(String date);
+
+  /// No description provided for @reviewUnloggedDaysNote.
+  ///
+  /// In es, this message translates to:
+  /// **'Los días sin registro no cuentan.'**
+  String get reviewUnloggedDaysNote;
+
+  /// No description provided for @reviewEvidenceWithNote.
+  ///
+  /// In es, this message translates to:
+  /// **'{evidence} {note}'**
+  String reviewEvidenceWithNote(String evidence, String note);
+
+  /// No description provided for @reviewAdjustedQuestion.
+  ///
+  /// In es, this message translates to:
+  /// **'¿Ajustaste el plan por esta señal?'**
+  String get reviewAdjustedQuestion;
+
+  /// No description provided for @reviewAnswerYesNo.
+  ///
+  /// In es, this message translates to:
+  /// **'Responde Sí o No'**
+  String get reviewAnswerYesNo;
+
+  /// No description provided for @reviewNoteLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Nota (opcional)'**
+  String get reviewNoteLabel;
+
+  /// No description provided for @reviewNotePlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'Ej. se conversó en consulta…'**
+  String get reviewNotePlaceholder;
+
+  /// No description provided for @reviewResolutionInfo.
+  ///
+  /// In es, this message translates to:
+  /// **'Resolver no cambia el plan. Si decides ajustarlo, se abre como una acción aparte y la señal queda registrada como «ajustada».'**
+  String get reviewResolutionInfo;
+
+  /// No description provided for @reviewResolve.
+  ///
+  /// In es, this message translates to:
+  /// **'Resolver'**
+  String get reviewResolve;
+
+  /// No description provided for @reviewAdjustPlanNow.
+  ///
+  /// In es, this message translates to:
+  /// **'Ajustar el plan ahora'**
+  String get reviewAdjustPlanNow;
+
+  /// No description provided for @reviewAdjust.
+  ///
+  /// In es, this message translates to:
+  /// **'Ajustar'**
+  String get reviewAdjust;
+
+  /// No description provided for @reviewAssigning.
+  ///
+  /// In es, this message translates to:
+  /// **'Asignando…'**
+  String get reviewAssigning;
+
+  /// No description provided for @reviewResolveWithoutProposal.
+  ///
+  /// In es, this message translates to:
+  /// **'Resolver sin asignar este plan'**
+  String get reviewResolveWithoutProposal;
+
+  /// No description provided for @reviewResolveNow.
+  ///
+  /// In es, this message translates to:
+  /// **'Resolver sin esperar'**
+  String get reviewResolveNow;
+
+  /// No description provided for @reviewAiProposalBadge.
+  ///
+  /// In es, this message translates to:
+  /// **'Plan propuesto por IA'**
+  String get reviewAiProposalBadge;
+
+  /// No description provided for @reviewAiGenerating.
+  ///
+  /// In es, this message translates to:
+  /// **'La IA está preparando un plan propuesto…'**
+  String get reviewAiGenerating;
+
+  /// No description provided for @reviewNotAvailableTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Ítem no disponible'**
+  String get reviewNotAvailableTitle;
+
+  /// No description provided for @reviewNotAvailableBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Este ítem ya no está disponible.'**
+  String get reviewNotAvailableBody;
+
+  /// No description provided for @reviewAlreadyResolvedTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Ítem resuelto'**
+  String get reviewAlreadyResolvedTitle;
+
+  /// No description provided for @reviewAlreadyResolvedBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Este ítem ya fue resuelto.'**
+  String get reviewAlreadyResolvedBody;
+
+  /// No description provided for @reviewPlanChangedTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'El plan cambió'**
+  String get reviewPlanChangedTitle;
+
+  /// No description provided for @reviewPlanChangedBody.
+  ///
+  /// In es, this message translates to:
+  /// **'El plan de este paciente cambió mientras revisabas la señal. Vuelve a revisarla.'**
+  String get reviewPlanChangedBody;
+
+  /// No description provided for @reviewBackToInbox.
+  ///
+  /// In es, this message translates to:
+  /// **'Volver a la bandeja'**
+  String get reviewBackToInbox;
+
+  /// No description provided for @proposalDailyEnergy.
+  ///
+  /// In es, this message translates to:
+  /// **'Energía diaria'**
+  String get proposalDailyEnergy;
+
+  /// No description provided for @proposalEnergyChange.
+  ///
+  /// In es, this message translates to:
+  /// **'{from} → {to} kcal'**
+  String proposalEnergyChange(String from, String to);
+
+  /// No description provided for @proposalEnergyValue.
+  ///
+  /// In es, this message translates to:
+  /// **'{value} kcal'**
+  String proposalEnergyValue(String value);
+
+  /// No description provided for @proposalAddedGuideline.
+  ///
+  /// In es, this message translates to:
+  /// **'Nueva indicación'**
+  String get proposalAddedGuideline;
+
+  /// No description provided for @proposalRemovedGuideline.
+  ///
+  /// In es, this message translates to:
+  /// **'Se quita la indicación'**
+  String get proposalRemovedGuideline;
+
+  /// No description provided for @proposalMessageFor.
+  ///
+  /// In es, this message translates to:
+  /// **'Mensaje para {name}'**
+  String proposalMessageFor(String name);
+
+  /// No description provided for @proposalMessageForPatient.
+  ///
+  /// In es, this message translates to:
+  /// **'Mensaje para tu paciente'**
+  String get proposalMessageForPatient;
+
+  /// No description provided for @proposalQuoted.
+  ///
+  /// In es, this message translates to:
+  /// **'«{text}»'**
+  String proposalQuoted(String text);
+
+  /// No description provided for @proposalFollowUp.
+  ///
+  /// In es, this message translates to:
+  /// **'Seguimiento'**
+  String get proposalFollowUp;
+
+  /// No description provided for @proposalRecheckInDays.
+  ///
+  /// In es, this message translates to:
+  /// **'Revisar de nuevo en {days} días'**
+  String proposalRecheckInDays(int days);
+
+  /// No description provided for @proposalWhy.
+  ///
+  /// In es, this message translates to:
+  /// **'Por qué'**
+  String get proposalWhy;
 
   /// No description provided for @shellFollowUpScheduled.
   ///
@@ -3055,6 +3449,12 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Registrar derivación'**
   String get summaryReferral;
+
+  /// No description provided for @inboxPendingCount.
+  ///
+  /// In es, this message translates to:
+  /// **'{count, plural, one{{count} ítem pendiente por revisar} other{{count} ítems pendientes por revisar}}'**
+  String inboxPendingCount(int count);
 }
 
 class _AppLocalizationsDelegate
