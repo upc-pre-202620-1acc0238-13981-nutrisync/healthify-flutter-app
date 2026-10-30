@@ -130,6 +130,10 @@
   "menuRolePractitioner": "Nutricionista",
   "menuSettings": "Ajustes",
   "menuSignOut": "Cerrar sesión",
+  "signOutTitle": "¿CERRAR SESIÓN?",
+  "signOutBody": "Tendrás que volver a ingresar tu correo y contraseña. Tus pacientes y sus datos quedan guardados.",
+  "signOutConfirm": "Cerrar sesión",
+  "signOutInProgress": "Cerrando sesión…",
   "shellPatientDischarged": "Alta registrada: {patientName} ya no está en tu cartera.",
   "@shellPatientDischarged": {
     "placeholders": {

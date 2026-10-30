@@ -382,6 +382,19 @@ class AppLocalizationsEs extends AppLocalizations {
   String get menuSignOut => 'Cerrar sesión';
 
   @override
+  String get signOutTitle => '¿CERRAR SESIÓN?';
+
+  @override
+  String get signOutBody =>
+      'Tendrás que volver a ingresar tu correo y contraseña. Tus pacientes y sus datos quedan guardados.';
+
+  @override
+  String get signOutConfirm => 'Cerrar sesión';
+
+  @override
+  String get signOutInProgress => 'Cerrando sesión…';
+
+  @override
   String shellPatientDischarged(String patientName) {
     return 'Alta registrada: $patientName ya no está en tu cartera.';
   }

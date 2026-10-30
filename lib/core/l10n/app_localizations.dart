@@ -794,6 +794,30 @@ abstract class AppLocalizations {
   /// **'Cerrar sesión'**
   String get menuSignOut;
 
+  /// No description provided for @signOutTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'¿CERRAR SESIÓN?'**
+  String get signOutTitle;
+
+  /// No description provided for @signOutBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Tendrás que volver a ingresar tu correo y contraseña. Tus pacientes y sus datos quedan guardados.'**
+  String get signOutBody;
+
+  /// No description provided for @signOutConfirm.
+  ///
+  /// In es, this message translates to:
+  /// **'Cerrar sesión'**
+  String get signOutConfirm;
+
+  /// No description provided for @signOutInProgress.
+  ///
+  /// In es, this message translates to:
+  /// **'Cerrando sesión…'**
+  String get signOutInProgress;
+
   /// No description provided for @shellPatientDischarged.
   ///
   /// In es, this message translates to:

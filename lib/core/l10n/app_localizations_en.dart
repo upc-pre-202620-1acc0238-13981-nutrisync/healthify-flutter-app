@@ -385,6 +385,19 @@ class AppLocalizationsEn extends AppLocalizations {
   String get menuSignOut => 'Sign out';
 
   @override
+  String get signOutTitle => 'SIGN OUT?';
+
+  @override
+  String get signOutBody =>
+      'You\'ll have to enter your email and password again. Your patients and their data stay saved.';
+
+  @override
+  String get signOutConfirm => 'Sign out';
+
+  @override
+  String get signOutInProgress => 'Signing out…';
+
+  @override
   String shellPatientDischarged(String patientName) {
     return 'Discharge recorded: $patientName is no longer in your roster.';
   }
