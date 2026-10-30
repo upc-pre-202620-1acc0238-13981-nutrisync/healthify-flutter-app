@@ -717,6 +717,11 @@ class AppLocalizationsEs extends AppLocalizations {
   }
 
   @override
+  String unitKgValue(String value) {
+    return '$value kg';
+  }
+
+  @override
   String unitKgPerWeek(String value) {
     return '$value kg/sem';
   }
@@ -734,6 +739,94 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get macroCarbsShort => 'Carbohid.';
+
+  @override
+  String get followUpThisWeek => 'Esta semana';
+
+  @override
+  String get followUpLegendMet => 'Dentro de metas';
+
+  @override
+  String get followUpLegendExceeded => 'Por encima';
+
+  @override
+  String get followUpLegendShort => 'Por debajo';
+
+  @override
+  String get followUpLegendUnlogged => 'Sin registro';
+
+  @override
+  String followUpDayCd(String day, String outcome) {
+    return '$day: $outcome';
+  }
+
+  @override
+  String get followUpWeightTrend => 'Tendencia de peso';
+
+  @override
+  String get followUpLogging => 'Registro';
+
+  @override
+  String get followUpLoggingCaption => 'Comidas registradas';
+
+  @override
+  String get followUpAiBadge => 'Resumen generado con IA';
+
+  @override
+  String get followUpAiReview => 'Revísalo antes de usarlo en consulta.';
+
+  @override
+  String get followUpDiaryToday => 'Diario de hoy';
+
+  @override
+  String get followUpDiaryEmpty => 'Todavía no hay comidas registradas hoy.';
+
+  @override
+  String get followUpFoodUnnamed => 'Comida';
+
+  @override
+  String followUpFoodPortion(String name, String grams) {
+    return '$name · $grams g';
+  }
+
+  @override
+  String followUpEntryMeta(String time, String source) {
+    return '$time · $source';
+  }
+
+  @override
+  String get followUpProvenancePhoto => 'foto';
+
+  @override
+  String get followUpProvenanceManual => 'a mano';
+
+  @override
+  String get followUpProvenanceOffPlan => 'fuera del plan';
+
+  @override
+  String get followUpEntryConfirmed => 'Confirmada';
+
+  @override
+  String get followUpLastMeasurement => 'Última medición clínica';
+
+  @override
+  String get followUpReadOnly =>
+      'Solo lectura: no puedes escribir ni corregir entradas del diario.';
+
+  @override
+  String get protocolFasting => 'En ayunas';
+
+  @override
+  String get protocolNoShoes => 'Sin zapatos';
+
+  @override
+  String get protocolLightClothing => 'Ropa ligera';
+
+  @override
+  String get protocolEmptyBladder => 'Vejiga vacía';
+
+  @override
+  String get protocolSameScale => 'Misma balanza';
 
   @override
   String get planActiveTargets => 'Metas vigentes';
@@ -938,6 +1031,17 @@ class AppLocalizationsEs extends AppLocalizations {
       locale: localeName,
       other: 'Tendencia · $weeks semanas',
       one: 'Tendencia · $weeks semana',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String followUpWeightTrendCaption(int weeks) {
+    String _temp0 = intl.Intl.pluralLogic(
+      weeks,
+      locale: localeName,
+      other: 'Autopesaje · $weeks semanas',
+      one: 'Autopesaje · $weeks semana',
     );
     return '$_temp0';
   }

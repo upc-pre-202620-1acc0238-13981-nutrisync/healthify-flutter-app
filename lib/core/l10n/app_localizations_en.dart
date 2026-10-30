@@ -721,6 +721,11 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String unitKgValue(String value) {
+    return '$value kg';
+  }
+
+  @override
   String unitKgPerWeek(String value) {
     return '$value kg/wk';
   }
@@ -738,6 +743,95 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get macroCarbsShort => 'Carbs';
+
+  @override
+  String get followUpThisWeek => 'This week';
+
+  @override
+  String get followUpLegendMet => 'Within targets';
+
+  @override
+  String get followUpLegendExceeded => 'Above';
+
+  @override
+  String get followUpLegendShort => 'Below';
+
+  @override
+  String get followUpLegendUnlogged => 'Not logged';
+
+  @override
+  String followUpDayCd(String day, String outcome) {
+    return '$day: $outcome';
+  }
+
+  @override
+  String get followUpWeightTrend => 'Weight trend';
+
+  @override
+  String get followUpLogging => 'Logging';
+
+  @override
+  String get followUpLoggingCaption => 'Meals logged';
+
+  @override
+  String get followUpAiBadge => 'AI-generated summary';
+
+  @override
+  String get followUpAiReview =>
+      'Review it before using it in the consultation.';
+
+  @override
+  String get followUpDiaryToday => 'Today\'s diary';
+
+  @override
+  String get followUpDiaryEmpty => 'No meals logged today yet.';
+
+  @override
+  String get followUpFoodUnnamed => 'Meal';
+
+  @override
+  String followUpFoodPortion(String name, String grams) {
+    return '$name · $grams g';
+  }
+
+  @override
+  String followUpEntryMeta(String time, String source) {
+    return '$time · $source';
+  }
+
+  @override
+  String get followUpProvenancePhoto => 'photo';
+
+  @override
+  String get followUpProvenanceManual => 'manual';
+
+  @override
+  String get followUpProvenanceOffPlan => 'off plan';
+
+  @override
+  String get followUpEntryConfirmed => 'Confirmed';
+
+  @override
+  String get followUpLastMeasurement => 'Last clinical measurement';
+
+  @override
+  String get followUpReadOnly =>
+      'Read only: you can\'t write or correct diary entries.';
+
+  @override
+  String get protocolFasting => 'Fasting';
+
+  @override
+  String get protocolNoShoes => 'No shoes';
+
+  @override
+  String get protocolLightClothing => 'Light clothing';
+
+  @override
+  String get protocolEmptyBladder => 'Empty bladder';
+
+  @override
+  String get protocolSameScale => 'Same scale';
 
   @override
   String get planActiveTargets => 'Current targets';
@@ -941,6 +1035,17 @@ class AppLocalizationsEn extends AppLocalizations {
       locale: localeName,
       other: 'Trend · $weeks weeks',
       one: 'Trend · $weeks week',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String followUpWeightTrendCaption(int weeks) {
+    String _temp0 = intl.Intl.pluralLogic(
+      weeks,
+      locale: localeName,
+      other: 'Self-weigh-in · $weeks weeks',
+      one: 'Self-weigh-in · $weeks week',
     );
     return '$_temp0';
   }

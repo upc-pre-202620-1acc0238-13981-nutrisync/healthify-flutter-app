@@ -1376,6 +1376,12 @@ abstract class AppLocalizations {
   /// **'{value} cm'**
   String unitCmValue(String value);
 
+  /// No description provided for @unitKgValue.
+  ///
+  /// In es, this message translates to:
+  /// **'{value} kg'**
+  String unitKgValue(String value);
+
   /// No description provided for @unitKgPerWeek.
   ///
   /// In es, this message translates to:
@@ -1405,6 +1411,168 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Carbohid.'**
   String get macroCarbsShort;
+
+  /// No description provided for @followUpThisWeek.
+  ///
+  /// In es, this message translates to:
+  /// **'Esta semana'**
+  String get followUpThisWeek;
+
+  /// No description provided for @followUpLegendMet.
+  ///
+  /// In es, this message translates to:
+  /// **'Dentro de metas'**
+  String get followUpLegendMet;
+
+  /// No description provided for @followUpLegendExceeded.
+  ///
+  /// In es, this message translates to:
+  /// **'Por encima'**
+  String get followUpLegendExceeded;
+
+  /// No description provided for @followUpLegendShort.
+  ///
+  /// In es, this message translates to:
+  /// **'Por debajo'**
+  String get followUpLegendShort;
+
+  /// No description provided for @followUpLegendUnlogged.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin registro'**
+  String get followUpLegendUnlogged;
+
+  /// No description provided for @followUpDayCd.
+  ///
+  /// In es, this message translates to:
+  /// **'{day}: {outcome}'**
+  String followUpDayCd(String day, String outcome);
+
+  /// No description provided for @followUpWeightTrend.
+  ///
+  /// In es, this message translates to:
+  /// **'Tendencia de peso'**
+  String get followUpWeightTrend;
+
+  /// No description provided for @followUpLogging.
+  ///
+  /// In es, this message translates to:
+  /// **'Registro'**
+  String get followUpLogging;
+
+  /// No description provided for @followUpLoggingCaption.
+  ///
+  /// In es, this message translates to:
+  /// **'Comidas registradas'**
+  String get followUpLoggingCaption;
+
+  /// No description provided for @followUpAiBadge.
+  ///
+  /// In es, this message translates to:
+  /// **'Resumen generado con IA'**
+  String get followUpAiBadge;
+
+  /// No description provided for @followUpAiReview.
+  ///
+  /// In es, this message translates to:
+  /// **'Revísalo antes de usarlo en consulta.'**
+  String get followUpAiReview;
+
+  /// No description provided for @followUpDiaryToday.
+  ///
+  /// In es, this message translates to:
+  /// **'Diario de hoy'**
+  String get followUpDiaryToday;
+
+  /// No description provided for @followUpDiaryEmpty.
+  ///
+  /// In es, this message translates to:
+  /// **'Todavía no hay comidas registradas hoy.'**
+  String get followUpDiaryEmpty;
+
+  /// No description provided for @followUpFoodUnnamed.
+  ///
+  /// In es, this message translates to:
+  /// **'Comida'**
+  String get followUpFoodUnnamed;
+
+  /// No description provided for @followUpFoodPortion.
+  ///
+  /// In es, this message translates to:
+  /// **'{name} · {grams} g'**
+  String followUpFoodPortion(String name, String grams);
+
+  /// No description provided for @followUpEntryMeta.
+  ///
+  /// In es, this message translates to:
+  /// **'{time} · {source}'**
+  String followUpEntryMeta(String time, String source);
+
+  /// No description provided for @followUpProvenancePhoto.
+  ///
+  /// In es, this message translates to:
+  /// **'foto'**
+  String get followUpProvenancePhoto;
+
+  /// No description provided for @followUpProvenanceManual.
+  ///
+  /// In es, this message translates to:
+  /// **'a mano'**
+  String get followUpProvenanceManual;
+
+  /// No description provided for @followUpProvenanceOffPlan.
+  ///
+  /// In es, this message translates to:
+  /// **'fuera del plan'**
+  String get followUpProvenanceOffPlan;
+
+  /// No description provided for @followUpEntryConfirmed.
+  ///
+  /// In es, this message translates to:
+  /// **'Confirmada'**
+  String get followUpEntryConfirmed;
+
+  /// No description provided for @followUpLastMeasurement.
+  ///
+  /// In es, this message translates to:
+  /// **'Última medición clínica'**
+  String get followUpLastMeasurement;
+
+  /// No description provided for @followUpReadOnly.
+  ///
+  /// In es, this message translates to:
+  /// **'Solo lectura: no puedes escribir ni corregir entradas del diario.'**
+  String get followUpReadOnly;
+
+  /// No description provided for @protocolFasting.
+  ///
+  /// In es, this message translates to:
+  /// **'En ayunas'**
+  String get protocolFasting;
+
+  /// No description provided for @protocolNoShoes.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin zapatos'**
+  String get protocolNoShoes;
+
+  /// No description provided for @protocolLightClothing.
+  ///
+  /// In es, this message translates to:
+  /// **'Ropa ligera'**
+  String get protocolLightClothing;
+
+  /// No description provided for @protocolEmptyBladder.
+  ///
+  /// In es, this message translates to:
+  /// **'Vejiga vacía'**
+  String get protocolEmptyBladder;
+
+  /// No description provided for @protocolSameScale.
+  ///
+  /// In es, this message translates to:
+  /// **'Misma balanza'**
+  String get protocolSameScale;
 
   /// No description provided for @planActiveTargets.
   ///
@@ -1723,6 +1891,12 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'{weeks, plural, one{Tendencia · {weeks} semana} other{Tendencia · {weeks} semanas}}'**
   String summaryWeightCaption(int weeks);
+
+  /// No description provided for @followUpWeightTrendCaption.
+  ///
+  /// In es, this message translates to:
+  /// **'{weeks, plural, one{Autopesaje · {weeks} semana} other{Autopesaje · {weeks} semanas}}'**
+  String followUpWeightTrendCaption(int weeks);
 
   /// No description provided for @summaryStartConsultation.
   ///

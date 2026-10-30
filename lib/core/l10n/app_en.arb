@@ -274,6 +274,14 @@
       }
     }
   },
+  "unitKgValue": "{value} kg",
+  "@unitKgValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
   "unitKgPerWeek": "{value} kg/wk",
   "@unitKgPerWeek": {
     "placeholders": {
@@ -293,6 +301,63 @@
   "macroProtein": "Protein",
   "macroFat": "Fat",
   "macroCarbsShort": "Carbs",
+  "followUpThisWeek": "This week",
+  "followUpLegendMet": "Within targets",
+  "followUpLegendExceeded": "Above",
+  "followUpLegendShort": "Below",
+  "followUpLegendUnlogged": "Not logged",
+  "followUpDayCd": "{day}: {outcome}",
+  "@followUpDayCd": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      },
+      "outcome": {
+        "type": "String"
+      }
+    }
+  },
+  "followUpWeightTrend": "Weight trend",
+  "followUpLogging": "Logging",
+  "followUpLoggingCaption": "Meals logged",
+  "followUpAiBadge": "AI-generated summary",
+  "followUpAiReview": "Review it before using it in the consultation.",
+  "followUpDiaryToday": "Today's diary",
+  "followUpDiaryEmpty": "No meals logged today yet.",
+  "followUpFoodUnnamed": "Meal",
+  "followUpFoodPortion": "{name} · {grams} g",
+  "@followUpFoodPortion": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "grams": {
+        "type": "String"
+      }
+    }
+  },
+  "followUpEntryMeta": "{time} · {source}",
+  "@followUpEntryMeta": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "source": {
+        "type": "String"
+      }
+    }
+  },
+  "followUpProvenancePhoto": "photo",
+  "followUpProvenanceManual": "manual",
+  "followUpProvenanceOffPlan": "off plan",
+  "followUpEntryConfirmed": "Confirmed",
+  "followUpLastMeasurement": "Last clinical measurement",
+  "followUpReadOnly": "Read only: you can't write or correct diary entries.",
+  "protocolFasting": "Fasting",
+  "protocolNoShoes": "No shoes",
+  "protocolLightClothing": "Light clothing",
+  "protocolEmptyBladder": "Empty bladder",
+  "protocolSameScale": "Same scale",
   "planActiveTargets": "Current targets",
   "planVersionChip": "Version {version}",
   "@planVersionChip": {
@@ -440,6 +505,14 @@
   },
   "summaryWeightCaption": "{weeks, plural, one{Trend · {weeks} week} other{Trend · {weeks} weeks}}",
   "@summaryWeightCaption": {
+    "placeholders": {
+      "weeks": {
+        "type": "int"
+      }
+    }
+  },
+  "followUpWeightTrendCaption": "{weeks, plural, one{Self-weigh-in · {weeks} week} other{Self-weigh-in · {weeks} weeks}}",
+  "@followUpWeightTrendCaption": {
     "placeholders": {
       "weeks": {
         "type": "int"

@@ -333,6 +333,14 @@
       }
     }
   },
+  "unitKgValue": "{value} kg",
+  "@unitKgValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
   "unitKgPerWeek": "{value} kg/sem",
   "@unitKgPerWeek": {
     "placeholders": {
@@ -352,6 +360,63 @@
   "macroProtein": "Proteína",
   "macroFat": "Grasa",
   "macroCarbsShort": "Carbohid.",
+  "followUpThisWeek": "Esta semana",
+  "followUpLegendMet": "Dentro de metas",
+  "followUpLegendExceeded": "Por encima",
+  "followUpLegendShort": "Por debajo",
+  "followUpLegendUnlogged": "Sin registro",
+  "followUpDayCd": "{day}: {outcome}",
+  "@followUpDayCd": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      },
+      "outcome": {
+        "type": "String"
+      }
+    }
+  },
+  "followUpWeightTrend": "Tendencia de peso",
+  "followUpLogging": "Registro",
+  "followUpLoggingCaption": "Comidas registradas",
+  "followUpAiBadge": "Resumen generado con IA",
+  "followUpAiReview": "Revísalo antes de usarlo en consulta.",
+  "followUpDiaryToday": "Diario de hoy",
+  "followUpDiaryEmpty": "Todavía no hay comidas registradas hoy.",
+  "followUpFoodUnnamed": "Comida",
+  "followUpFoodPortion": "{name} · {grams} g",
+  "@followUpFoodPortion": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "grams": {
+        "type": "String"
+      }
+    }
+  },
+  "followUpEntryMeta": "{time} · {source}",
+  "@followUpEntryMeta": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "source": {
+        "type": "String"
+      }
+    }
+  },
+  "followUpProvenancePhoto": "foto",
+  "followUpProvenanceManual": "a mano",
+  "followUpProvenanceOffPlan": "fuera del plan",
+  "followUpEntryConfirmed": "Confirmada",
+  "followUpLastMeasurement": "Última medición clínica",
+  "followUpReadOnly": "Solo lectura: no puedes escribir ni corregir entradas del diario.",
+  "protocolFasting": "En ayunas",
+  "protocolNoShoes": "Sin zapatos",
+  "protocolLightClothing": "Ropa ligera",
+  "protocolEmptyBladder": "Vejiga vacía",
+  "protocolSameScale": "Misma balanza",
   "planActiveTargets": "Metas vigentes",
   "planVersionChip": "Versión {version}",
   "@planVersionChip": {
@@ -499,6 +564,14 @@
   },
   "summaryWeightCaption": "{weeks, plural, one{Tendencia · {weeks} semana} other{Tendencia · {weeks} semanas}}",
   "@summaryWeightCaption": {
+    "placeholders": {
+      "weeks": {
+        "type": "int"
+      }
+    }
+  },
+  "followUpWeightTrendCaption": "{weeks, plural, one{Autopesaje · {weeks} semana} other{Autopesaje · {weeks} semanas}}",
+  "@followUpWeightTrendCaption": {
     "placeholders": {
       "weeks": {
         "type": "int"
