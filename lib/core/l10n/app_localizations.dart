@@ -1124,17 +1124,359 @@ abstract class AppLocalizations {
   /// **'Este paciente ya había sido dado de alta.'**
   String get dischargeAlreadyBody;
 
+  /// No description provided for @patientUnnamed.
+  ///
+  /// In es, this message translates to:
+  /// **'Paciente'**
+  String get patientUnnamed;
+
+  /// No description provided for @patientPlanVersion.
+  ///
+  /// In es, this message translates to:
+  /// **'Plan versión {version}'**
+  String patientPlanVersion(int version);
+
+  /// No description provided for @patientInRosterSince.
+  ///
+  /// In es, this message translates to:
+  /// **'en tu cartera desde el {date}'**
+  String patientInRosterSince(String date);
+
+  /// No description provided for @patientWithoutPlan.
+  ///
+  /// In es, this message translates to:
+  /// **'sin plan'**
+  String get patientWithoutPlan;
+
+  /// No description provided for @patientNewChip.
+  ///
+  /// In es, this message translates to:
+  /// **'Nuevo ingreso'**
+  String get patientNewChip;
+
+  /// No description provided for @patientPlanActiveChip.
+  ///
+  /// In es, this message translates to:
+  /// **'Vigente'**
+  String get patientPlanActiveChip;
+
+  /// No description provided for @patientOfflineBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Los datos de tus pacientes no se guardan en el teléfono. Vuelve a intentarlo cuando tengas conexión.'**
+  String get patientOfflineBody;
+
+  /// No description provided for @summaryNoBaselineTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Aún no tiene datos base'**
+  String get summaryNoBaselineTitle;
+
+  /// No description provided for @summaryNoBaselineBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Regístralos una sola vez: fecha de nacimiento, sexo, talla y antecedentes. Con ellos se calculan la edad, el IMC y las metas.'**
+  String get summaryNoBaselineBody;
+
+  /// No description provided for @summaryRegisterBaseline.
+  ///
+  /// In es, this message translates to:
+  /// **'Registrar datos base'**
+  String get summaryRegisterBaseline;
+
+  /// No description provided for @summaryContinueConsultation.
+  ///
+  /// In es, this message translates to:
+  /// **'Continuar consulta'**
+  String get summaryContinueConsultation;
+
+  /// No description provided for @summaryInProgressTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Consulta en curso'**
+  String get summaryInProgressTitle;
+
+  /// No description provided for @summaryInProgressBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Paso {step} de {total} · {title} · {saved}'**
+  String summaryInProgressBody(int step, int total, String title, String saved);
+
+  /// No description provided for @summaryNextFollowUp.
+  ///
+  /// In es, this message translates to:
+  /// **'Próxima consulta'**
+  String get summaryNextFollowUp;
+
+  /// No description provided for @summaryFollowUpWhen.
+  ///
+  /// In es, this message translates to:
+  /// **'{day} · {time}'**
+  String summaryFollowUpWhen(String day, String time);
+
+  /// No description provided for @summaryBaselineTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Datos base'**
+  String get summaryBaselineTitle;
+
+  /// No description provided for @summarySinceLastConsultation.
+  ///
+  /// In es, this message translates to:
+  /// **'DESDE LA ÚLTIMA CONSULTA'**
+  String get summarySinceLastConsultation;
+
+  /// No description provided for @summaryWeightLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Peso (autopesaje)'**
+  String get summaryWeightLabel;
+
+  /// No description provided for @summaryComplianceLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Cumplimiento'**
+  String get summaryComplianceLabel;
+
+  /// No description provided for @summaryComplianceLastWeek.
+  ///
+  /// In es, this message translates to:
+  /// **'Últimos 7 días'**
+  String get summaryComplianceLastWeek;
+
+  /// No description provided for @summaryComplianceSince.
+  ///
+  /// In es, this message translates to:
+  /// **'Desde el {date}'**
+  String summaryComplianceSince(String date);
+
+  /// No description provided for @summaryManagement.
+  ///
+  /// In es, this message translates to:
+  /// **'GESTIÓN'**
+  String get summaryManagement;
+
+  /// No description provided for @commonEdit.
+  ///
+  /// In es, this message translates to:
+  /// **'Editar'**
+  String get commonEdit;
+
+  /// No description provided for @savedToday.
+  ///
+  /// In es, this message translates to:
+  /// **'se guardó hoy'**
+  String get savedToday;
+
+  /// No description provided for @savedYesterday.
+  ///
+  /// In es, this message translates to:
+  /// **'se guardó ayer'**
+  String get savedYesterday;
+
+  /// No description provided for @savedOn.
+  ///
+  /// In es, this message translates to:
+  /// **'se guardó el {date}'**
+  String savedOn(String date);
+
+  /// No description provided for @sexFemale.
+  ///
+  /// In es, this message translates to:
+  /// **'Femenino'**
+  String get sexFemale;
+
+  /// No description provided for @sexMale.
+  ///
+  /// In es, this message translates to:
+  /// **'Masculino'**
+  String get sexMale;
+
+  /// No description provided for @sexSummaryFemale.
+  ///
+  /// In es, this message translates to:
+  /// **'Mujer'**
+  String get sexSummaryFemale;
+
+  /// No description provided for @sexSummaryMale.
+  ///
+  /// In es, this message translates to:
+  /// **'Hombre'**
+  String get sexSummaryMale;
+
+  /// No description provided for @conditionType2Diabetes.
+  ///
+  /// In es, this message translates to:
+  /// **'Diabetes tipo 2'**
+  String get conditionType2Diabetes;
+
+  /// No description provided for @conditionHypertension.
+  ///
+  /// In es, this message translates to:
+  /// **'Hipertensión arterial'**
+  String get conditionHypertension;
+
+  /// No description provided for @conditionCeliacDisease.
+  ///
+  /// In es, this message translates to:
+  /// **'Enfermedad celíaca'**
+  String get conditionCeliacDisease;
+
+  /// No description provided for @conditionHypothyroidism.
+  ///
+  /// In es, this message translates to:
+  /// **'Hipotiroidismo'**
+  String get conditionHypothyroidism;
+
+  /// No description provided for @conditionChronicKidneyDisease.
+  ///
+  /// In es, this message translates to:
+  /// **'Enfermedad renal'**
+  String get conditionChronicKidneyDisease;
+
+  /// No description provided for @conditionGout.
+  ///
+  /// In es, this message translates to:
+  /// **'Gota'**
+  String get conditionGout;
+
+  /// No description provided for @consultationStepMeasurement.
+  ///
+  /// In es, this message translates to:
+  /// **'Medición de hoy'**
+  String get consultationStepMeasurement;
+
+  /// No description provided for @consultationStepDiagnosis.
+  ///
+  /// In es, this message translates to:
+  /// **'Diagnóstico'**
+  String get consultationStepDiagnosis;
+
+  /// No description provided for @consultationStepTargets.
+  ///
+  /// In es, this message translates to:
+  /// **'Metas'**
+  String get consultationStepTargets;
+
+  /// No description provided for @consultationStepPublication.
+  ///
+  /// In es, this message translates to:
+  /// **'Indicaciones y publicación'**
+  String get consultationStepPublication;
+
   /// No description provided for @unitCm.
   ///
   /// In es, this message translates to:
   /// **'cm'**
   String get unitCm;
 
+  /// No description provided for @unitCmValue.
+  ///
+  /// In es, this message translates to:
+  /// **'{value} cm'**
+  String unitCmValue(String value);
+
+  /// No description provided for @unitKgPerWeek.
+  ///
+  /// In es, this message translates to:
+  /// **'{value} kg/sem'**
+  String unitKgPerWeek(String value);
+
   /// No description provided for @planHistory.
   ///
   /// In es, this message translates to:
   /// **'HISTORIAL DEL PLAN'**
   String get planHistory;
+
+  /// No description provided for @guidelinePrioritizeVegetables.
+  ///
+  /// In es, this message translates to:
+  /// **'Prioriza vegetales'**
+  String get guidelinePrioritizeVegetables;
+
+  /// No description provided for @guidelineDrink2lWater.
+  ///
+  /// In es, this message translates to:
+  /// **'Toma 2 L de agua al día'**
+  String get guidelineDrink2lWater;
+
+  /// No description provided for @guidelineAvoidSugaryDrinks.
+  ///
+  /// In es, this message translates to:
+  /// **'Evita bebidas azucaradas'**
+  String get guidelineAvoidSugaryDrinks;
+
+  /// No description provided for @guidelineProteinAtBreakfast.
+  ///
+  /// In es, this message translates to:
+  /// **'Proteína en el desayuno'**
+  String get guidelineProteinAtBreakfast;
+
+  /// No description provided for @guidelineReduceSalt.
+  ///
+  /// In es, this message translates to:
+  /// **'Reduce la sal'**
+  String get guidelineReduceSalt;
+
+  /// No description provided for @guidelineEatEvery3To4Hours.
+  ///
+  /// In es, this message translates to:
+  /// **'Come cada 3 a 4 horas'**
+  String get guidelineEatEvery3To4Hours;
+
+  /// No description provided for @guidelineProteinAndVegetablesAtDinner.
+  ///
+  /// In es, this message translates to:
+  /// **'Cena con proteína y vegetales'**
+  String get guidelineProteinAndVegetablesAtDinner;
+
+  /// No description provided for @restrictionLactoseFree.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin lactosa'**
+  String get restrictionLactoseFree;
+
+  /// No description provided for @restrictionGlutenFree.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin gluten'**
+  String get restrictionGlutenFree;
+
+  /// No description provided for @restrictionVegan.
+  ///
+  /// In es, this message translates to:
+  /// **'Vegano'**
+  String get restrictionVegan;
+
+  /// No description provided for @restrictionVegetarian.
+  ///
+  /// In es, this message translates to:
+  /// **'Vegetariano'**
+  String get restrictionVegetarian;
+
+  /// No description provided for @restrictionTreeNutFree.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin frutos secos'**
+  String get restrictionTreeNutFree;
+
+  /// No description provided for @restrictionShellfishFree.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin mariscos'**
+  String get restrictionShellfishFree;
+
+  /// No description provided for @restrictionKosher.
+  ///
+  /// In es, this message translates to:
+  /// **'Kosher'**
+  String get restrictionKosher;
+
+  /// No description provided for @restrictionHalal.
+  ///
+  /// In es, this message translates to:
+  /// **'Halal'**
+  String get restrictionHalal;
 
   /// No description provided for @baselineTitle.
   ///
@@ -1238,6 +1580,24 @@ abstract class AppLocalizations {
   /// **'{count, plural, one{{count} año} other{{count} años}}'**
   String baselineAgeYears(int count);
 
+  /// No description provided for @daysOfTotal.
+  ///
+  /// In es, this message translates to:
+  /// **'{total, plural, one{{met} de {total} día} other{{met} de {total} días}}'**
+  String daysOfTotal(int met, int total);
+
+  /// No description provided for @summaryWeightCaption.
+  ///
+  /// In es, this message translates to:
+  /// **'{weeks, plural, one{Tendencia · {weeks} semana} other{Tendencia · {weeks} semanas}}'**
+  String summaryWeightCaption(int weeks);
+
+  /// No description provided for @summaryStartConsultation.
+  ///
+  /// In es, this message translates to:
+  /// **'Nueva consulta'**
+  String get summaryStartConsultation;
+
   /// No description provided for @shellSignalResolved.
   ///
   /// In es, this message translates to:
@@ -1261,6 +1621,18 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Consulta reprogramada: {day}, {time}'**
   String shellFollowUpRescheduled(String day, String time);
+
+  /// No description provided for @summarySchedule.
+  ///
+  /// In es, this message translates to:
+  /// **'Agendar consulta'**
+  String get summarySchedule;
+
+  /// No description provided for @summaryReferral.
+  ///
+  /// In es, this message translates to:
+  /// **'Registrar derivación'**
+  String get summaryReferral;
 }
 
 class _AppLocalizationsDelegate

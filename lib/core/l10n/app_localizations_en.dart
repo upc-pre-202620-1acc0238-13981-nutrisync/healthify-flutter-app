@@ -574,10 +574,205 @@ class AppLocalizationsEn extends AppLocalizations {
       'This patient had already been discharged.';
 
   @override
+  String get patientUnnamed => 'Patient';
+
+  @override
+  String patientPlanVersion(int version) {
+    return 'Plan version $version';
+  }
+
+  @override
+  String patientInRosterSince(String date) {
+    return 'in your roster since $date';
+  }
+
+  @override
+  String get patientWithoutPlan => 'no plan';
+
+  @override
+  String get patientNewChip => 'New intake';
+
+  @override
+  String get patientPlanActiveChip => 'Current';
+
+  @override
+  String get patientOfflineBody =>
+      'Your patients\' data is not stored on the phone. Try again when you\'re connected.';
+
+  @override
+  String get summaryNoBaselineTitle => 'No baseline data yet';
+
+  @override
+  String get summaryNoBaselineBody =>
+      'Record it once: date of birth, sex, height and medical history. Age, BMI and targets are calculated from it.';
+
+  @override
+  String get summaryRegisterBaseline => 'Record baseline data';
+
+  @override
+  String get summaryContinueConsultation => 'Continue consultation';
+
+  @override
+  String get summaryInProgressTitle => 'Consultation in progress';
+
+  @override
+  String summaryInProgressBody(
+    int step,
+    int total,
+    String title,
+    String saved,
+  ) {
+    return 'Step $step of $total · $title · $saved';
+  }
+
+  @override
+  String get summaryNextFollowUp => 'Next consultation';
+
+  @override
+  String summaryFollowUpWhen(String day, String time) {
+    return '$day · $time';
+  }
+
+  @override
+  String get summaryBaselineTitle => 'Baseline data';
+
+  @override
+  String get summarySinceLastConsultation => 'SINCE THE LAST CONSULTATION';
+
+  @override
+  String get summaryWeightLabel => 'Weight (self-weigh-in)';
+
+  @override
+  String get summaryComplianceLabel => 'Adherence';
+
+  @override
+  String get summaryComplianceLastWeek => 'Last 7 days';
+
+  @override
+  String summaryComplianceSince(String date) {
+    return 'Since $date';
+  }
+
+  @override
+  String get summaryManagement => 'MANAGEMENT';
+
+  @override
+  String get commonEdit => 'Edit';
+
+  @override
+  String get savedToday => 'saved today';
+
+  @override
+  String get savedYesterday => 'saved yesterday';
+
+  @override
+  String savedOn(String date) {
+    return 'saved on $date';
+  }
+
+  @override
+  String get sexFemale => 'Female';
+
+  @override
+  String get sexMale => 'Male';
+
+  @override
+  String get sexSummaryFemale => 'Woman';
+
+  @override
+  String get sexSummaryMale => 'Man';
+
+  @override
+  String get conditionType2Diabetes => 'Type 2 diabetes';
+
+  @override
+  String get conditionHypertension => 'Hypertension';
+
+  @override
+  String get conditionCeliacDisease => 'Celiac disease';
+
+  @override
+  String get conditionHypothyroidism => 'Hypothyroidism';
+
+  @override
+  String get conditionChronicKidneyDisease => 'Kidney disease';
+
+  @override
+  String get conditionGout => 'Gout';
+
+  @override
+  String get consultationStepMeasurement => 'Today\'s measurement';
+
+  @override
+  String get consultationStepDiagnosis => 'Diagnosis';
+
+  @override
+  String get consultationStepTargets => 'Targets';
+
+  @override
+  String get consultationStepPublication => 'Guidelines and publication';
+
+  @override
   String get unitCm => 'cm';
 
   @override
+  String unitCmValue(String value) {
+    return '$value cm';
+  }
+
+  @override
+  String unitKgPerWeek(String value) {
+    return '$value kg/wk';
+  }
+
+  @override
   String get planHistory => 'PLAN HISTORY';
+
+  @override
+  String get guidelinePrioritizeVegetables => 'Prioritize vegetables';
+
+  @override
+  String get guidelineDrink2lWater => 'Drink 2 L of water a day';
+
+  @override
+  String get guidelineAvoidSugaryDrinks => 'Avoid sugary drinks';
+
+  @override
+  String get guidelineProteinAtBreakfast => 'Protein at breakfast';
+
+  @override
+  String get guidelineReduceSalt => 'Reduce salt';
+
+  @override
+  String get guidelineEatEvery3To4Hours => 'Eat every 3 to 4 hours';
+
+  @override
+  String get guidelineProteinAndVegetablesAtDinner =>
+      'Protein and vegetables at dinner';
+
+  @override
+  String get restrictionLactoseFree => 'Lactose-free';
+
+  @override
+  String get restrictionGlutenFree => 'Gluten-free';
+
+  @override
+  String get restrictionVegan => 'Vegan';
+
+  @override
+  String get restrictionVegetarian => 'Vegetarian';
+
+  @override
+  String get restrictionTreeNutFree => 'Tree-nut-free';
+
+  @override
+  String get restrictionShellfishFree => 'Shellfish-free';
+
+  @override
+  String get restrictionKosher => 'Kosher';
+
+  @override
+  String get restrictionHalal => 'Halal';
 
   @override
   String get baselineTitle => 'BASELINE DATA';
@@ -642,6 +837,31 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String daysOfTotal(int met, int total) {
+    String _temp0 = intl.Intl.pluralLogic(
+      total,
+      locale: localeName,
+      other: '$met of $total days',
+      one: '$met of $total day',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String summaryWeightCaption(int weeks) {
+    String _temp0 = intl.Intl.pluralLogic(
+      weeks,
+      locale: localeName,
+      other: 'Trend · $weeks weeks',
+      one: 'Trend · $weeks week',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get summaryStartConsultation => 'New consultation';
+
+  @override
   String shellSignalResolved(String name) {
     return 'Signal resolved. $name is no longer in your inbox.';
   }
@@ -659,4 +879,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String shellFollowUpRescheduled(String day, String time) {
     return 'Consultation rescheduled: $day, $time';
   }
+
+  @override
+  String get summarySchedule => 'Schedule consultation';
+
+  @override
+  String get summaryReferral => 'Register referral';
 }

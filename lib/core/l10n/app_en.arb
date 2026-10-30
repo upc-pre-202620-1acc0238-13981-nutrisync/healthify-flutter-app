@@ -171,8 +171,133 @@
   "dischargeDialogConfirm": "Yes, discharge",
   "dischargeAlreadyTitle": "Discharge already recorded",
   "dischargeAlreadyBody": "This patient had already been discharged.",
+  "patientUnnamed": "Patient",
+  "patientPlanVersion": "Plan version {version}",
+  "@patientPlanVersion": {
+    "placeholders": {
+      "version": {
+        "type": "int"
+      }
+    }
+  },
+  "patientInRosterSince": "in your roster since {date}",
+  "@patientInRosterSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "patientWithoutPlan": "no plan",
+  "patientNewChip": "New intake",
+  "patientPlanActiveChip": "Current",
+  "patientOfflineBody": "Your patients' data is not stored on the phone. Try again when you're connected.",
+  "summaryNoBaselineTitle": "No baseline data yet",
+  "summaryNoBaselineBody": "Record it once: date of birth, sex, height and medical history. Age, BMI and targets are calculated from it.",
+  "summaryRegisterBaseline": "Record baseline data",
+  "summaryContinueConsultation": "Continue consultation",
+  "summaryInProgressTitle": "Consultation in progress",
+  "summaryInProgressBody": "Step {step} of {total} · {title} · {saved}",
+  "@summaryInProgressBody": {
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "title": {
+        "type": "String"
+      },
+      "saved": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryNextFollowUp": "Next consultation",
+  "summaryFollowUpWhen": "{day} · {time}",
+  "@summaryFollowUpWhen": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryBaselineTitle": "Baseline data",
+  "summarySinceLastConsultation": "SINCE THE LAST CONSULTATION",
+  "summaryWeightLabel": "Weight (self-weigh-in)",
+  "summaryComplianceLabel": "Adherence",
+  "summaryComplianceLastWeek": "Last 7 days",
+  "summaryComplianceSince": "Since {date}",
+  "@summaryComplianceSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryManagement": "MANAGEMENT",
+  "commonEdit": "Edit",
+  "savedToday": "saved today",
+  "savedYesterday": "saved yesterday",
+  "savedOn": "saved on {date}",
+  "@savedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "sexFemale": "Female",
+  "sexMale": "Male",
+  "sexSummaryFemale": "Woman",
+  "sexSummaryMale": "Man",
+  "conditionType2Diabetes": "Type 2 diabetes",
+  "conditionHypertension": "Hypertension",
+  "conditionCeliacDisease": "Celiac disease",
+  "conditionHypothyroidism": "Hypothyroidism",
+  "conditionChronicKidneyDisease": "Kidney disease",
+  "conditionGout": "Gout",
+  "consultationStepMeasurement": "Today's measurement",
+  "consultationStepDiagnosis": "Diagnosis",
+  "consultationStepTargets": "Targets",
+  "consultationStepPublication": "Guidelines and publication",
   "unitCm": "cm",
+  "unitCmValue": "{value} cm",
+  "@unitCmValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "unitKgPerWeek": "{value} kg/wk",
+  "@unitKgPerWeek": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
   "planHistory": "PLAN HISTORY",
+  "guidelinePrioritizeVegetables": "Prioritize vegetables",
+  "guidelineDrink2lWater": "Drink 2 L of water a day",
+  "guidelineAvoidSugaryDrinks": "Avoid sugary drinks",
+  "guidelineProteinAtBreakfast": "Protein at breakfast",
+  "guidelineReduceSalt": "Reduce salt",
+  "guidelineEatEvery3To4Hours": "Eat every 3 to 4 hours",
+  "guidelineProteinAndVegetablesAtDinner": "Protein and vegetables at dinner",
+  "restrictionLactoseFree": "Lactose-free",
+  "restrictionGlutenFree": "Gluten-free",
+  "restrictionVegan": "Vegan",
+  "restrictionVegetarian": "Vegetarian",
+  "restrictionTreeNutFree": "Tree-nut-free",
+  "restrictionShellfishFree": "Shellfish-free",
+  "restrictionKosher": "Kosher",
+  "restrictionHalal": "Halal",
   "baselineTitle": "BASELINE DATA",
   "baselineIntro": "Recorded only once. You can edit it later from the Summary tab.",
   "baselineBirthDate": "Date of birth",
@@ -204,8 +329,30 @@
       }
     }
   },
+  "daysOfTotal": "{total, plural, one{{met} of {total} day} other{{met} of {total} days}}",
+  "@daysOfTotal": {
+    "placeholders": {
+      "met": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryWeightCaption": "{weeks, plural, one{Trend · {weeks} week} other{Trend · {weeks} weeks}}",
+  "@summaryWeightCaption": {
+    "placeholders": {
+      "weeks": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryStartConsultation": "New consultation",
   "shellSignalResolved": "Signal resolved. {name} is no longer in your inbox.",
   "shellSignalResolvedGeneric": "Signal resolved. It's no longer in your inbox.",
   "shellFollowUpScheduled": "Consultation scheduled: {day}, {time}",
-  "shellFollowUpRescheduled": "Consultation rescheduled: {day}, {time}"
+  "shellFollowUpRescheduled": "Consultation rescheduled: {day}, {time}",
+  "summarySchedule": "Schedule consultation",
+  "summaryReferral": "Register referral"
 }

@@ -230,8 +230,133 @@
   "dischargeDialogConfirm": "Sí, dar de alta",
   "dischargeAlreadyTitle": "Alta ya registrada",
   "dischargeAlreadyBody": "Este paciente ya había sido dado de alta.",
+  "patientUnnamed": "Paciente",
+  "patientPlanVersion": "Plan versión {version}",
+  "@patientPlanVersion": {
+    "placeholders": {
+      "version": {
+        "type": "int"
+      }
+    }
+  },
+  "patientInRosterSince": "en tu cartera desde el {date}",
+  "@patientInRosterSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "patientWithoutPlan": "sin plan",
+  "patientNewChip": "Nuevo ingreso",
+  "patientPlanActiveChip": "Vigente",
+  "patientOfflineBody": "Los datos de tus pacientes no se guardan en el teléfono. Vuelve a intentarlo cuando tengas conexión.",
+  "summaryNoBaselineTitle": "Aún no tiene datos base",
+  "summaryNoBaselineBody": "Regístralos una sola vez: fecha de nacimiento, sexo, talla y antecedentes. Con ellos se calculan la edad, el IMC y las metas.",
+  "summaryRegisterBaseline": "Registrar datos base",
+  "summaryContinueConsultation": "Continuar consulta",
+  "summaryInProgressTitle": "Consulta en curso",
+  "summaryInProgressBody": "Paso {step} de {total} · {title} · {saved}",
+  "@summaryInProgressBody": {
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "title": {
+        "type": "String"
+      },
+      "saved": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryNextFollowUp": "Próxima consulta",
+  "summaryFollowUpWhen": "{day} · {time}",
+  "@summaryFollowUpWhen": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryBaselineTitle": "Datos base",
+  "summarySinceLastConsultation": "DESDE LA ÚLTIMA CONSULTA",
+  "summaryWeightLabel": "Peso (autopesaje)",
+  "summaryComplianceLabel": "Cumplimiento",
+  "summaryComplianceLastWeek": "Últimos 7 días",
+  "summaryComplianceSince": "Desde el {date}",
+  "@summaryComplianceSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryManagement": "GESTIÓN",
+  "commonEdit": "Editar",
+  "savedToday": "se guardó hoy",
+  "savedYesterday": "se guardó ayer",
+  "savedOn": "se guardó el {date}",
+  "@savedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "sexFemale": "Femenino",
+  "sexMale": "Masculino",
+  "sexSummaryFemale": "Mujer",
+  "sexSummaryMale": "Hombre",
+  "conditionType2Diabetes": "Diabetes tipo 2",
+  "conditionHypertension": "Hipertensión arterial",
+  "conditionCeliacDisease": "Enfermedad celíaca",
+  "conditionHypothyroidism": "Hipotiroidismo",
+  "conditionChronicKidneyDisease": "Enfermedad renal",
+  "conditionGout": "Gota",
+  "consultationStepMeasurement": "Medición de hoy",
+  "consultationStepDiagnosis": "Diagnóstico",
+  "consultationStepTargets": "Metas",
+  "consultationStepPublication": "Indicaciones y publicación",
   "unitCm": "cm",
+  "unitCmValue": "{value} cm",
+  "@unitCmValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "unitKgPerWeek": "{value} kg/sem",
+  "@unitKgPerWeek": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
   "planHistory": "HISTORIAL DEL PLAN",
+  "guidelinePrioritizeVegetables": "Prioriza vegetales",
+  "guidelineDrink2lWater": "Toma 2 L de agua al día",
+  "guidelineAvoidSugaryDrinks": "Evita bebidas azucaradas",
+  "guidelineProteinAtBreakfast": "Proteína en el desayuno",
+  "guidelineReduceSalt": "Reduce la sal",
+  "guidelineEatEvery3To4Hours": "Come cada 3 a 4 horas",
+  "guidelineProteinAndVegetablesAtDinner": "Cena con proteína y vegetales",
+  "restrictionLactoseFree": "Sin lactosa",
+  "restrictionGlutenFree": "Sin gluten",
+  "restrictionVegan": "Vegano",
+  "restrictionVegetarian": "Vegetariano",
+  "restrictionTreeNutFree": "Sin frutos secos",
+  "restrictionShellfishFree": "Sin mariscos",
+  "restrictionKosher": "Kosher",
+  "restrictionHalal": "Halal",
   "baselineTitle": "DATOS BASE",
   "baselineIntro": "Se registran una sola vez. Puedes editarlos después desde la pestaña Resumen.",
   "baselineBirthDate": "Fecha de nacimiento",
@@ -263,6 +388,26 @@
       }
     }
   },
+  "daysOfTotal": "{total, plural, one{{met} de {total} día} other{{met} de {total} días}}",
+  "@daysOfTotal": {
+    "placeholders": {
+      "met": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryWeightCaption": "{weeks, plural, one{Tendencia · {weeks} semana} other{Tendencia · {weeks} semanas}}",
+  "@summaryWeightCaption": {
+    "placeholders": {
+      "weeks": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryStartConsultation": "Nueva consulta",
   "shellSignalResolved": "Señal resuelta. {name} ya no aparece en tu bandeja.",
   "@shellSignalResolved": {
     "placeholders": {
@@ -293,5 +438,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "summarySchedule": "Agendar consulta",
+  "summaryReferral": "Registrar derivación"
 }
