@@ -806,6 +806,12 @@ abstract class AppLocalizations {
   /// **'BANDEJA'**
   String get inboxTitle;
 
+  /// No description provided for @agendaTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'AGENDA'**
+  String get agendaTitle;
+
   /// No description provided for @settingsTitle.
   ///
   /// In es, this message translates to:
@@ -3516,6 +3522,90 @@ abstract class AppLocalizations {
   /// **'Asignar plan ajustado'**
   String get adjustProposalAssign;
 
+  /// No description provided for @agendaUpcoming.
+  ///
+  /// In es, this message translates to:
+  /// **'Próximas consultas'**
+  String get agendaUpcoming;
+
+  /// No description provided for @agendaRowTime.
+  ///
+  /// In es, this message translates to:
+  /// **'{weekday} · {time}'**
+  String agendaRowTime(String weekday, String time);
+
+  /// No description provided for @agendaSchedule.
+  ///
+  /// In es, this message translates to:
+  /// **'Agendar consulta'**
+  String get agendaSchedule;
+
+  /// No description provided for @agendaEmptyTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin consultas agendadas'**
+  String get agendaEmptyTitle;
+
+  /// No description provided for @agendaEmptyBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Cuando agendes una consulta, aparecerá aquí.'**
+  String get agendaEmptyBody;
+
+  /// No description provided for @agendaOfflineBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu agenda no se guarda en el teléfono. Vuelve a intentarlo cuando tengas conexión.'**
+  String get agendaOfflineBody;
+
+  /// No description provided for @agendaReschedule.
+  ///
+  /// In es, this message translates to:
+  /// **'Reprogramar'**
+  String get agendaReschedule;
+
+  /// No description provided for @agendaCancel.
+  ///
+  /// In es, this message translates to:
+  /// **'Cancelar consulta'**
+  String get agendaCancel;
+
+  /// No description provided for @agendaCancelDialogTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'¿CANCELAR ESTA CONSULTA?'**
+  String get agendaCancelDialogTitle;
+
+  /// No description provided for @agendaCancelDialogBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu paciente dejará de verla en su app. Cancelar no cierra el vínculo.'**
+  String get agendaCancelDialogBody;
+
+  /// No description provided for @agendaCancelConfirm.
+  ///
+  /// In es, this message translates to:
+  /// **'Sí, cancelar'**
+  String get agendaCancelConfirm;
+
+  /// No description provided for @agendaCancelled.
+  ///
+  /// In es, this message translates to:
+  /// **'Consulta cancelada'**
+  String get agendaCancelled;
+
+  /// No description provided for @agendaNotCancellableTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'No se puede cancelar'**
+  String get agendaNotCancellableTitle;
+
+  /// No description provided for @agendaNotCancellableBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Esta consulta ya no está agendada.'**
+  String get agendaNotCancellableBody;
+
   /// No description provided for @shellFollowUpScheduled.
   ///
   /// In es, this message translates to:
@@ -3528,6 +3618,30 @@ abstract class AppLocalizations {
   /// **'Consulta reprogramada: {day}, {time}'**
   String shellFollowUpRescheduled(String day, String time);
 
+  /// No description provided for @schedulePreparationFasting.
+  ///
+  /// In es, this message translates to:
+  /// **'En ayunas'**
+  String get schedulePreparationFasting;
+
+  /// No description provided for @schedulePreparationLightClothing.
+  ///
+  /// In es, this message translates to:
+  /// **'Ropa ligera'**
+  String get schedulePreparationLightClothing;
+
+  /// No description provided for @schedulePreparationBloodTests.
+  ///
+  /// In es, this message translates to:
+  /// **'Llevar análisis de sangre'**
+  String get schedulePreparationBloodTests;
+
+  /// No description provided for @schedulePreparationEmptyBladder.
+  ///
+  /// In es, this message translates to:
+  /// **'Vejiga vacía'**
+  String get schedulePreparationEmptyBladder;
+
   /// No description provided for @summarySchedule.
   ///
   /// In es, this message translates to:
@@ -3539,6 +3653,12 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Registrar derivación'**
   String get summaryReferral;
+
+  /// No description provided for @agendaViewPatient.
+  ///
+  /// In es, this message translates to:
+  /// **'Ver paciente'**
+  String get agendaViewPatient;
 
   /// No description provided for @inboxPendingCount.
   ///

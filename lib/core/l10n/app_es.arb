@@ -132,6 +132,7 @@
   "menuSettings": "Ajustes",
   "menuSignOut": "Cerrar sesión",
   "inboxTitle": "BANDEJA",
+  "agendaTitle": "AGENDA",
   "settingsTitle": "AJUSTES",
   "settingsAccount": "Mi cuenta",
   "settingsLanguage": "Idioma",
@@ -1281,6 +1282,30 @@
     }
   },
   "adjustProposalAssign": "Asignar plan ajustado",
+  "agendaUpcoming": "Próximas consultas",
+  "agendaRowTime": "{weekday} · {time}",
+  "@agendaRowTime": {
+    "placeholders": {
+      "weekday": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "agendaSchedule": "Agendar consulta",
+  "agendaEmptyTitle": "Sin consultas agendadas",
+  "agendaEmptyBody": "Cuando agendes una consulta, aparecerá aquí.",
+  "agendaOfflineBody": "Tu agenda no se guarda en el teléfono. Vuelve a intentarlo cuando tengas conexión.",
+  "agendaReschedule": "Reprogramar",
+  "agendaCancel": "Cancelar consulta",
+  "agendaCancelDialogTitle": "¿CANCELAR ESTA CONSULTA?",
+  "agendaCancelDialogBody": "Tu paciente dejará de verla en su app. Cancelar no cierra el vínculo.",
+  "agendaCancelConfirm": "Sí, cancelar",
+  "agendaCancelled": "Consulta cancelada",
+  "agendaNotCancellableTitle": "No se puede cancelar",
+  "agendaNotCancellableBody": "Esta consulta ya no está agendada.",
   "shellFollowUpScheduled": "Consulta agendada: {day}, {time}",
   "@shellFollowUpScheduled": {
     "placeholders": {
@@ -1303,8 +1328,13 @@
       }
     }
   },
+  "schedulePreparationFasting": "En ayunas",
+  "schedulePreparationLightClothing": "Ropa ligera",
+  "schedulePreparationBloodTests": "Llevar análisis de sangre",
+  "schedulePreparationEmptyBladder": "Vejiga vacía",
   "summarySchedule": "Agendar consulta",
   "summaryReferral": "Registrar derivación",
+  "agendaViewPatient": "Ver paciente",
   "inboxPendingCount": "{count, plural, one{{count} ítem pendiente por revisar} other{{count} ítems pendientes por revisar}}",
   "@inboxPendingCount": {
     "placeholders": {

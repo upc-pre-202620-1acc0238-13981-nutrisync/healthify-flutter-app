@@ -388,6 +388,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get inboxTitle => 'BANDEJA';
 
   @override
+  String get agendaTitle => 'AGENDA';
+
+  @override
   String get settingsTitle => 'AJUSTES';
 
   @override
@@ -1994,6 +1997,52 @@ class AppLocalizationsEs extends AppLocalizations {
   String get adjustProposalAssign => 'Asignar plan ajustado';
 
   @override
+  String get agendaUpcoming => 'Próximas consultas';
+
+  @override
+  String agendaRowTime(String weekday, String time) {
+    return '$weekday · $time';
+  }
+
+  @override
+  String get agendaSchedule => 'Agendar consulta';
+
+  @override
+  String get agendaEmptyTitle => 'Sin consultas agendadas';
+
+  @override
+  String get agendaEmptyBody => 'Cuando agendes una consulta, aparecerá aquí.';
+
+  @override
+  String get agendaOfflineBody =>
+      'Tu agenda no se guarda en el teléfono. Vuelve a intentarlo cuando tengas conexión.';
+
+  @override
+  String get agendaReschedule => 'Reprogramar';
+
+  @override
+  String get agendaCancel => 'Cancelar consulta';
+
+  @override
+  String get agendaCancelDialogTitle => '¿CANCELAR ESTA CONSULTA?';
+
+  @override
+  String get agendaCancelDialogBody =>
+      'Tu paciente dejará de verla en su app. Cancelar no cierra el vínculo.';
+
+  @override
+  String get agendaCancelConfirm => 'Sí, cancelar';
+
+  @override
+  String get agendaCancelled => 'Consulta cancelada';
+
+  @override
+  String get agendaNotCancellableTitle => 'No se puede cancelar';
+
+  @override
+  String get agendaNotCancellableBody => 'Esta consulta ya no está agendada.';
+
+  @override
   String shellFollowUpScheduled(String day, String time) {
     return 'Consulta agendada: $day, $time';
   }
@@ -2004,10 +2053,25 @@ class AppLocalizationsEs extends AppLocalizations {
   }
 
   @override
+  String get schedulePreparationFasting => 'En ayunas';
+
+  @override
+  String get schedulePreparationLightClothing => 'Ropa ligera';
+
+  @override
+  String get schedulePreparationBloodTests => 'Llevar análisis de sangre';
+
+  @override
+  String get schedulePreparationEmptyBladder => 'Vejiga vacía';
+
+  @override
   String get summarySchedule => 'Agendar consulta';
 
   @override
   String get summaryReferral => 'Registrar derivación';
+
+  @override
+  String get agendaViewPatient => 'Ver paciente';
 
   @override
   String inboxPendingCount(int count) {
