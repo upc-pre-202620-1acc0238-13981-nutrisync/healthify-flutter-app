@@ -763,6 +763,114 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Cerrar sesión'**
   String get practitionerOnlySignOut;
+
+  /// No description provided for @menuCdOpen.
+  ///
+  /// In es, this message translates to:
+  /// **'Abrir menú'**
+  String get menuCdOpen;
+
+  /// No description provided for @rosterTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'MIS PACIENTES'**
+  String get rosterTitle;
+
+  /// No description provided for @rosterInvite.
+  ///
+  /// In es, this message translates to:
+  /// **'Invitar paciente'**
+  String get rosterInvite;
+
+  /// No description provided for @rosterEmptyTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin pacientes aún'**
+  String get rosterEmptyTitle;
+
+  /// No description provided for @rosterEmptyBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Invita a tu primer paciente generando un código QR durante la consulta.'**
+  String get rosterEmptyBody;
+
+  /// No description provided for @rosterOfflineTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Necesitas conexión'**
+  String get rosterOfflineTitle;
+
+  /// No description provided for @rosterOfflineBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu cartera y los datos de tus pacientes no se guardan en el teléfono. Vuelve a intentarlo cuando tengas conexión.'**
+  String get rosterOfflineBody;
+
+  /// No description provided for @rosterSearch.
+  ///
+  /// In es, this message translates to:
+  /// **'Buscar paciente'**
+  String get rosterSearch;
+
+  /// No description provided for @rosterSearchPlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'Buscar paciente…'**
+  String get rosterSearchPlaceholder;
+
+  /// No description provided for @rosterNeedsAction.
+  ///
+  /// In es, this message translates to:
+  /// **'Requieren acción · {count}'**
+  String rosterNeedsAction(int count);
+
+  /// No description provided for @rosterUpToDate.
+  ///
+  /// In es, this message translates to:
+  /// **'Al día · {count}'**
+  String rosterUpToDate(int count);
+
+  /// No description provided for @rosterUpToDateBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin pendientes'**
+  String get rosterUpToDateBody;
+
+  /// No description provided for @rosterReasonOpenReview.
+  ///
+  /// In es, this message translates to:
+  /// **'Señal por revisar'**
+  String get rosterReasonOpenReview;
+
+  /// No description provided for @rosterReasonConsultation.
+  ///
+  /// In es, this message translates to:
+  /// **'Consulta por terminar'**
+  String get rosterReasonConsultation;
+
+  /// No description provided for @rosterReasonBaseline.
+  ///
+  /// In es, this message translates to:
+  /// **'Faltan datos base'**
+  String get rosterReasonBaseline;
+
+  /// No description provided for @rosterReasonPlan.
+  ///
+  /// In es, this message translates to:
+  /// **'Falta publicar el plan'**
+  String get rosterReasonPlan;
+
+  /// No description provided for @rosterNoResultsTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin resultados'**
+  String get rosterNoResultsTitle;
+
+  /// No description provided for @rosterNoResultsBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Ningún paciente coincide con «{query}».'**
+  String rosterNoResultsBody(String query);
 }
 
 class _AppLocalizationsDelegate

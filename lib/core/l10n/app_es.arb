@@ -124,5 +124,44 @@
   "shellLoadingText": "Preparando tu espacio…",
   "practitionerOnlyTitle": "ESTA APP ES PARA NUTRICIONISTAS",
   "practitionerOnlyBody": "Tu cuenta es de paciente. Usa la app de pacientes de Healthify para ver tu plan y registrar tus comidas.",
-  "practitionerOnlySignOut": "Cerrar sesión"
+  "practitionerOnlySignOut": "Cerrar sesión",
+  "menuCdOpen": "Abrir menú",
+  "rosterTitle": "MIS PACIENTES",
+  "rosterInvite": "Invitar paciente",
+  "rosterEmptyTitle": "Sin pacientes aún",
+  "rosterEmptyBody": "Invita a tu primer paciente generando un código QR durante la consulta.",
+  "rosterOfflineTitle": "Necesitas conexión",
+  "rosterOfflineBody": "Tu cartera y los datos de tus pacientes no se guardan en el teléfono. Vuelve a intentarlo cuando tengas conexión.",
+  "rosterSearch": "Buscar paciente",
+  "rosterSearchPlaceholder": "Buscar paciente…",
+  "rosterNeedsAction": "Requieren acción · {count}",
+  "@rosterNeedsAction": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rosterUpToDate": "Al día · {count}",
+  "@rosterUpToDate": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rosterUpToDateBody": "Sin pendientes",
+  "rosterReasonOpenReview": "Señal por revisar",
+  "rosterReasonConsultation": "Consulta por terminar",
+  "rosterReasonBaseline": "Faltan datos base",
+  "rosterReasonPlan": "Falta publicar el plan",
+  "rosterNoResultsTitle": "Sin resultados",
+  "rosterNoResultsBody": "Ningún paciente coincide con «{query}».",
+  "@rosterNoResultsBody": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  }
 }

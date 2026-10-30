@@ -368,4 +368,66 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get practitionerOnlySignOut => 'Sign out';
+
+  @override
+  String get menuCdOpen => 'Open menu';
+
+  @override
+  String get rosterTitle => 'MY PATIENTS';
+
+  @override
+  String get rosterInvite => 'Invite patient';
+
+  @override
+  String get rosterEmptyTitle => 'No patients yet';
+
+  @override
+  String get rosterEmptyBody =>
+      'Invite your first patient by generating a QR code during the consultation.';
+
+  @override
+  String get rosterOfflineTitle => 'You need a connection';
+
+  @override
+  String get rosterOfflineBody =>
+      'Your roster and your patients\' data are not stored on the phone. Try again when you\'re connected.';
+
+  @override
+  String get rosterSearch => 'Search patient';
+
+  @override
+  String get rosterSearchPlaceholder => 'Search patient…';
+
+  @override
+  String rosterNeedsAction(int count) {
+    return 'Need action · $count';
+  }
+
+  @override
+  String rosterUpToDate(int count) {
+    return 'Up to date · $count';
+  }
+
+  @override
+  String get rosterUpToDateBody => 'Nothing pending';
+
+  @override
+  String get rosterReasonOpenReview => 'Signal to review';
+
+  @override
+  String get rosterReasonConsultation => 'Consultation to finish';
+
+  @override
+  String get rosterReasonBaseline => 'Baseline data missing';
+
+  @override
+  String get rosterReasonPlan => 'Plan not published yet';
+
+  @override
+  String get rosterNoResultsTitle => 'No results';
+
+  @override
+  String rosterNoResultsBody(String query) {
+    return 'No patient matches “$query”.';
+  }
 }
