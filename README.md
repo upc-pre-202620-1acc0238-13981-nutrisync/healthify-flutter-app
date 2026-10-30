@@ -47,3 +47,16 @@ flutter test              # add --coverage to write coverage/lcov.info
 - Release notes for testers are the last 10 commits, without merges.
 - The APK is also kept as the `healthify-release-<run number>` artifact, and attached to the GitHub release as
   `healthify-v<version>.apk`.
+
+### Repository secrets
+
+| Secret | Value |
+|---|---|
+| `FIREBASE_APP_ID` | Firebase App ID of the Android app `pe.edu.upc.healthify.practitioner` |
+| `FIREBASE_SERVICE_ACCOUNT_JSON` | JSON key of a service account with the *Firebase App Distribution Admin* role |
+| `KEYSTORE_BASE64` | Upload keystore (`.jks`) encoded in base64 |
+| `KEYSTORE_PASSWORD` | Keystore password |
+| `KEY_ALIAS` | Key alias |
+| `KEY_PASSWORD` | Key password |
+
+The app uses no Firebase SDK: there is no `google-services.json`, only the Firebase CLI uploads the APK.
