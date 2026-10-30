@@ -314,6 +314,24 @@ abstract class AppLocalizations {
   /// **'Agenda'**
   String get navAgenda;
 
+  /// No description provided for @languageSpanish.
+  ///
+  /// In es, this message translates to:
+  /// **'Español'**
+  String get languageSpanish;
+
+  /// No description provided for @languageEnglish.
+  ///
+  /// In es, this message translates to:
+  /// **'English'**
+  String get languageEnglish;
+
+  /// No description provided for @languageSelectorLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Idioma'**
+  String get languageSelectorLabel;
+
   /// No description provided for @authEmail.
   ///
   /// In es, this message translates to:

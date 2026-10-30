@@ -125,6 +125,15 @@ class AppLocalizationsEs extends AppLocalizations {
   String get navAgenda => 'Agenda';
 
   @override
+  String get languageSpanish => 'Español';
+
+  @override
+  String get languageEnglish => 'English';
+
+  @override
+  String get languageSelectorLabel => 'Idioma';
+
+  @override
   String get authEmail => 'Correo electrónico';
 
   @override

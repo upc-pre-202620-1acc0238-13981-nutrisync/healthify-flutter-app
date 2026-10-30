@@ -126,6 +126,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get navAgenda => 'Schedule';
 
   @override
+  String get languageSpanish => 'Español';
+
+  @override
+  String get languageEnglish => 'English';
+
+  @override
+  String get languageSelectorLabel => 'Language';
+
+  @override
   String get authEmail => 'Email';
 
   @override
