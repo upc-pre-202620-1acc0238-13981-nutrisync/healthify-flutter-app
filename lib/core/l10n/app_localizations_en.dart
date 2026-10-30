@@ -1480,6 +1480,64 @@ class AppLocalizationsEn extends AppLocalizations {
   String get measurementWeightRequired => 'Enter the weight in kg.';
 
   @override
+  String get publicationAddGuideline => 'Add guideline';
+
+  @override
+  String get publicationChooseSeveral => 'You can choose several.';
+
+  @override
+  String get publicationErrorBody =>
+      'We couldn\'t publish the plan. What you wrote wasn\'t lost.';
+
+  @override
+  String get publicationErrorRetry => 'Try again';
+
+  @override
+  String get publicationErrorTitle => 'SOMETHING WENT WRONG';
+
+  @override
+  String get publicationGuidelines => 'Guidelines';
+
+  @override
+  String get publicationMessage => 'Message for your patient';
+
+  @override
+  String get publicationMessageLabel => 'Message (optional)';
+
+  @override
+  String get publicationMessagePlaceholder =>
+      'They\'ll see it with their targets.';
+
+  @override
+  String get publicationMessageTooLong => 'Use at most 500 characters.';
+
+  @override
+  String get publicationOtherGuideline => 'Other guideline';
+
+  @override
+  String get publicationOtherGuidelineLength => 'Write 3 to 140 characters.';
+
+  @override
+  String get publicationOtherGuidelineMax =>
+      'You can add up to 5 guidelines of your own.';
+
+  @override
+  String get publicationPatientSees =>
+      'Your patient will see the targets, guidelines and restrictions. They won\'t see the diagnosis.';
+
+  @override
+  String get publicationPublish => 'Publish and close consultation';
+
+  @override
+  String get publicationRestrictions => 'Restrictions';
+
+  @override
+  String get publicationSuggestedAi => 'Suggested by AI based on the diagnosis';
+
+  @override
+  String get publicationSuggestedRule => 'Suggested based on the diagnosis';
+
+  @override
   String get targetsAccept => 'Accept targets';
 
   @override
@@ -1617,6 +1675,10 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get diagnosisSuggestionFailedBody =>
       'You can pick the diagnosis from the list or try again. What you already chose is kept.';
+
+  @override
+  String get publicationSuggestionsFailed =>
+      'We couldn\'t load the AI-suggested guidelines. You can choose your own or try again.';
 
   @override
   String get targetsCalculating => 'Calculating the targets…';

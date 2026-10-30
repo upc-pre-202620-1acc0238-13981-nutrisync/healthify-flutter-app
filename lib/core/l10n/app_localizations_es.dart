@@ -1478,6 +1478,64 @@ class AppLocalizationsEs extends AppLocalizations {
   String get measurementWeightRequired => 'Escribe el peso en kg.';
 
   @override
+  String get publicationAddGuideline => 'Agregar indicación';
+
+  @override
+  String get publicationChooseSeveral => 'Puedes elegir varias.';
+
+  @override
+  String get publicationErrorBody =>
+      'No pudimos publicar el plan. Lo que escribiste no se perdió.';
+
+  @override
+  String get publicationErrorRetry => 'Volver a intentarlo';
+
+  @override
+  String get publicationErrorTitle => 'HUBO UN ERROR';
+
+  @override
+  String get publicationGuidelines => 'Indicaciones';
+
+  @override
+  String get publicationMessage => 'Mensaje para tu paciente';
+
+  @override
+  String get publicationMessageLabel => 'Mensaje (opcional)';
+
+  @override
+  String get publicationMessagePlaceholder => 'Lo verá junto con sus metas.';
+
+  @override
+  String get publicationMessageTooLong => 'Usa como máximo 500 caracteres.';
+
+  @override
+  String get publicationOtherGuideline => 'Otra indicación';
+
+  @override
+  String get publicationOtherGuidelineLength =>
+      'Escribe de 3 a 140 caracteres.';
+
+  @override
+  String get publicationOtherGuidelineMax =>
+      'Puedes agregar hasta 5 indicaciones propias.';
+
+  @override
+  String get publicationPatientSees =>
+      'Tu paciente verá las metas, las indicaciones y las restricciones. No verá el diagnóstico.';
+
+  @override
+  String get publicationPublish => 'Publicar y cerrar consulta';
+
+  @override
+  String get publicationRestrictions => 'Restricciones';
+
+  @override
+  String get publicationSuggestedAi => 'Sugeridas por IA según el diagnóstico';
+
+  @override
+  String get publicationSuggestedRule => 'Sugeridas según el diagnóstico';
+
+  @override
   String get targetsAccept => 'Aceptar metas';
 
   @override
@@ -1615,6 +1673,10 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get diagnosisSuggestionFailedBody =>
       'Puedes elegir el diagnóstico de la lista o volver a intentarlo. Lo que ya elegiste se conserva.';
+
+  @override
+  String get publicationSuggestionsFailed =>
+      'No pudimos cargar las indicaciones sugeridas por IA. Puedes elegir las tuyas o volver a intentarlo.';
 
   @override
   String get targetsCalculating => 'Calculando las metas…';

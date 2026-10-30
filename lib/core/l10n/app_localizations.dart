@@ -2660,6 +2660,114 @@ abstract class AppLocalizations {
   /// **'Escribe el peso en kg.'**
   String get measurementWeightRequired;
 
+  /// No description provided for @publicationAddGuideline.
+  ///
+  /// In es, this message translates to:
+  /// **'Agregar indicación'**
+  String get publicationAddGuideline;
+
+  /// No description provided for @publicationChooseSeveral.
+  ///
+  /// In es, this message translates to:
+  /// **'Puedes elegir varias.'**
+  String get publicationChooseSeveral;
+
+  /// No description provided for @publicationErrorBody.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos publicar el plan. Lo que escribiste no se perdió.'**
+  String get publicationErrorBody;
+
+  /// No description provided for @publicationErrorRetry.
+  ///
+  /// In es, this message translates to:
+  /// **'Volver a intentarlo'**
+  String get publicationErrorRetry;
+
+  /// No description provided for @publicationErrorTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'HUBO UN ERROR'**
+  String get publicationErrorTitle;
+
+  /// No description provided for @publicationGuidelines.
+  ///
+  /// In es, this message translates to:
+  /// **'Indicaciones'**
+  String get publicationGuidelines;
+
+  /// No description provided for @publicationMessage.
+  ///
+  /// In es, this message translates to:
+  /// **'Mensaje para tu paciente'**
+  String get publicationMessage;
+
+  /// No description provided for @publicationMessageLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Mensaje (opcional)'**
+  String get publicationMessageLabel;
+
+  /// No description provided for @publicationMessagePlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'Lo verá junto con sus metas.'**
+  String get publicationMessagePlaceholder;
+
+  /// No description provided for @publicationMessageTooLong.
+  ///
+  /// In es, this message translates to:
+  /// **'Usa como máximo 500 caracteres.'**
+  String get publicationMessageTooLong;
+
+  /// No description provided for @publicationOtherGuideline.
+  ///
+  /// In es, this message translates to:
+  /// **'Otra indicación'**
+  String get publicationOtherGuideline;
+
+  /// No description provided for @publicationOtherGuidelineLength.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribe de 3 a 140 caracteres.'**
+  String get publicationOtherGuidelineLength;
+
+  /// No description provided for @publicationOtherGuidelineMax.
+  ///
+  /// In es, this message translates to:
+  /// **'Puedes agregar hasta 5 indicaciones propias.'**
+  String get publicationOtherGuidelineMax;
+
+  /// No description provided for @publicationPatientSees.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu paciente verá las metas, las indicaciones y las restricciones. No verá el diagnóstico.'**
+  String get publicationPatientSees;
+
+  /// No description provided for @publicationPublish.
+  ///
+  /// In es, this message translates to:
+  /// **'Publicar y cerrar consulta'**
+  String get publicationPublish;
+
+  /// No description provided for @publicationRestrictions.
+  ///
+  /// In es, this message translates to:
+  /// **'Restricciones'**
+  String get publicationRestrictions;
+
+  /// No description provided for @publicationSuggestedAi.
+  ///
+  /// In es, this message translates to:
+  /// **'Sugeridas por IA según el diagnóstico'**
+  String get publicationSuggestedAi;
+
+  /// No description provided for @publicationSuggestedRule.
+  ///
+  /// In es, this message translates to:
+  /// **'Sugeridas según el diagnóstico'**
+  String get publicationSuggestedRule;
+
   /// No description provided for @targetsAccept.
   ///
   /// In es, this message translates to:
@@ -2899,6 +3007,12 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Puedes elegir el diagnóstico de la lista o volver a intentarlo. Lo que ya elegiste se conserva.'**
   String get diagnosisSuggestionFailedBody;
+
+  /// No description provided for @publicationSuggestionsFailed.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos cargar las indicaciones sugeridas por IA. Puedes elegir las tuyas o volver a intentarlo.'**
+  String get publicationSuggestionsFailed;
 
   /// No description provided for @targetsCalculating.
   ///
