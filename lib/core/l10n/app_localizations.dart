@@ -794,6 +794,30 @@ abstract class AppLocalizations {
   /// **'Cerrar sesión'**
   String get menuSignOut;
 
+  /// No description provided for @settingsTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'AJUSTES'**
+  String get settingsTitle;
+
+  /// No description provided for @settingsAccount.
+  ///
+  /// In es, this message translates to:
+  /// **'Mi cuenta'**
+  String get settingsAccount;
+
+  /// No description provided for @settingsLanguage.
+  ///
+  /// In es, this message translates to:
+  /// **'Idioma'**
+  String get settingsLanguage;
+
+  /// No description provided for @settingsLanguageSheetTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'IDIOMA'**
+  String get settingsLanguageSheetTitle;
+
   /// No description provided for @signOutTitle.
   ///
   /// In es, this message translates to:

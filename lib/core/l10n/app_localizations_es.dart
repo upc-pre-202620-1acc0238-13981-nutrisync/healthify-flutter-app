@@ -382,6 +382,18 @@ class AppLocalizationsEs extends AppLocalizations {
   String get menuSignOut => 'Cerrar sesión';
 
   @override
+  String get settingsTitle => 'AJUSTES';
+
+  @override
+  String get settingsAccount => 'Mi cuenta';
+
+  @override
+  String get settingsLanguage => 'Idioma';
+
+  @override
+  String get settingsLanguageSheetTitle => 'IDIOMA';
+
+  @override
   String get signOutTitle => '¿CERRAR SESIÓN?';
 
   @override

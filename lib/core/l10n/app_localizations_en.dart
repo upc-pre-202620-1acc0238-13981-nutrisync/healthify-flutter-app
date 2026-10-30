@@ -385,6 +385,18 @@ class AppLocalizationsEn extends AppLocalizations {
   String get menuSignOut => 'Sign out';
 
   @override
+  String get settingsTitle => 'SETTINGS';
+
+  @override
+  String get settingsAccount => 'My account';
+
+  @override
+  String get settingsLanguage => 'Language';
+
+  @override
+  String get settingsLanguageSheetTitle => 'LANGUAGE';
+
+  @override
   String get signOutTitle => 'SIGN OUT?';
 
   @override
