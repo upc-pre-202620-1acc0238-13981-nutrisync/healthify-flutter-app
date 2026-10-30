@@ -152,6 +152,24 @@ abstract class AppLocalizations {
   /// **'Algo salió mal. Inténtalo de nuevo en unos minutos.'**
   String get errorUnexpected;
 
+  /// No description provided for @sessionExpiredTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'TU SESIÓN VENCIÓ'**
+  String get sessionExpiredTitle;
+
+  /// No description provided for @sessionExpiredBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Por tu seguridad cerramos tu sesión. Lo que ya registraste está a salvo.'**
+  String get sessionExpiredBody;
+
+  /// No description provided for @sessionExpiredOffline.
+  ///
+  /// In es, this message translates to:
+  /// **'En cuanto tengas conexión, vuelve a iniciar sesión.'**
+  String get sessionExpiredOffline;
+
   /// No description provided for @brandLogoCd.
   ///
   /// In es, this message translates to:
@@ -295,6 +313,456 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Agenda'**
   String get navAgenda;
+
+  /// No description provided for @welcomeChipGoalLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Meta de hoy'**
+  String get welcomeChipGoalLabel;
+
+  /// No description provided for @welcomeChipGoalValue.
+  ///
+  /// In es, this message translates to:
+  /// **'1 260 / 1 850 kcal'**
+  String get welcomeChipGoalValue;
+
+  /// No description provided for @welcomeChipMealLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Comida registrada'**
+  String get welcomeChipMealLabel;
+
+  /// No description provided for @welcomeChipMealValue.
+  ///
+  /// In es, this message translates to:
+  /// **'Lomo saltado · 320 g'**
+  String get welcomeChipMealValue;
+
+  /// No description provided for @welcomeChipPractitionerLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu nutricionista'**
+  String get welcomeChipPractitionerLabel;
+
+  /// No description provided for @welcomeChipPractitionerValue.
+  ///
+  /// In es, this message translates to:
+  /// **'Revisó tu plan'**
+  String get welcomeChipPractitionerValue;
+
+  /// No description provided for @welcomeHeadlineFirst.
+  ///
+  /// In es, this message translates to:
+  /// **'TU NUTRICIÓN,'**
+  String get welcomeHeadlineFirst;
+
+  /// No description provided for @welcomeHeadlineSecond.
+  ///
+  /// In es, this message translates to:
+  /// **'EN UN LUGAR'**
+  String get welcomeHeadlineSecond;
+
+  /// No description provided for @welcomeBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Metas, registro y seguimiento junto a tu nutricionista, sin complicarte.'**
+  String get welcomeBody;
+
+  /// No description provided for @welcomeCreateAccount.
+  ///
+  /// In es, this message translates to:
+  /// **'Crear cuenta'**
+  String get welcomeCreateAccount;
+
+  /// No description provided for @welcomeHaveAccount.
+  ///
+  /// In es, this message translates to:
+  /// **'Ya tengo cuenta'**
+  String get welcomeHaveAccount;
+
+  /// No description provided for @languageSpanish.
+  ///
+  /// In es, this message translates to:
+  /// **'Español'**
+  String get languageSpanish;
+
+  /// No description provided for @languageEnglish.
+  ///
+  /// In es, this message translates to:
+  /// **'English'**
+  String get languageEnglish;
+
+  /// No description provided for @languageSelectorLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Idioma'**
+  String get languageSelectorLabel;
+
+  /// No description provided for @authEmail.
+  ///
+  /// In es, this message translates to:
+  /// **'Correo electrónico'**
+  String get authEmail;
+
+  /// No description provided for @authEmailPlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'tucorreo@ejemplo.com'**
+  String get authEmailPlaceholder;
+
+  /// No description provided for @authPassword.
+  ///
+  /// In es, this message translates to:
+  /// **'Contraseña'**
+  String get authPassword;
+
+  /// No description provided for @signUpTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'CREAR CUENTA'**
+  String get signUpTitle;
+
+  /// No description provided for @signUpSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Así vas a entrar a Healthify'**
+  String get signUpSubtitle;
+
+  /// No description provided for @signUpGivenNames.
+  ///
+  /// In es, this message translates to:
+  /// **'Nombres'**
+  String get signUpGivenNames;
+
+  /// No description provided for @signUpGivenNamesPlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'Ej. María'**
+  String get signUpGivenNamesPlaceholder;
+
+  /// No description provided for @signUpFamilyNames.
+  ///
+  /// In es, this message translates to:
+  /// **'Apellidos'**
+  String get signUpFamilyNames;
+
+  /// No description provided for @signUpFamilyNamesPlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'Ej. Flores'**
+  String get signUpFamilyNamesPlaceholder;
+
+  /// No description provided for @signUpPasswordPlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'Mínimo 8 caracteres'**
+  String get signUpPasswordPlaceholder;
+
+  /// No description provided for @signUpPasswordHint.
+  ///
+  /// In es, this message translates to:
+  /// **'Usa mayúscula, minúscula, número y símbolo'**
+  String get signUpPasswordHint;
+
+  /// No description provided for @signUpSubmit.
+  ///
+  /// In es, this message translates to:
+  /// **'Crear cuenta'**
+  String get signUpSubmit;
+
+  /// No description provided for @signUpSubmitting.
+  ///
+  /// In es, this message translates to:
+  /// **'Creando cuenta…'**
+  String get signUpSubmitting;
+
+  /// No description provided for @signUpHaveAccount.
+  ///
+  /// In es, this message translates to:
+  /// **'Ya tengo cuenta'**
+  String get signUpHaveAccount;
+
+  /// No description provided for @signUpOfflineHint.
+  ///
+  /// In es, this message translates to:
+  /// **'Necesitas conexión para crear tu cuenta'**
+  String get signUpOfflineHint;
+
+  /// No description provided for @signUpErrorGivenNamesRequired.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribe tus nombres'**
+  String get signUpErrorGivenNamesRequired;
+
+  /// No description provided for @signUpErrorFamilyNamesRequired.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribe tus apellidos'**
+  String get signUpErrorFamilyNamesRequired;
+
+  /// No description provided for @signUpErrorNameCharacters.
+  ///
+  /// In es, this message translates to:
+  /// **'Escríbelo sin números ni los signos < >'**
+  String get signUpErrorNameCharacters;
+
+  /// No description provided for @signUpErrorNameTooLong.
+  ///
+  /// In es, this message translates to:
+  /// **'Usa como máximo 80 caracteres'**
+  String get signUpErrorNameTooLong;
+
+  /// No description provided for @signUpErrorEmail.
+  ///
+  /// In es, this message translates to:
+  /// **'Ingresa un correo válido'**
+  String get signUpErrorEmail;
+
+  /// No description provided for @signUpErrorEmailTaken.
+  ///
+  /// In es, this message translates to:
+  /// **'Ya existe una cuenta con este correo. ¿Iniciar sesión?'**
+  String get signUpErrorEmailTaken;
+
+  /// No description provided for @signUpErrorPassword.
+  ///
+  /// In es, this message translates to:
+  /// **'Necesita mayúscula, minúscula, número y símbolo, y al menos 8 caracteres'**
+  String get signUpErrorPassword;
+
+  /// No description provided for @signInTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'INICIAR SESIÓN'**
+  String get signInTitle;
+
+  /// No description provided for @signInSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Entra con tu correo. Te llevaremos a tu espacio según tu tipo de cuenta.'**
+  String get signInSubtitle;
+
+  /// No description provided for @signInPasswordPlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu contraseña'**
+  String get signInPasswordPlaceholder;
+
+  /// No description provided for @signInForgotPassword.
+  ///
+  /// In es, this message translates to:
+  /// **'¿Olvidaste tu contraseña?'**
+  String get signInForgotPassword;
+
+  /// No description provided for @signInSubmit.
+  ///
+  /// In es, this message translates to:
+  /// **'Iniciar sesión'**
+  String get signInSubmit;
+
+  /// No description provided for @signInSubmitting.
+  ///
+  /// In es, this message translates to:
+  /// **'Entrando…'**
+  String get signInSubmitting;
+
+  /// No description provided for @signInCreateAccount.
+  ///
+  /// In es, this message translates to:
+  /// **'Crear cuenta'**
+  String get signInCreateAccount;
+
+  /// No description provided for @signInErrorCredentials.
+  ///
+  /// In es, this message translates to:
+  /// **'Correo o contraseña incorrectos'**
+  String get signInErrorCredentials;
+
+  /// No description provided for @signInLockedTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu cuenta está bloqueada temporalmente'**
+  String get signInLockedTitle;
+
+  /// No description provided for @signInLockedBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Por seguridad, tras 5 intentos fallidos. Inténtalo más tarde o recupera tu contraseña.'**
+  String get signInLockedBody;
+
+  /// No description provided for @forgotPasswordTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'RECUPERAR CONTRASEÑA'**
+  String get forgotPasswordTitle;
+
+  /// No description provided for @forgotPasswordEmailSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribe el correo de tu cuenta y te enviaremos un código de 6 dígitos.'**
+  String get forgotPasswordEmailSubtitle;
+
+  /// No description provided for @forgotPasswordEmailError.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribe un correo válido'**
+  String get forgotPasswordEmailError;
+
+  /// No description provided for @forgotPasswordSend.
+  ///
+  /// In es, this message translates to:
+  /// **'Enviar código'**
+  String get forgotPasswordSend;
+
+  /// No description provided for @forgotPasswordSending.
+  ///
+  /// In es, this message translates to:
+  /// **'Enviando…'**
+  String get forgotPasswordSending;
+
+  /// No description provided for @forgotPasswordBackToSignIn.
+  ///
+  /// In es, this message translates to:
+  /// **'Volver a iniciar sesión'**
+  String get forgotPasswordBackToSignIn;
+
+  /// No description provided for @forgotPasswordCodeSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Si {email} tiene una cuenta, te enviamos un código. Revisa también la carpeta de spam.'**
+  String forgotPasswordCodeSubtitle(String email);
+
+  /// No description provided for @forgotPasswordCodeLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Código'**
+  String get forgotPasswordCodeLabel;
+
+  /// No description provided for @forgotPasswordCodePlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'6 dígitos'**
+  String get forgotPasswordCodePlaceholder;
+
+  /// No description provided for @forgotPasswordCodeError.
+  ///
+  /// In es, this message translates to:
+  /// **'El código no es correcto o ya venció. Pide uno nuevo.'**
+  String get forgotPasswordCodeError;
+
+  /// No description provided for @forgotPasswordVerify.
+  ///
+  /// In es, this message translates to:
+  /// **'Verificar código'**
+  String get forgotPasswordVerify;
+
+  /// No description provided for @forgotPasswordVerifying.
+  ///
+  /// In es, this message translates to:
+  /// **'Verificando…'**
+  String get forgotPasswordVerifying;
+
+  /// No description provided for @forgotPasswordTokenExpired.
+  ///
+  /// In es, this message translates to:
+  /// **'Se acabó el tiempo para cambiar tu contraseña. Pide un código nuevo.'**
+  String get forgotPasswordTokenExpired;
+
+  /// No description provided for @forgotPasswordNewPasswordSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Código verificado. Elige una contraseña nueva, distinta a la actual.'**
+  String get forgotPasswordNewPasswordSubtitle;
+
+  /// No description provided for @forgotPasswordNewPassword.
+  ///
+  /// In es, this message translates to:
+  /// **'Contraseña nueva'**
+  String get forgotPasswordNewPassword;
+
+  /// No description provided for @forgotPasswordErrorReused.
+  ///
+  /// In es, this message translates to:
+  /// **'Usa una contraseña distinta a la actual'**
+  String get forgotPasswordErrorReused;
+
+  /// No description provided for @forgotPasswordSubmit.
+  ///
+  /// In es, this message translates to:
+  /// **'Cambiar contraseña'**
+  String get forgotPasswordSubmit;
+
+  /// No description provided for @forgotPasswordSubmitting.
+  ///
+  /// In es, this message translates to:
+  /// **'Cambiando…'**
+  String get forgotPasswordSubmitting;
+
+  /// No description provided for @forgotPasswordResend.
+  ///
+  /// In es, this message translates to:
+  /// **'Reenviar código'**
+  String get forgotPasswordResend;
+
+  /// No description provided for @forgotPasswordResendIn.
+  ///
+  /// In es, this message translates to:
+  /// **'Reenviar código en {seconds} s'**
+  String forgotPasswordResendIn(int seconds);
+
+  /// No description provided for @forgotPasswordResent.
+  ///
+  /// In es, this message translates to:
+  /// **'Te enviamos un código nuevo.'**
+  String get forgotPasswordResent;
+
+  /// No description provided for @forgotPasswordChangeEmail.
+  ///
+  /// In es, this message translates to:
+  /// **'Usar otro correo'**
+  String get forgotPasswordChangeEmail;
+
+  /// No description provided for @forgotPasswordDoneTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'CONTRASEÑA ACTUALIZADA'**
+  String get forgotPasswordDoneTitle;
+
+  /// No description provided for @forgotPasswordDoneBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Ya puedes iniciar sesión con tu contraseña nueva. Por seguridad, cerramos tu sesión en los demás dispositivos.'**
+  String get forgotPasswordDoneBody;
+
+  /// No description provided for @forgotPasswordGoToSignIn.
+  ///
+  /// In es, this message translates to:
+  /// **'Iniciar sesión'**
+  String get forgotPasswordGoToSignIn;
+
+  /// No description provided for @shellLoadingText.
+  ///
+  /// In es, this message translates to:
+  /// **'Preparando tu espacio…'**
+  String get shellLoadingText;
+
+  /// No description provided for @practitionerOnlyTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'ESTA APP ES PARA NUTRICIONISTAS'**
+  String get practitionerOnlyTitle;
+
+  /// No description provided for @practitionerOnlyBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu cuenta es de paciente. Usa la app de pacientes de Healthify para ver tu plan y registrar tus comidas.'**
+  String get practitionerOnlyBody;
+
+  /// No description provided for @practitionerOnlySignOut.
+  ///
+  /// In es, this message translates to:
+  /// **'Cerrar sesión'**
+  String get practitionerOnlySignOut;
 }
 
 class _AppLocalizationsDelegate
