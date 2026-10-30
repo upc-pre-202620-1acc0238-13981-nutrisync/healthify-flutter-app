@@ -230,6 +230,7 @@
   "dischargeDialogConfirm": "Sí, dar de alta",
   "dischargeAlreadyTitle": "Alta ya registrada",
   "dischargeAlreadyBody": "Este paciente ya había sido dado de alta.",
+  "planHistory": "HISTORIAL DEL PLAN",
   "shellSignalResolved": "Señal resuelta. {name} ya no aparece en tu bandeja.",
   "@shellSignalResolved": {
     "placeholders": {

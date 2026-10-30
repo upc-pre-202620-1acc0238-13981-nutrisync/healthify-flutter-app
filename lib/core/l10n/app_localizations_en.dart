@@ -574,6 +574,9 @@ class AppLocalizationsEn extends AppLocalizations {
       'This patient had already been discharged.';
 
   @override
+  String get planHistory => 'PLAN HISTORY';
+
+  @override
   String shellSignalResolved(String name) {
     return 'Signal resolved. $name is no longer in your inbox.';
   }

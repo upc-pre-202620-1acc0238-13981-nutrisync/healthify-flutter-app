@@ -1124,6 +1124,12 @@ abstract class AppLocalizations {
   /// **'Este paciente ya había sido dado de alta.'**
   String get dischargeAlreadyBody;
 
+  /// No description provided for @planHistory.
+  ///
+  /// In es, this message translates to:
+  /// **'HISTORIAL DEL PLAN'**
+  String get planHistory;
+
   /// No description provided for @shellSignalResolved.
   ///
   /// In es, this message translates to:

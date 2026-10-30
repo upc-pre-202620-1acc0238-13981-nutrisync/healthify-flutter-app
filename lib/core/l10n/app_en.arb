@@ -171,6 +171,7 @@
   "dischargeDialogConfirm": "Yes, discharge",
   "dischargeAlreadyTitle": "Discharge already recorded",
   "dischargeAlreadyBody": "This patient had already been discharged.",
+  "planHistory": "PLAN HISTORY",
   "shellSignalResolved": "Signal resolved. {name} is no longer in your inbox.",
   "shellSignalResolvedGeneric": "Signal resolved. It's no longer in your inbox.",
   "shellFollowUpScheduled": "Consultation scheduled: {day}, {time}",

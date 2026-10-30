@@ -570,6 +570,9 @@ class AppLocalizationsEs extends AppLocalizations {
       'Este paciente ya había sido dado de alta.';
 
   @override
+  String get planHistory => 'HISTORIAL DEL PLAN';
+
+  @override
   String shellSignalResolved(String name) {
     return 'Señal resuelta. $name ya no aparece en tu bandeja.';
   }
