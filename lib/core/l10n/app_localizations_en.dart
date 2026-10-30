@@ -1946,6 +1946,59 @@ class AppLocalizationsEn extends AppLocalizations {
   String get proposalWhy => 'Why';
 
   @override
+  String get adjustProposalTitle => 'ADJUST PLAN';
+
+  @override
+  String get adjustProposalBadge => 'Prefilled with the AI proposal';
+
+  @override
+  String get adjustProposalIntro =>
+      'Everything comes prefilled with the proposal. Change only what you need.';
+
+  @override
+  String get adjustProposalTargets => 'Daily targets';
+
+  @override
+  String get adjustProposalEnergy => 'Energy';
+
+  @override
+  String adjustProposalBefore(String value) {
+    return 'Before: $value kcal';
+  }
+
+  @override
+  String get adjustProposalProtein => 'Protein';
+
+  @override
+  String get adjustProposalCarb => 'Carbs';
+
+  @override
+  String get adjustProposalFat => 'Fat';
+
+  @override
+  String get adjustProposalPositiveValue => 'Enter a value greater than 0';
+
+  @override
+  String get adjustProposalBelowFloor =>
+      'It\'s below the safe energy minimum for this patient.';
+
+  @override
+  String get adjustProposalGuidelines => 'Guidelines';
+
+  @override
+  String adjustProposalMessageHelp(int max) {
+    return 'Your patient will see it with their targets. Up to $max characters.';
+  }
+
+  @override
+  String adjustProposalMessageInvalid(int max) {
+    return 'Write a message of up to $max characters.';
+  }
+
+  @override
+  String get adjustProposalAssign => 'Assign adjusted plan';
+
+  @override
   String shellFollowUpScheduled(String day, String time) {
     return 'Consultation scheduled: $day, $time';
   }

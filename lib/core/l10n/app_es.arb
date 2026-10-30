@@ -1245,6 +1245,42 @@
     }
   },
   "proposalWhy": "Por qué",
+  "adjustProposalTitle": "AJUSTAR PLAN",
+  "adjustProposalBadge": "Prellenado con la propuesta de IA",
+  "adjustProposalIntro": "Todo viene prellenado con la propuesta. Cambia solo lo que necesites.",
+  "adjustProposalTargets": "Metas diarias",
+  "adjustProposalEnergy": "Energía",
+  "adjustProposalBefore": "Antes: {value} kcal",
+  "@adjustProposalBefore": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "adjustProposalProtein": "Proteína",
+  "adjustProposalCarb": "Carbohid.",
+  "adjustProposalFat": "Grasa",
+  "adjustProposalPositiveValue": "Escribe un valor mayor que 0",
+  "adjustProposalBelowFloor": "Está por debajo del mínimo seguro de energía para este paciente.",
+  "adjustProposalGuidelines": "Indicaciones",
+  "adjustProposalMessageHelp": "Lo verá tu paciente junto a sus metas. Máximo {max} caracteres.",
+  "@adjustProposalMessageHelp": {
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "adjustProposalMessageInvalid": "Escribe un mensaje de hasta {max} caracteres.",
+  "@adjustProposalMessageInvalid": {
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "adjustProposalAssign": "Asignar plan ajustado",
   "shellFollowUpScheduled": "Consulta agendada: {day}, {time}",
   "@shellFollowUpScheduled": {
     "placeholders": {

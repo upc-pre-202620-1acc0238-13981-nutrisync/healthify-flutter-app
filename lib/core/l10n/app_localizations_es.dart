@@ -1941,6 +1941,59 @@ class AppLocalizationsEs extends AppLocalizations {
   String get proposalWhy => 'Por qué';
 
   @override
+  String get adjustProposalTitle => 'AJUSTAR PLAN';
+
+  @override
+  String get adjustProposalBadge => 'Prellenado con la propuesta de IA';
+
+  @override
+  String get adjustProposalIntro =>
+      'Todo viene prellenado con la propuesta. Cambia solo lo que necesites.';
+
+  @override
+  String get adjustProposalTargets => 'Metas diarias';
+
+  @override
+  String get adjustProposalEnergy => 'Energía';
+
+  @override
+  String adjustProposalBefore(String value) {
+    return 'Antes: $value kcal';
+  }
+
+  @override
+  String get adjustProposalProtein => 'Proteína';
+
+  @override
+  String get adjustProposalCarb => 'Carbohid.';
+
+  @override
+  String get adjustProposalFat => 'Grasa';
+
+  @override
+  String get adjustProposalPositiveValue => 'Escribe un valor mayor que 0';
+
+  @override
+  String get adjustProposalBelowFloor =>
+      'Está por debajo del mínimo seguro de energía para este paciente.';
+
+  @override
+  String get adjustProposalGuidelines => 'Indicaciones';
+
+  @override
+  String adjustProposalMessageHelp(int max) {
+    return 'Lo verá tu paciente junto a sus metas. Máximo $max caracteres.';
+  }
+
+  @override
+  String adjustProposalMessageInvalid(int max) {
+    return 'Escribe un mensaje de hasta $max caracteres.';
+  }
+
+  @override
+  String get adjustProposalAssign => 'Asignar plan ajustado';
+
+  @override
   String shellFollowUpScheduled(String day, String time) {
     return 'Consulta agendada: $day, $time';
   }

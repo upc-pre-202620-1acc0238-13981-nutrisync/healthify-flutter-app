@@ -3426,6 +3426,96 @@ abstract class AppLocalizations {
   /// **'Por qué'**
   String get proposalWhy;
 
+  /// No description provided for @adjustProposalTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'AJUSTAR PLAN'**
+  String get adjustProposalTitle;
+
+  /// No description provided for @adjustProposalBadge.
+  ///
+  /// In es, this message translates to:
+  /// **'Prellenado con la propuesta de IA'**
+  String get adjustProposalBadge;
+
+  /// No description provided for @adjustProposalIntro.
+  ///
+  /// In es, this message translates to:
+  /// **'Todo viene prellenado con la propuesta. Cambia solo lo que necesites.'**
+  String get adjustProposalIntro;
+
+  /// No description provided for @adjustProposalTargets.
+  ///
+  /// In es, this message translates to:
+  /// **'Metas diarias'**
+  String get adjustProposalTargets;
+
+  /// No description provided for @adjustProposalEnergy.
+  ///
+  /// In es, this message translates to:
+  /// **'Energía'**
+  String get adjustProposalEnergy;
+
+  /// No description provided for @adjustProposalBefore.
+  ///
+  /// In es, this message translates to:
+  /// **'Antes: {value} kcal'**
+  String adjustProposalBefore(String value);
+
+  /// No description provided for @adjustProposalProtein.
+  ///
+  /// In es, this message translates to:
+  /// **'Proteína'**
+  String get adjustProposalProtein;
+
+  /// No description provided for @adjustProposalCarb.
+  ///
+  /// In es, this message translates to:
+  /// **'Carbohid.'**
+  String get adjustProposalCarb;
+
+  /// No description provided for @adjustProposalFat.
+  ///
+  /// In es, this message translates to:
+  /// **'Grasa'**
+  String get adjustProposalFat;
+
+  /// No description provided for @adjustProposalPositiveValue.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribe un valor mayor que 0'**
+  String get adjustProposalPositiveValue;
+
+  /// No description provided for @adjustProposalBelowFloor.
+  ///
+  /// In es, this message translates to:
+  /// **'Está por debajo del mínimo seguro de energía para este paciente.'**
+  String get adjustProposalBelowFloor;
+
+  /// No description provided for @adjustProposalGuidelines.
+  ///
+  /// In es, this message translates to:
+  /// **'Indicaciones'**
+  String get adjustProposalGuidelines;
+
+  /// No description provided for @adjustProposalMessageHelp.
+  ///
+  /// In es, this message translates to:
+  /// **'Lo verá tu paciente junto a sus metas. Máximo {max} caracteres.'**
+  String adjustProposalMessageHelp(int max);
+
+  /// No description provided for @adjustProposalMessageInvalid.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribe un mensaje de hasta {max} caracteres.'**
+  String adjustProposalMessageInvalid(int max);
+
+  /// No description provided for @adjustProposalAssign.
+  ///
+  /// In es, this message translates to:
+  /// **'Asignar plan ajustado'**
+  String get adjustProposalAssign;
+
   /// No description provided for @shellFollowUpScheduled.
   ///
   /// In es, this message translates to:
