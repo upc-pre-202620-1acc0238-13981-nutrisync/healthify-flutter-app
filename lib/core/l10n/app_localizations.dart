@@ -110,6 +110,12 @@ abstract class AppLocalizations {
   /// **'Cerrar'**
   String get commonClose;
 
+  /// No description provided for @commonUnderstood.
+  ///
+  /// In es, this message translates to:
+  /// **'Entendido'**
+  String get commonUnderstood;
+
   /// No description provided for @errorNetwork.
   ///
   /// In es, this message translates to:
@@ -770,6 +776,18 @@ abstract class AppLocalizations {
   /// **'Abrir menú'**
   String get menuCdOpen;
 
+  /// No description provided for @practitionerNoActiveLinkTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin vínculo activo'**
+  String get practitionerNoActiveLinkTitle;
+
+  /// No description provided for @practitionerNoActiveLinkBody.
+  ///
+  /// In es, this message translates to:
+  /// **'No tienes un vínculo activo con este paciente.'**
+  String get practitionerNoActiveLinkBody;
+
   /// No description provided for @rosterTitle.
   ///
   /// In es, this message translates to:
@@ -961,6 +979,78 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Elige cuándo vence este código.'**
   String get inviteErrorExpirationRequired;
+
+  /// No description provided for @dischargeTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'DAR DE ALTA'**
+  String get dischargeTitle;
+
+  /// No description provided for @dischargeBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Esto cierra el tratamiento con este paciente. Un vínculo dado de alta no se puede reactivar.'**
+  String get dischargeBody;
+
+  /// No description provided for @dischargeReason.
+  ///
+  /// In es, this message translates to:
+  /// **'Motivo clínico'**
+  String get dischargeReason;
+
+  /// No description provided for @dischargeReasonPlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'Obligatorio…'**
+  String get dischargeReasonPlaceholder;
+
+  /// No description provided for @dischargeReasonMissing.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribe el motivo clínico del alta'**
+  String get dischargeReasonMissing;
+
+  /// No description provided for @dischargeAction.
+  ///
+  /// In es, this message translates to:
+  /// **'Dar de alta'**
+  String get dischargeAction;
+
+  /// No description provided for @dischargeProcessing.
+  ///
+  /// In es, this message translates to:
+  /// **'Procesando…'**
+  String get dischargeProcessing;
+
+  /// No description provided for @dischargeDialogTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'¿DAR DE ALTA?'**
+  String get dischargeDialogTitle;
+
+  /// No description provided for @dischargeDialogBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Este vínculo no se podrá reactivar después. El motivo clínico queda registrado.'**
+  String get dischargeDialogBody;
+
+  /// No description provided for @dischargeDialogConfirm.
+  ///
+  /// In es, this message translates to:
+  /// **'Sí, dar de alta'**
+  String get dischargeDialogConfirm;
+
+  /// No description provided for @dischargeAlreadyTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Alta ya registrada'**
+  String get dischargeAlreadyTitle;
+
+  /// No description provided for @dischargeAlreadyBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Este paciente ya había sido dado de alta.'**
+  String get dischargeAlreadyBody;
 }
 
 class _AppLocalizationsDelegate

@@ -16,6 +16,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get commonClose => 'Cerrar';
 
   @override
+  String get commonUnderstood => 'Entendido';
+
+  @override
   String get errorNetwork =>
       'No hay conexión. Revisa tu internet e inténtalo de nuevo.';
 
@@ -370,6 +373,13 @@ class AppLocalizationsEs extends AppLocalizations {
   String get menuCdOpen => 'Abrir menú';
 
   @override
+  String get practitionerNoActiveLinkTitle => 'Sin vínculo activo';
+
+  @override
+  String get practitionerNoActiveLinkBody =>
+      'No tienes un vínculo activo con este paciente.';
+
+  @override
   String get rosterTitle => 'MIS PACIENTES';
 
   @override
@@ -480,4 +490,43 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get inviteErrorExpirationRequired => 'Elige cuándo vence este código.';
+
+  @override
+  String get dischargeTitle => 'DAR DE ALTA';
+
+  @override
+  String get dischargeBody =>
+      'Esto cierra el tratamiento con este paciente. Un vínculo dado de alta no se puede reactivar.';
+
+  @override
+  String get dischargeReason => 'Motivo clínico';
+
+  @override
+  String get dischargeReasonPlaceholder => 'Obligatorio…';
+
+  @override
+  String get dischargeReasonMissing => 'Escribe el motivo clínico del alta';
+
+  @override
+  String get dischargeAction => 'Dar de alta';
+
+  @override
+  String get dischargeProcessing => 'Procesando…';
+
+  @override
+  String get dischargeDialogTitle => '¿DAR DE ALTA?';
+
+  @override
+  String get dischargeDialogBody =>
+      'Este vínculo no se podrá reactivar después. El motivo clínico queda registrado.';
+
+  @override
+  String get dischargeDialogConfirm => 'Sí, dar de alta';
+
+  @override
+  String get dischargeAlreadyTitle => 'Alta ya registrada';
+
+  @override
+  String get dischargeAlreadyBody =>
+      'Este paciente ya había sido dado de alta.';
 }

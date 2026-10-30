@@ -16,6 +16,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get commonClose => 'Close';
 
   @override
+  String get commonUnderstood => 'Got it';
+
+  @override
   String get errorNetwork =>
       'You\'re offline. Check your connection and try again.';
 
@@ -373,6 +376,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get menuCdOpen => 'Open menu';
 
   @override
+  String get practitionerNoActiveLinkTitle => 'No active link';
+
+  @override
+  String get practitionerNoActiveLinkBody =>
+      'You don\'t have an active link with this patient.';
+
+  @override
   String get rosterTitle => 'MY PATIENTS';
 
   @override
@@ -483,4 +493,44 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get inviteErrorExpirationRequired => 'Choose when this code expires.';
+
+  @override
+  String get dischargeTitle => 'DISCHARGE';
+
+  @override
+  String get dischargeBody =>
+      'This ends the treatment with this patient. A discharged link can\'t be reactivated.';
+
+  @override
+  String get dischargeReason => 'Clinical reason';
+
+  @override
+  String get dischargeReasonPlaceholder => 'Required…';
+
+  @override
+  String get dischargeReasonMissing =>
+      'Write the clinical reason for the discharge';
+
+  @override
+  String get dischargeAction => 'Discharge';
+
+  @override
+  String get dischargeProcessing => 'Processing…';
+
+  @override
+  String get dischargeDialogTitle => 'DISCHARGE?';
+
+  @override
+  String get dischargeDialogBody =>
+      'This link can\'t be reactivated later. The clinical reason is recorded.';
+
+  @override
+  String get dischargeDialogConfirm => 'Yes, discharge';
+
+  @override
+  String get dischargeAlreadyTitle => 'Discharge already recorded';
+
+  @override
+  String get dischargeAlreadyBody =>
+      'This patient had already been discharged.';
 }
