@@ -104,6 +104,54 @@ abstract class AppLocalizations {
   /// **'Healthify'**
   String get appName;
 
+  /// No description provided for @commonClose.
+  ///
+  /// In es, this message translates to:
+  /// **'Cerrar'**
+  String get commonClose;
+
+  /// No description provided for @errorNetwork.
+  ///
+  /// In es, this message translates to:
+  /// **'No hay conexión. Revisa tu internet e inténtalo de nuevo.'**
+  String get errorNetwork;
+
+  /// No description provided for @errorUnauthorized.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu sesión terminó. Vuelve a ingresar.'**
+  String get errorUnauthorized;
+
+  /// No description provided for @errorForbidden.
+  ///
+  /// In es, this message translates to:
+  /// **'No tienes acceso a esta información.'**
+  String get errorForbidden;
+
+  /// No description provided for @errorNotFound.
+  ///
+  /// In es, this message translates to:
+  /// **'No encontramos lo que buscabas.'**
+  String get errorNotFound;
+
+  /// No description provided for @errorConflict.
+  ///
+  /// In es, this message translates to:
+  /// **'Esto ya cambió. Actualiza e inténtalo de nuevo.'**
+  String get errorConflict;
+
+  /// No description provided for @errorValidation.
+  ///
+  /// In es, this message translates to:
+  /// **'Revisa los datos e inténtalo de nuevo.'**
+  String get errorValidation;
+
+  /// No description provided for @errorUnexpected.
+  ///
+  /// In es, this message translates to:
+  /// **'Algo salió mal. Inténtalo de nuevo en unos minutos.'**
+  String get errorUnexpected;
+
   /// No description provided for @brandLogoCd.
   ///
   /// In es, this message translates to:
@@ -163,6 +211,72 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Cancelar'**
   String get dsCancel;
+
+  /// No description provided for @dsRetry.
+  ///
+  /// In es, this message translates to:
+  /// **'Reintentar'**
+  String get dsRetry;
+
+  /// No description provided for @dsErrorStateTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'ALGO FALLÓ'**
+  String get dsErrorStateTitle;
+
+  /// No description provided for @dsErrorStateBody.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos completar esta acción. Inténtalo de nuevo en un momento.'**
+  String get dsErrorStateBody;
+
+  /// No description provided for @dsOfflineQueueable.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin conexión. Lo que registres se guarda y se enviará solo.'**
+  String get dsOfflineQueueable;
+
+  /// No description provided for @dsOfflineRequiresNetwork.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin conexión. Necesitas conexión para continuar.'**
+  String get dsOfflineRequiresNetwork;
+
+  /// No description provided for @statusChipPendingConfirmation.
+  ///
+  /// In es, this message translates to:
+  /// **'Por confirmar'**
+  String get statusChipPendingConfirmation;
+
+  /// No description provided for @statusChipPendingSync.
+  ///
+  /// In es, this message translates to:
+  /// **'Pendiente'**
+  String get statusChipPendingSync;
+
+  /// No description provided for @statusChipConfirmed.
+  ///
+  /// In es, this message translates to:
+  /// **'Confirmada'**
+  String get statusChipConfirmed;
+
+  /// No description provided for @statusChipPhoto.
+  ///
+  /// In es, this message translates to:
+  /// **'Foto'**
+  String get statusChipPhoto;
+
+  /// No description provided for @statusChipManual.
+  ///
+  /// In es, this message translates to:
+  /// **'Manual'**
+  String get statusChipManual;
+
+  /// No description provided for @statusChipOffPlan.
+  ///
+  /// In es, this message translates to:
+  /// **'Fuera del plan'**
+  String get statusChipOffPlan;
 
   /// No description provided for @navPatients.
   ///
