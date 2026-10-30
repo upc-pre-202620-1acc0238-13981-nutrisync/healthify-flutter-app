@@ -574,6 +574,1116 @@ class AppLocalizationsEn extends AppLocalizations {
       'This patient had already been discharged.';
 
   @override
+  String get patientTabSummary => 'Summary';
+
+  @override
+  String get patientTabFollowUp => 'Follow-up';
+
+  @override
+  String get patientTabPlan => 'Plan';
+
+  @override
+  String get patientUnnamed => 'Patient';
+
+  @override
+  String patientPlanVersion(int version) {
+    return 'Plan version $version';
+  }
+
+  @override
+  String patientInRosterSince(String date) {
+    return 'in your roster since $date';
+  }
+
+  @override
+  String get patientWithoutPlan => 'no plan';
+
+  @override
+  String get patientNewChip => 'New intake';
+
+  @override
+  String get patientPlanActiveChip => 'Current';
+
+  @override
+  String get patientOfflineBody =>
+      'Your patients\' data is not stored on the phone. Try again when you\'re connected.';
+
+  @override
+  String patientSnackbarPlanPublished(String patient) {
+    return 'Plan published. $patient can now see their targets.';
+  }
+
+  @override
+  String patientSnackbarReferralRegistered(String specialty) {
+    return 'Referral to $specialty registered.';
+  }
+
+  @override
+  String get patientSnackbarView => 'View';
+
+  @override
+  String patientSnackbarFollowUpScheduled(String day, String time) {
+    return 'Consultation scheduled: $day, $time';
+  }
+
+  @override
+  String get summaryNoBaselineTitle => 'No baseline data yet';
+
+  @override
+  String get summaryNoBaselineBody =>
+      'Record it once: date of birth, sex, height and medical history. Age, BMI and targets are calculated from it.';
+
+  @override
+  String get summaryRegisterBaseline => 'Record baseline data';
+
+  @override
+  String get summaryContinueConsultation => 'Continue consultation';
+
+  @override
+  String get summaryInProgressTitle => 'Consultation in progress';
+
+  @override
+  String summaryInProgressBody(
+    int step,
+    int total,
+    String title,
+    String saved,
+  ) {
+    return 'Step $step of $total · $title · $saved';
+  }
+
+  @override
+  String get summaryNextFollowUp => 'Next consultation';
+
+  @override
+  String summaryFollowUpWhen(String day, String time) {
+    return '$day · $time';
+  }
+
+  @override
+  String get summaryBaselineTitle => 'Baseline data';
+
+  @override
+  String get summarySinceLastConsultation => 'SINCE THE LAST CONSULTATION';
+
+  @override
+  String get summaryWeightLabel => 'Weight (self-weigh-in)';
+
+  @override
+  String get summaryComplianceLabel => 'Adherence';
+
+  @override
+  String get summaryComplianceLastWeek => 'Last 7 days';
+
+  @override
+  String summaryComplianceSince(String date) {
+    return 'Since $date';
+  }
+
+  @override
+  String get summaryManagement => 'MANAGEMENT';
+
+  @override
+  String get commonEdit => 'Edit';
+
+  @override
+  String get savedToday => 'saved today';
+
+  @override
+  String get savedYesterday => 'saved yesterday';
+
+  @override
+  String savedOn(String date) {
+    return 'saved on $date';
+  }
+
+  @override
+  String get sexFemale => 'Female';
+
+  @override
+  String get sexMale => 'Male';
+
+  @override
+  String get sexSummaryFemale => 'Woman';
+
+  @override
+  String get sexSummaryMale => 'Man';
+
+  @override
+  String get conditionType2Diabetes => 'Type 2 diabetes';
+
+  @override
+  String get conditionHypertension => 'Hypertension';
+
+  @override
+  String get conditionCeliacDisease => 'Celiac disease';
+
+  @override
+  String get conditionHypothyroidism => 'Hypothyroidism';
+
+  @override
+  String get conditionChronicKidneyDisease => 'Kidney disease';
+
+  @override
+  String get conditionGout => 'Gout';
+
+  @override
+  String get consultationStepMeasurement => 'Today\'s measurement';
+
+  @override
+  String get consultationStepDiagnosis => 'Diagnosis';
+
+  @override
+  String get consultationStepTargets => 'Targets';
+
+  @override
+  String get consultationStepPublication => 'Guidelines and publication';
+
+  @override
+  String consultationStepHeader(int step, int total, String title) {
+    return 'Step $step of $total · $title';
+  }
+
+  @override
+  String get unitCm => 'cm';
+
+  @override
+  String unitCmValue(String value) {
+    return '$value cm';
+  }
+
+  @override
+  String unitKcalValue(String value) {
+    return '$value kcal';
+  }
+
+  @override
+  String unitKgValue(String value) {
+    return '$value kg';
+  }
+
+  @override
+  String unitKgPerWeek(String value) {
+    return '$value kg/wk';
+  }
+
+  @override
+  String unitGValue(String value) {
+    return '$value g';
+  }
+
+  @override
+  String get macroProtein => 'Protein';
+
+  @override
+  String get macroFat => 'Fat';
+
+  @override
+  String get macroCarbsShort => 'Carbs';
+
+  @override
+  String get followUpThisWeek => 'This week';
+
+  @override
+  String get followUpLegendMet => 'Within targets';
+
+  @override
+  String get followUpLegendExceeded => 'Above';
+
+  @override
+  String get followUpLegendShort => 'Below';
+
+  @override
+  String get followUpLegendUnlogged => 'Not logged';
+
+  @override
+  String followUpDayCd(String day, String outcome) {
+    return '$day: $outcome';
+  }
+
+  @override
+  String get followUpWeightTrend => 'Weight trend';
+
+  @override
+  String get followUpLogging => 'Logging';
+
+  @override
+  String get followUpLoggingCaption => 'Meals logged';
+
+  @override
+  String get followUpAiBadge => 'AI-generated summary';
+
+  @override
+  String get followUpAiReview =>
+      'Review it before using it in the consultation.';
+
+  @override
+  String get followUpDiaryToday => 'Today\'s diary';
+
+  @override
+  String get followUpDiaryEmpty => 'No meals logged today yet.';
+
+  @override
+  String get followUpFoodUnnamed => 'Meal';
+
+  @override
+  String followUpFoodPortion(String name, String grams) {
+    return '$name · $grams g';
+  }
+
+  @override
+  String followUpEntryMeta(String time, String source) {
+    return '$time · $source';
+  }
+
+  @override
+  String get followUpProvenancePhoto => 'photo';
+
+  @override
+  String get followUpProvenanceManual => 'manual';
+
+  @override
+  String get followUpProvenanceOffPlan => 'off plan';
+
+  @override
+  String get followUpEntryConfirmed => 'Confirmed';
+
+  @override
+  String get followUpLastMeasurement => 'Last clinical measurement';
+
+  @override
+  String get followUpReadOnly =>
+      'Read only: you can\'t write or correct diary entries.';
+
+  @override
+  String get protocolFasting => 'Fasting';
+
+  @override
+  String get protocolNoShoes => 'No shoes';
+
+  @override
+  String get protocolLightClothing => 'Light clothing';
+
+  @override
+  String get protocolEmptyBladder => 'Empty bladder';
+
+  @override
+  String get protocolSameScale => 'Same scale';
+
+  @override
+  String get planActiveTargets => 'Current targets';
+
+  @override
+  String planVersionChip(int version) {
+    return 'Version $version';
+  }
+
+  @override
+  String get planKcalPerDay => 'kcal / day';
+
+  @override
+  String planPublishedOn(String date) {
+    return 'Published on $date';
+  }
+
+  @override
+  String planSeenSameDay(String name) {
+    return '$name saw them the same day.';
+  }
+
+  @override
+  String planSeenOn(String name, String date) {
+    return '$name saw them on $date.';
+  }
+
+  @override
+  String planSeen(String name) {
+    return '$name has seen them.';
+  }
+
+  @override
+  String planNotSeenYet(String name) {
+    return '$name hasn\'t reviewed them yet.';
+  }
+
+  @override
+  String get planGuidelines => 'Guidelines';
+
+  @override
+  String get planRestrictions => 'Restrictions';
+
+  @override
+  String get planNone => 'None';
+
+  @override
+  String get planHistory => 'PLAN HISTORY';
+
+  @override
+  String planVersionTitle(int version) {
+    return 'Version $version';
+  }
+
+  @override
+  String planVersionLine(String date, String kcal) {
+    return '$date · $kcal kcal';
+  }
+
+  @override
+  String get planAdjust => 'Adjust plan';
+
+  @override
+  String get planEmptyTitle => 'No plan yet';
+
+  @override
+  String get planEmptyBody =>
+      'The plan is published when the guided consultation is closed.';
+
+  @override
+  String planVersionDetailPublished(String date) {
+    return 'Published on $date';
+  }
+
+  @override
+  String get planVersionDetailMessageToPatient => 'Message to the patient';
+
+  @override
+  String get guidelinePrioritizeVegetables => 'Prioritize vegetables';
+
+  @override
+  String get guidelineDrink2lWater => 'Drink 2 L of water a day';
+
+  @override
+  String get guidelineAvoidSugaryDrinks => 'Avoid sugary drinks';
+
+  @override
+  String get guidelineProteinAtBreakfast => 'Protein at breakfast';
+
+  @override
+  String get guidelineReduceSalt => 'Reduce salt';
+
+  @override
+  String get guidelineEatEvery3To4Hours => 'Eat every 3 to 4 hours';
+
+  @override
+  String get guidelineProteinAndVegetablesAtDinner =>
+      'Protein and vegetables at dinner';
+
+  @override
+  String get restrictionLactoseFree => 'Lactose-free';
+
+  @override
+  String get restrictionGlutenFree => 'Gluten-free';
+
+  @override
+  String get restrictionVegan => 'Vegan';
+
+  @override
+  String get restrictionVegetarian => 'Vegetarian';
+
+  @override
+  String get restrictionTreeNutFree => 'Tree-nut-free';
+
+  @override
+  String get restrictionShellfishFree => 'Shellfish-free';
+
+  @override
+  String get restrictionKosher => 'Kosher';
+
+  @override
+  String get restrictionHalal => 'Halal';
+
+  @override
+  String get baselineTitle => 'BASELINE DATA';
+
+  @override
+  String get baselineIntro =>
+      'Recorded only once. You can edit it later from the Summary tab.';
+
+  @override
+  String get baselineBirthDate => 'Date of birth';
+
+  @override
+  String get baselineBirthDateRequired => 'Choose the date of birth.';
+
+  @override
+  String get baselineBirthDateRange => 'The date must be 1 to 120 years ago.';
+
+  @override
+  String baselineAgeAuto(String age) {
+    return 'Age: $age (updates by itself)';
+  }
+
+  @override
+  String get baselineSex => 'Biological sex';
+
+  @override
+  String get baselineSexRequired => 'Choose the biological sex.';
+
+  @override
+  String get baselineHeight => 'Height';
+
+  @override
+  String get baselineHeightRequired => 'Enter the height in cm.';
+
+  @override
+  String get baselineHeightRange => 'Height goes from 50 to 250 cm.';
+
+  @override
+  String get baselineConditions => 'Medical history';
+
+  @override
+  String get baselineConditionsHint => 'You can choose several.';
+
+  @override
+  String get baselineSaveAndStart => 'Save and start consultation';
+
+  @override
+  String get baselineSaveAndExit => 'Save and exit';
+
+  @override
+  String get baselineSave => 'Save changes';
+
+  @override
+  String baselineAgeYears(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count years',
+      one: '$count year',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String daysOfTotal(int met, int total) {
+    String _temp0 = intl.Intl.pluralLogic(
+      total,
+      locale: localeName,
+      other: '$met of $total days',
+      one: '$met of $total day',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String summaryWeightCaption(int weeks) {
+    String _temp0 = intl.Intl.pluralLogic(
+      weeks,
+      locale: localeName,
+      other: 'Trend · $weeks weeks',
+      one: 'Trend · $weeks week',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String followUpWeightTrendCaption(int weeks) {
+    String _temp0 = intl.Intl.pluralLogic(
+      weeks,
+      locale: localeName,
+      other: 'Self-weigh-in · $weeks weeks',
+      one: 'Self-weigh-in · $weeks week',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get patientTabRecord => 'History';
+
+  @override
+  String get summaryStartConsultation => 'New consultation';
+
+  @override
+  String get recordPrClinicalWeight => 'Clinical weight';
+
+  @override
+  String recordPrWeightDelta(String delta, String month) {
+    return '$delta kg since $month';
+  }
+
+  @override
+  String get recordPrNoMeasurement => 'No measurement yet';
+
+  @override
+  String get recordPrBmi => 'BMI';
+
+  @override
+  String recordPrBmiValue(String value) {
+    return 'BMI $value';
+  }
+
+  @override
+  String get recordPrActiveTargets => 'Current targets';
+
+  @override
+  String recordPrVersionOn(int version, String date) {
+    return 'Version $version · $date';
+  }
+
+  @override
+  String get recordPrNoPlan => 'No plan yet';
+
+  @override
+  String get recordPrActiveDiagnosis => 'Active diagnosis';
+
+  @override
+  String recordPrDiagnosisLine(String label, String date) {
+    return '$label · $date · practitioner only';
+  }
+
+  @override
+  String get recordPrNoDiagnosis => 'No diagnosis yet · practitioner only';
+
+  @override
+  String recordPrReferralTitle(String specialty) {
+    return 'Referral to $specialty';
+  }
+
+  @override
+  String recordPrReferralLine(String date, String status) {
+    return '$date · $status';
+  }
+
+  @override
+  String get recordPrReferralOpen => 'in progress';
+
+  @override
+  String get recordPrReferralClosed => 'closed';
+
+  @override
+  String get recordPrEvaluations => 'EVALUATIONS';
+
+  @override
+  String get recordPrNoEvaluations => 'No evaluations yet';
+
+  @override
+  String get recordPrFirstEvaluation => 'first evaluation';
+
+  @override
+  String recordPrWaistValue(String value) {
+    return 'waist $value cm';
+  }
+
+  @override
+  String get recordReferralsTitle => 'Referrals';
+
+  @override
+  String get evaluationDetailTitle => 'Assessment';
+
+  @override
+  String get referralDetailOpen => 'Ongoing';
+
+  @override
+  String get referralDetailClosed => 'Closed';
+
+  @override
+  String referralDetailIssuedOn(String date) {
+    return 'Recorded on $date';
+  }
+
+  @override
+  String referralDetailClosedOn(String date) {
+    return 'closed on $date';
+  }
+
+  @override
+  String get referralDetailReason => 'Reason';
+
+  @override
+  String get referralDetailNoReason => 'No reason recorded.';
+
+  @override
+  String get historyRecordUnavailable => 'We couldn\'t load the record.';
+
+  @override
+  String get activityInlineIntense => 'intense activity';
+
+  @override
+  String get activityInlineLight => 'light activity';
+
+  @override
+  String get activityInlineModerate => 'moderate activity';
+
+  @override
+  String get activityInlineSedentary => 'sedentary activity';
+
+  @override
+  String get activityIntense => 'Intense';
+
+  @override
+  String get activityLight => 'Light';
+
+  @override
+  String get activityModerate => 'Moderate';
+
+  @override
+  String get activitySedentary => 'Sedentary';
+
+  @override
+  String get checkInDifficultyCravings => 'Cravings';
+
+  @override
+  String get checkInDifficultyDinners => 'Dinners';
+
+  @override
+  String get checkInDifficultyEatingOut => 'Eating out';
+
+  @override
+  String get checkInDifficultySchedules => 'Schedules';
+
+  @override
+  String get checkInDifficultyWeekends => 'Weekends';
+
+  @override
+  String checkInReportDifficulties(String list) {
+    return 'Found it hard: $list.';
+  }
+
+  @override
+  String get checkInReportFeelingFair => 'Felt so-so with the plan.';
+
+  @override
+  String get checkInReportFeelingGood => 'Felt good with the plan.';
+
+  @override
+  String get checkInReportFeelingHard => 'Found the plan hard to follow.';
+
+  @override
+  String checkInReportQuestion(String question) {
+    return 'Question: $question';
+  }
+
+  @override
+  String consultationDiscardBody(String patient) {
+    return 'The consultation with $patient from today is discarded. Their current plan and targets stay the same.';
+  }
+
+  @override
+  String get consultationDiscardCd => 'Delete the consultation';
+
+  @override
+  String get consultationDiscardConfirm => 'Delete consultation';
+
+  @override
+  String get consultationDiscardKeep => 'Keep it';
+
+  @override
+  String get consultationDiscardTitle => 'DELETE THIS CONSULTATION?';
+
+  @override
+  String consultationExitBody(String patient) {
+    return 'What you already saved stays saved. You can continue from “Consultation in progress” in $patient\'s summary.';
+  }
+
+  @override
+  String get consultationExitConfirm => 'Leave and continue later';
+
+  @override
+  String get consultationExitStay => 'Stay here';
+
+  @override
+  String get consultationExitTitle => 'LEAVE THE CONSULTATION?';
+
+  @override
+  String get consultationOfflineBody =>
+      'You need a connection to continue the consultation. What you already saved isn\'t lost.';
+
+  @override
+  String get consultationTitle => 'TODAY\'S CONSULTATION';
+
+  @override
+  String get diagnosisAiBadge => 'AI suggestion';
+
+  @override
+  String get diagnosisChooseOther => 'Choose another';
+
+  @override
+  String get diagnosisContinue => 'Continue to targets';
+
+  @override
+  String get diagnosisDisclaimer =>
+      'Based on the measurement and history of this evaluation. Review it before using it.';
+
+  @override
+  String get diagnosisNormalWeight => 'Normal weight';
+
+  @override
+  String get diagnosisObesityGradeI => 'Obesity grade I';
+
+  @override
+  String get diagnosisObesityGradeIi => 'Obesity grade II';
+
+  @override
+  String get diagnosisObesityGradeIii => 'Obesity grade III';
+
+  @override
+  String get diagnosisOverweightGradeI => 'Overweight grade I';
+
+  @override
+  String get diagnosisRationale => 'Clinical rationale';
+
+  @override
+  String get diagnosisRequired => 'Choose a diagnosis to continue.';
+
+  @override
+  String get diagnosisRuleBadge => 'Suggestion based on BMI';
+
+  @override
+  String get diagnosisSubtitle =>
+      'Only for your professional record. The patient won\'t see it.';
+
+  @override
+  String get diagnosisSuggestionUsed => 'Suggestion chosen';
+
+  @override
+  String get diagnosisTitle => 'Diagnosis';
+
+  @override
+  String get diagnosisUnderweight => 'Underweight';
+
+  @override
+  String get diagnosisUseSuggestion => 'Use suggestion';
+
+  @override
+  String get equationFaoWhoUnu => 'FAO/WHO/UNU';
+
+  @override
+  String get equationHarrisBenedict => 'Harris-Benedict';
+
+  @override
+  String get equationKatchMcardle => 'Katch-McArdle';
+
+  @override
+  String get equationMifflinStJeor => 'Mifflin-St Jeor';
+
+  @override
+  String get measurementActivity => 'Current physical activity';
+
+  @override
+  String get measurementActivityRequired =>
+      'Choose the current physical activity.';
+
+  @override
+  String get measurementBiochemistry => 'Biochemical data';
+
+  @override
+  String get measurementBiochemistryHint =>
+      'Glucose, cholesterol, triglycerides';
+
+  @override
+  String get measurementBmi => 'Calculated BMI';
+
+  @override
+  String get measurementBodyFat => 'Body fat';
+
+  @override
+  String get measurementBodyFatPlaceholder => 'E.g. 24';
+
+  @override
+  String get measurementBodyFatRange => 'From 3 to 70 %.';
+
+  @override
+  String measurementCheckInSent(String date) {
+    return 'Sent on $date from their app.';
+  }
+
+  @override
+  String measurementCheckInTitle(String name) {
+    return 'Before the consultation, $name shared';
+  }
+
+  @override
+  String get measurementCholesterol => 'Total cholesterol';
+
+  @override
+  String get measurementCholesterolRange => 'From 50 to 500 mg/dL.';
+
+  @override
+  String get measurementContinue => 'Continue to diagnosis';
+
+  @override
+  String get measurementFromBaseline => 'From the baseline data';
+
+  @override
+  String measurementFromBaselineWith(String conditions) {
+    return '$conditions · from the baseline data';
+  }
+
+  @override
+  String get measurementGlucose => 'Fasting glucose';
+
+  @override
+  String get measurementGlucoseRange => 'From 20 to 600 mg/dL.';
+
+  @override
+  String get measurementHabits => 'Eating habits';
+
+  @override
+  String get measurementHabitsHint => 'Meals per day, water, meals out';
+
+  @override
+  String get measurementMealsOut => 'Meals out per week';
+
+  @override
+  String get measurementMealsOutRange => 'From 0 to 21 meals.';
+
+  @override
+  String get measurementMealsPerDay => 'Meals per day';
+
+  @override
+  String get measurementMealsPerDayRange => 'From 1 to 10 meals.';
+
+  @override
+  String get measurementMeasures => 'Measurements';
+
+  @override
+  String get measurementOptional => 'OPTIONAL';
+
+  @override
+  String get measurementOptionalNote => 'Waist and body fat are optional.';
+
+  @override
+  String get measurementProtocol => 'Protocol used';
+
+  @override
+  String get measurementProtocolRequired => 'Tick at least one protocol box.';
+
+  @override
+  String get measurementSubtitle =>
+      'Only what changes between consultations. The rest comes from the baseline data.';
+
+  @override
+  String get measurementTriglycerides => 'Triglycerides';
+
+  @override
+  String get measurementTriglyceridesRange => 'From 20 to 2000 mg/dL.';
+
+  @override
+  String get measurementWaist => 'Waist';
+
+  @override
+  String get measurementWaistRange => 'From 40 to 200 cm.';
+
+  @override
+  String get measurementWater => 'Water';
+
+  @override
+  String get measurementWaterRange => 'From 0 to 10 liters.';
+
+  @override
+  String get measurementWeight => 'Weight';
+
+  @override
+  String get measurementWeightRange => 'Weight goes from 20 to 350 kg.';
+
+  @override
+  String get measurementWeightRequired => 'Enter the weight in kg.';
+
+  @override
+  String get publicationAddGuideline => 'Add guideline';
+
+  @override
+  String get publicationChooseSeveral => 'You can choose several.';
+
+  @override
+  String get publicationErrorBody =>
+      'We couldn\'t publish the plan. What you wrote wasn\'t lost.';
+
+  @override
+  String get publicationErrorRetry => 'Try again';
+
+  @override
+  String get publicationErrorTitle => 'SOMETHING WENT WRONG';
+
+  @override
+  String get publicationGuidelines => 'Guidelines';
+
+  @override
+  String get publicationMessage => 'Message for your patient';
+
+  @override
+  String get publicationMessageLabel => 'Message (optional)';
+
+  @override
+  String get publicationMessagePlaceholder =>
+      'They\'ll see it with their targets.';
+
+  @override
+  String get publicationMessageTooLong => 'Use at most 500 characters.';
+
+  @override
+  String get publicationOtherGuideline => 'Other guideline';
+
+  @override
+  String get publicationOtherGuidelineLength => 'Write 3 to 140 characters.';
+
+  @override
+  String get publicationOtherGuidelineMax =>
+      'You can add up to 5 guidelines of your own.';
+
+  @override
+  String get publicationPatientSees =>
+      'Your patient will see the targets, guidelines and restrictions. They won\'t see the diagnosis.';
+
+  @override
+  String get publicationPublish => 'Publish and close consultation';
+
+  @override
+  String get publicationRestrictions => 'Restrictions';
+
+  @override
+  String get publicationSuggestedAi => 'Suggested by AI based on the diagnosis';
+
+  @override
+  String get publicationSuggestedRule => 'Suggested based on the diagnosis';
+
+  @override
+  String get targetsAccept => 'Accept targets';
+
+  @override
+  String targetsActivityFactor(String factor) {
+    return 'activity factor $factor';
+  }
+
+  @override
+  String get targetsCalculatedWith => 'Calculated with';
+
+  @override
+  String get targetsChangeParameters => 'Change parameters';
+
+  @override
+  String get targetsDeficit => 'Deficit';
+
+  @override
+  String targetsDeficitKcal(String value) {
+    return '$value kcal deficit';
+  }
+
+  @override
+  String get targetsDeficitKindKcal => 'Fixed kcal';
+
+  @override
+  String get targetsDeficitKindPercent => '% of expenditure';
+
+  @override
+  String targetsDeficitPercent(String value) {
+    return '$value % deficit';
+  }
+
+  @override
+  String get targetsDeficitValue => 'Deficit value';
+
+  @override
+  String get targetsEnergy => 'Energy';
+
+  @override
+  String get targetsEnergyInvalid => 'Enter an energy greater than 0.';
+
+  @override
+  String get targetsEquation => 'Equation';
+
+  @override
+  String get targetsFatPercent => 'Fat share of energy';
+
+  @override
+  String get targetsKcalPerDay => 'kcal per day';
+
+  @override
+  String targetsMacroShare(String label, int percent) {
+    return '$label · $percent %';
+  }
+
+  @override
+  String get targetsOverrideReason => 'Reason for the change';
+
+  @override
+  String get targetsOverrideReasonPlaceholder =>
+      'E.g. Adjusted to their work schedule';
+
+  @override
+  String get targetsOverrideReasonRequired =>
+      'Write the reason for the change: it stays in the record.';
+
+  @override
+  String get targetsOverrideSave => 'Save and continue';
+
+  @override
+  String get targetsOverrideTitle => 'Your own values';
+
+  @override
+  String get targetsParametersInvalid =>
+      'Check the values: deficit 0–1500 kcal or 0–40 %, protein 0.5–3 g/kg and fat 15–45 %.';
+
+  @override
+  String get targetsParametersTitle => 'Change parameters';
+
+  @override
+  String get targetsProposed => 'Proposed targets';
+
+  @override
+  String get targetsProteinPerKg => 'Protein';
+
+  @override
+  String get targetsRecalculate => 'Recalculate targets';
+
+  @override
+  String get targetsSubtitle =>
+      'Calculated automatically from the baseline data and today\'s measurement.';
+
+  @override
+  String get targetsWriteOwn => 'Write my own values';
+
+  @override
+  String textCounter(int count, int max) {
+    return '$count/$max';
+  }
+
+  @override
+  String unitBmiValue(String value) {
+    return '$value kg/m²';
+  }
+
+  @override
+  String get unitG => 'g';
+
+  @override
+  String get unitGPerKg => 'g/kg';
+
+  @override
+  String get unitKcal => 'kcal';
+
+  @override
+  String get unitKg => 'kg';
+
+  @override
+  String get unitLitersPerDay => 'L/day';
+
+  @override
+  String get unitMgDl => 'mg/dL';
+
+  @override
+  String get unitPercent => '%';
+
+  @override
+  String get aiGeneratingNote =>
+      'Generating with AI. It can take up to a minute.';
+
+  @override
+  String get diagnosisSuggestionFailedTitle =>
+      'We couldn\'t generate the AI suggestion';
+
+  @override
+  String get diagnosisSuggestionFailedBody =>
+      'You can pick the diagnosis from the list or try again. What you already chose is kept.';
+
+  @override
+  String get publicationSuggestionsFailed =>
+      'We couldn\'t load the AI-suggested guidelines. You can choose your own or try again.';
+
+  @override
+  String get targetsCalculating => 'Calculating the targets…';
+
+  @override
   String shellSignalResolved(String name) {
     return 'Signal resolved. $name is no longer in your inbox.';
   }
@@ -591,4 +1701,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String shellFollowUpRescheduled(String day, String time) {
     return 'Consultation rescheduled: $day, $time';
   }
+
+  @override
+  String get summarySchedule => 'Schedule consultation';
+
+  @override
+  String get summaryReferral => 'Register referral';
 }

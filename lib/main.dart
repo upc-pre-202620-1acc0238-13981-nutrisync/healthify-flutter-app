@@ -9,6 +9,8 @@ import 'features/carerelationship/infrastructure/di/care_relationship_module.dar
 import 'features/iam/application/usecase/session_use_cases.dart';
 import 'features/iam/infrastructure/di/iam_module.dart';
 import 'features/main/presentation/di/main_module.dart';
+import 'features/monitoring/infrastructure/di/monitoring_module.dart';
+import 'features/nutritionalcare/infrastructure/di/nutritional_care_module.dart';
 import 'features/onboarding/presentation/di/onboarding_module.dart';
 import 'navigation/app_router.dart';
 import 'navigation/session_gate.dart';
@@ -24,6 +26,8 @@ Future<void> main() async {
 void registerFeatureModules() {
   registerIam();
   registerCareRelationship();
+  registerNutritionalCare();
+  registerMonitoring();
   registerMain();
   registerOnboarding();
 }

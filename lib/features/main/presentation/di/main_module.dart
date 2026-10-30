@@ -1,5 +1,6 @@
 import '../../../../core/connectivity/connectivity_observer.dart';
 import '../../../../core/di/service_locator.dart';
+import '../cubit/patient_history_cubit.dart';
 import '../cubit/practitioner_settings_cubit.dart';
 import '../cubit/practitioner_shell_cubit.dart';
 import '../cubit/sign_out_cubit.dart';
@@ -12,5 +13,15 @@ void registerMain() {
     ..registerLazySingleton<PractitionerShellMessages>(PractitionerShellMessages.new)
     ..registerFactory(() => PractitionerShellCubit(getIt(), getIt<PractitionerShellMessages>()))
     ..registerFactory(() => PractitionerSettingsCubit(getIt(), getIt(), getIt(), getIt(), getIt<ConnectivityObserver>()))
-    ..registerFactory(() => SignOutCubit(getIt()));
+    ..registerFactory(() => SignOutCubit(getIt()))
+    ..registerFactoryParam<PatientHistoryCubit, int, void>(
+      (patientId, _) => PatientHistoryCubit(
+        getIt(),
+        getIt(),
+        getIt(),
+        getIt(),
+        getIt<ConnectivityObserver>(),
+        patientId: patientId,
+      ),
+    );
 }
