@@ -969,5 +969,15 @@
   "consultationReminderTitleDay": "Consultation tomorrow",
   "consultationReminderTitleHour": "Consultation in one hour",
   "consultationReminderText": "With {patientName} at {time}.",
-  "consultationReminderTextNoName": "With your patient at {time}."
+  "consultationReminderTextNoName": "With your patient at {time}.",
+  "foodCatalogTitle": "CATALOG",
+  "foodCatalogSearch": "Search food",
+  "foodCatalogSearchPlaceholder": "Search food…",
+  "foodCatalogLocalName": "{name} (local)",
+  "foodCatalogEnergy": "{kcal} kcal / 100 g",
+  "foodCatalogAddLocal": "Add local food",
+  "foodCatalogEmptyTitle": "No results",
+  "foodCatalogEmptyBody": "We didn't find foods with that name. You can add it as a local food.",
+  "foodCatalogOfflineBody": "Managing the catalog needs a connection. Try again when you're connected.",
+  "foodCatalogAdded": "“{name}” was added to the local catalog."
 }

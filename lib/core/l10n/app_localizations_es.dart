@@ -2218,4 +2218,42 @@ class AppLocalizationsEs extends AppLocalizations {
   String consultationReminderTextNoName(String time) {
     return 'Con tu paciente a las $time.';
   }
+
+  @override
+  String get foodCatalogTitle => 'CATÁLOGO';
+
+  @override
+  String get foodCatalogSearch => 'Buscar alimento';
+
+  @override
+  String get foodCatalogSearchPlaceholder => 'Buscar alimento…';
+
+  @override
+  String foodCatalogLocalName(String name) {
+    return '$name (local)';
+  }
+
+  @override
+  String foodCatalogEnergy(String kcal) {
+    return '$kcal kcal / 100 g';
+  }
+
+  @override
+  String get foodCatalogAddLocal => 'Agregar alimento local';
+
+  @override
+  String get foodCatalogEmptyTitle => 'Sin resultados';
+
+  @override
+  String get foodCatalogEmptyBody =>
+      'No encontramos alimentos con ese nombre. Puedes agregarlo como alimento local.';
+
+  @override
+  String get foodCatalogOfflineBody =>
+      'La gestión del catálogo necesita conexión. Vuelve a intentarlo cuando tengas conexión.';
+
+  @override
+  String foodCatalogAdded(String name) {
+    return '«$name» se agregó al catálogo local.';
+  }
 }

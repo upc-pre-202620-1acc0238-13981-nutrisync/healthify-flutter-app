@@ -3911,6 +3911,66 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Con tu paciente a las {time}.'**
   String consultationReminderTextNoName(String time);
+
+  /// No description provided for @foodCatalogTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'CATÁLOGO'**
+  String get foodCatalogTitle;
+
+  /// No description provided for @foodCatalogSearch.
+  ///
+  /// In es, this message translates to:
+  /// **'Buscar alimento'**
+  String get foodCatalogSearch;
+
+  /// No description provided for @foodCatalogSearchPlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'Buscar alimento…'**
+  String get foodCatalogSearchPlaceholder;
+
+  /// No description provided for @foodCatalogLocalName.
+  ///
+  /// In es, this message translates to:
+  /// **'{name} (local)'**
+  String foodCatalogLocalName(String name);
+
+  /// No description provided for @foodCatalogEnergy.
+  ///
+  /// In es, this message translates to:
+  /// **'{kcal} kcal / 100 g'**
+  String foodCatalogEnergy(String kcal);
+
+  /// No description provided for @foodCatalogAddLocal.
+  ///
+  /// In es, this message translates to:
+  /// **'Agregar alimento local'**
+  String get foodCatalogAddLocal;
+
+  /// No description provided for @foodCatalogEmptyTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin resultados'**
+  String get foodCatalogEmptyTitle;
+
+  /// No description provided for @foodCatalogEmptyBody.
+  ///
+  /// In es, this message translates to:
+  /// **'No encontramos alimentos con ese nombre. Puedes agregarlo como alimento local.'**
+  String get foodCatalogEmptyBody;
+
+  /// No description provided for @foodCatalogOfflineBody.
+  ///
+  /// In es, this message translates to:
+  /// **'La gestión del catálogo necesita conexión. Vuelve a intentarlo cuando tengas conexión.'**
+  String get foodCatalogOfflineBody;
+
+  /// No description provided for @foodCatalogAdded.
+  ///
+  /// In es, this message translates to:
+  /// **'«{name}» se agregó al catálogo local.'**
+  String foodCatalogAdded(String name);
 }
 
 class _AppLocalizationsDelegate

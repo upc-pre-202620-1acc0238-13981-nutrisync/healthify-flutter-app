@@ -1400,5 +1400,36 @@
         "type": "String"
       }
     }
+  },
+  "foodCatalogTitle": "CATÁLOGO",
+  "foodCatalogSearch": "Buscar alimento",
+  "foodCatalogSearchPlaceholder": "Buscar alimento…",
+  "foodCatalogLocalName": "{name} (local)",
+  "@foodCatalogLocalName": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "foodCatalogEnergy": "{kcal} kcal / 100 g",
+  "@foodCatalogEnergy": {
+    "placeholders": {
+      "kcal": {
+        "type": "String"
+      }
+    }
+  },
+  "foodCatalogAddLocal": "Agregar alimento local",
+  "foodCatalogEmptyTitle": "Sin resultados",
+  "foodCatalogEmptyBody": "No encontramos alimentos con ese nombre. Puedes agregarlo como alimento local.",
+  "foodCatalogOfflineBody": "La gestión del catálogo necesita conexión. Vuelve a intentarlo cuando tengas conexión.",
+  "foodCatalogAdded": "«{name}» se agregó al catálogo local.",
+  "@foodCatalogAdded": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
   }
 }
