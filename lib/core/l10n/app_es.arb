@@ -78,6 +78,17 @@
   "signUpErrorEmail": "Ingresa un correo válido",
   "signUpErrorEmailTaken": "Ya existe una cuenta con este correo. ¿Iniciar sesión?",
   "signUpErrorPassword": "Necesita mayúscula, minúscula, número y símbolo, y al menos 8 caracteres",
+  "signUpTermsAccept": "Acepto los {link}",
+  "@signUpTermsAccept": {
+    "placeholders": {
+      "link": {
+        "type": "String"
+      }
+    }
+  },
+  "signUpTermsLink": "términos y condiciones",
+  "signUpErrorTerms": "Acepta los términos y condiciones para crear tu cuenta",
+  "linkOpenFailed": "No se pudo abrir el enlace",
   "signInTitle": "INICIAR SESIÓN",
   "signInSubtitle": "Entra con tu correo. Te llevaremos a tu espacio según tu tipo de cuenta.",
   "signInPasswordPlaceholder": "Tu contraseña",

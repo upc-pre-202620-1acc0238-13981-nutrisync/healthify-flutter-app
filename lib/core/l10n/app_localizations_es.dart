@@ -255,6 +255,21 @@ class AppLocalizationsEs extends AppLocalizations {
       'Necesita mayúscula, minúscula, número y símbolo, y al menos 8 caracteres';
 
   @override
+  String signUpTermsAccept(String link) {
+    return 'Acepto los $link';
+  }
+
+  @override
+  String get signUpTermsLink => 'términos y condiciones';
+
+  @override
+  String get signUpErrorTerms =>
+      'Acepta los términos y condiciones para crear tu cuenta';
+
+  @override
+  String get linkOpenFailed => 'No se pudo abrir el enlace';
+
+  @override
   String get signInTitle => 'INICIAR SESIÓN';
 
   @override

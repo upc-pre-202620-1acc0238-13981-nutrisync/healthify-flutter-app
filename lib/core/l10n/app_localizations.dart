@@ -566,6 +566,30 @@ abstract class AppLocalizations {
   /// **'Necesita mayúscula, minúscula, número y símbolo, y al menos 8 caracteres'**
   String get signUpErrorPassword;
 
+  /// No description provided for @signUpTermsAccept.
+  ///
+  /// In es, this message translates to:
+  /// **'Acepto los {link}'**
+  String signUpTermsAccept(String link);
+
+  /// No description provided for @signUpTermsLink.
+  ///
+  /// In es, this message translates to:
+  /// **'términos y condiciones'**
+  String get signUpTermsLink;
+
+  /// No description provided for @signUpErrorTerms.
+  ///
+  /// In es, this message translates to:
+  /// **'Acepta los términos y condiciones para crear tu cuenta'**
+  String get signUpErrorTerms;
+
+  /// No description provided for @linkOpenFailed.
+  ///
+  /// In es, this message translates to:
+  /// **'No se pudo abrir el enlace'**
+  String get linkOpenFailed;
+
   /// No description provided for @signInTitle.
   ///
   /// In es, this message translates to:

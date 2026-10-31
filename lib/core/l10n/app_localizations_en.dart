@@ -258,6 +258,21 @@ class AppLocalizationsEn extends AppLocalizations {
       'It needs an uppercase letter, a lowercase letter, a number and a symbol, and at least 8 characters';
 
   @override
+  String signUpTermsAccept(String link) {
+    return 'I accept the $link';
+  }
+
+  @override
+  String get signUpTermsLink => 'terms and conditions';
+
+  @override
+  String get signUpErrorTerms =>
+      'Accept the terms and conditions to create your account';
+
+  @override
+  String get linkOpenFailed => 'The link could not be opened';
+
+  @override
   String get signInTitle => 'SIGN IN';
 
   @override
