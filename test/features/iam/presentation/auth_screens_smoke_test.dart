@@ -76,6 +76,7 @@ void main() {
         onFamilyNamesChange: noop,
         onEmailChange: noop,
         onPasswordChange: noop,
+        onTermsAcceptedChange: (_) {},
         onSubmit: noop,
         onSignIn: noop,
       ),
@@ -83,6 +84,7 @@ void main() {
     );
 
     expect(find.text('CREATE ACCOUNT'), findsWidgets);
+    expect(find.textContaining('terms and conditions'), findsOneWidget);
     expect(find.text('Dietitian'), findsNothing);
     expect(tester.takeException(), isNull);
   });

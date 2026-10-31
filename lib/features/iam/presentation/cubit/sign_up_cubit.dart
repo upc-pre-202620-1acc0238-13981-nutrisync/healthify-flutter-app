@@ -42,6 +42,9 @@ class SignUpCubit extends Cubit<SignUpState> {
   void onPasswordChange(String value) =>
       emit(state.copyWith(password: value, errors: state.errors.copyWith(weakPassword: false)));
 
+  void onTermsAcceptedChange(bool accepted) =>
+      emit(state.copyWith(acceptedTerms: accepted, errors: state.errors.copyWith(termsNotAccepted: false)));
+
   void onSignInClick() => _events.emit(const SignUpNavigateToSignIn());
 
   void onErrorDialogDismiss() => emit(state.copyWith(showErrorDialog: false));
@@ -61,9 +64,14 @@ class SignUpCubit extends Cubit<SignUpState> {
       password: current.password,
       role: UserRole.practitioner,
     );
+    // The terms are a client-side requirement (the backend does not receive them): checked together with the fields
+    // so every error shows at once.
+    final termsNotAccepted = !current.acceptedTerms;
     switch (validation) {
       case InvalidSignUp(:final problems):
-        emit(current.copyWith(errors: _fieldErrorsOf(problems)));
+        emit(current.copyWith(errors: _fieldErrorsOf(problems).copyWith(termsNotAccepted: termsNotAccepted)));
+      case ValidSignUp() when termsNotAccepted:
+        emit(current.copyWith(errors: const SignUpFieldErrors(termsNotAccepted: true)));
       case ValidSignUp(:final account):
         emit(current.copyWith(isSubmitting: true, errors: const SignUpFieldErrors()));
         final result = await _register(account);
