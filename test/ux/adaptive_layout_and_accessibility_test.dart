@@ -56,6 +56,7 @@ void main() {
         selected: selected,
         onSelect: onSelect ?? (_) {},
         onCloseMenu: () {},
+        onFoodCatalog: () {},
         onSettings: () {},
         onSignOut: () {},
         child: const Center(child: Text('contenido')),

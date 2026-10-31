@@ -391,6 +391,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get menuRolePractitioner => 'Nutricionista';
 
   @override
+  String get menuFoodCatalog => 'Catálogo de alimentos';
+
+  @override
   String get menuSettings => 'Ajustes';
 
   @override

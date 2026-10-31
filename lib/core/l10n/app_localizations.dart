@@ -812,6 +812,12 @@ abstract class AppLocalizations {
   /// **'Nutricionista'**
   String get menuRolePractitioner;
 
+  /// No description provided for @menuFoodCatalog.
+  ///
+  /// In es, this message translates to:
+  /// **'Catálogo de alimentos'**
+  String get menuFoodCatalog;
+
   /// No description provided for @menuSettings.
   ///
   /// In es, this message translates to:

@@ -309,6 +309,7 @@ void main() {
           selected: selected,
           onSelect: noop,
           onCloseMenu: noop,
+          onFoodCatalog: noop,
           onSettings: noop,
           onSignOut: noop,
           child: const Center(child: Text('contenido')),

@@ -146,6 +146,7 @@ GoRouter createAppRouter(SessionGate gate) => GoRouter(
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) => PractitionerShellScreen(
         navigationShell: navigationShell,
+        onOpenFoodCatalog: () => context.push(foodCatalogPath),
         onOpenSettings: () => context.push(practitionerSettingsPath),
         onSignOut: () => context.push(signOutConfirmationPath),
       ),
