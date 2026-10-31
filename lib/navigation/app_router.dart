@@ -7,6 +7,9 @@ import '../features/carerelationship/presentation/navigation/care_relationship_r
 import '../features/carerelationship/presentation/screen/discharge_patient_screen.dart';
 import '../features/carerelationship/presentation/screen/invite_patient_screen.dart';
 import '../features/carerelationship/presentation/screen/patient_roster_screen.dart';
+import '../features/foodcatalog/presentation/navigation/food_catalog_routes.dart';
+import '../features/foodcatalog/presentation/screen/add_local_food_screen.dart';
+import '../features/foodcatalog/presentation/screen/food_catalog_screen.dart';
 import '../features/iam/presentation/screen/forgot_password_screen.dart';
 import '../features/iam/presentation/screen/practitioner_only_screen.dart';
 import '../features/iam/presentation/screen/session_expired_screen.dart';
@@ -62,6 +65,7 @@ bool routeRequiresSession(String location) =>
       '/care-links',
       '/review-items',
       ScheduleFollowUpRoute.pathPattern,
+      foodCatalogPath,
       practitionerSettingsPath,
       signOutConfirmationPath,
     ].any((path) => location == path || location.startsWith('$path/'));
@@ -332,6 +336,17 @@ GoRouter createAppRouter(SessionGate gate) => GoRouter(
           },
         );
       },
+    ),
+    GoRoute(
+      path: foodCatalogPath,
+      builder: (context, state) => FoodCatalogScreen(
+        onBack: context.pop,
+        onAddLocalFood: () => context.push<String>(addLocalFoodPath),
+      ),
+    ),
+    GoRoute(
+      path: addLocalFoodPath,
+      builder: (context, state) => AddLocalFoodScreen(onBack: context.pop, onAdded: context.pop<String>),
     ),
     GoRoute(
       path: practitionerSettingsPath,
