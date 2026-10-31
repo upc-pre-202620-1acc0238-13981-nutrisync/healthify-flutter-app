@@ -14,6 +14,8 @@ import 'package:healthify/core/network/api_client.dart';
 import 'package:healthify/features/carerelationship/presentation/cubit/discharge_patient_cubit.dart';
 import 'package:healthify/features/carerelationship/presentation/cubit/invite_patient_cubit.dart';
 import 'package:healthify/features/carerelationship/presentation/cubit/patient_roster_cubit.dart';
+import 'package:healthify/features/foodcatalog/presentation/cubit/add_local_food_cubit.dart';
+import 'package:healthify/features/foodcatalog/presentation/cubit/food_catalog_cubit.dart';
 import 'package:healthify/features/iam/application/usecase/session_use_cases.dart';
 import 'package:healthify/features/iam/domain/repository/session_repository.dart';
 import 'package:healthify/features/main/presentation/cubit/patient_history_cubit.dart';
@@ -250,6 +252,8 @@ void main() {
       () => getIt<RecordReferralCubit>(param1: _patientId),
       () => getIt<PractitionerShellCubit>(),
       () => getIt<PractitionerSettingsCubit>(),
+      () => getIt<FoodCatalogCubit>(),
+      () => getIt<AddLocalFoodCubit>(),
       () => getIt<SignOutCubit>(),
     ];
 
