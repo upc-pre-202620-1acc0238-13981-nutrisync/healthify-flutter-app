@@ -2256,4 +2256,58 @@ class AppLocalizationsEs extends AppLocalizations {
   String foodCatalogAdded(String name) {
     return '«$name» se agregó al catálogo local.';
   }
+
+  @override
+  String get localFoodTitle => 'ALIMENTO LOCAL';
+
+  @override
+  String get localFoodIntro =>
+      'Para platos peruanos que el catálogo externo no trae. Un alimento local nunca se sobrescribe con una importación.';
+
+  @override
+  String get localFoodName => 'Nombre local';
+
+  @override
+  String get localFoodNamePlaceholder => 'Ej. Chaufa de cuy';
+
+  @override
+  String get localFoodNameSupport => 'Debe ser único en el catálogo local.';
+
+  @override
+  String get localFoodDuplicated =>
+      'Ya existe un alimento local con este nombre';
+
+  @override
+  String get localFoodIncomplete =>
+      'Completa el nombre y los valores nutricionales';
+
+  @override
+  String get localFoodValues => 'VALORES POR 100 G';
+
+  @override
+  String get localFoodEnergy => 'Energía (kcal)';
+
+  @override
+  String get localFoodEnergyExample => 'Ej. 180';
+
+  @override
+  String get localFoodProtein => 'Proteína (g)';
+
+  @override
+  String get localFoodProteinExample => 'Ej. 12';
+
+  @override
+  String get localFoodCarb => 'Carbohidrato (g)';
+
+  @override
+  String get localFoodCarbExample => 'Ej. 20';
+
+  @override
+  String get localFoodFat => 'Grasa (g)';
+
+  @override
+  String get localFoodFatExample => 'Ej. 6';
+
+  @override
+  String get localFoodSave => 'Guardar alimento';
 }

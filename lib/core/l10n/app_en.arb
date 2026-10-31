@@ -979,5 +979,22 @@
   "foodCatalogEmptyTitle": "No results",
   "foodCatalogEmptyBody": "We didn't find foods with that name. You can add it as a local food.",
   "foodCatalogOfflineBody": "Managing the catalog needs a connection. Try again when you're connected.",
-  "foodCatalogAdded": "“{name}” was added to the local catalog."
+  "foodCatalogAdded": "“{name}” was added to the local catalog.",
+  "localFoodTitle": "LOCAL FOOD",
+  "localFoodIntro": "For Peruvian dishes the external catalog doesn't have. A local food is never overwritten by an import.",
+  "localFoodName": "Local name",
+  "localFoodNamePlaceholder": "E.g. Chaufa de cuy",
+  "localFoodNameSupport": "It must be unique in the local catalog.",
+  "localFoodDuplicated": "A local food with this name already exists",
+  "localFoodIncomplete": "Fill in the name and the nutritional values",
+  "localFoodValues": "VALUES PER 100 G",
+  "localFoodEnergy": "Energy (kcal)",
+  "localFoodEnergyExample": "E.g. 180",
+  "localFoodProtein": "Protein (g)",
+  "localFoodProteinExample": "E.g. 12",
+  "localFoodCarb": "Carbohydrate (g)",
+  "localFoodCarbExample": "E.g. 20",
+  "localFoodFat": "Fat (g)",
+  "localFoodFatExample": "E.g. 6",
+  "localFoodSave": "Save food"
 }

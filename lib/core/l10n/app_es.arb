@@ -1431,5 +1431,22 @@
         "type": "String"
       }
     }
-  }
+  },
+  "localFoodTitle": "ALIMENTO LOCAL",
+  "localFoodIntro": "Para platos peruanos que el catálogo externo no trae. Un alimento local nunca se sobrescribe con una importación.",
+  "localFoodName": "Nombre local",
+  "localFoodNamePlaceholder": "Ej. Chaufa de cuy",
+  "localFoodNameSupport": "Debe ser único en el catálogo local.",
+  "localFoodDuplicated": "Ya existe un alimento local con este nombre",
+  "localFoodIncomplete": "Completa el nombre y los valores nutricionales",
+  "localFoodValues": "VALORES POR 100 G",
+  "localFoodEnergy": "Energía (kcal)",
+  "localFoodEnergyExample": "Ej. 180",
+  "localFoodProtein": "Proteína (g)",
+  "localFoodProteinExample": "Ej. 12",
+  "localFoodCarb": "Carbohidrato (g)",
+  "localFoodCarbExample": "Ej. 20",
+  "localFoodFat": "Grasa (g)",
+  "localFoodFatExample": "Ej. 6",
+  "localFoodSave": "Guardar alimento"
 }

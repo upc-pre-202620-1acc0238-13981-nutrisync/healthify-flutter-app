@@ -3971,6 +3971,108 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'«{name}» se agregó al catálogo local.'**
   String foodCatalogAdded(String name);
+
+  /// No description provided for @localFoodTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'ALIMENTO LOCAL'**
+  String get localFoodTitle;
+
+  /// No description provided for @localFoodIntro.
+  ///
+  /// In es, this message translates to:
+  /// **'Para platos peruanos que el catálogo externo no trae. Un alimento local nunca se sobrescribe con una importación.'**
+  String get localFoodIntro;
+
+  /// No description provided for @localFoodName.
+  ///
+  /// In es, this message translates to:
+  /// **'Nombre local'**
+  String get localFoodName;
+
+  /// No description provided for @localFoodNamePlaceholder.
+  ///
+  /// In es, this message translates to:
+  /// **'Ej. Chaufa de cuy'**
+  String get localFoodNamePlaceholder;
+
+  /// No description provided for @localFoodNameSupport.
+  ///
+  /// In es, this message translates to:
+  /// **'Debe ser único en el catálogo local.'**
+  String get localFoodNameSupport;
+
+  /// No description provided for @localFoodDuplicated.
+  ///
+  /// In es, this message translates to:
+  /// **'Ya existe un alimento local con este nombre'**
+  String get localFoodDuplicated;
+
+  /// No description provided for @localFoodIncomplete.
+  ///
+  /// In es, this message translates to:
+  /// **'Completa el nombre y los valores nutricionales'**
+  String get localFoodIncomplete;
+
+  /// No description provided for @localFoodValues.
+  ///
+  /// In es, this message translates to:
+  /// **'VALORES POR 100 G'**
+  String get localFoodValues;
+
+  /// No description provided for @localFoodEnergy.
+  ///
+  /// In es, this message translates to:
+  /// **'Energía (kcal)'**
+  String get localFoodEnergy;
+
+  /// No description provided for @localFoodEnergyExample.
+  ///
+  /// In es, this message translates to:
+  /// **'Ej. 180'**
+  String get localFoodEnergyExample;
+
+  /// No description provided for @localFoodProtein.
+  ///
+  /// In es, this message translates to:
+  /// **'Proteína (g)'**
+  String get localFoodProtein;
+
+  /// No description provided for @localFoodProteinExample.
+  ///
+  /// In es, this message translates to:
+  /// **'Ej. 12'**
+  String get localFoodProteinExample;
+
+  /// No description provided for @localFoodCarb.
+  ///
+  /// In es, this message translates to:
+  /// **'Carbohidrato (g)'**
+  String get localFoodCarb;
+
+  /// No description provided for @localFoodCarbExample.
+  ///
+  /// In es, this message translates to:
+  /// **'Ej. 20'**
+  String get localFoodCarbExample;
+
+  /// No description provided for @localFoodFat.
+  ///
+  /// In es, this message translates to:
+  /// **'Grasa (g)'**
+  String get localFoodFat;
+
+  /// No description provided for @localFoodFatExample.
+  ///
+  /// In es, this message translates to:
+  /// **'Ej. 6'**
+  String get localFoodFatExample;
+
+  /// No description provided for @localFoodSave.
+  ///
+  /// In es, this message translates to:
+  /// **'Guardar alimento'**
+  String get localFoodSave;
 }
 
 class _AppLocalizationsDelegate
