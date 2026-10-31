@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$SignUpFieldErrors {
 
- PersonNameProblem? get givenNames; PersonNameProblem? get familyNames; SignUpEmailError? get email; bool get weakPassword;
+ PersonNameProblem? get givenNames; PersonNameProblem? get familyNames; SignUpEmailError? get email; bool get weakPassword; bool get termsNotAccepted;
 /// Create a copy of SignUpFieldErrors
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -27,20 +27,20 @@ $SignUpFieldErrorsCopyWith<SignUpFieldErrors> get copyWith => _$SignUpFieldError
 @override
 bool operator ==(Object other) {
   final _this = this as SignUpFieldErrors;
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is SignUpFieldErrors&&(identical(other.givenNames, _this.givenNames) || other.givenNames == _this.givenNames)&&(identical(other.familyNames, _this.familyNames) || other.familyNames == _this.familyNames)&&(identical(other.email, _this.email) || other.email == _this.email)&&(identical(other.weakPassword, _this.weakPassword) || other.weakPassword == _this.weakPassword));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SignUpFieldErrors&&(identical(other.givenNames, _this.givenNames) || other.givenNames == _this.givenNames)&&(identical(other.familyNames, _this.familyNames) || other.familyNames == _this.familyNames)&&(identical(other.email, _this.email) || other.email == _this.email)&&(identical(other.weakPassword, _this.weakPassword) || other.weakPassword == _this.weakPassword)&&(identical(other.termsNotAccepted, _this.termsNotAccepted) || other.termsNotAccepted == _this.termsNotAccepted));
 }
 
 
 @override
 int get hashCode {
   final _this = this as SignUpFieldErrors;
-  return Object.hash(runtimeType,_this.givenNames,_this.familyNames,_this.email,_this.weakPassword);
+  return Object.hash(runtimeType,_this.givenNames,_this.familyNames,_this.email,_this.weakPassword,_this.termsNotAccepted);
 }
 
 @override
 String toString() {
   final _this = this as SignUpFieldErrors;
-  return 'SignUpFieldErrors(givenNames: ${_this.givenNames}, familyNames: ${_this.familyNames}, email: ${_this.email}, weakPassword: ${_this.weakPassword})';
+  return 'SignUpFieldErrors(givenNames: ${_this.givenNames}, familyNames: ${_this.familyNames}, email: ${_this.email}, weakPassword: ${_this.weakPassword}, termsNotAccepted: ${_this.termsNotAccepted})';
 }
 
 
@@ -51,7 +51,7 @@ abstract mixin class $SignUpFieldErrorsCopyWith<$Res>  {
   factory $SignUpFieldErrorsCopyWith(SignUpFieldErrors value, $Res Function(SignUpFieldErrors) _then) = _$SignUpFieldErrorsCopyWithImpl;
 @useResult
 $Res call({
- PersonNameProblem? givenNames, PersonNameProblem? familyNames, SignUpEmailError? email, bool weakPassword
+ PersonNameProblem? givenNames, PersonNameProblem? familyNames, SignUpEmailError? email, bool weakPassword, bool termsNotAccepted
 });
 
 
@@ -68,12 +68,13 @@ class _$SignUpFieldErrorsCopyWithImpl<$Res>
 
 /// Create a copy of SignUpFieldErrors
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? givenNames = freezed,Object? familyNames = freezed,Object? email = freezed,Object? weakPassword = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? givenNames = freezed,Object? familyNames = freezed,Object? email = freezed,Object? weakPassword = null,Object? termsNotAccepted = null,}) {
   return _then(SignUpFieldErrors(
 givenNames: freezed == givenNames ? _self.givenNames : givenNames // ignore: cast_nullable_to_non_nullable
 as PersonNameProblem?,familyNames: freezed == familyNames ? _self.familyNames : familyNames // ignore: cast_nullable_to_non_nullable
 as PersonNameProblem?,email: freezed == email ? _self.email : email // ignore: cast_nullable_to_non_nullable
 as SignUpEmailError?,weakPassword: null == weakPassword ? _self.weakPassword : weakPassword // ignore: cast_nullable_to_non_nullable
+as bool,termsNotAccepted: null == termsNotAccepted ? _self.termsNotAccepted : termsNotAccepted // ignore: cast_nullable_to_non_nullable
 as bool,
   ));
 }
@@ -159,10 +160,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( PersonNameProblem? givenNames,  PersonNameProblem? familyNames,  SignUpEmailError? email,  bool weakPassword)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( PersonNameProblem? givenNames,  PersonNameProblem? familyNames,  SignUpEmailError? email,  bool weakPassword,  bool termsNotAccepted)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _SignUpFieldErrors() when $default != null:
-return $default(_that.givenNames,_that.familyNames,_that.email,_that.weakPassword);case _:
+return $default(_that.givenNames,_that.familyNames,_that.email,_that.weakPassword,_that.termsNotAccepted);case _:
   return orElse();
 
 }
@@ -180,10 +181,10 @@ return $default(_that.givenNames,_that.familyNames,_that.email,_that.weakPasswor
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( PersonNameProblem? givenNames,  PersonNameProblem? familyNames,  SignUpEmailError? email,  bool weakPassword)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( PersonNameProblem? givenNames,  PersonNameProblem? familyNames,  SignUpEmailError? email,  bool weakPassword,  bool termsNotAccepted)  $default,) {final _that = this;
 switch (_that) {
 case _SignUpFieldErrors():
-return $default(_that.givenNames,_that.familyNames,_that.email,_that.weakPassword);case _:
+return $default(_that.givenNames,_that.familyNames,_that.email,_that.weakPassword,_that.termsNotAccepted);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -200,10 +201,10 @@ return $default(_that.givenNames,_that.familyNames,_that.email,_that.weakPasswor
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( PersonNameProblem? givenNames,  PersonNameProblem? familyNames,  SignUpEmailError? email,  bool weakPassword)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( PersonNameProblem? givenNames,  PersonNameProblem? familyNames,  SignUpEmailError? email,  bool weakPassword,  bool termsNotAccepted)?  $default,) {final _that = this;
 switch (_that) {
 case _SignUpFieldErrors() when $default != null:
-return $default(_that.givenNames,_that.familyNames,_that.email,_that.weakPassword);case _:
+return $default(_that.givenNames,_that.familyNames,_that.email,_that.weakPassword,_that.termsNotAccepted);case _:
   return null;
 
 }
@@ -215,13 +216,14 @@ return $default(_that.givenNames,_that.familyNames,_that.email,_that.weakPasswor
 
 
 class _SignUpFieldErrors implements SignUpFieldErrors {
-  const _SignUpFieldErrors({this.givenNames, this.familyNames, this.email, this.weakPassword = false});
+  const _SignUpFieldErrors({this.givenNames, this.familyNames, this.email, this.weakPassword = false, this.termsNotAccepted = false});
   
 
 @override final  PersonNameProblem? givenNames;
 @override final  PersonNameProblem? familyNames;
 @override final  SignUpEmailError? email;
 @override@JsonKey() final  bool weakPassword;
+@override@JsonKey() final  bool termsNotAccepted;
 
 /// Create a copy of SignUpFieldErrors
 /// with the given fields replaced by the non-null parameter values.
@@ -233,18 +235,18 @@ _$SignUpFieldErrorsCopyWith<_SignUpFieldErrors> get copyWith => __$SignUpFieldEr
 
 @override
 bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _SignUpFieldErrors&&(identical(other.givenNames, givenNames) || other.givenNames == givenNames)&&(identical(other.familyNames, familyNames) || other.familyNames == familyNames)&&(identical(other.email, email) || other.email == email)&&(identical(other.weakPassword, weakPassword) || other.weakPassword == weakPassword));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _SignUpFieldErrors&&(identical(other.givenNames, givenNames) || other.givenNames == givenNames)&&(identical(other.familyNames, familyNames) || other.familyNames == familyNames)&&(identical(other.email, email) || other.email == email)&&(identical(other.weakPassword, weakPassword) || other.weakPassword == weakPassword)&&(identical(other.termsNotAccepted, termsNotAccepted) || other.termsNotAccepted == termsNotAccepted));
 }
 
 
 @override
 int get hashCode {
-    return Object.hash(runtimeType,givenNames,familyNames,email,weakPassword);
+    return Object.hash(runtimeType,givenNames,familyNames,email,weakPassword,termsNotAccepted);
 }
 
 @override
 String toString() {
-    return 'SignUpFieldErrors(givenNames: $givenNames, familyNames: $familyNames, email: $email, weakPassword: $weakPassword)';
+    return 'SignUpFieldErrors(givenNames: $givenNames, familyNames: $familyNames, email: $email, weakPassword: $weakPassword, termsNotAccepted: $termsNotAccepted)';
 }
 
 
@@ -255,7 +257,7 @@ abstract mixin class _$SignUpFieldErrorsCopyWith<$Res> implements $SignUpFieldEr
   factory _$SignUpFieldErrorsCopyWith(_SignUpFieldErrors value, $Res Function(_SignUpFieldErrors) _then) = __$SignUpFieldErrorsCopyWithImpl;
 @override @useResult
 $Res call({
- PersonNameProblem? givenNames, PersonNameProblem? familyNames, SignUpEmailError? email, bool weakPassword
+ PersonNameProblem? givenNames, PersonNameProblem? familyNames, SignUpEmailError? email, bool weakPassword, bool termsNotAccepted
 });
 
 
@@ -272,12 +274,13 @@ class __$SignUpFieldErrorsCopyWithImpl<$Res>
 
 /// Create a copy of SignUpFieldErrors
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? givenNames = freezed,Object? familyNames = freezed,Object? email = freezed,Object? weakPassword = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? givenNames = freezed,Object? familyNames = freezed,Object? email = freezed,Object? weakPassword = null,Object? termsNotAccepted = null,}) {
   return _then(_SignUpFieldErrors(
 givenNames: freezed == givenNames ? _self.givenNames : givenNames // ignore: cast_nullable_to_non_nullable
 as PersonNameProblem?,familyNames: freezed == familyNames ? _self.familyNames : familyNames // ignore: cast_nullable_to_non_nullable
 as PersonNameProblem?,email: freezed == email ? _self.email : email // ignore: cast_nullable_to_non_nullable
 as SignUpEmailError?,weakPassword: null == weakPassword ? _self.weakPassword : weakPassword // ignore: cast_nullable_to_non_nullable
+as bool,termsNotAccepted: null == termsNotAccepted ? _self.termsNotAccepted : termsNotAccepted // ignore: cast_nullable_to_non_nullable
 as bool,
   ));
 }
@@ -288,7 +291,7 @@ as bool,
 /// @nodoc
 mixin _$SignUpState {
 
- String get givenNames; String get familyNames; String get email; String get password; SignUpFieldErrors get errors; bool get isSubmitting; bool get isOffline; bool get showErrorDialog;
+ String get givenNames; String get familyNames; String get email; String get password; bool get acceptedTerms; SignUpFieldErrors get errors; bool get isSubmitting; bool get isOffline; bool get showErrorDialog;
 /// Create a copy of SignUpState
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -300,14 +303,14 @@ $SignUpStateCopyWith<SignUpState> get copyWith => _$SignUpStateCopyWithImpl<Sign
 @override
 bool operator ==(Object other) {
   final _this = this as SignUpState;
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is SignUpState&&(identical(other.givenNames, _this.givenNames) || other.givenNames == _this.givenNames)&&(identical(other.familyNames, _this.familyNames) || other.familyNames == _this.familyNames)&&(identical(other.email, _this.email) || other.email == _this.email)&&(identical(other.password, _this.password) || other.password == _this.password)&&(identical(other.errors, _this.errors) || other.errors == _this.errors)&&(identical(other.isSubmitting, _this.isSubmitting) || other.isSubmitting == _this.isSubmitting)&&(identical(other.isOffline, _this.isOffline) || other.isOffline == _this.isOffline)&&(identical(other.showErrorDialog, _this.showErrorDialog) || other.showErrorDialog == _this.showErrorDialog));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SignUpState&&(identical(other.givenNames, _this.givenNames) || other.givenNames == _this.givenNames)&&(identical(other.familyNames, _this.familyNames) || other.familyNames == _this.familyNames)&&(identical(other.email, _this.email) || other.email == _this.email)&&(identical(other.password, _this.password) || other.password == _this.password)&&(identical(other.acceptedTerms, _this.acceptedTerms) || other.acceptedTerms == _this.acceptedTerms)&&(identical(other.errors, _this.errors) || other.errors == _this.errors)&&(identical(other.isSubmitting, _this.isSubmitting) || other.isSubmitting == _this.isSubmitting)&&(identical(other.isOffline, _this.isOffline) || other.isOffline == _this.isOffline)&&(identical(other.showErrorDialog, _this.showErrorDialog) || other.showErrorDialog == _this.showErrorDialog));
 }
 
 
 @override
 int get hashCode {
   final _this = this as SignUpState;
-  return Object.hash(runtimeType,_this.givenNames,_this.familyNames,_this.email,_this.password,_this.errors,_this.isSubmitting,_this.isOffline,_this.showErrorDialog);
+  return Object.hash(runtimeType,_this.givenNames,_this.familyNames,_this.email,_this.password,_this.acceptedTerms,_this.errors,_this.isSubmitting,_this.isOffline,_this.showErrorDialog);
 }
 
 
@@ -319,7 +322,7 @@ abstract mixin class $SignUpStateCopyWith<$Res>  {
   factory $SignUpStateCopyWith(SignUpState value, $Res Function(SignUpState) _then) = _$SignUpStateCopyWithImpl;
 @useResult
 $Res call({
- String givenNames, String familyNames, String email, String password, SignUpFieldErrors errors, bool isSubmitting, bool isOffline, bool showErrorDialog
+ String givenNames, String familyNames, String email, String password, bool acceptedTerms, SignUpFieldErrors errors, bool isSubmitting, bool isOffline, bool showErrorDialog
 });
 
 
@@ -336,13 +339,14 @@ class _$SignUpStateCopyWithImpl<$Res>
 
 /// Create a copy of SignUpState
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? givenNames = null,Object? familyNames = null,Object? email = null,Object? password = null,Object? errors = null,Object? isSubmitting = null,Object? isOffline = null,Object? showErrorDialog = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? givenNames = null,Object? familyNames = null,Object? email = null,Object? password = null,Object? acceptedTerms = null,Object? errors = null,Object? isSubmitting = null,Object? isOffline = null,Object? showErrorDialog = null,}) {
   return _then(SignUpState(
 givenNames: null == givenNames ? _self.givenNames : givenNames // ignore: cast_nullable_to_non_nullable
 as String,familyNames: null == familyNames ? _self.familyNames : familyNames // ignore: cast_nullable_to_non_nullable
 as String,email: null == email ? _self.email : email // ignore: cast_nullable_to_non_nullable
 as String,password: null == password ? _self.password : password // ignore: cast_nullable_to_non_nullable
-as String,errors: null == errors ? _self.errors : errors // ignore: cast_nullable_to_non_nullable
+as String,acceptedTerms: null == acceptedTerms ? _self.acceptedTerms : acceptedTerms // ignore: cast_nullable_to_non_nullable
+as bool,errors: null == errors ? _self.errors : errors // ignore: cast_nullable_to_non_nullable
 as SignUpFieldErrors,isSubmitting: null == isSubmitting ? _self.isSubmitting : isSubmitting // ignore: cast_nullable_to_non_nullable
 as bool,isOffline: null == isOffline ? _self.isOffline : isOffline // ignore: cast_nullable_to_non_nullable
 as bool,showErrorDialog: null == showErrorDialog ? _self.showErrorDialog : showErrorDialog // ignore: cast_nullable_to_non_nullable
@@ -440,10 +444,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String givenNames,  String familyNames,  String email,  String password,  SignUpFieldErrors errors,  bool isSubmitting,  bool isOffline,  bool showErrorDialog)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String givenNames,  String familyNames,  String email,  String password,  bool acceptedTerms,  SignUpFieldErrors errors,  bool isSubmitting,  bool isOffline,  bool showErrorDialog)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _SignUpState() when $default != null:
-return $default(_that.givenNames,_that.familyNames,_that.email,_that.password,_that.errors,_that.isSubmitting,_that.isOffline,_that.showErrorDialog);case _:
+return $default(_that.givenNames,_that.familyNames,_that.email,_that.password,_that.acceptedTerms,_that.errors,_that.isSubmitting,_that.isOffline,_that.showErrorDialog);case _:
   return orElse();
 
 }
@@ -461,10 +465,10 @@ return $default(_that.givenNames,_that.familyNames,_that.email,_that.password,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String givenNames,  String familyNames,  String email,  String password,  SignUpFieldErrors errors,  bool isSubmitting,  bool isOffline,  bool showErrorDialog)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String givenNames,  String familyNames,  String email,  String password,  bool acceptedTerms,  SignUpFieldErrors errors,  bool isSubmitting,  bool isOffline,  bool showErrorDialog)  $default,) {final _that = this;
 switch (_that) {
 case _SignUpState():
-return $default(_that.givenNames,_that.familyNames,_that.email,_that.password,_that.errors,_that.isSubmitting,_that.isOffline,_that.showErrorDialog);case _:
+return $default(_that.givenNames,_that.familyNames,_that.email,_that.password,_that.acceptedTerms,_that.errors,_that.isSubmitting,_that.isOffline,_that.showErrorDialog);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -481,10 +485,10 @@ return $default(_that.givenNames,_that.familyNames,_that.email,_that.password,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String givenNames,  String familyNames,  String email,  String password,  SignUpFieldErrors errors,  bool isSubmitting,  bool isOffline,  bool showErrorDialog)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String givenNames,  String familyNames,  String email,  String password,  bool acceptedTerms,  SignUpFieldErrors errors,  bool isSubmitting,  bool isOffline,  bool showErrorDialog)?  $default,) {final _that = this;
 switch (_that) {
 case _SignUpState() when $default != null:
-return $default(_that.givenNames,_that.familyNames,_that.email,_that.password,_that.errors,_that.isSubmitting,_that.isOffline,_that.showErrorDialog);case _:
+return $default(_that.givenNames,_that.familyNames,_that.email,_that.password,_that.acceptedTerms,_that.errors,_that.isSubmitting,_that.isOffline,_that.showErrorDialog);case _:
   return null;
 
 }
@@ -496,13 +500,14 @@ return $default(_that.givenNames,_that.familyNames,_that.email,_that.password,_t
 
 
 class _SignUpState extends SignUpState {
-  const _SignUpState({this.givenNames = '', this.familyNames = '', this.email = '', this.password = '', this.errors = const SignUpFieldErrors(), this.isSubmitting = false, this.isOffline = false, this.showErrorDialog = false}): super._();
+  const _SignUpState({this.givenNames = '', this.familyNames = '', this.email = '', this.password = '', this.acceptedTerms = false, this.errors = const SignUpFieldErrors(), this.isSubmitting = false, this.isOffline = false, this.showErrorDialog = false}): super._();
   
 
 @override@JsonKey() final  String givenNames;
 @override@JsonKey() final  String familyNames;
 @override@JsonKey() final  String email;
 @override@JsonKey() final  String password;
+@override@JsonKey() final  bool acceptedTerms;
 @override@JsonKey() final  SignUpFieldErrors errors;
 @override@JsonKey() final  bool isSubmitting;
 @override@JsonKey() final  bool isOffline;
@@ -518,13 +523,13 @@ _$SignUpStateCopyWith<_SignUpState> get copyWith => __$SignUpStateCopyWithImpl<_
 
 @override
 bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _SignUpState&&(identical(other.givenNames, givenNames) || other.givenNames == givenNames)&&(identical(other.familyNames, familyNames) || other.familyNames == familyNames)&&(identical(other.email, email) || other.email == email)&&(identical(other.password, password) || other.password == password)&&(identical(other.errors, errors) || other.errors == errors)&&(identical(other.isSubmitting, isSubmitting) || other.isSubmitting == isSubmitting)&&(identical(other.isOffline, isOffline) || other.isOffline == isOffline)&&(identical(other.showErrorDialog, showErrorDialog) || other.showErrorDialog == showErrorDialog));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _SignUpState&&(identical(other.givenNames, givenNames) || other.givenNames == givenNames)&&(identical(other.familyNames, familyNames) || other.familyNames == familyNames)&&(identical(other.email, email) || other.email == email)&&(identical(other.password, password) || other.password == password)&&(identical(other.acceptedTerms, acceptedTerms) || other.acceptedTerms == acceptedTerms)&&(identical(other.errors, errors) || other.errors == errors)&&(identical(other.isSubmitting, isSubmitting) || other.isSubmitting == isSubmitting)&&(identical(other.isOffline, isOffline) || other.isOffline == isOffline)&&(identical(other.showErrorDialog, showErrorDialog) || other.showErrorDialog == showErrorDialog));
 }
 
 
 @override
 int get hashCode {
-    return Object.hash(runtimeType,givenNames,familyNames,email,password,errors,isSubmitting,isOffline,showErrorDialog);
+    return Object.hash(runtimeType,givenNames,familyNames,email,password,acceptedTerms,errors,isSubmitting,isOffline,showErrorDialog);
 }
 
 
@@ -536,7 +541,7 @@ abstract mixin class _$SignUpStateCopyWith<$Res> implements $SignUpStateCopyWith
   factory _$SignUpStateCopyWith(_SignUpState value, $Res Function(_SignUpState) _then) = __$SignUpStateCopyWithImpl;
 @override @useResult
 $Res call({
- String givenNames, String familyNames, String email, String password, SignUpFieldErrors errors, bool isSubmitting, bool isOffline, bool showErrorDialog
+ String givenNames, String familyNames, String email, String password, bool acceptedTerms, SignUpFieldErrors errors, bool isSubmitting, bool isOffline, bool showErrorDialog
 });
 
 
@@ -553,13 +558,14 @@ class __$SignUpStateCopyWithImpl<$Res>
 
 /// Create a copy of SignUpState
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? givenNames = null,Object? familyNames = null,Object? email = null,Object? password = null,Object? errors = null,Object? isSubmitting = null,Object? isOffline = null,Object? showErrorDialog = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? givenNames = null,Object? familyNames = null,Object? email = null,Object? password = null,Object? acceptedTerms = null,Object? errors = null,Object? isSubmitting = null,Object? isOffline = null,Object? showErrorDialog = null,}) {
   return _then(_SignUpState(
 givenNames: null == givenNames ? _self.givenNames : givenNames // ignore: cast_nullable_to_non_nullable
 as String,familyNames: null == familyNames ? _self.familyNames : familyNames // ignore: cast_nullable_to_non_nullable
 as String,email: null == email ? _self.email : email // ignore: cast_nullable_to_non_nullable
 as String,password: null == password ? _self.password : password // ignore: cast_nullable_to_non_nullable
-as String,errors: null == errors ? _self.errors : errors // ignore: cast_nullable_to_non_nullable
+as String,acceptedTerms: null == acceptedTerms ? _self.acceptedTerms : acceptedTerms // ignore: cast_nullable_to_non_nullable
+as bool,errors: null == errors ? _self.errors : errors // ignore: cast_nullable_to_non_nullable
 as SignUpFieldErrors,isSubmitting: null == isSubmitting ? _self.isSubmitting : isSubmitting // ignore: cast_nullable_to_non_nullable
 as bool,isOffline: null == isOffline ? _self.isOffline : isOffline // ignore: cast_nullable_to_non_nullable
 as bool,showErrorDialog: null == showErrorDialog ? _self.showErrorDialog : showErrorDialog // ignore: cast_nullable_to_non_nullable

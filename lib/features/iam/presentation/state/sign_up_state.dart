@@ -15,13 +15,15 @@ abstract class SignUpFieldErrors with _$SignUpFieldErrors {
     PersonNameProblem? familyNames,
     SignUpEmailError? email,
     @Default(false) bool weakPassword,
+    @Default(false) bool termsNotAccepted,
   }) = _SignUpFieldErrors;
 }
 
 /// Sign-up. The password lives in memory only.
 ///
 /// [isOffline]: the "You need a connection to continue" banner and the text under the button. Creating the account is
-/// not attempted offline. [showErrorDialog]: unexpected server error ("Retry" / "Close").
+/// not attempted offline. [showErrorDialog]: unexpected server error ("Retry" / "Close"). [acceptedTerms]: the terms
+/// and conditions box; the account is not created until it is checked.
 @freezed
 abstract class SignUpState with _$SignUpState {
   const SignUpState._();
@@ -31,6 +33,7 @@ abstract class SignUpState with _$SignUpState {
     @Default('') String familyNames,
     @Default('') String email,
     @Default('') String password,
+    @Default(false) bool acceptedTerms,
     @Default(SignUpFieldErrors()) SignUpFieldErrors errors,
     @Default(false) bool isSubmitting,
     @Default(false) bool isOffline,
