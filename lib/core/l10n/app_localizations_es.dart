@@ -255,6 +255,21 @@ class AppLocalizationsEs extends AppLocalizations {
       'Necesita mayúscula, minúscula, número y símbolo, y al menos 8 caracteres';
 
   @override
+  String signUpTermsAccept(String link) {
+    return 'Acepto los $link';
+  }
+
+  @override
+  String get signUpTermsLink => 'términos y condiciones';
+
+  @override
+  String get signUpErrorTerms =>
+      'Acepta los términos y condiciones para crear tu cuenta';
+
+  @override
+  String get linkOpenFailed => 'No se pudo abrir el enlace';
+
+  @override
   String get signInTitle => 'INICIAR SESIÓN';
 
   @override
@@ -389,6 +404,9 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get menuRolePractitioner => 'Nutricionista';
+
+  @override
+  String get menuFoodCatalog => 'Catálogo de alimentos';
 
   @override
   String get menuSettings => 'Ajustes';
@@ -2218,4 +2236,96 @@ class AppLocalizationsEs extends AppLocalizations {
   String consultationReminderTextNoName(String time) {
     return 'Con tu paciente a las $time.';
   }
+
+  @override
+  String get foodCatalogTitle => 'CATÁLOGO';
+
+  @override
+  String get foodCatalogSearch => 'Buscar alimento';
+
+  @override
+  String get foodCatalogSearchPlaceholder => 'Buscar alimento…';
+
+  @override
+  String foodCatalogLocalName(String name) {
+    return '$name (local)';
+  }
+
+  @override
+  String foodCatalogEnergy(String kcal) {
+    return '$kcal kcal / 100 g';
+  }
+
+  @override
+  String get foodCatalogAddLocal => 'Agregar alimento local';
+
+  @override
+  String get foodCatalogEmptyTitle => 'Sin resultados';
+
+  @override
+  String get foodCatalogEmptyBody =>
+      'No encontramos alimentos con ese nombre. Puedes agregarlo como alimento local.';
+
+  @override
+  String get foodCatalogOfflineBody =>
+      'La gestión del catálogo necesita conexión. Vuelve a intentarlo cuando tengas conexión.';
+
+  @override
+  String foodCatalogAdded(String name) {
+    return '«$name» se agregó al catálogo local.';
+  }
+
+  @override
+  String get localFoodTitle => 'ALIMENTO LOCAL';
+
+  @override
+  String get localFoodIntro =>
+      'Para platos peruanos que el catálogo externo no trae. Un alimento local nunca se sobrescribe con una importación.';
+
+  @override
+  String get localFoodName => 'Nombre local';
+
+  @override
+  String get localFoodNamePlaceholder => 'Ej. Chaufa de cuy';
+
+  @override
+  String get localFoodNameSupport => 'Debe ser único en el catálogo local.';
+
+  @override
+  String get localFoodDuplicated =>
+      'Ya existe un alimento local con este nombre';
+
+  @override
+  String get localFoodIncomplete =>
+      'Completa el nombre y los valores nutricionales';
+
+  @override
+  String get localFoodValues => 'VALORES POR 100 G';
+
+  @override
+  String get localFoodEnergy => 'Energía (kcal)';
+
+  @override
+  String get localFoodEnergyExample => 'Ej. 180';
+
+  @override
+  String get localFoodProtein => 'Proteína (g)';
+
+  @override
+  String get localFoodProteinExample => 'Ej. 12';
+
+  @override
+  String get localFoodCarb => 'Carbohidrato (g)';
+
+  @override
+  String get localFoodCarbExample => 'Ej. 20';
+
+  @override
+  String get localFoodFat => 'Grasa (g)';
+
+  @override
+  String get localFoodFatExample => 'Ej. 6';
+
+  @override
+  String get localFoodSave => 'Guardar alimento';
 }

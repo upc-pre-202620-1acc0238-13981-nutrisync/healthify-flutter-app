@@ -19,16 +19,18 @@ import '../state/practitioner_shell_state.dart';
 /// stack and state) and the main menu (menu button on the tabs) that opens from the right. The return snackbars
 /// (discharge, signal resolved, visit scheduled) show above the NavigationBar.
 ///
-/// Settings and sign out are root-graph screens: the menu closes before opening them.
+/// Food catalog, settings and sign out are root-graph screens: the menu closes before opening them.
 class PractitionerShellScreen extends StatelessWidget {
   const PractitionerShellScreen({
     super.key,
     required this.navigationShell,
+    required this.onOpenFoodCatalog,
     required this.onOpenSettings,
     required this.onSignOut,
   });
 
   final StatefulNavigationShell navigationShell;
+  final VoidCallback onOpenFoodCatalog;
   final VoidCallback onOpenSettings;
   final VoidCallback onSignOut;
 
@@ -51,6 +53,10 @@ class PractitionerShellScreen extends StatelessWidget {
                 initialLocation: tab.index == navigationShell.currentIndex,
               ),
               onCloseMenu: cubit.onCloseMenu,
+              onFoodCatalog: () {
+                cubit.onCloseMenu();
+                onOpenFoodCatalog();
+              },
               onSettings: () {
                 cubit.onCloseMenu();
                 onOpenSettings();
@@ -100,6 +106,7 @@ class PractitionerShellContent extends StatelessWidget {
     required this.selected,
     required this.onSelect,
     required this.onCloseMenu,
+    required this.onFoodCatalog,
     required this.onSettings,
     required this.onSignOut,
     required this.child,
@@ -109,6 +116,7 @@ class PractitionerShellContent extends StatelessWidget {
   final PractitionerTab selected;
   final ValueChanged<PractitionerTab> onSelect;
   final VoidCallback onCloseMenu;
+  final VoidCallback onFoodCatalog;
   final VoidCallback onSettings;
   final VoidCallback onSignOut;
   final Widget child;
@@ -121,6 +129,7 @@ class PractitionerShellContent extends StatelessWidget {
       context,
       fullName: state.fullName,
       avatarInitial: state.avatarInitial,
+      onFoodCatalog: onFoodCatalog,
       onSettings: onSettings,
       onSignOut: onSignOut,
     ),

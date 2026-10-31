@@ -78,6 +78,17 @@
   "signUpErrorEmail": "Ingresa un correo válido",
   "signUpErrorEmailTaken": "Ya existe una cuenta con este correo. ¿Iniciar sesión?",
   "signUpErrorPassword": "Necesita mayúscula, minúscula, número y símbolo, y al menos 8 caracteres",
+  "signUpTermsAccept": "Acepto los {link}",
+  "@signUpTermsAccept": {
+    "placeholders": {
+      "link": {
+        "type": "String"
+      }
+    }
+  },
+  "signUpTermsLink": "términos y condiciones",
+  "signUpErrorTerms": "Acepta los términos y condiciones para crear tu cuenta",
+  "linkOpenFailed": "No se pudo abrir el enlace",
   "signInTitle": "INICIAR SESIÓN",
   "signInSubtitle": "Entra con tu correo. Te llevaremos a tu espacio según tu tipo de cuenta.",
   "signInPasswordPlaceholder": "Tu contraseña",
@@ -133,6 +144,7 @@
   "practitionerOnlySignOut": "Cerrar sesión",
   "menuCdOpen": "Abrir menú",
   "menuRolePractitioner": "Nutricionista",
+  "menuFoodCatalog": "Catálogo de alimentos",
   "menuSettings": "Ajustes",
   "menuSignOut": "Cerrar sesión",
   "comingSoonBody": "Esta sección estará disponible muy pronto.",
@@ -1400,5 +1412,53 @@
         "type": "String"
       }
     }
-  }
+  },
+  "foodCatalogTitle": "CATÁLOGO",
+  "foodCatalogSearch": "Buscar alimento",
+  "foodCatalogSearchPlaceholder": "Buscar alimento…",
+  "foodCatalogLocalName": "{name} (local)",
+  "@foodCatalogLocalName": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "foodCatalogEnergy": "{kcal} kcal / 100 g",
+  "@foodCatalogEnergy": {
+    "placeholders": {
+      "kcal": {
+        "type": "String"
+      }
+    }
+  },
+  "foodCatalogAddLocal": "Agregar alimento local",
+  "foodCatalogEmptyTitle": "Sin resultados",
+  "foodCatalogEmptyBody": "No encontramos alimentos con ese nombre. Puedes agregarlo como alimento local.",
+  "foodCatalogOfflineBody": "La gestión del catálogo necesita conexión. Vuelve a intentarlo cuando tengas conexión.",
+  "foodCatalogAdded": "«{name}» se agregó al catálogo local.",
+  "@foodCatalogAdded": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "localFoodTitle": "ALIMENTO LOCAL",
+  "localFoodIntro": "Para platos peruanos que el catálogo externo no trae. Un alimento local nunca se sobrescribe con una importación.",
+  "localFoodName": "Nombre local",
+  "localFoodNamePlaceholder": "Ej. Chaufa de cuy",
+  "localFoodNameSupport": "Debe ser único en el catálogo local.",
+  "localFoodDuplicated": "Ya existe un alimento local con este nombre",
+  "localFoodIncomplete": "Completa el nombre y los valores nutricionales",
+  "localFoodValues": "VALORES POR 100 G",
+  "localFoodEnergy": "Energía (kcal)",
+  "localFoodEnergyExample": "Ej. 180",
+  "localFoodProtein": "Proteína (g)",
+  "localFoodProteinExample": "Ej. 12",
+  "localFoodCarb": "Carbohidrato (g)",
+  "localFoodCarbExample": "Ej. 20",
+  "localFoodFat": "Grasa (g)",
+  "localFoodFatExample": "Ej. 6",
+  "localFoodSave": "Guardar alimento"
 }

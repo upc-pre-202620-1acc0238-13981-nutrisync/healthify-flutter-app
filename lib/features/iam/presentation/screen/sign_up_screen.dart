@@ -12,6 +12,7 @@ import '../../../../core/di/service_locator.dart';
 import '../../../../core/l10n/app_localizations.dart';
 import '../../domain/valueobject/person_name.dart';
 import '../components/auth_card_layout.dart';
+import '../components/terms_acceptance.dart';
 import '../cubit/sign_up_cubit.dart';
 import '../state/sign_up_state.dart';
 
@@ -52,6 +53,7 @@ class SignUpScreen extends StatelessWidget {
                 onFamilyNamesChange: cubit.onFamilyNamesChange,
                 onEmailChange: cubit.onEmailChange,
                 onPasswordChange: cubit.onPasswordChange,
+                onTermsAcceptedChange: cubit.onTermsAcceptedChange,
                 onSubmit: cubit.onSubmit,
                 onSignIn: cubit.onSignInClick,
               );
@@ -71,6 +73,7 @@ class SignUpContent extends StatelessWidget {
     required this.onFamilyNamesChange,
     required this.onEmailChange,
     required this.onPasswordChange,
+    required this.onTermsAcceptedChange,
     required this.onSubmit,
     required this.onSignIn,
   });
@@ -80,6 +83,7 @@ class SignUpContent extends StatelessWidget {
   final ValueChanged<String> onFamilyNamesChange;
   final ValueChanged<String> onEmailChange;
   final ValueChanged<String> onPasswordChange;
+  final ValueChanged<bool> onTermsAcceptedChange;
   final VoidCallback onSubmit;
   final VoidCallback onSignIn;
 
@@ -170,6 +174,12 @@ class SignUpContent extends StatelessWidget {
               style: context.textStyles.bodySmall!.copyWith(color: scheme.onSurfaceVariant),
             ),
           ],
+        ),
+        TermsAcceptance(
+          accepted: state.acceptedTerms,
+          onAcceptedChange: onTermsAcceptedChange,
+          isError: state.errors.termsNotAccepted,
+          enabled: !state.isSubmitting,
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,

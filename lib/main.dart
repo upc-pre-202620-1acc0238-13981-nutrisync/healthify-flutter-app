@@ -6,6 +6,7 @@ import 'core/di/service_locator.dart';
 import 'core/l10n/app_localizations.dart';
 import 'core/network/app_language_provider.dart';
 import 'features/carerelationship/infrastructure/di/care_relationship_module.dart';
+import 'features/foodcatalog/infrastructure/di/food_catalog_module.dart';
 import 'features/iam/application/usecase/session_use_cases.dart';
 import 'features/iam/infrastructure/di/iam_module.dart';
 import 'features/main/presentation/di/main_module.dart';
@@ -29,6 +30,7 @@ void registerFeatureModules() {
   registerCareRelationship();
   registerNutritionalCare();
   registerMonitoring();
+  registerFoodCatalog();
   registerMain();
   registerOnboarding();
 }

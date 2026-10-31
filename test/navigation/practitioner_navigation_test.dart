@@ -19,6 +19,9 @@ import 'package:healthify/features/carerelationship/infrastructure/di/care_relat
 import 'package:healthify/features/carerelationship/presentation/cubit/discharge_patient_cubit.dart';
 import 'package:healthify/features/carerelationship/presentation/cubit/invite_patient_cubit.dart';
 import 'package:healthify/features/carerelationship/presentation/cubit/patient_roster_cubit.dart';
+import 'package:healthify/features/foodcatalog/application/usecase/food_catalog_use_cases.dart';
+import 'package:healthify/features/foodcatalog/presentation/cubit/add_local_food_cubit.dart';
+import 'package:healthify/features/foodcatalog/presentation/cubit/food_catalog_cubit.dart';
 import 'package:healthify/features/iam/application/usecase/account_use_cases.dart';
 import 'package:healthify/features/iam/application/usecase/session_use_cases.dart';
 import 'package:healthify/features/iam/application/usecase/sign_out_use_case.dart';
@@ -64,6 +67,7 @@ import 'package:qr_flutter/qr_flutter.dart';
 
 import '../core/designsystem/test_fonts.dart';
 import '../features/carerelationship/fakes.dart';
+import '../features/foodcatalog/fakes.dart';
 import '../features/monitoring/agenda_fakes.dart';
 import '../features/monitoring/fakes.dart';
 import '../features/monitoring/reminder_fakes.dart';
@@ -93,6 +97,7 @@ void main() {
   late _MockChangeLanguage changeLanguage;
   late FakeReviewInboxRepository inbox;
   late FakePractitionerAgendaRepository agenda;
+  late FakeReferenceFoodRepository foods;
   late SessionGate gate;
   GoRouter? router;
 
@@ -118,6 +123,8 @@ void main() {
     records = FakePractitionerRecordRepository();
     inbox = FakeReviewInboxRepository();
     agenda = FakePractitionerAgendaRepository();
+    foods = FakeReferenceFoodRepository()
+      ..remote = Result.success([referenceFood(1, 'Papa amarilla'), referenceFood(2, 'Cuy al horno', override: true)]);
     getLanguage = _MockGetLanguage();
     applyLanguage = _MockApplyLanguage();
     changeLanguage = _MockChangeLanguage();
@@ -286,6 +293,8 @@ void main() {
           connectivity,
         ),
       )
+      ..registerFactory(() => FoodCatalogCubit(BrowseFoodCatalogUseCase(foods), connectivity))
+      ..registerFactory(() => AddLocalFoodCubit(CreateLocalFoodUseCase(foods), connectivity))
       ..registerFactory(() => SignOutCubit(SignOutUseCase(authentication, session)));
     gate = SessionGate(ObserveIsLoggedInUseCase(session), ObserveSessionExpiredUseCase(session));
   });
@@ -356,7 +365,7 @@ void main() {
     expect(repository.rosterCalls, 2);
   });
 
-  testWidgets('the menu opens from the top bar and offers Settings and Sign out', (tester) async {
+  testWidgets('the menu opens from the top bar and offers Food catalog, Settings and Sign out', (tester) async {
     await pumpApp(tester);
 
     await tester.tap(find.byType(HealthifyIconButton));
@@ -364,6 +373,7 @@ void main() {
 
     expect(find.text('Lucía Paredes'), findsOneWidget);
     expect(find.text('Nutricionista'), findsOneWidget);
+    expect(find.text('Catálogo de alimentos'), findsOneWidget);
     expect(find.text('Ajustes'), findsOneWidget);
     expect(find.text('Cerrar sesión'), findsOneWidget);
   });
@@ -382,6 +392,63 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('MIS PACIENTES'), findsOneWidget);
     expect(find.text('¿CERRAR SESIÓN?'), findsNothing);
+  });
+
+  group('food catalog', () {
+    Future<void> openCatalog(WidgetTester tester) async {
+      await pumpApp(tester);
+      await tester.tap(find.byType(HealthifyIconButton));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Catálogo de alimentos'));
+      await tester.pumpAndSettle();
+    }
+
+    testWidgets('opens from the menu with the server catalog and back returns to the tab', (tester) async {
+      await openCatalog(tester);
+
+      expect(find.text('CATÁLOGO'), findsOneWidget);
+      expect(find.text('Papa amarilla'), findsOneWidget);
+      expect(find.text('Cuy al horno (local)'), findsOneWidget);
+      expect(foods.browsedTerms, [null]);
+
+      await tester.binding.handlePopRoute();
+      await tester.pumpAndSettle();
+      expect(find.text('CATÁLOGO'), findsNothing);
+      expect(find.text('MIS PACIENTES'), findsOneWidget);
+    });
+
+    testWidgets('a saved local food returns to the catalog, searched, with the snackbar', (tester) async {
+      await openCatalog(tester);
+      await tester.tap(find.text('Agregar alimento local'));
+      await tester.pumpAndSettle();
+      expect(find.text('ALIMENTO LOCAL'), findsOneWidget);
+
+      final fields = find.byType(EditableText);
+      for (final (index, text) in ['Chaufa de cuy', '180', '12', '20', '6'].indexed) {
+        await tester.enterText(fields.at(index), text);
+      }
+      await tester.tap(find.text('Guardar alimento'));
+      await tester.pumpAndSettle();
+
+      expect(find.text('ALIMENTO LOCAL'), findsNothing);
+      expect(find.text('CATÁLOGO'), findsOneWidget);
+      expect(find.text('«Chaufa de cuy» se agregó al catálogo local.'), findsOneWidget);
+      expect(foods.created.single.name, 'Chaufa de cuy');
+      expect(foods.browsedTerms.last, 'Chaufa de cuy');
+    });
+
+    testWidgets('leaving the add screen without saving changes nothing', (tester) async {
+      await openCatalog(tester);
+      await tester.tap(find.text('Agregar alimento local'));
+      await tester.pumpAndSettle();
+
+      await tester.binding.handlePopRoute();
+      await tester.pumpAndSettle();
+
+      expect(find.text('CATÁLOGO'), findsOneWidget);
+      expect(foods.browsedTerms, [null]);
+      expect(find.textContaining('se agregó'), findsNothing);
+    });
   });
 
   group('settings', () {
@@ -1387,6 +1454,8 @@ void main() {
       '/patients/1/referral',
       '/invite-patient',
       '/care-links/8/discharge',
+      '/food-catalog',
+      '/food-catalog/new',
       '/settings',
       '/sign-out',
       '/shell-loading',
