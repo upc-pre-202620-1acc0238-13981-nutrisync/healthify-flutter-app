@@ -331,9 +331,21 @@ void main() {
       expect(button.enabled, isFalse);
     });
 
-    testWidgets('it stays in the Summary tab: Record and the rest do not show it', (tester) async {
+    testWidgets('the Record tab pins it too and it starts the same consultation', (tester) async {
       await pumpScreen(tester);
       await openTab(tester, 'Historia');
+
+      expect(find.widgetWithText(HealthifyButton, 'Nueva consulta'), findsOneWidget);
+
+      await tester.tap(find.widgetWithText(HealthifyButton, 'Nueva consulta'));
+      await tester.pumpAndSettle();
+
+      expect(opened, ['consultation:Measurement']);
+    });
+
+    testWidgets('Follow-up and Plan do not show it', (tester) async {
+      await pumpScreen(tester);
+      await openTab(tester, 'Seguimiento');
 
       expect(find.widgetWithText(HealthifyButton, 'Nueva consulta'), findsNothing);
     });
@@ -356,14 +368,14 @@ void main() {
       expect(find.text('CONSULTAS'), findsNothing);
     });
 
-    testWidgets('shows the consultation in progress, with no button', (tester) async {
+    testWidgets('shows the consultation in progress and the pinned "Continue consultation"', (tester) async {
       consultations.inProgressResult = Result.success(consultation(step: ConsultationStep.targets));
       await pumpScreen(tester);
       await openTab(tester, 'Historia');
 
       expect(find.text('Consulta en curso'), findsOneWidget);
       expect(find.text('Paso 3 de 4 · Metas · se guardó hoy'), findsOneWidget);
-      expect(find.text('Continuar consulta'), findsNothing);
+      expect(find.widgetWithText(HealthifyButton, 'Continuar consulta'), findsOneWidget);
     });
 
     testWidgets('"Edit" opens the baseline form', (tester) async {
