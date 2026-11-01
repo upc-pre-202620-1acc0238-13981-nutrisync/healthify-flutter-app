@@ -359,7 +359,8 @@ class _SummaryHost extends StatelessWidget {
   }
 }
 
-/// Record tab plus its navigation events.
+/// Record tab plus its navigation events. It also pins the Summary's consultation button: the button drives the
+/// same [PatientSummaryCubit], whose events and "could not start" notice the (kept alive) [_SummaryHost] handles.
 class _HistoryHost extends StatelessWidget {
   const _HistoryHost({required this.onEvent});
 
@@ -368,10 +369,16 @@ class _HistoryHost extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final cubit = context.read<PatientHistoryCubit>();
+    final summaryCubit = context.read<PatientSummaryCubit>();
     return ObserveEvents<PatientTabEvent>(
       events: cubit.events,
       onEvent: (context, event) => onEvent(event),
-      child: const PatientHistoryTab(),
+      child: PatientHistoryTab(
+        bottomBar: BlocBuilder<PatientSummaryCubit, PatientSummaryState>(
+          builder: (context, state) =>
+              ConsultationPrimaryButton(state: state, onPressed: summaryCubit.onPrimaryAction),
+        ),
+      ),
     );
   }
 }
