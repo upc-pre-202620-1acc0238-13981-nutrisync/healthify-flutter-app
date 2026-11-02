@@ -29,7 +29,10 @@ const _skeletonRows = 4;
 /// Record tab ("Historia"): the baseline (edit it), the consultation in progress and the clinical record. The guided
 /// consultation starts from the Summary tab.
 class PatientHistoryTab extends StatelessWidget {
-  const PatientHistoryTab({super.key});
+  const PatientHistoryTab({super.key, this.bottomBar});
+
+  /// The action pinned at the bottom (the file's consultation button), if any.
+  final Widget? bottomBar;
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +44,7 @@ class PatientHistoryTab extends StatelessWidget {
         onRetry: cubit.onRetry,
         onSelectReferral: (referral) => showReferralSheet(context, referral),
         onSelectEvaluation: (assessmentId) => _openEvaluationSheet(context, cubit, assessmentId),
+        bottomBar: bottomBar,
       ),
     );
   }
@@ -75,6 +79,7 @@ class PatientHistoryContent extends StatelessWidget {
     required this.onRetry,
     this.onSelectReferral = _ignoreReferral,
     this.onSelectEvaluation = _ignoreEvaluation,
+    this.bottomBar,
   });
 
   final PatientHistoryState state;
@@ -82,6 +87,7 @@ class PatientHistoryContent extends StatelessWidget {
   final VoidCallback onRetry;
   final ValueChanged<ReferralSummary> onSelectReferral;
   final ValueChanged<int> onSelectEvaluation;
+  final Widget? bottomBar;
 
   static void _ignoreReferral(ReferralSummary _) {}
 
@@ -91,6 +97,7 @@ class PatientHistoryContent extends StatelessWidget {
   Widget build(BuildContext context) {
     final data = state.data;
     return PatientTabLayout(
+      bottomBar: bottomBar,
       children: [
         if (state.isOffline) const OfflineBanner(type: OfflineBannerType.requiresNetwork),
         if (data != null)

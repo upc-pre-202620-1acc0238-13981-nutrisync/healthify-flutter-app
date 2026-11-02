@@ -63,6 +63,34 @@ class PatientSummaryTab extends StatelessWidget {
   }
 }
 
+/// "Record baseline data" / "New consultation" / "Continue consultation", the file's primary action. Pinned in the
+/// Summary and Record tabs: in the validation interviews the practitioner looked for it in the Record first. Nothing
+/// without a summary.
+class ConsultationPrimaryButton extends StatelessWidget {
+  const ConsultationPrimaryButton({super.key, required this.state, required this.onPressed});
+
+  final PatientSummaryState state;
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    final summary = state.summary;
+    if (summary == null) return const SizedBox.shrink();
+    return HealthifyButton(
+      text: !summary.hasBaseline
+          ? l10n.summaryRegisterBaseline
+          : summary.consultationInProgress != null
+          ? l10n.summaryContinueConsultation
+          : l10n.summaryStartConsultation,
+      onPressed: onPressed,
+      loading: state.isStartingConsultation,
+      enabled: !state.isOffline,
+      fullWidth: true,
+    );
+  }
+}
+
 class PatientSummaryContent extends StatelessWidget {
   const PatientSummaryContent({
     super.key,
@@ -87,22 +115,9 @@ class PatientSummaryContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context);
     final summary = state.summary;
     return PatientTabLayout(
-      bottomBar: summary == null
-          ? null
-          : HealthifyButton(
-              text: !summary.hasBaseline
-                  ? l10n.summaryRegisterBaseline
-                  : summary.consultationInProgress != null
-                  ? l10n.summaryContinueConsultation
-                  : l10n.summaryStartConsultation,
-              onPressed: onPrimaryAction,
-              loading: state.isStartingConsultation,
-              enabled: !state.isOffline,
-              fullWidth: true,
-            ),
+      bottomBar: summary == null ? null : ConsultationPrimaryButton(state: state, onPressed: onPrimaryAction),
       children: [
         if (state.isOffline) const OfflineBanner(type: OfflineBannerType.requiresNetwork),
         if (summary != null)
