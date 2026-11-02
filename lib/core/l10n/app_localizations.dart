@@ -1622,6 +1622,12 @@ abstract class AppLocalizations {
   /// **'Todavía no hay comidas registradas hoy.'**
   String get followUpDiaryEmpty;
 
+  /// No description provided for @followUpPendingConfirmationHint.
+  ///
+  /// In es, this message translates to:
+  /// **'«Por confirmar»: el paciente aún no confirmó la porción. No suma a su cumplimiento hasta que la confirme.'**
+  String get followUpPendingConfirmationHint;
+
   /// No description provided for @followUpFoodUnnamed.
   ///
   /// In es, this message translates to:

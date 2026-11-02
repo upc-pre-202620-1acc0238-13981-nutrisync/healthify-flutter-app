@@ -866,6 +866,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get followUpDiaryEmpty => 'No meals logged today yet.';
 
   @override
+  String get followUpPendingConfirmationHint =>
+      '\"Pending confirmation\": the patient has not confirmed the portion yet. It does not count toward their adherence until they confirm it.';
+
+  @override
   String get followUpFoodUnnamed => 'Meal';
 
   @override

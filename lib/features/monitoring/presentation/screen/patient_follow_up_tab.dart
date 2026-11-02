@@ -303,6 +303,12 @@ class _DiaryCard extends StatelessWidget {
             l10n.followUpDiaryEmpty,
             style: context.textStyles.bodySmall!.copyWith(color: scheme.onSurfaceVariant),
           ),
+        // "Pending confirmation" alone did not say whether to count the meal (validation interviews).
+        if (entries.any((entry) => entry.isAwaitingConfirmation))
+          Text(
+            l10n.followUpPendingConfirmationHint,
+            style: context.textStyles.bodySmall!.copyWith(color: scheme.onSurfaceVariant),
+          ),
         for (var i = 0; i < entries.length; i++) ...[
           if (i > 0) const CardDivider(),
           Row(

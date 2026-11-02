@@ -390,6 +390,7 @@
   "followUpAiReview": "Review it before using it in the consultation.",
   "followUpDiaryToday": "Today's diary",
   "followUpDiaryEmpty": "No meals logged today yet.",
+  "followUpPendingConfirmationHint": "\"Pending confirmation\": the patient has not confirmed the portion yet. It does not count toward their adherence until they confirm it.",
   "followUpFoodUnnamed": "Meal",
   "followUpFoodPortion": "{name} · {grams} g",
   "@followUpFoodPortion": {

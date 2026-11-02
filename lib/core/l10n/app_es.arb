@@ -456,6 +456,7 @@
   "followUpAiReview": "Revísalo antes de usarlo en consulta.",
   "followUpDiaryToday": "Diario de hoy",
   "followUpDiaryEmpty": "Todavía no hay comidas registradas hoy.",
+  "followUpPendingConfirmationHint": "«Por confirmar»: el paciente aún no confirmó la porción. No suma a su cumplimiento hasta que la confirme.",
   "followUpFoodUnnamed": "Comida",
   "followUpFoodPortion": "{name} · {grams} g",
   "@followUpFoodPortion": {
