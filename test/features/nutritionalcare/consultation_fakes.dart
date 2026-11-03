@@ -16,12 +16,13 @@ Consultation consultation({
   ConsultationTargets? targets,
   PublicationDraft? draft,
   PatientCheckIn? checkIn,
+  DateTime? lastSavedAt,
 }) => Consultation(
   id: ConsultationId(id),
   patientId: PatientId(7),
   isInProgress: true,
   currentStep: step,
-  lastSavedAt: DateTime.utc(2026, 10, 30, 12),
+  lastSavedAt: lastSavedAt ?? DateTime.utc(2026, 10, 30, 12),
   measurement: measurement,
   diagnosis: diagnosis,
   targets: targets,
@@ -122,6 +123,7 @@ Future<T> _after<T>(Completer<void>? gate, T Function() value) async {
 class FakeConsultationRepository implements ConsultationRepository {
   Result<Consultation> startResult = Result.success(consultation());
   Result<Consultation?> inProgressResult = const Result.success(null);
+
   /// `null` answers like the backend: the consultation at step 2 with the measurement that was sent.
   Result<Consultation>? recordMeasurementResult;
   Result<DiagnosisSuggestion> suggestDiagnosisResult = Result.success(diagnosisSuggestion());
@@ -236,7 +238,11 @@ class FakeConsultationRepository implements ConsultationRepository {
   }
 
   @override
-  Future<Result<Consultation>> publish(ConsultationId id, Publication publication, IdempotencyKey idempotencyKey) async {
+  Future<Result<Consultation>> publish(
+    ConsultationId id,
+    Publication publication,
+    IdempotencyKey idempotencyKey,
+  ) async {
     published.add((publication, idempotencyKey));
     return publishResults.isEmpty ? publishResult : publishResults.removeAt(0);
   }

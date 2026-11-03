@@ -376,7 +376,18 @@ void main() {
     });
 
     testWidgets('shows the consultation in progress and the pinned "Continue consultation"', (tester) async {
-      consultations.inProgressResult = Result.success(consultation(step: ConsultationStep.targets));
+      consultations.inProgressResult = Result.success(
+        consultation(step: ConsultationStep.targets, lastSavedAt: DateTime.now()),
+      );
+      summaries.result = Result.success(
+        summary(
+          inProgress: ConsultationInProgress(
+            id: ConsultationId(9),
+            step: ConsultationStep.targets,
+            lastSavedAt: DateTime.now(),
+          ),
+        ),
+      );
       await pumpScreen(tester);
       await openTab(tester, 'Historia');
 
@@ -408,7 +419,12 @@ void main() {
   });
 
   group('closing a referral from the Record tab', () {
-    final open = ReferralSummary(id: 5, specialty: 'Endocrinología', issuedAt: DateTime.utc(2026, 9, 8, 15), isOpen: true);
+    final open = ReferralSummary(
+      id: 5,
+      specialty: 'Endocrinología',
+      issuedAt: DateTime.utc(2026, 9, 8, 15),
+      isOpen: true,
+    );
     final closed = ReferralSummary(
       id: 5,
       specialty: 'Endocrinología',
