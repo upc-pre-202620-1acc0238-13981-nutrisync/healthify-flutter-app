@@ -311,6 +311,43 @@ void main() {
       expect((await repo.recordReferral(referral)).errorOrNull, isA<Network>());
     });
 
+    test('POST referrals/{id}/closure sends no body and a 200 is a success', () async {
+      final repo = repository((_) => _json(200, {'referralId': 5, 'status': 'Closed'}));
+
+      final result = await repo.closeReferral(5);
+
+      expect(requests.single.method, 'POST');
+      expect(requests.single.url.path, '/api/v1/referrals/5/closure');
+      expect(requests.single.body, isEmpty);
+      expect(result.isSuccess, isTrue);
+    });
+
+    test('closing: 404 is a not-found, 409 a conflict and no connection a network error', () async {
+      var repo = repository((_) => _json(404, {'title': 'x', 'code': 'ReferralNotFound'}));
+      expect((await repo.closeReferral(5)).errorOrNull, isA<NotFound>());
+
+      repo = repository((_) => _json(409, {'title': 'x', 'code': 'ReferralAlreadyClosed'}));
+      expect((await repo.closeReferral(5)).errorOrNull, isA<Conflict>());
+
+      repo = repository((_) => throw const SocketException('offline'));
+      expect((await repo.closeReferral(5)).errorOrNull, isA<Network>());
+    });
+
+    test('the close use case asks to close that referral and returns its answer', () async {
+      final repo = repository((_) => _json(409, {'title': 'x'}));
+
+      final result = await CloseReferralUseCase(repo)(5);
+
+      expect(requests.single.url.path, '/api/v1/referrals/5/closure');
+      expect(result.errorOrNull, isA<Conflict>());
+    });
+
+    test('closing does not touch the reminders', () async {
+      await repository((_) => _json(200, {'referralId': 5})).closeReferral(5);
+
+      expect(agendaChanges, 0);
+    });
+
     test('the referral rules: a specialty up to 120 characters and a reason up to 1000', () {
       final patient = PatientId(11);
 

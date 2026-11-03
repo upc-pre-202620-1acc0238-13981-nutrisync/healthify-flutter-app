@@ -29,6 +29,7 @@ class FakePractitionerAgendaRepository implements PractitionerAgendaRepository {
   Result<AgendaVisit>? rescheduleResult;
   Result<void> cancelResult = const Result.success(null);
   Result<void> referralResult = const Result.success(null);
+  Result<void> closeReferralResult = const Result.success(null);
 
   /// Completes the next `getAgenda` call by hand, to test answers that arrive out of order.
   Completer<Result<List<AgendaVisit>>>? agendaGate;
@@ -39,6 +40,7 @@ class FakePractitionerAgendaRepository implements PractitionerAgendaRepository {
   final rescheduled = <(int, DateTime, FollowUpPreparation)>[];
   final cancelled = <(int, CancellationReason?)>[];
   final referrals = <NewReferral>[];
+  final closedReferrals = <int>[];
 
   @override
   Future<Result<List<AgendaVisit>>> getAgenda(int practitionerId, FollowUpState? state, DateTime? from) async {
@@ -74,5 +76,11 @@ class FakePractitionerAgendaRepository implements PractitionerAgendaRepository {
   Future<Result<void>> recordReferral(NewReferral referral) async {
     referrals.add(referral);
     return referralResult;
+  }
+
+  @override
+  Future<Result<void>> closeReferral(int referralId) async {
+    closedReferrals.add(referralId);
+    return closeReferralResult;
   }
 }

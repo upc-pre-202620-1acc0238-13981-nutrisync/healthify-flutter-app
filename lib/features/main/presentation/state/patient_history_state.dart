@@ -50,5 +50,6 @@ abstract class PatientHistoryState with _$PatientHistoryState {
     @Default(false) bool loadFailed,
     HistoryData? data,
     EvaluationSheetState? evaluationSheet,
+    @Default(false) bool isClosingReferral,
   }) = _PatientHistoryState;
 }

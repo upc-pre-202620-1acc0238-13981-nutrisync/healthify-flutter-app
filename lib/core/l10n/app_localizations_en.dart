@@ -1239,6 +1239,26 @@ class AppLocalizationsEn extends AppLocalizations {
   String get referralDetailNoReason => 'No reason recorded.';
 
   @override
+  String get referralCloseAction => 'Close referral';
+
+  @override
+  String get referralCloseDialogTitle => 'CLOSE THIS REFERRAL?';
+
+  @override
+  String get referralCloseDialogBody =>
+      'It will be marked as closed in the record.';
+
+  @override
+  String get referralCloseConfirm => 'Yes, close';
+
+  @override
+  String get referralCloseNotFound => 'This referral is no longer available.';
+
+  @override
+  String get referralCloseFailed =>
+      'We couldn\'t close the referral. Try again.';
+
+  @override
   String get historyRecordUnavailable => 'We couldn\'t load the record.';
 
   @override

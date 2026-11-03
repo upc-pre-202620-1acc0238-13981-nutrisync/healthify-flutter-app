@@ -1235,6 +1235,26 @@ class AppLocalizationsEs extends AppLocalizations {
   String get referralDetailNoReason => 'Sin motivo registrado.';
 
   @override
+  String get referralCloseAction => 'Cerrar derivación';
+
+  @override
+  String get referralCloseDialogTitle => '¿CERRAR ESTA DERIVACIÓN?';
+
+  @override
+  String get referralCloseDialogBody =>
+      'Quedará marcada como cerrada en el expediente.';
+
+  @override
+  String get referralCloseConfirm => 'Sí, cerrar';
+
+  @override
+  String get referralCloseNotFound => 'Esta derivación ya no está disponible.';
+
+  @override
+  String get referralCloseFailed =>
+      'No pudimos cerrar la derivación. Inténtalo de nuevo.';
+
+  @override
   String get historyRecordUnavailable => 'No pudimos cargar el expediente.';
 
   @override
