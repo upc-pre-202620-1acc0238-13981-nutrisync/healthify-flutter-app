@@ -174,6 +174,7 @@ void main() {
           GetConsultationInProgressUseCase(consultations),
           GetPractitionerRecordUseCase(records),
           GetEvaluationDetailUseCase(records),
+          CloseReferralUseCase(agenda),
           connectivity,
           patientId: id,
         ),

@@ -68,6 +68,7 @@ void registerMonitoring() {
     ..registerFactory(() => RescheduleFollowUpUseCase(getIt<PractitionerAgendaRepository>(), DateTime.now))
     ..registerFactory(() => CancelFollowUpUseCase(getIt<PractitionerAgendaRepository>()))
     ..registerFactory(() => RecordReferralUseCase(getIt<PractitionerAgendaRepository>()))
+    ..registerFactory(() => CloseReferralUseCase(getIt<PractitionerAgendaRepository>()))
     ..registerFactory(
       () => PractitionerAgendaCubit(
         getIt<ObserveCurrentUserUseCase>(),

@@ -2210,6 +2210,42 @@ abstract class AppLocalizations {
   /// **'Sin motivo registrado.'**
   String get referralDetailNoReason;
 
+  /// No description provided for @referralCloseAction.
+  ///
+  /// In es, this message translates to:
+  /// **'Cerrar derivación'**
+  String get referralCloseAction;
+
+  /// No description provided for @referralCloseDialogTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'¿CERRAR ESTA DERIVACIÓN?'**
+  String get referralCloseDialogTitle;
+
+  /// No description provided for @referralCloseDialogBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Quedará marcada como cerrada en el expediente.'**
+  String get referralCloseDialogBody;
+
+  /// No description provided for @referralCloseConfirm.
+  ///
+  /// In es, this message translates to:
+  /// **'Sí, cerrar'**
+  String get referralCloseConfirm;
+
+  /// No description provided for @referralCloseNotFound.
+  ///
+  /// In es, this message translates to:
+  /// **'Esta derivación ya no está disponible.'**
+  String get referralCloseNotFound;
+
+  /// No description provided for @referralCloseFailed.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos cerrar la derivación. Inténtalo de nuevo.'**
+  String get referralCloseFailed;
+
   /// No description provided for @historyRecordUnavailable.
   ///
   /// In es, this message translates to:

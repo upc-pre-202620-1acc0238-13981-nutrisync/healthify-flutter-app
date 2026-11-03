@@ -5,6 +5,7 @@ import 'package:healthify/core/common/error/domain_error.dart';
 import 'package:healthify/core/common/error/result.dart';
 import 'package:healthify/core/designsystem/component/healthify_button.dart';
 import 'package:healthify/core/designsystem/component/healthify_icon_button.dart';
+import 'package:healthify/core/designsystem/component/healthify_snackbar.dart';
 import 'package:healthify/core/designsystem/theme/healthify_theme.dart';
 import 'package:healthify/core/di/service_locator.dart';
 import 'package:healthify/core/l10n/app_localizations.dart';
@@ -14,8 +15,10 @@ import 'package:healthify/features/main/presentation/navigation/patient_snackbar
 import 'package:healthify/features/main/presentation/navigation/shell_routes.dart';
 import 'package:healthify/features/main/presentation/screen/practitioner_patient_screen.dart';
 import 'package:healthify/features/monitoring/application/usecase/monitoring_use_cases.dart';
+import 'package:healthify/features/monitoring/application/usecase/practitioner_agenda_use_cases.dart';
 import 'package:healthify/features/monitoring/presentation/cubit/patient_follow_up_cubit.dart';
 import 'package:healthify/features/nutritionalcare/application/usecase/practitioner_care_use_cases.dart';
+import 'package:healthify/features/nutritionalcare/domain/entity/patient_record.dart';
 import 'package:healthify/features/nutritionalcare/domain/entity/patient_summary.dart';
 import 'package:healthify/features/nutritionalcare/domain/valueobject/clinical_codes.dart';
 import 'package:healthify/features/nutritionalcare/domain/valueobject/clinical_values.dart';
@@ -24,6 +27,7 @@ import 'package:healthify/features/nutritionalcare/presentation/cubit/patient_su
 
 import '../../../core/designsystem/test_fonts.dart';
 import '../../carerelationship/fakes.dart';
+import '../../monitoring/agenda_fakes.dart';
 import '../../monitoring/fakes.dart';
 import '../../nutritionalcare/fakes.dart';
 
@@ -35,6 +39,7 @@ void main() {
   late FakeNutritionPlanRepository plans;
   late FakePractitionerMonitoringRepository monitoring;
   late FakePractitionerRecordRepository records;
+  late FakePractitionerAgendaRepository agenda;
   late FakePractitionerCareLinkRepository careLinks;
   late FakeConnectivity connectivity;
 
@@ -51,6 +56,7 @@ void main() {
     plans = FakeNutritionPlanRepository();
     monitoring = FakePractitionerMonitoringRepository();
     records = FakePractitionerRecordRepository();
+    agenda = FakePractitionerAgendaRepository();
     careLinks = FakePractitionerCareLinkRepository();
     connectivity = FakeConnectivity();
     opened.clear();
@@ -79,6 +85,7 @@ void main() {
           GetConsultationInProgressUseCase(consultations),
           GetPractitionerRecordUseCase(records),
           GetEvaluationDetailUseCase(records),
+          CloseReferralUseCase(agenda),
           connectivity,
           patientId: id,
         ),
@@ -397,6 +404,86 @@ void main() {
 
       expect(tester.widget<HealthifyButton>(find.widgetWithText(HealthifyButton, 'Editar')).enabled, isFalse);
       expect(find.text('Sin conexión. Necesitas conexión para continuar.'), findsWidgets);
+    });
+  });
+
+  group('closing a referral from the Record tab', () {
+    final open = ReferralSummary(id: 5, specialty: 'Endocrinología', issuedAt: DateTime.utc(2026, 9, 8, 15), isOpen: true);
+    final closed = ReferralSummary(
+      id: 5,
+      specialty: 'Endocrinología',
+      issuedAt: DateTime.utc(2026, 9, 8, 15),
+      isOpen: false,
+      closedAt: DateTime.utc(2026, 10, 12, 15),
+    );
+
+    Future<void> openSheet(WidgetTester tester) async {
+      records.recordResult = Result.success(practitionerRecord(referrals: [open]));
+      await pumpScreen(tester);
+      await openTab(tester, 'Historia');
+      await tester.ensureVisible(find.text('Derivación a Endocrinología'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Derivación a Endocrinología'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Cerrar derivación'));
+      await tester.pumpAndSettle();
+    }
+
+    testWidgets('dismissing the confirmation sends nothing and keeps the sheet', (tester) async {
+      await openSheet(tester);
+
+      expect(find.text('¿CERRAR ESTA DERIVACIÓN?'), findsOneWidget);
+      await tester.tap(find.text('Cancelar'));
+      await tester.pumpAndSettle();
+
+      expect(agenda.closedReferrals, isEmpty);
+      expect(find.text('Cerrar derivación'), findsOneWidget);
+    });
+
+    testWidgets('confirming closes the sheet and the card shows it closed with its date', (tester) async {
+      await openSheet(tester);
+
+      records.recordResult = Result.success(practitionerRecord(referrals: [closed]));
+      await tester.tap(find.text('Sí, cerrar'));
+      await tester.pumpAndSettle();
+
+      expect(agenda.closedReferrals, [5]);
+      expect(find.text('Cerrar derivación'), findsNothing);
+      expect(find.textContaining('cerrada el 12 oct 2026'), findsOneWidget);
+    });
+
+    testWidgets('already closed is silent: the sheet closes and the card updates', (tester) async {
+      agenda.closeReferralResult = const Result.failure(Conflict('ReferralAlreadyClosed'));
+      await openSheet(tester);
+
+      records.recordResult = Result.success(practitionerRecord(referrals: [closed]));
+      await tester.tap(find.text('Sí, cerrar'));
+      await tester.pumpAndSettle();
+
+      expect(find.text('Cerrar derivación'), findsNothing);
+      expect(find.textContaining('cerrada el 12 oct 2026'), findsOneWidget);
+      expect(find.byType(HealthifySnackbarContent), findsNothing);
+    });
+
+    testWidgets('not found closes the sheet and shows the snackbar', (tester) async {
+      agenda.closeReferralResult = const Result.failure(NotFound('ReferralNotFound'));
+      await openSheet(tester);
+
+      await tester.tap(find.text('Sí, cerrar'));
+      await tester.pumpAndSettle();
+
+      expect(find.text('Cerrar derivación'), findsNothing);
+      expect(find.text('Esta derivación ya no está disponible.'), findsOneWidget);
+    });
+
+    testWidgets('no connection closes the sheet and shows the snackbar', (tester) async {
+      agenda.closeReferralResult = const Result.failure(Network());
+      await openSheet(tester);
+
+      await tester.tap(find.text('Sí, cerrar'));
+      await tester.pumpAndSettle();
+
+      expect(find.text('No hay conexión. Revisa tu internet e inténtalo de nuevo.'), findsOneWidget);
     });
   });
 

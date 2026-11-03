@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/designsystem/component/date_time_texts.dart';
 import '../../../../core/designsystem/component/error_state.dart';
-import '../../../../core/designsystem/component/healthify_bottom_sheet.dart';
+import '../../../../core/designsystem/component/healthify_button.dart';
 import '../../../../core/designsystem/component/number_texts.dart';
 import '../../../../core/designsystem/component/skeleton.dart';
 import '../../../../core/designsystem/component/status_chip.dart';
@@ -122,12 +122,14 @@ class EvaluationSheetContent extends StatelessWidget {
   }
 }
 
-/// Referral detail: specialty, date, status and reason. The specialty and reason are the practitioner's text; they
-/// are not translated.
+/// Referral detail: specialty, date, status and reason, plus "Close referral" while it is open. The specialty and reason
+/// are the practitioner's text; they are not translated.
 class ReferralSheetContent extends StatelessWidget {
-  const ReferralSheetContent({super.key, required this.referral});
+  const ReferralSheetContent({super.key, required this.referral, required this.onClose, this.isClosing = false});
 
   final ReferralSummary referral;
+  final VoidCallback onClose;
+  final bool isClosing;
 
   @override
   Widget build(BuildContext context) {
@@ -173,6 +175,14 @@ class ReferralSheetContent extends StatelessWidget {
             ),
           ],
         ),
+        if (referral.isOpen)
+          HealthifyButton(
+            text: l10n.referralCloseAction,
+            onPressed: onClose,
+            style: HealthifyButtonStyle.outlined,
+            loading: isClosing,
+            fullWidth: true,
+          ),
       ],
     );
   }
@@ -257,9 +267,3 @@ class _DetailGroup extends StatelessWidget {
     );
   }
 }
-
-/// Opens the referral detail in the standard bottom sheet.
-Future<void> showReferralSheet(BuildContext context, ReferralSummary referral) => showHealthifyBottomSheet<void>(
-  context: context,
-  builder: (_) => ReferralSheetContent(referral: referral),
-);

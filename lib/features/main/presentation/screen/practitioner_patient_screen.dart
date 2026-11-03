@@ -179,6 +179,7 @@ class _PatientFileState extends State<_PatientFile> with SingleTickerProviderSta
     final request = switch (event) {
       OpenBaseline(:final editing) => await widget.onOpenBaseline(editing),
       OpenConsultation(:final step) => await widget.onOpenConsultation(step),
+      ReferralClosureFailed(:final failure) => ReferralNotClosed(failure),
     };
     if (request != null && mounted) _handle(request);
   }
@@ -200,6 +201,12 @@ class _PatientFileState extends State<_PatientFile> with SingleTickerProviderSta
           onAction: () => _select(PatientDetailTab.record),
           duration: _longSnackbar,
         );
+      case ReferralNotClosed(:final failure):
+        _show(switch (failure) {
+          ReferralClosureFailure.notFound => l10n.referralCloseNotFound,
+          ReferralClosureFailure.network => l10n.errorNetwork,
+          ReferralClosureFailure.other => l10n.referralCloseFailed,
+        });
       case FollowUpScheduled(:final scheduledFor):
         _select(PatientDetailTab.summary);
         final day = weekdayDayMonthText(scheduledFor, l10n.locale);

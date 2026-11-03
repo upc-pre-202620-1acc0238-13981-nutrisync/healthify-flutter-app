@@ -7,7 +7,7 @@ import '../../domain/valueobject/clinical_codes.dart';
 
 part 'patient_tab_states.freezed.dart';
 
-/// Navigation the patient file's tabs ask for (baseline form or the consultation).
+/// What the patient file's tabs ask of it (baseline form, the consultation or a notice).
 sealed class PatientTabEvent {
   const PatientTabEvent();
 }
@@ -24,6 +24,21 @@ final class OpenConsultation extends PatientTabEvent {
   const OpenConsultation(this.step);
 
   final ConsultationStep step;
+}
+
+/// Why a referral could not be closed.
+enum ReferralClosureFailure {
+  /// `404`: it does not exist or another practitioner recorded it.
+  notFound,
+  network,
+  other,
+}
+
+/// The referral was not closed: the file shows the snackbar.
+final class ReferralClosureFailed extends PatientTabEvent {
+  const ReferralClosureFailed(this.failure);
+
+  final ReferralClosureFailure failure;
 }
 
 /// Summary tab. `summary.baseline == null` means no baseline yet. None of this is stored on the phone: offline with no
