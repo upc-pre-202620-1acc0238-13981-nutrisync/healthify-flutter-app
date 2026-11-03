@@ -5,18 +5,21 @@ import 'package:healthify/core/common/error/domain_error.dart';
 import 'package:healthify/core/common/error/result.dart';
 import 'package:healthify/features/main/presentation/cubit/patient_history_cubit.dart';
 import 'package:healthify/features/main/presentation/state/patient_history_state.dart';
+import 'package:healthify/features/monitoring/application/usecase/practitioner_agenda_use_cases.dart';
 import 'package:healthify/features/nutritionalcare/application/usecase/practitioner_care_use_cases.dart';
 import 'package:healthify/features/nutritionalcare/domain/valueobject/clinical_codes.dart';
 import 'package:healthify/features/nutritionalcare/domain/entity/patient_record.dart';
 import 'package:healthify/features/nutritionalcare/presentation/state/patient_tab_states.dart';
 
 import '../../carerelationship/fakes.dart';
+import '../../monitoring/agenda_fakes.dart';
 import '../../nutritionalcare/fakes.dart';
 
 void main() {
   late FakePatientBaselineRepository baselines;
   late FakeConsultationRepository consultations;
   late FakePractitionerRecordRepository records;
+  late FakePractitionerAgendaRepository agenda;
   late FakeConnectivity connectivity;
   late List<PatientTabEvent> events;
 
@@ -24,6 +27,7 @@ void main() {
     baselines = FakePatientBaselineRepository()..getResult = Result.success(baseline());
     consultations = FakeConsultationRepository();
     records = FakePractitionerRecordRepository();
+    agenda = FakePractitionerAgendaRepository();
     connectivity = FakeConnectivity();
   });
 
@@ -33,6 +37,7 @@ void main() {
       GetConsultationInProgressUseCase(consultations),
       GetPractitionerRecordUseCase(records),
       GetEvaluationDetailUseCase(records),
+      CloseReferralUseCase(agenda),
       connectivity,
       patientId: 7,
     );
@@ -158,6 +163,72 @@ void main() {
 
       expect(cubit.state.data!.record, isNotNull);
       expect(cubit.state.data!.recordFailed, isTrue);
+      await cubit.close();
+    });
+  });
+
+  group('closing a referral', () {
+    test('closes that referral, rereads the record and reports nothing', () async {
+      final cubit = build();
+      await pumpEventQueue();
+      final readsBefore = records.recordCalls;
+
+      final closing = cubit.onCloseReferral(5);
+      expect(cubit.state.isClosingReferral, isTrue);
+      await closing;
+      await pumpEventQueue();
+
+      expect(agenda.closedReferrals, [5]);
+      expect(cubit.state.isClosingReferral, isFalse);
+      expect(records.recordCalls, readsBefore + 1);
+      expect(events, isEmpty);
+      await cubit.close();
+    });
+
+    test('already closed counts as closed: it rereads and reports nothing', () async {
+      agenda.closeReferralResult = const Result.failure(Conflict('ReferralAlreadyClosed'));
+      final cubit = build();
+      await pumpEventQueue();
+      final readsBefore = records.recordCalls;
+
+      await cubit.onCloseReferral(5);
+      await pumpEventQueue();
+
+      expect(records.recordCalls, readsBefore + 1);
+      expect(events, isEmpty);
+      await cubit.close();
+    });
+
+    final failures = <DomainError, ReferralClosureFailure>{
+      const NotFound('ReferralNotFound'): ReferralClosureFailure.notFound,
+      const Network(): ReferralClosureFailure.network,
+      const Unexpected('HTTP_500'): ReferralClosureFailure.other,
+      const Forbidden(): ReferralClosureFailure.other,
+    };
+    for (final MapEntry(key: error, value: failure) in failures.entries) {
+      test('$error reports ${failure.name} and does not reread', () async {
+        agenda.closeReferralResult = Result.failure(error);
+        final cubit = build();
+        await pumpEventQueue();
+        final readsBefore = records.recordCalls;
+
+        await cubit.onCloseReferral(5);
+        await pumpEventQueue();
+
+        expect(events.single, isA<ReferralClosureFailed>().having((e) => e.failure, 'failure', failure));
+        expect(cubit.state.isClosingReferral, isFalse);
+        expect(records.recordCalls, readsBefore);
+        await cubit.close();
+      });
+    }
+
+    test('a second tap while closing is ignored', () async {
+      final cubit = build();
+      await pumpEventQueue();
+
+      await Future.wait([cubit.onCloseReferral(5), cubit.onCloseReferral(5)]);
+
+      expect(agenda.closedReferrals, [5]);
       await cubit.close();
     });
   });

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:healthify/core/designsystem/component/healthify_button.dart';
 import 'package:healthify/core/designsystem/theme/healthify_theme.dart';
 import 'package:healthify/core/l10n/app_localizations.dart';
 import 'package:healthify/features/main/presentation/screen/patient_history_tab.dart';
@@ -14,7 +15,13 @@ import '../../nutritionalcare/fakes.dart';
 void main() {
   setUpAll(loadAppFonts);
 
-  Future<void> pump(WidgetTester tester, Widget child, {String language = 'es', double width = 320}) async {
+  Future<void> pump(
+    WidgetTester tester,
+    Widget child, {
+    String language = 'es',
+    double width = 320,
+    bool settle = true,
+  }) async {
     await tester.binding.setSurfaceSize(Size(width, 800));
     addTearDown(() => tester.binding.setSurfaceSize(null));
     await tester.pumpWidget(
@@ -31,7 +38,7 @@ void main() {
         home: Scaffold(body: child),
       ),
     );
-    await tester.pumpAndSettle();
+    if (settle) await tester.pumpAndSettle();
   }
 
   final referral = ReferralSummary(
@@ -153,7 +160,7 @@ void main() {
     });
 
     testWidgets('referral: status, dates and the practitioner reason as written', (tester) async {
-      await pump(tester, ReferralSheetContent(referral: referral));
+      await pump(tester, ReferralSheetContent(referral: referral, onClose: () {}));
 
       expect(find.text('Derivaciones'), findsOneWidget);
       expect(find.text('Derivación a Endocrinología'), findsOneWidget);
@@ -161,11 +168,45 @@ void main() {
       expect(find.text('Descartar hipotiroidismo.'), findsOneWidget);
     });
 
+    testWidgets('an open referral offers to close it, and blocks the button while closing', (tester) async {
+      var closed = 0;
+      await pump(tester, ReferralSheetContent(referral: referral, onClose: () => closed++));
+
+      await tester.tap(find.text('Cerrar derivación'));
+      expect(closed, 1);
+
+      // The button's progress never settles.
+      await pump(
+        tester,
+        ReferralSheetContent(referral: referral, onClose: () => closed++, isClosing: true),
+        settle: false,
+      );
+      await tester.tap(find.byType(HealthifyButton), warnIfMissed: false);
+      expect(closed, 1);
+    });
+
+    testWidgets('a closed referral has no close button and its card shows the closing date', (tester) async {
+      final closed = ReferralSummary(
+        id: 3,
+        specialty: 'Cardiología',
+        issuedAt: DateTime.utc(2026, 8, 1, 15),
+        isOpen: false,
+        closedAt: DateTime.utc(2026, 10, 12, 15),
+      );
+
+      await pump(tester, ReferralSheetContent(referral: closed, onClose: () {}));
+      expect(find.text('Cerrar derivación'), findsNothing);
+
+      await pump(tester, content(state(record: practitionerRecord(referrals: [closed]))));
+      expect(find.textContaining('cerrada el 12 oct 2026'), findsOneWidget);
+    });
+
     testWidgets('referral without a reason says so', (tester) async {
       await pump(
         tester,
         ReferralSheetContent(
           referral: ReferralSummary(id: 2, specialty: 'Cardiología', issuedAt: DateTime.utc(2026, 8, 1), isOpen: false),
+          onClose: () {},
         ),
       );
 
