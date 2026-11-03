@@ -50,5 +50,8 @@ class PractitionerAgendaRepositoryImpl implements PractitionerAgendaRepository {
   Future<Result<void>> recordReferral(NewReferral referral) =>
       apiCall<void>(() => _service.recordReferral(referral.toDto()));
 
+  @override
+  Future<Result<void>> closeReferral(int referralId) => apiCall<void>(() => _service.closeReferral(referralId));
+
   Result<T> _changingAgenda<T>(Result<T> result) => result.onSuccess((_) => _onAgendaChanged());
 }

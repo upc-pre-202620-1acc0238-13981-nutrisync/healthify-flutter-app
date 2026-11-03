@@ -29,4 +29,7 @@ class PractitionerAgendaService {
 
   /// `201` with the `ReferralResource` (unused: the patient file is re-read on return).
   Future<void> recordReferral(RecordReferralRequestDto body) => _api.post('referrals', body: body.toJson());
+
+  /// `200` with the closed referral (unused: the patient file is re-read afterwards).
+  Future<void> closeReferral(int referralId) => _api.post('referrals/$referralId/closure');
 }

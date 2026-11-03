@@ -63,3 +63,12 @@ class RecordReferralUseCase {
 
   Future<Result<void>> call(NewReferral referral) => _repository.recordReferral(referral);
 }
+
+/// "Close referral".
+class CloseReferralUseCase {
+  const CloseReferralUseCase(this._repository);
+
+  final PractitionerAgendaRepository _repository;
+
+  Future<Result<void>> call(int referralId) => _repository.closeReferral(referralId);
+}

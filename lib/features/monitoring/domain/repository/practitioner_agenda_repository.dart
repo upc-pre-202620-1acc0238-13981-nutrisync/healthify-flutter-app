@@ -19,4 +19,8 @@ abstract interface class PractitionerAgendaRepository {
 
   /// `POST /referrals` (`201`). `400 SpecialtyAndReasonRequired`, `403 ActiveCareLinkRequired`.
   Future<Result<void>> recordReferral(NewReferral referral);
+
+  /// `POST /referrals/{id}/closure` (`200`). `404` if it does not exist or another practitioner recorded it, `409` if it
+  /// was already closed.
+  Future<Result<void>> closeReferral(int referralId);
 }
