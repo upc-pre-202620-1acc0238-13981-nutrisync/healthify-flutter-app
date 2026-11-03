@@ -189,6 +189,7 @@ class _ReferralCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
+    final closedAt = referral.closedAt;
     return SectionCard(
       onTap: onTap,
       children: [
@@ -197,7 +198,11 @@ class _ReferralCard extends StatelessWidget {
           title: l10n.recordPrReferralTitle(referral.specialty),
           supportingText: l10n.recordPrReferralLine(
             mediumDateText(referral.issuedAt, l10n.locale),
-            referral.isOpen ? l10n.recordPrReferralOpen : l10n.recordPrReferralClosed,
+            referral.isOpen
+                ? l10n.recordPrReferralOpen
+                : closedAt == null
+                ? l10n.recordPrReferralClosed
+                : l10n.referralDetailClosedOn(mediumDateText(closedAt, l10n.locale)),
           ),
           trailing: HealthifyIcon(HealthifyIcons.chevronRight, color: context.colors.onSurfaceVariant),
         ),

@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/common/error/domain_error.dart';
 import '../../../../core/common/one_shot_events.dart';
 import '../../../../core/connectivity/connectivity_observer.dart';
+import '../../../monitoring/application/usecase/practitioner_agenda_use_cases.dart';
 import '../../../nutritionalcare/application/usecase/practitioner_care_use_cases.dart';
 import '../../../nutritionalcare/presentation/state/patient_tab_states.dart';
 import '../state/patient_history_state.dart';
@@ -14,13 +15,14 @@ import '../state/patient_history_state.dart';
 /// on returning to the tab or from the baseline and when the connection comes back.
 ///
 /// The record is a section of its own: if it cannot be read, the baseline still works. Tapping an assessment reads its
-/// detail (`GET nutritional-assessments/{id}`) into a sheet.
+/// detail (`GET nutritional-assessments/{id}`) into a sheet. A referral's sheet can close it, which rereads the tab.
 class PatientHistoryCubit extends Cubit<PatientHistoryState> {
   PatientHistoryCubit(
     this._getPatientBaseline,
     this._getConsultationInProgress,
     this._getPractitionerRecord,
     this._getEvaluationDetail,
+    this._closeReferral,
     ConnectivityObserver connectivityObserver, {
     required this.patientId,
   }) : super(const PatientHistoryState()) {
@@ -37,6 +39,7 @@ class PatientHistoryCubit extends Cubit<PatientHistoryState> {
   final GetConsultationInProgressUseCase _getConsultationInProgress;
   final GetPractitionerRecordUseCase _getPractitionerRecord;
   final GetEvaluationDetailUseCase _getEvaluationDetail;
+  final CloseReferralUseCase _closeReferral;
   final int patientId;
 
   late final StreamSubscription<bool> _connectivity;
@@ -70,6 +73,25 @@ class PatientHistoryCubit extends Cubit<PatientHistoryState> {
     _evaluationId++;
     _selectedAssessmentId = null;
     emit(state.copyWith(evaluationSheet: null));
+  }
+
+  /// "Close referral", once confirmed. Already closed (`409`) is what was asked for, so it counts as closed.
+  Future<void> onCloseReferral(int referralId) async {
+    if (state.isClosingReferral) return;
+    emit(state.copyWith(isClosingReferral: true));
+    final result = await _closeReferral(referralId);
+    if (isClosed) return;
+    emit(state.copyWith(isClosingReferral: false));
+    switch (result.errorOrNull) {
+      case null || Conflict():
+        _load();
+      case NotFound():
+        _events.emit(const ReferralClosureFailed(ReferralClosureFailure.notFound));
+      case Network():
+        _events.emit(const ReferralClosureFailed(ReferralClosureFailure.network));
+      default:
+        _events.emit(const ReferralClosureFailed(ReferralClosureFailure.other));
+    }
   }
 
   Future<void> _loadEvaluation(int assessmentId) async {

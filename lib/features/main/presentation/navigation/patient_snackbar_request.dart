@@ -1,4 +1,5 @@
 import '../../../nutritionalcare/domain/valueobject/clinical_codes.dart';
+import '../../../nutritionalcare/presentation/state/patient_tab_states.dart';
 
 /// Patient file snackbars (and tab changes) that another screen requests on return: the screen it opened pops with one of
 /// these and the patient file shows it, over its own tab bar. One of them is not a message but a hand-over: the baseline
@@ -25,6 +26,13 @@ final class ReferralRegistered extends PatientSnackbarRequest {
   const ReferralRegistered(this.specialty);
 
   final String specialty;
+}
+
+/// The referral could not be closed. Comes from the referral sheet of the Record tab.
+final class ReferralNotClosed extends PatientSnackbarRequest {
+  const ReferralNotClosed(this.failure);
+
+  final ReferralClosureFailure failure;
 }
 
 /// Scheduling opened from the summary: "Consultation scheduled: thu 18 sep, 10:00". Back on the Summary tab.

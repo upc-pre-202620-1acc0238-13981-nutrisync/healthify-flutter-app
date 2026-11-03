@@ -20,6 +20,7 @@ void registerMain() {
         getIt(),
         getIt(),
         getIt(),
+        getIt(),
         getIt<ConnectivityObserver>(),
         patientId: patientId,
       ),

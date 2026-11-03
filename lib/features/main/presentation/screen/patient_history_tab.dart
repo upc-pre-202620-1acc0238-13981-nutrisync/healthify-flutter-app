@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/designsystem/component/error_state.dart';
 import '../../../../core/designsystem/component/healthify_bottom_sheet.dart';
 import '../../../../core/designsystem/component/healthify_button.dart';
+import '../../../../core/designsystem/component/healthify_dialog.dart';
 import '../../../../core/designsystem/component/info_cards.dart';
 import '../../../../core/designsystem/component/offline_banner.dart';
 import '../../../../core/designsystem/component/skeleton.dart';
@@ -42,11 +43,40 @@ class PatientHistoryTab extends StatelessWidget {
         state: state,
         onEditBaseline: cubit.onEditBaseline,
         onRetry: cubit.onRetry,
-        onSelectReferral: (referral) => showReferralSheet(context, referral),
+        onSelectReferral: (referral) => _openReferralSheet(context, cubit, referral),
         onSelectEvaluation: (assessmentId) => _openEvaluationSheet(context, cubit, assessmentId),
         bottomBar: bottomBar,
       ),
     );
+  }
+
+  Future<void> _openReferralSheet(BuildContext context, PatientHistoryCubit cubit, ReferralSummary referral) =>
+      showHealthifyBottomSheet<void>(
+        context: context,
+        builder: (sheetContext) => BlocBuilder<PatientHistoryCubit, PatientHistoryState>(
+          bloc: cubit,
+          buildWhen: (previous, current) => previous.isClosingReferral != current.isClosingReferral,
+          builder: (_, state) => ReferralSheetContent(
+            referral: referral,
+            isClosing: state.isClosingReferral,
+            onClose: () => _closeReferral(sheetContext, cubit, referral),
+          ),
+        ),
+      );
+
+  /// Whatever the answer the sheet closes: the file's snackbar sits under it, and the record behind it is what changed.
+  Future<void> _closeReferral(BuildContext sheetContext, PatientHistoryCubit cubit, ReferralSummary referral) async {
+    final l10n = AppLocalizations.of(sheetContext);
+    final confirmed = await showHealthifyConfirmDialog(
+      context: sheetContext,
+      title: l10n.referralCloseDialogTitle,
+      text: l10n.referralCloseDialogBody,
+      confirmLabel: l10n.referralCloseConfirm,
+      destructive: true,
+    );
+    if (!confirmed) return;
+    await cubit.onCloseReferral(referral.id);
+    if (sheetContext.mounted) Navigator.of(sheetContext).pop();
   }
 
   /// The detail is read when tapped; the sheet follows the cubit (loading, failed, loaded) and tells it when it closes.
