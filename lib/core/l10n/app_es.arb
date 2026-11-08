@@ -484,6 +484,54 @@
   "followUpProvenanceManual": "a mano",
   "followUpProvenanceOffPlan": "fuera del plan",
   "followUpEntryConfirmed": "Confirmada",
+  "followUpKpiWeight": "Peso",
+  "followUpKpiWeightCaption": "kg/sem · {weeks} sem",
+  "@followUpKpiWeightCaption": {
+    "placeholders": {
+      "weeks": {
+        "type": "int"
+      }
+    }
+  },
+  "followUpKpiRatio": "{count} de {total}",
+  "@followUpKpiRatio": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "followUpKpiDays": "días",
+  "followUpKpiMeasurement": "Medición",
+  "followUpKpiMeasurementCaption": "kg · {date}",
+  "@followUpKpiMeasurementCaption": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "followUpKpiMeasurementProtocol": "Medición clínica: {protocol}",
+  "@followUpKpiMeasurementProtocol": {
+    "placeholders": {
+      "protocol": {
+        "type": "String"
+      }
+    }
+  },
+  "followUpExpand": "Mostrar",
+  "followUpCollapse": "Ocultar",
+  "followUpPendingCount": "{count, plural, one{{count} por confirmar} other{{count} por confirmar}}",
+  "@followUpPendingCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "followUpLastMeasurement": "Última medición clínica",
   "followUpReadOnly": "Solo lectura: no puedes escribir ni corregir entradas del diario.",
   "protocolFasting": "En ayunas",

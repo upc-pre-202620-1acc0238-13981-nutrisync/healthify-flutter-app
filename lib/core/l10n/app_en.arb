@@ -418,6 +418,54 @@
   "followUpProvenanceManual": "manual",
   "followUpProvenanceOffPlan": "off plan",
   "followUpEntryConfirmed": "Confirmed",
+  "followUpKpiWeight": "Weight",
+  "followUpKpiWeightCaption": "kg/wk · {weeks} wk",
+  "@followUpKpiWeightCaption": {
+    "placeholders": {
+      "weeks": {
+        "type": "int"
+      }
+    }
+  },
+  "followUpKpiRatio": "{count} of {total}",
+  "@followUpKpiRatio": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "followUpKpiDays": "days",
+  "followUpKpiMeasurement": "Measure",
+  "followUpKpiMeasurementCaption": "kg · {date}",
+  "@followUpKpiMeasurementCaption": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "followUpKpiMeasurementProtocol": "Clinical measurement: {protocol}",
+  "@followUpKpiMeasurementProtocol": {
+    "placeholders": {
+      "protocol": {
+        "type": "String"
+      }
+    }
+  },
+  "followUpExpand": "Show",
+  "followUpCollapse": "Hide",
+  "followUpPendingCount": "{count, plural, one{{count} to confirm} other{{count} to confirm}}",
+  "@followUpPendingCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "followUpLastMeasurement": "Last clinical measurement",
   "followUpReadOnly": "Read only: you can't write or correct diary entries.",
   "protocolFasting": "Fasting",
