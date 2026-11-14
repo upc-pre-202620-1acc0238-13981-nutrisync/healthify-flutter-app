@@ -527,7 +527,24 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get inviteInstructions =>
-      'Show this code to your patient so they can scan it with their phone, here in the consultation.';
+      'Show this code to your patient so they can scan it with their phone, here in the consultation. If they can\'t scan it, share it so they can type it.';
+
+  @override
+  String get inviteCodeLabel => 'Code to type by hand';
+
+  @override
+  String get inviteCodeCopy => 'Copy';
+
+  @override
+  String get inviteCodeShare => 'Share';
+
+  @override
+  String get inviteCodeCopied => 'Code copied';
+
+  @override
+  String inviteCodeShareMessage(String code) {
+    return 'Your Healthify invitation code: $code';
+  }
 
   @override
   String get inviteExpiresInLabel => 'Expires in';
