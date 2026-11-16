@@ -158,7 +158,19 @@
   "rosterNoResultsTitle": "No results",
   "rosterNoResultsBody": "No patient matches “{query}”.",
   "inviteTitle": "INVITE PATIENT",
-  "inviteInstructions": "Show this code to your patient so they can scan it with their phone, here in the consultation.",
+  "inviteInstructions": "Show this code to your patient so they can scan it with their phone, here in the consultation. If they can't scan it, share it so they can type it.",
+  "inviteCodeLabel": "Code to type by hand",
+  "inviteCodeCopy": "Copy",
+  "inviteCodeShare": "Share",
+  "inviteCodeCopied": "Code copied",
+  "inviteCodeShareMessage": "Your Healthify invitation code: {code}",
+  "@inviteCodeShareMessage": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
   "inviteExpiresInLabel": "Expires in",
   "inviteValidityOneHour": "1 hour",
   "inviteValidityOneDay": "24 hours",
@@ -418,6 +430,54 @@
   "followUpProvenanceManual": "manual",
   "followUpProvenanceOffPlan": "off plan",
   "followUpEntryConfirmed": "Confirmed",
+  "followUpKpiWeight": "Weight",
+  "followUpKpiWeightCaption": "kg/wk · {weeks} wk",
+  "@followUpKpiWeightCaption": {
+    "placeholders": {
+      "weeks": {
+        "type": "int"
+      }
+    }
+  },
+  "followUpKpiRatio": "{count} of {total}",
+  "@followUpKpiRatio": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "followUpKpiDays": "days",
+  "followUpKpiMeasurement": "Measure",
+  "followUpKpiMeasurementCaption": "kg · {date}",
+  "@followUpKpiMeasurementCaption": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "followUpKpiMeasurementProtocol": "Clinical measurement: {protocol}",
+  "@followUpKpiMeasurementProtocol": {
+    "placeholders": {
+      "protocol": {
+        "type": "String"
+      }
+    }
+  },
+  "followUpExpand": "Show",
+  "followUpCollapse": "Hide",
+  "followUpPendingCount": "{count, plural, one{{count} to confirm} other{{count} to confirm}}",
+  "@followUpPendingCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "followUpLastMeasurement": "Last clinical measurement",
   "followUpReadOnly": "Read only: you can't write or correct diary entries.",
   "protocolFasting": "Fasting",

@@ -244,7 +244,7 @@ class _PatientFileState extends State<_PatientFile> with SingleTickerProviderSta
             Column(
               children: [
                 HealthifyTopAppBar(title: widget.route.patientName.toUpperCase(), onBack: widget.onBack),
-                _PatientTabBar(controller: _tabs),
+                PatientTabBar(controller: _tabs),
                 Expanded(
                   child: SafeArea(
                     top: false,
@@ -419,9 +419,11 @@ class _PlanHost extends StatelessWidget {
   }
 }
 
-/// "Patient tabs": four of equal width, Label/Large, `primary` indicator under the selected one.
-class _PatientTabBar extends StatelessWidget {
-  const _PatientTabBar({required this.controller});
+/// "Patient tabs": Label/Large, `primary` indicator under the selected one. Each tab is as wide as its text and the free
+/// width is shared in equal slots (one between neighbours, one at each edge), so a short label like «Plan» is not left
+/// far from the rest the way it was with four equal cells. If the labels do not fit (very large text), it scrolls.
+class PatientTabBar extends StatelessWidget {
+  const PatientTabBar({super.key, required this.controller});
 
   final TabController controller;
 
@@ -430,26 +432,48 @@ class _PatientTabBar extends StatelessWidget {
     final l10n = AppLocalizations.of(context);
     final dimens = context.dimens;
     final scheme = context.colors;
+    final style = context.textStyles.labelLarge!;
+    final labels = [for (final tab in PatientDetailTab.values) tab.label(l10n)];
+    final scaler = MediaQuery.textScalerOf(context);
+    final direction = Directionality.of(context);
+    final textWidth = labels.fold<double>(0, (sum, label) => sum + _labelWidth(label, style, scaler, direction));
     return Material(
       color: scheme.surface,
-      child: TabBar(
-        controller: controller,
-        labelPadding: EdgeInsets.zero,
-        labelStyle: context.textStyles.labelLarge,
-        unselectedLabelStyle: context.textStyles.labelLarge,
-        labelColor: scheme.primary,
-        unselectedLabelColor: scheme.onSurfaceVariant,
-        indicator: _TextWidthIndicator(color: scheme.primary, height: _tabIndicatorHeight, radius: dimens.radiusXs),
-        indicatorSize: TabBarIndicatorSize.label,
-        dividerColor: scheme.outlineVariant,
-        dividerHeight: dimens.borderThin,
-        splashFactory: NoSplash.splashFactory,
-        overlayColor: const WidgetStatePropertyAll(Colors.transparent),
-        tabs: [
-          for (final tab in PatientDetailTab.values) Tab(height: _tabHeight, text: tab.label(l10n)),
-        ],
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final slot = (constraints.maxWidth - textWidth) / (labels.length + 1);
+          final gap = slot < dimens.space16 ? dimens.space16 : slot;
+          return TabBar(
+            controller: controller,
+            isScrollable: true,
+            tabAlignment: TabAlignment.start,
+            padding: EdgeInsetsDirectional.only(start: gap / 2),
+            labelPadding: EdgeInsets.symmetric(horizontal: gap / 2),
+            labelStyle: style,
+            unselectedLabelStyle: style,
+            labelColor: scheme.primary,
+            unselectedLabelColor: scheme.onSurfaceVariant,
+            indicator: _TextWidthIndicator(color: scheme.primary, height: _tabIndicatorHeight, radius: dimens.radiusXs),
+            indicatorSize: TabBarIndicatorSize.label,
+            dividerColor: scheme.outlineVariant,
+            dividerHeight: dimens.borderThin,
+            splashFactory: NoSplash.splashFactory,
+            overlayColor: const WidgetStatePropertyAll(Colors.transparent),
+            tabs: [for (final label in labels) Tab(height: _tabHeight, text: label)],
+          );
+        },
       ),
     );
+  }
+
+  static double _labelWidth(String label, TextStyle style, TextScaler scaler, TextDirection direction) {
+    final painter = TextPainter(
+      text: TextSpan(text: label, style: style),
+      textDirection: direction,
+      textScaler: scaler,
+      maxLines: 1,
+    )..layout();
+    return painter.width;
   }
 }
 

@@ -527,7 +527,24 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get inviteInstructions =>
-      'Show this code to your patient so they can scan it with their phone, here in the consultation.';
+      'Show this code to your patient so they can scan it with their phone, here in the consultation. If they can\'t scan it, share it so they can type it.';
+
+  @override
+  String get inviteCodeLabel => 'Code to type by hand';
+
+  @override
+  String get inviteCodeCopy => 'Copy';
+
+  @override
+  String get inviteCodeShare => 'Share';
+
+  @override
+  String get inviteCodeCopied => 'Code copied';
+
+  @override
+  String inviteCodeShareMessage(String code) {
+    return 'Your Healthify invitation code: $code';
+  }
 
   @override
   String get inviteExpiresInLabel => 'Expires in';
@@ -893,6 +910,52 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get followUpEntryConfirmed => 'Confirmed';
+
+  @override
+  String get followUpKpiWeight => 'Weight';
+
+  @override
+  String followUpKpiWeightCaption(int weeks) {
+    return 'kg/wk · $weeks wk';
+  }
+
+  @override
+  String followUpKpiRatio(int count, int total) {
+    return '$count of $total';
+  }
+
+  @override
+  String get followUpKpiDays => 'days';
+
+  @override
+  String get followUpKpiMeasurement => 'Measure';
+
+  @override
+  String followUpKpiMeasurementCaption(String date) {
+    return 'kg · $date';
+  }
+
+  @override
+  String followUpKpiMeasurementProtocol(String protocol) {
+    return 'Clinical measurement: $protocol';
+  }
+
+  @override
+  String get followUpExpand => 'Show';
+
+  @override
+  String get followUpCollapse => 'Hide';
+
+  @override
+  String followUpPendingCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count to confirm',
+      one: '$count to confirm',
+    );
+    return '$_temp0';
+  }
 
   @override
   String get followUpLastMeasurement => 'Last clinical measurement';

@@ -207,7 +207,19 @@
     }
   },
   "inviteTitle": "INVITAR PACIENTE",
-  "inviteInstructions": "Muéstrale este código a tu paciente para que lo escanee desde su teléfono, aquí en consulta.",
+  "inviteInstructions": "Muéstrale este código a tu paciente para que lo escanee desde su teléfono, aquí en consulta. Si no puede escanear, compártelo para que lo escriba.",
+  "inviteCodeLabel": "Código para escribir a mano",
+  "inviteCodeCopy": "Copiar",
+  "inviteCodeShare": "Compartir",
+  "inviteCodeCopied": "Código copiado",
+  "inviteCodeShareMessage": "Tu código de invitación de Healthify: {code}",
+  "@inviteCodeShareMessage": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
   "inviteExpiresInLabel": "Vence en",
   "inviteValidityOneHour": "1 hora",
   "inviteValidityOneDay": "24 horas",
@@ -484,6 +496,54 @@
   "followUpProvenanceManual": "a mano",
   "followUpProvenanceOffPlan": "fuera del plan",
   "followUpEntryConfirmed": "Confirmada",
+  "followUpKpiWeight": "Peso",
+  "followUpKpiWeightCaption": "kg/sem · {weeks} sem",
+  "@followUpKpiWeightCaption": {
+    "placeholders": {
+      "weeks": {
+        "type": "int"
+      }
+    }
+  },
+  "followUpKpiRatio": "{count} de {total}",
+  "@followUpKpiRatio": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "followUpKpiDays": "días",
+  "followUpKpiMeasurement": "Medición",
+  "followUpKpiMeasurementCaption": "kg · {date}",
+  "@followUpKpiMeasurementCaption": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "followUpKpiMeasurementProtocol": "Medición clínica: {protocol}",
+  "@followUpKpiMeasurementProtocol": {
+    "placeholders": {
+      "protocol": {
+        "type": "String"
+      }
+    }
+  },
+  "followUpExpand": "Mostrar",
+  "followUpCollapse": "Ocultar",
+  "followUpPendingCount": "{count, plural, one{{count} por confirmar} other{{count} por confirmar}}",
+  "@followUpPendingCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "followUpLastMeasurement": "Última medición clínica",
   "followUpReadOnly": "Solo lectura: no puedes escribir ni corregir entradas del diario.",
   "protocolFasting": "En ayunas",

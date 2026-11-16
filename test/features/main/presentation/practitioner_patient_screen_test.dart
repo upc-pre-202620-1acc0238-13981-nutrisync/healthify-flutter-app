@@ -209,9 +209,11 @@ void main() {
 
     expect(find.text('Esta semana'), findsOneWidget);
     expect(find.text('4 de 7 días'), findsOneWidget);
-    expect(find.text('−0,3 kg/sem'), findsOneWidget);
+    // The trend, logging and last measurement are the three compact indicators of the redesigned tab.
+    expect(find.text('−0,3'), findsOneWidget);
+    expect(find.textContaining('kg/sem'), findsOneWidget);
     expect(find.text('Cumple casi todos los días.'), findsOneWidget);
-    expect(find.text('Última medición clínica'), findsOneWidget);
+    expect(find.text('Medición'), findsOneWidget);
     expect(find.textContaining('Solo lectura'), findsOneWidget);
   });
 

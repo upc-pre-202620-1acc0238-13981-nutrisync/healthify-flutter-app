@@ -1049,8 +1049,38 @@ abstract class AppLocalizations {
   /// No description provided for @inviteInstructions.
   ///
   /// In es, this message translates to:
-  /// **'Muéstrale este código a tu paciente para que lo escanee desde su teléfono, aquí en consulta.'**
+  /// **'Muéstrale este código a tu paciente para que lo escanee desde su teléfono, aquí en consulta. Si no puede escanear, compártelo para que lo escriba.'**
   String get inviteInstructions;
+
+  /// No description provided for @inviteCodeLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Código para escribir a mano'**
+  String get inviteCodeLabel;
+
+  /// No description provided for @inviteCodeCopy.
+  ///
+  /// In es, this message translates to:
+  /// **'Copiar'**
+  String get inviteCodeCopy;
+
+  /// No description provided for @inviteCodeShare.
+  ///
+  /// In es, this message translates to:
+  /// **'Compartir'**
+  String get inviteCodeShare;
+
+  /// No description provided for @inviteCodeCopied.
+  ///
+  /// In es, this message translates to:
+  /// **'Código copiado'**
+  String get inviteCodeCopied;
+
+  /// No description provided for @inviteCodeShareMessage.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu código de invitación de Healthify: {code}'**
+  String inviteCodeShareMessage(String code);
 
   /// No description provided for @inviteExpiresInLabel.
   ///
@@ -1669,6 +1699,66 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Confirmada'**
   String get followUpEntryConfirmed;
+
+  /// No description provided for @followUpKpiWeight.
+  ///
+  /// In es, this message translates to:
+  /// **'Peso'**
+  String get followUpKpiWeight;
+
+  /// No description provided for @followUpKpiWeightCaption.
+  ///
+  /// In es, this message translates to:
+  /// **'kg/sem · {weeks} sem'**
+  String followUpKpiWeightCaption(int weeks);
+
+  /// No description provided for @followUpKpiRatio.
+  ///
+  /// In es, this message translates to:
+  /// **'{count} de {total}'**
+  String followUpKpiRatio(int count, int total);
+
+  /// No description provided for @followUpKpiDays.
+  ///
+  /// In es, this message translates to:
+  /// **'días'**
+  String get followUpKpiDays;
+
+  /// No description provided for @followUpKpiMeasurement.
+  ///
+  /// In es, this message translates to:
+  /// **'Medición'**
+  String get followUpKpiMeasurement;
+
+  /// No description provided for @followUpKpiMeasurementCaption.
+  ///
+  /// In es, this message translates to:
+  /// **'kg · {date}'**
+  String followUpKpiMeasurementCaption(String date);
+
+  /// No description provided for @followUpKpiMeasurementProtocol.
+  ///
+  /// In es, this message translates to:
+  /// **'Medición clínica: {protocol}'**
+  String followUpKpiMeasurementProtocol(String protocol);
+
+  /// No description provided for @followUpExpand.
+  ///
+  /// In es, this message translates to:
+  /// **'Mostrar'**
+  String get followUpExpand;
+
+  /// No description provided for @followUpCollapse.
+  ///
+  /// In es, this message translates to:
+  /// **'Ocultar'**
+  String get followUpCollapse;
+
+  /// No description provided for @followUpPendingCount.
+  ///
+  /// In es, this message translates to:
+  /// **'{count, plural, one{{count} por confirmar} other{{count} por confirmar}}'**
+  String followUpPendingCount(int count);
 
   /// No description provided for @followUpLastMeasurement.
   ///
