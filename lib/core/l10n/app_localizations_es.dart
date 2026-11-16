@@ -524,7 +524,24 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get inviteInstructions =>
-      'Muéstrale este código a tu paciente para que lo escanee desde su teléfono, aquí en consulta.';
+      'Muéstrale este código a tu paciente para que lo escanee desde su teléfono, aquí en consulta. Si no puede escanear, compártelo para que lo escriba.';
+
+  @override
+  String get inviteCodeLabel => 'Código para escribir a mano';
+
+  @override
+  String get inviteCodeCopy => 'Copiar';
+
+  @override
+  String get inviteCodeShare => 'Compartir';
+
+  @override
+  String get inviteCodeCopied => 'Código copiado';
+
+  @override
+  String inviteCodeShareMessage(String code) {
+    return 'Tu código de invitación de Healthify: $code';
+  }
 
   @override
   String get inviteExpiresInLabel => 'Vence en';

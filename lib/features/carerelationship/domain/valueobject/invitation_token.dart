@@ -16,6 +16,7 @@ final class InvitationToken {
 
   static const minLength = 22;
   static const maxLength = 64;
+  static const _groupSize = 4;
 
   static final _base64Url = RegExp(r'^[A-Za-z0-9_-]+$');
 
@@ -26,6 +27,17 @@ final class InvitationToken {
     final candidate = raw.trim();
     final valid = candidate.length >= minLength && candidate.length <= maxLength && _base64Url.hasMatch(candidate);
     return valid ? InvitationToken._(candidate) : null;
+  }
+
+  /// The token in blocks of four («kP3x 9Qm2 ...»), for the nutritionist to read out or type. A display form of the
+  /// same secret: show it only where the QR is shown, never log it.
+  String grouped() {
+    final buffer = StringBuffer();
+    for (var i = 0; i < value.length; i += _groupSize) {
+      if (i > 0) buffer.write(' ');
+      buffer.write(value.substring(i, i + _groupSize > value.length ? value.length : i + _groupSize));
+    }
+    return buffer.toString();
   }
 
   @override

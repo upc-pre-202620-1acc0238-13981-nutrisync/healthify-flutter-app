@@ -158,7 +158,19 @@
   "rosterNoResultsTitle": "No results",
   "rosterNoResultsBody": "No patient matches “{query}”.",
   "inviteTitle": "INVITE PATIENT",
-  "inviteInstructions": "Show this code to your patient so they can scan it with their phone, here in the consultation.",
+  "inviteInstructions": "Show this code to your patient so they can scan it with their phone, here in the consultation. If they can't scan it, share it so they can type it.",
+  "inviteCodeLabel": "Code to type by hand",
+  "inviteCodeCopy": "Copy",
+  "inviteCodeShare": "Share",
+  "inviteCodeCopied": "Code copied",
+  "inviteCodeShareMessage": "Your Healthify invitation code: {code}",
+  "@inviteCodeShareMessage": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
   "inviteExpiresInLabel": "Expires in",
   "inviteValidityOneHour": "1 hour",
   "inviteValidityOneDay": "24 hours",

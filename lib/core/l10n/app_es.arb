@@ -207,7 +207,19 @@
     }
   },
   "inviteTitle": "INVITAR PACIENTE",
-  "inviteInstructions": "Muéstrale este código a tu paciente para que lo escanee desde su teléfono, aquí en consulta.",
+  "inviteInstructions": "Muéstrale este código a tu paciente para que lo escanee desde su teléfono, aquí en consulta. Si no puede escanear, compártelo para que lo escriba.",
+  "inviteCodeLabel": "Código para escribir a mano",
+  "inviteCodeCopy": "Copiar",
+  "inviteCodeShare": "Compartir",
+  "inviteCodeCopied": "Código copiado",
+  "inviteCodeShareMessage": "Tu código de invitación de Healthify: {code}",
+  "@inviteCodeShareMessage": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
   "inviteExpiresInLabel": "Vence en",
   "inviteValidityOneHour": "1 hora",
   "inviteValidityOneDay": "24 horas",

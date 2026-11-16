@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:share_plus/share_plus.dart';
 
 import '../../../../core/designsystem/component/error_state.dart';
 import '../../../../core/designsystem/component/healthify_button.dart';
+import '../../../../core/designsystem/component/healthify_snackbar.dart';
 import '../../../../core/designsystem/component/healthify_top_app_bar.dart';
 import '../../../../core/designsystem/component/list_card.dart';
 import '../../../../core/designsystem/component/offline_banner.dart';
@@ -34,10 +37,25 @@ class InvitePatientScreen extends StatelessWidget {
           onBack: onBack,
           onValidityChange: cubit.onValidityChange,
           onGenerateAnother: cubit.onGenerateAnother,
+          onCopyCode: (code) => _copyCode(context, code),
+          onShareCode: (code) => _shareCode(context, code),
         );
       },
     ),
   );
+}
+
+/// Copies the code (a secret: single use, expires) and confirms with a snackbar. Never logged.
+Future<void> _copyCode(BuildContext context, String code) async {
+  final message = AppLocalizations.of(context).inviteCodeCopied;
+  await Clipboard.setData(ClipboardData(text: code));
+  if (context.mounted) showHealthifySnackbar(context, message: message);
+}
+
+/// Opens the system share sheet with the code in a short message.
+Future<void> _shareCode(BuildContext context, String code) async {
+  final l10n = AppLocalizations.of(context);
+  await SharePlus.instance.share(ShareParams(text: l10n.inviteCodeShareMessage(code), title: l10n.inviteCodeShare));
 }
 
 class InvitePatientContent extends StatelessWidget {
@@ -47,12 +65,18 @@ class InvitePatientContent extends StatelessWidget {
     required this.onBack,
     required this.onValidityChange,
     required this.onGenerateAnother,
+    this.onCopyCode,
+    this.onShareCode,
   });
 
   final InvitePatientState state;
   final VoidCallback onBack;
   final ValueChanged<InvitationValidity> onValidityChange;
   final VoidCallback onGenerateAnother;
+
+  /// Called with the token's value; `null` hides nothing, it only makes the buttons do nothing (previews, tests).
+  final ValueChanged<String>? onCopyCode;
+  final ValueChanged<String>? onShareCode;
 
   @override
   Widget build(BuildContext context) {
@@ -96,6 +120,8 @@ class InvitePatientContent extends StatelessWidget {
                         token: token,
                         onValidityChange: onValidityChange,
                         onGenerateAnother: onGenerateAnother,
+                        onCopyCode: onCopyCode,
+                        onShareCode: onShareCode,
                       ),
                   ],
                 ),
@@ -114,12 +140,16 @@ class _InvitationBody extends StatelessWidget {
     required this.token,
     required this.onValidityChange,
     required this.onGenerateAnother,
+    required this.onCopyCode,
+    required this.onShareCode,
   });
 
   final InvitePatientState state;
   final InvitationToken token;
   final ValueChanged<InvitationValidity> onValidityChange;
   final VoidCallback onGenerateAnother;
+  final ValueChanged<String>? onCopyCode;
+  final ValueChanged<String>? onShareCode;
 
   @override
   Widget build(BuildContext context) {
@@ -130,10 +160,7 @@ class _InvitationBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Text(
-          l10n.inviteInstructions,
-          style: context.textStyles.bodyMedium!.copyWith(color: scheme.onSurfaceVariant),
-        ),
+        Text(l10n.inviteInstructions, style: context.textStyles.bodyMedium!.copyWith(color: scheme.onSurfaceVariant)),
         SizedBox(height: dimens.space24),
         HealthifyCard(
           shape: dimens.shapeExtraLarge,
@@ -157,13 +184,18 @@ class _InvitationBody extends StatelessWidget {
                   child: InvitationQrCode(content: token.value, contentDescription: l10n.inviteQrCd),
                 ),
                 SizedBox(height: dimens.space16),
+                _CodeText(
+                  token: token,
+                  enabled: !state.isExpired,
+                  onCopy: () => onCopyCode?.call(token.value),
+                  onShare: () => onShareCode?.call(token.value),
+                ),
+                SizedBox(height: dimens.space16),
                 // The design's "Valid 24h · single use" becomes the validity countdown.
                 Semantics(
                   liveRegion: true,
                   child: Text(
-                    state.isExpired
-                        ? l10n.inviteExpired
-                        : l10n.inviteCountdown(_countdownText(l10n, state.remaining)),
+                    state.isExpired ? l10n.inviteExpired : l10n.inviteCountdown(_countdownText(l10n, state.remaining)),
                     style: context.textStyles.bodySmall!.copyWith(
                       color: state.isExpired ? scheme.error : scheme.onSurfaceVariant,
                     ),
@@ -191,11 +223,56 @@ class _InvitationBody extends StatelessWidget {
         ),
         if (error != null) ...[
           SizedBox(height: dimens.space4),
-          Text(
-            _errorMessage(l10n, error),
-            style: context.textStyles.bodySmall!.copyWith(color: scheme.error),
-          ),
+          Text(_errorMessage(l10n, error), style: context.textStyles.bodySmall!.copyWith(color: scheme.error)),
         ],
+      ],
+    );
+  }
+}
+
+/// The same token the QR holds, as text in blocks of four, with Copy and Share: how the patient gets it when they
+/// cannot scan. A secret (single use, expires): it is shown only here and never logged.
+class _CodeText extends StatelessWidget {
+  const _CodeText({required this.token, required this.enabled, required this.onCopy, required this.onShare});
+
+  final InvitationToken token;
+  final bool enabled;
+  final VoidCallback onCopy;
+  final VoidCallback onShare;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    final dimens = context.dimens;
+    final scheme = context.colors;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Text(l10n.inviteCodeLabel, style: context.textStyles.labelMedium!.copyWith(color: scheme.onSurfaceVariant)),
+        SizedBox(height: dimens.space8),
+        Text(token.grouped(), style: context.textStyles.titleMedium!.copyWith(color: scheme.onSurface)),
+        SizedBox(height: dimens.space8),
+        Row(
+          spacing: dimens.space8,
+          children: [
+            Expanded(
+              child: HealthifyButton(
+                text: l10n.inviteCodeCopy,
+                onPressed: onCopy,
+                style: HealthifyButtonStyle.tonal,
+                enabled: enabled,
+              ),
+            ),
+            Expanded(
+              child: HealthifyButton(
+                text: l10n.inviteCodeShare,
+                onPressed: onShare,
+                style: HealthifyButtonStyle.outlined,
+                enabled: enabled,
+              ),
+            ),
+          ],
+        ),
       ],
     );
   }
