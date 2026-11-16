@@ -895,6 +895,52 @@ class AppLocalizationsEn extends AppLocalizations {
   String get followUpEntryConfirmed => 'Confirmed';
 
   @override
+  String get followUpKpiWeight => 'Weight';
+
+  @override
+  String followUpKpiWeightCaption(int weeks) {
+    return 'kg/wk · $weeks wk';
+  }
+
+  @override
+  String followUpKpiRatio(int count, int total) {
+    return '$count of $total';
+  }
+
+  @override
+  String get followUpKpiDays => 'days';
+
+  @override
+  String get followUpKpiMeasurement => 'Measure';
+
+  @override
+  String followUpKpiMeasurementCaption(String date) {
+    return 'kg · $date';
+  }
+
+  @override
+  String followUpKpiMeasurementProtocol(String protocol) {
+    return 'Clinical measurement: $protocol';
+  }
+
+  @override
+  String get followUpExpand => 'Show';
+
+  @override
+  String get followUpCollapse => 'Hide';
+
+  @override
+  String followUpPendingCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count to confirm',
+      one: '$count to confirm',
+    );
+    return '$_temp0';
+  }
+
+  @override
   String get followUpLastMeasurement => 'Last clinical measurement';
 
   @override
